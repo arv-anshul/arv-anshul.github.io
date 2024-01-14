@@ -12,5 +12,9 @@
       "mkdocs.yaml",
       "mkdocs.yml"
     ]
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
   }
 }
