@@ -8,7 +8,7 @@ theme:
   language: en
   name: material
   icon:
-    repo: fontawesome/brands/github-alt
+    logo: fontawesome/solid/om
   logo: null
   favicon: null
   features:
@@ -47,12 +47,20 @@ theme:
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
   - footnotes
-  - tables
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.mark
   - pymdownx.snippets
+  - pymdownx.tilde
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
   - pymdownx.superfences:
