@@ -1,0 +1,85 @@
+repo_url: https://github.com/arv-anshul/arv-anshul.github.io
+site_author: Anshul Raj Verma
+site_description: Anshul's personal website for showcasing his learnings, blogs and more.
+site_name: Anshul Raj Verma
+site_url: https://arv-anshul.github.io
+
+theme:
+  language: en
+  name: material
+  icon:
+    repo: fontawesome/brands/github-alt
+  logo: null
+  favicon: null
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - navigation.indexes
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      accent: indigo
+      primary: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: indigo
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.snippets
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search: null
+  - markdownextradata:
+      data: docs/data/render_yaml/
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/arv-anshul
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arv-anshul
+
+copyright: |
+  Copyright &copy; 2024 <a href="https://github.com/arv-anshul">Anshul Raj Verma</a>
