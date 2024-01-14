@@ -1,0 +1,6 @@
+rules:
+  document-start:
+    present: false
+  line-length:
+    level: warning
+    max: 88
