@@ -1,4 +1,5 @@
 repo_url: https://github.com/arv-anshul/arv-anshul.github.io
+repo_name: arv-anshul.github.io
 site_author: Anshul Raj Verma
 site_description: Anshul's personal website for showcasing his learnings, blogs and more.
 site_name: Anshul Raj Verma
@@ -8,6 +9,7 @@ theme:
   language: en
   name: material
   icon:
+    repo: material/book
     logo: fontawesome/solid/om
   logo: null
   favicon: null
@@ -82,12 +84,19 @@ plugins:
       data: docs/data/render_yaml/
 
 extra:
-  generator: false
   social:
-    - icon: fontawesome/brands/github-alt
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/arv_anshul
+      name: Connect on Instagram
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/user/arv-anshul/
+      name: See My Python Projects PyPi
+    - icon: fontawesome/brands/github
       link: https://github.com/arv-anshul
+      name: See my GitHub Profile
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arv-anshul
+      name: Connect on LinkedIn
 
 copyright: |
   Copyright &copy; 2024 <a href="https://github.com/arv-anshul">Anshul Raj Verma</a>
