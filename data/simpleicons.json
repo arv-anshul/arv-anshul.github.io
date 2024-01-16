@@ -1,0 +1,21 @@
+[
+  "docker",
+  "fastapi",
+  "flipkart",
+  "github",
+  "instagram",
+  "linkedin",
+  "medium",
+  "materialformkdocs",
+  "mlflow",
+  "mongodb",
+  "plotly",
+  "polars",
+  "pydantic",
+  "pypi",
+  "python",
+  "ruff",
+  "scikitlearn",
+  "streamlit",
+  "youtube"
+]

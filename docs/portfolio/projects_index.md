@@ -4,9 +4,9 @@
 
 ## **{{ project.title }}**
 
-:{{ project.status }}:{ title="Project Status" }
-{% if project.completed_on %} :material-calendar-check:{ title="Completed on: {{ project.completed_on }}" } {% else %} :material-calendar-clock:{ title="Currently Working" } {% endif %} &nbsp; • &nbsp;
-{% for tag in project.tags|sort %} :simple-{{ tag }}:{ title="{{ tag|title }}"} &nbsp; {% endfor %}
+:{{ project.status }}:{ .hover-icon title="Project Status" }
+{% if project.completed_on %} :material-calendar-check:{ .hover-icon .success title="Completed on: {{ project.completed_on }}" } {% else %} :material-calendar-clock:{ .hover-icon .warning title="Currently Working" } {% endif %} &nbsp; • &nbsp;
+{% for tag in project.tags|sort %} :simple-{{ tag }}:{ .{{ tag }} .hover-icon-bounce title="{{ tag|title }}"} &nbsp; {% endfor %}
 
 {{ project.description }}
 

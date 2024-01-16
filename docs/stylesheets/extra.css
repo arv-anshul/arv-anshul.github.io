@@ -1,0 +1,60 @@
+@keyframes heart {
+  0%,
+  40%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+  20%,
+  60% {
+    transform: scale(1.15);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.hover-icon:hover {
+  transform: scale(1.25);
+}
+.hover-icon-bounce:hover {
+  animation: bounce 1s infinite;
+}
+.bounce {
+  animation: bounce 1s infinite;
+}
+.heart {
+  animation: heart 1s infinite;
+}
+
+/* Distinct colors */
+.danger {
+  color: #dc3545;
+}
+.dark {
+  color: #343a40;
+}
+.info {
+  color: #17a2b8;
+}
+.light {
+  color: #f8f9fa;
+}
+.primary {
+  color: #007bff;
+}
+.secondary {
+  color: #6c757d;
+}
+.success {
+  color: #28a745;
+}
+.warning {
+  color: #ffc107;
+}

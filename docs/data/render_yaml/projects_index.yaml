@@ -10,7 +10,14 @@
     - docker
     - fastapi
     - mlflow
+    - mongodb
+    - plotly
+    - polars
+    - pydantic
+    - ruff
+    - scikitlearn
     - streamlit
+    - youtube
   status: material-clipboard-clock
   completed_on:
 
