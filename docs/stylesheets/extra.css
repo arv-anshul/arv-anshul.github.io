@@ -63,3 +63,8 @@
 .highlight .filename {
   font-family: var(--md-code-font-family);
 }
+
+/* Customize admonition layout */
+.md-typeset .admonition {
+  border-left-width: 4px;
+}
