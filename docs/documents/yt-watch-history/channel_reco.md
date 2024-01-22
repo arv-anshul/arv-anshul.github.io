@@ -97,11 +97,23 @@ def prediction(data: pl.DataFrame):
 
 ## Extra
 
+!!! abstract "Reccommendation System Summary"
+    - Ingesting data from database or local file. I had made API endpoint to fetch data from datbase.
+    - Using [:simple-polars:{ .light .hover-icon }](https://pola.rs) Polars library for data manipulation.
+    - This recommender system trained on **Youtube Channel's Videos titles and tags** which means it recommend on the basis of the channel's videos contents like title and tags.
+    - Used `TfidfVectorizer` for text-to-vec conversion.
+
 ### Provide Weights to Vectorizer
 
 Previously, I thought that I can add a functionality to provide weights to each vectorizer (`TfidfVectorizer`) to make the system more robust and I had achieved it ([See Notebook](https://github.com/arv-anshul/notebooks/blob/main/yt-watch-history/1.0_ChannelRecoSys.ipynb)) but not feels good while actual implementation because it creates so much objects to store and makes the prediction (recommendation) step complex.
 
 I have to store each vectorizer, vectorized data (title and tags) and the metadata (`channelId` and `channelTitle`) too which this pipeline complex and hard to keep track of objects.
+
+### Adding More Features
+
+I have tried to add more features like `categoryName` (channel owner provide category of the video while uploading) and `contentTypePred` (a feature I have predicted using ML) but I found it difficult to implement and it doesn't show much effect while reccommending. That's why I thought a different idea to implement this.
+
+I can filter the reccommended channels on the basis of `categoryName` and `contentTypePred` in the frontend part (yeah this not the right way of doing this but I'll think about it later).
 
 ---
 
