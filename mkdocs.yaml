@@ -103,3 +103,14 @@ copyright: |
 extra_css:
   - stylesheets/extra.css
   - stylesheets/simpleicons.css
+
+nav:
+  - Home: index.md
+  - About:
+      - portfolio/about.md
+      - portfolio/projects_index.md
+  - Documents:
+      - documents/index.md
+      - Youtube Watch History:
+          - documents/yt-watch-history/index.md
+          - documents/yt-watch-history/channel_reco.md
