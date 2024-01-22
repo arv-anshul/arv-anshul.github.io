@@ -1,8 +1,14 @@
 # Personal Website
 
-[🌐 Go To Website!](https://arv-anshul.github.io)
+<p align="center">
+    <img src="data/assets/home.png" alt="arv-anshul"/>
+</p>
 
-I have build this website using [`mkdocs-material`](https://mkdocs.org).
+<p align="center">
+    <a href="https://squidfunk.github.io/mkdocs-material/"><img src="https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&amp;logo=MaterialForMkDocs&amp;logoColor=white" alt="Built with Material for MkDocs"></a>
+    <a href="https://arv-anshul.github.io"><img src="https://img.shields.io/badge/GitHub%20Pages-222?logo=github&logoColor=fff&style=for-the-badge" alt="GitHub Badge"></a>
+    <a href="https://github.com/arv-anshul/arv-anshul.github.io/actions"><img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=for-the-badge" alt="GitHub Actions Badge"></a>
+</p>
 
 ## Setup Locally
 
