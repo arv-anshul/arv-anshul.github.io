@@ -3,9 +3,20 @@ hide:
   - navigation
 ---
 
-# Introduction
+<style>
+  article > h1 { display: none; }
+</style>
 
-Hey, I am Anshul Raj Verma and I am a Data Scientist. I am Learning ML, NLP and MLOps and also building projects which helps me to grow and learn from mistakes which I have done during building the project. I am currently working on [`yt-watch-history`](https://github.com/arv-anshul/yt-watch-history) project if you want to collaborate please contact I will explain you the project and we can work together 😉.
+<p style="text-align: center; margin: 0px;">
+  <img src="https://avatars.githubusercontent.com/u/111767754?v=4" alt="arv-anshul" style="width: 300px; border-radius: 50%;" />
+
+  <p style="text-align: center; font-size: 25px; margin: 0px;"><strong>Anshul Raj Verma</strong></p>
+  <p style="text-align: center; margin: 0px;">
+    Hey, I am Anshul Raj Verma and I am a Data Scientist. I am Learning ML, NLP and MLOps and also building projects which helps me to grow and learn from mistakes which I have done during building the project.
+  </p>
+</p>
+
+---
 
 ## Python
 
