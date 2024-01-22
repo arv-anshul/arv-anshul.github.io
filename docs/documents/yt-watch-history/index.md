@@ -3,6 +3,8 @@
 {% for project in projects_index %}
 {% if project.title == "YouTube Watch History" %}
 
+<figure markdown width=500px>
+
 | 😉 | 🤗 |
 | ---: | :--- |
 | **Project Status** | :{{ project.status }}:{ .hover-icon title="Project Status" } &nbsp; &nbsp; {% if project.completed_on %} :material-calendar-check:{ .hover-icon .success title="Completed on: {{ project.completed_on }}" } {% else %} :material-calendar-clock:{ .hover-icon .warning title="Currently Working" } {% endif %}|
@@ -11,6 +13,8 @@
 
 {% endif %}
 {% endfor %}
+
+</figure>
 
 ## 🎉 Features
 
