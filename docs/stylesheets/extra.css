@@ -66,5 +66,6 @@
 
 /* Customize admonition layout */
 .md-typeset .admonition {
+  border-width: 0px;
   border-left-width: 4px;
 }
