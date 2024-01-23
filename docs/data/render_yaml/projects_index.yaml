@@ -18,7 +18,6 @@
     - scikitlearn
     - streamlit
     - youtube
-  status: material-clipboard-clock
   completed_on:
 
 - title: E-commerce Scrapper API - FastAPI
@@ -38,7 +37,6 @@
     - fastapi
     - flipkart
     - pydantic
-  status: material-clipboard-check
   completed_on: Nov, 2023
 
 - title: Indian Real Estate Analyser and Price Prediction
@@ -56,7 +54,6 @@
     - plotly
     - scikitlearn
     - streamlit
-  status: material-clipboard-check
   completed_on: Oct, 2023
 
 - title: Curler
@@ -71,5 +68,4 @@
   tags:
     - pypi
     - python
-  status: material-clipboard-check
   completed_on: Nov, 2023
