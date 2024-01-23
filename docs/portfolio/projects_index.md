@@ -17,7 +17,7 @@ hide:
 - {{ point }}
 {% endfor %}
 
-{% for type, url in project.urls.items()|sort(attribute=0) %} <a href="{{ url }}" target="blank_"> :simple-{{ type }}: {{ type|title }} </a> &nbsp; &nbsp; {% endfor %}
+{% for type, url in project.urls.items()|sort(attribute=0) %} [:simple-{{ type }}:{ .light .secondary-hover }]({{ url }}){ target=blank_ } &nbsp; &nbsp; {% endfor %}
 
 ---
 
