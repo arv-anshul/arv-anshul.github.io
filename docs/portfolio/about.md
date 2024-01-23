@@ -1,6 +1,7 @@
 ---
 hide:
   - toc
+  - feedback
 ---
 
 # I'm Anshul Raj Verma
