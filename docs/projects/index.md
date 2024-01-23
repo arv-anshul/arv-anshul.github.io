@@ -1,8 +1,3 @@
----
-hide:
-  - feedback
----
-
 # My Projects Index
 
 {% for project in projects_index %}

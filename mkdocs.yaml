@@ -104,11 +104,9 @@ extra_css:
 
 nav:
   - Home: index.md
-  - About:
-      - portfolio/about.md
-      - portfolio/projects_index.md
-  - Documents:
-      - documents/index.md
+  - Projects:
+      - projects/index.md
       - Youtube Watch History:
-          - documents/yt-watch-history/index.md
-          - documents/yt-watch-history/channel_reco.md
+          - projects/yt-watch-history/index.md
+          - projects/yt-watch-history/channel_reco.md
+  - About: about.md
