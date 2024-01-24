@@ -69,7 +69,7 @@ I am learning Machine Learning along with Data Science. In Machine Learning, I h
 
 </div>
 
-[:material-file-document: See Projects Index](./projects){ .md-button .sm }
+[:material-file-document: See Projects Index](./projects/index.md){ .md-button .sm }
 
 ## MLOps
 
