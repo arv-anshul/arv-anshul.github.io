@@ -1,3 +1,7 @@
+---
+icon: simple/scikitlearn
+---
+
 # Channel Recommender System
 
 I've built `contentType` prediction pipeline using videos titles. Now, I am thinking that what if I can recommend similar channels on the basis of their subscribed channels. I can recommend channels using channel's videos titles and videos tags.

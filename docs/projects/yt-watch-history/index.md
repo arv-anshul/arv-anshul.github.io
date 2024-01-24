@@ -1,3 +1,7 @@
+---
+icon: simple/youtube
+---
+
 # YouTube Watch History
 
 {% for project in projects_index %}
