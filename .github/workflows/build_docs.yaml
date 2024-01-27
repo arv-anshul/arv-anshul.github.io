@@ -24,4 +24,6 @@ jobs:
       - name: Install mkdocs
         run: pip install mkdocs-material==9.5.3 mkdocs-markdownextradata-plugin==0.2.5
       - name: Finally build docs and publish
+        env:
+          GOOGLE_ANALYTICS_PROPERTY: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY }}
         run: mkdocs gh-deploy --force
