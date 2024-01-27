@@ -109,6 +109,7 @@ nav:
       - projects/index.md
       - Youtube Watch History:
           - projects/yt-watch-history/index.md
+          - projects/yt-watch-history/ctt.md
           - projects/yt-watch-history/channel_reco.md
   - Blog:
       - blog/index.md
