@@ -107,6 +107,7 @@ nav:
   - Home: index.md
   - Projects:
       - projects/index.md
+      - projects/others.md
       - Youtube Watch History:
           - projects/yt-watch-history/index.md
           - projects/yt-watch-history/ctt.md
