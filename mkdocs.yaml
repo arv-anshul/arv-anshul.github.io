@@ -12,7 +12,7 @@ theme:
     repo: material/book
     logo: fontawesome/solid/om
   logo: null
-  favicon: null
+  favicon: data/assets/favicon.png
   features:
     - content.code.annotate
     - content.code.copy
