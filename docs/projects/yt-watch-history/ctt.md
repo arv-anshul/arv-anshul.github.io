@@ -8,6 +8,11 @@ date: 2024-01-27
 
 I am building the ContentType Prediction System from scratch, this it is more robust, flexible and scalable.
 
+<figure markdown>
+  ![ml-system-diagram.png](./assets/ml-system-diagram.png)
+  <figcaption>ML System Diagram for "ContentType Prediction System"</figcaption>
+</figure>
+
 - I have created custom `sklearn` transformers to transform the datasets. :material-chat-question:{ title="But it is not that good." }
 - I also implemented the model monitoring part using abstraction classes. I do monitoring using `mlfow`.
 - I also write scripts for the reference about how to monitor, train and predict models, through this I want to give you some idea that how does this pipeline works. :material-emoticon-wink:{ title="These scripts are for reference only." }
