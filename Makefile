@@ -21,6 +21,9 @@ clean-site: site/  ## Remove site directory
 	@echo "Removing 'site/' directory..."
 	rm -rf $<
 
+icon-css: docs_src/generate_simpleicons_css.py
+	$(PYTHON) $<
+
 # ---------------- Essential Commands ----------------
 
 clean: clean-site clean-venv  ## Clean files and folders like [.venv/, site/]
