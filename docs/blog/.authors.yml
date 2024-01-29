@@ -4,3 +4,8 @@ authors:
     description: Creator
     avatar: https://avatars.githubusercontent.com/u/111767754?v=4
     url: https://github.com/arv-anshul
+  chatgpt:
+    name: ChatGPT
+    description: Bot
+    avatar: https://cdn-icons-png.flaticon.com/512/12222/12222560.png
+    url: https://chat.openai.com
