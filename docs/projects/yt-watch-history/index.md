@@ -30,6 +30,26 @@ date: 2024-01-21
 - [x] &nbsp; :simple-streamlit: &nbsp; Caption for each plots and graphs which describe them.
 - [x] &nbsp; :simple-plotly: &nbsp; Beautiful plots and graphs to showcase the insights about User's watching patterns.
 
+## :people_hugging: Discussions
+
+<div class="grid cards" markdown>
+
+  - ### **Error while importing model**
+
+    ---
+
+    > _This is my 3<sup>rd</sup> iteration on this improvement/refactoring approach._
+
+    I am facing problems while designing the ML systems of this project. I am not able to figure out where to train the model and then how to make the predition from it. Because I am getting error while importing the model using `dill`, `pickle` and `joblib` all.
+
+    I am only figure out that if you change your module structure then it the model importing trow `ModuleNotFoundError`. But when I export and import the model in a constraint environment (means the path of exporting and importing are same) then model works fine.
+
+    So whatever I was doing in these 2 weeks is not fully correct from the point of view of ML systems. Because this approach is not feasible for model to import and make prediction.
+
+    **To solve this** I have to rethink about the structure of the project maybe I should stick with the previous path.
+
+</div>
+
 ## :fontawesome-solid-tags: Releases
 
 ### [**`v0.0.1`**](https://github.com/arv-anshul/yt-watch-history/releases/tag/v0.0.1)
