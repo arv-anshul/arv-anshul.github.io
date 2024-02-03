@@ -19,6 +19,18 @@ date: 2024-01-21
 
 </p>
 
+This project can analyse your YouTube Watch History and shows some beautiful plots which depict how your watching patterns are changes over daytime and months.
+
+Uses machine learning to tag youtube videos with the required **Content Type**. And then using content type this app show some insights.
+
+!!! example "Channel Reccommendation System"
+
+    You have to upload your subscribed channels list for this then, try to analyse channels to recommend you some similar channels which make similar contents.
+
+!!! danger "Demo Video of the APP"
+
+    I will record a video where I will show how to use this app to get insights about you watching patterns.
+
 ## :octicons-log-16: Features
 
 - [x] &nbsp; :simple-mlflow: &nbsp; Used MLFlow for model monitoring.
