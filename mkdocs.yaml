@@ -8,6 +8,8 @@ site_url: https://arv-anshul.github.io
 theme:
   language: en
   name: material
+  font:
+    text: Rubik
   icon:
     repo: material/book
     logo: fontawesome/solid/om
