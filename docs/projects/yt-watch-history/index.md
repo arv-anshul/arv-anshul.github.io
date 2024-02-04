@@ -33,6 +33,7 @@ Uses machine learning to tag youtube videos with the required **Content Type**. 
 
 ## :octicons-log-16: Features
 
+- [x] &nbsp; :simple-scikitlearn: &nbsp; **Channel Reccommendation** in `frontend`.
 - [x] &nbsp; :simple-mlflow: &nbsp; Used MLFlow for model monitoring.
 - [x] &nbsp; :simple-docker: &nbsp; Setup the project using Docker Compose.
 - [x] &nbsp; :simple-scikitlearn: &nbsp; **Channel Reccommendation** using channel's videos' `#!py "title"` and `#!py "tags"`.
@@ -63,6 +64,12 @@ Uses machine learning to tag youtube videos with the required **Content Type**. 
 </div>
 
 ## :fontawesome-solid-tags: Releases
+
+### [**`v0.1.0`**](https://github.com/arv-anshul/yt-watch-history/releases/tag/v0.1.0)
+
+- Refactor `ml` model training and prediction pipeline.
+- One docker volume for both app as data.
+- Add `channel_reco` in `frontend`.
 
 ### [**`v0.0.1`**](https://github.com/arv-anshul/yt-watch-history/releases/tag/v0.0.1)
 
