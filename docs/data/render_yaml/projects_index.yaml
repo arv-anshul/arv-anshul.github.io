@@ -6,9 +6,11 @@
   urls:
     github: https://github.com/arv-anshul/yt-watch-history
     linkedin: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
+    jupyter: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
   tags:
     - docker
     - fastapi
+    - jupyter
     - mlflow
     - mongodb
     - plotly
