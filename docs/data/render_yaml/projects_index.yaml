@@ -69,3 +69,21 @@
     - pypi
     - python
   completed_on: Nov, 2023
+
+- title: Web Scrapping 99acres.com
+  description: |
+    Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit
+    Web-UI and download the data in **CSV** format.
+  extra_desc:
+    - You have to use `cURL` command to scrape the data. (you can get the curl command from browser's network tab).
+  urls:
+    github: https://github.com/arv-anshul/99acres-scrape
+    kaggle: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
+    linkedin: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
+    streamlit: https://arv-anshul-99acres-2a.streamlit.app/
+  tags:
+    - curl
+    - pandas
+    - python
+    - streamlit
+  completed_on: Oct, 2023
