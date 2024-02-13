@@ -1,0 +1,17 @@
+[project]
+name = "arv-anshul-github-io"
+version = "0.1.0"
+description = "My personal website using `mkdocs-material`."
+authors = [{ name = "Anshul Raj Verma", email = "arv.anshul.1864@gamail.com" }]
+readme = "README.md"
+requires-python = ">= 3.11"
+dependencies = [
+    "mkdocs-markdownextradata-plugin==0.2.5",
+    "mkdocs-material==9.5.3",
+    "simpleicons==7.21.0",
+]
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []

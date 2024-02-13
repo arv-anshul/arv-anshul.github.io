@@ -1,3 +1,0 @@
-mkdocs-material==9.5.3
-mkdocs-markdownextradata-plugin==0.2.5
-simpleicons==7.21.0
