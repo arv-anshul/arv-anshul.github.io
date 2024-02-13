@@ -7,13 +7,17 @@ using `simpleicons` library.
 Go to simple-icons website: https://simpleicons.org
 Check `simpleicons` library: https://github.com/sachinraja/simple-icons-py
 """
+from __future__ import annotations
 
 import json
 import logging
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from simpleicons import icons
-from simpleicons.icon import Icon
+
+if TYPE_CHECKING:
+    from simpleicons.icon import Icon
 
 SIMPLEICONS_CSS_PATH = Path("docs/stylesheets/simpleicons.css")
 SIMPLEICONS_JSON_PATH = Path("data/simpleicons.json")
