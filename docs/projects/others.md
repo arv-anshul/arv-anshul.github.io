@@ -9,6 +9,15 @@ hide:
 
 # :octicons-repo-16:{ title="2024-01-28" } Other Projects
 
+<style>
+.md-typeset .grid.cards>ul>li {
+    border-radius: 0.8rem;
+}
+.md-typeset .grid.cards>ul>li:hover {
+  box-shadow: 0 0 0.3rem #ffffff40
+}
+</style>
+
 <div class="grid cards" markdown>
 
 {% for project in other_projects %}
