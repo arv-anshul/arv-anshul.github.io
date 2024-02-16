@@ -1,0 +1,136 @@
+socials:
+  - title: GitHub Profile
+    icon: simple-github
+    url: https://github.com/arv-anshul/
+  - title: Personal Website
+    icon: fontawesome-solid-om
+    url: https://arv-anshul.github.io/
+  - title: E-Mail
+    icon: octicons-mail-16
+    url: mailto:arv.anshul.1864@gmail.com
+  - title: Instagram Profile
+    icon: simple-instagram
+    url: https://instagram.com/arv_anshul
+  - title: LinkedIn Profile
+    icon: simple-linkedin
+    url: https://www.linkedin.com/arv-anshul
+  - title: Portfolio as PDF
+    icon: material-account-box
+    url: "#"
+
+projects:
+  - title: YouTube Watch History
+    icon: simple-youtube
+    description: |
+      Analyse your YouTube Watch History Data and get insights from it like which type
+      of which type of content you likes to watch on which time of the day. I have build
+      ML model which predicts the `contentType` of the videos from their titles.
+    links:
+      - title: Repository on GitHub
+        icon: simple-github
+        url: https://github.com/arv-anshul/yt-watch-history
+      - title: Jupyter Notebooks
+        icon: simple-jupyter
+        url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
+      - title: Project Documents
+        icon: material-file-document
+        url: https://arv-anshul.github.io/projects/yt-watch-history
+  - title: Indian Real Estate Analyser and Price Prediction
+    icon: fontawesome-solid-building
+    description: |
+      Analyse real estate of India. I have scrapped data from
+      [99acres.com](https://99acres.com). You can also make prediction of property
+      prices by providing you requirements like BHK, AREA, LOCATION and more.
+    links:
+      - title: Repository on GitHub
+        icon: simple-github
+        url: https://github.com/arv-anshul/campusx-real-estate
+      - title: Post on LinkedIn
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
+  - title: Web Scrape 99acres.com
+    icon: simple-scrapy
+    description: |
+      Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit Web-UI
+      and download the data in **CSV** format.
+    links:
+      - title: Repository on GitHub
+        icon: simple-github
+        url: https://github.com/arv-anshul/99acres-scrape
+      - title: Datasets on Kaggle
+        icon: simple-kaggle
+        url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
+      - title: Post on LinkedIn
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
+      - title: Streamlit App
+        icon: simple-streamlit
+        url: https://arv-anshul-99acres-2a.streamlit.app/
+
+tech_stack:
+  Languages:
+    - title: Python
+      icon: simple-python
+    - title: HTML
+      icon: simple-html5
+    - title: CSS
+      icon: simple-css3
+    - title: Jinja
+      icon: simple-jinja
+    - title: Bash
+      icon: simple-gnubash
+  Frameworks:
+    - title: FastAPI
+      icon: simple-fastapi
+    - title: Streamlit
+      icon: simple-streamlit
+    - title: MongoDB
+      icon: simple-mongodb
+    - title: MySQL
+      icon: simple-mysql
+    - title: SQLite
+      icon: simple-sqlite
+  Dev Tools:
+    - title: VS-Code
+      icon: simple-visualstudiocode
+    - title: Obsdian
+      icon: simple-obsidian
+    - title: Arc Browser
+      icon: simple-arc
+    - title: pre-commit
+      icon: simple-precommit
+    - title: Material for Mkdocs
+      icon: simple-materialformkdocs
+  MLOps:
+    - title: Docker
+      icon: simple-docker
+    - title: GitHub Actions
+      icon: simple-githubactions
+    - title: MLFlow
+      icon: simple-mlflow
+  Data Science:
+    - title: Scikit-Learn
+      icon: simple-scikitlearn
+    - title: Polars
+      icon: simple-polars
+    - title: Pandas
+      icon: simple-pandas
+    - title: Numpy
+      icon: simple-numpy
+    - title: Matplotlib
+      icon: material-chart-scatter-plot
+    - title: Seaborn
+      icon: material-chart-scatter-plot-hexbin
+    - title: Plotly
+      icon: simple-plotly
+  Python Libraries:
+    - title: Pytest
+      icon: simple-pytest
+    - title: Pydantic
+      icon: simple-pydantic
+    - title: Ruff
+      icon: simple-ruff
+    - title: Rye
+      icon: simple-rye
+    - title: UV
+      icon: simple-ruff
