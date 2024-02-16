@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">= 3.11"
 dependencies = [
     "mkdocs-markdownextradata-plugin==0.2.5",
-    "mkdocs-material==9.5.3",
+    "mkdocs-material==9.5.9",
     "simpleicons==7.21.0",
 ]
 
