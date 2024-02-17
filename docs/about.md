@@ -30,7 +30,7 @@ search:
   <p class="light" style="text-align: center; font-size: 25px; margin: 0px;"><strong>Anshul Raj Verma</strong></p>
 </p>
 
-<p align="center" markdown>
+<p style="text-align: justify;" markdown>
 As a student based in Bihar, India; my aspiration is to become a proficient data scientist who seamlessly integrates machine learning models in cloud. Actively exploring diverse facets of data science, including ML, NLP, and MLOps, I have honed my skills in Python, mastering essential concepts like OOPs, and Type Hinting. My proficiency extends to REST API creation, with hands-on experience in FastAPI framework. Notably, I showcase my expertise in web scraping, demonstrated through projects like [ecommerce-scrapper-api](https://github.com/arv-anshul/ecommerce-scrapper-api). Continuously expanding my technological horizons, I have successfully completed multiple ML projects, such as [yt-watch-history](https://github.com/arv-anshul/yt-watch-history), [campusx-real-estate](https://github.com/arv-anshul/campusx-real-estate).
 </p>
 
@@ -50,7 +50,9 @@ As a student based in Bihar, India; my aspiration is to become a proficient data
 <div class="grid cards" markdown>
   - :{{ project.icon }}:&nbsp; **{{ project.title }}**
 
+    <p style="text-align: justify;" markdown>
     {{ project.description }}
+    </p>
 
     ---
 
