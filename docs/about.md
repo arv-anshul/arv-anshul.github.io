@@ -10,7 +10,12 @@ search:
 # I'm Anshul Raj Verma
 
 <style>
-  .md-content__inner { margin: 0 10rem 1.2rem; }
+  @media (min-width: 767px) {
+    main > div > div.md-content {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
   article > h1 { display: none; }
   #my-projects-index { display: none; }
   .md-typeset .grid.cards>ul>li {
