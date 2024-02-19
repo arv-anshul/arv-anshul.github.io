@@ -22,6 +22,15 @@ if TYPE_CHECKING:
 SIMPLEICONS_CSS_PATH = Path("docs/stylesheets/simpleicons.css")
 SIMPLEICONS_JSON_PATH = Path("data/simpleicons.json")
 
+UNAVAILABLE_ICONS = {
+    "arc": "FCBFBD",
+    "materialformkdocs": "526CFE",
+    "polars": "CD792C",
+    "pydantic": "E92063",
+    "ruff": "D7FF64",
+    "rye": "90c820",
+}
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(levelname)s:    -  %(message)s",
@@ -41,6 +50,14 @@ def generate_tech_css(tech_data: dict[str, str]) -> str:
     return "\n".join(css_rules) + "\n"
 
 
+def from_unavailable_dict(tech: str) -> str:
+    try:
+        return UNAVAILABLE_ICONS[tech]
+    except KeyError:
+        logging.error(f"{tech!r} not present in UNAVAILABEL_ICONS dict.")
+        return "FFFFF"
+
+
 def generate_simpleicons_css() -> None:
     simpleicons_data: set[str] = set(json.loads(SIMPLEICONS_JSON_PATH.read_bytes()))
 
@@ -50,8 +67,9 @@ def generate_simpleicons_css() -> None:
             icon: Icon = getattr(icons, f"si_{tech}")
         except AttributeError:
             logging.warning(f"{tech!r} not in 'simpleicons.icon' module.")
-            tech_colors[tech] = "FFFFFF"
-            tech_colors[f"{tech}-hover"] = "FFFFFF"
+            tech_color = from_unavailable_dict(tech)
+            tech_colors[tech] = tech_color
+            tech_colors[f"{tech}-hover"] = tech_color
             continue
         else:
             tech_colors[tech] = icon.hex
