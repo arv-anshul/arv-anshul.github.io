@@ -16,6 +16,9 @@ managed = true
 virtual = true
 dev-dependencies = []
 
+[tool.rye.scripts]
+simpleicons = "python -m docs_src.generate_simpleicons_css"
+
 [tool.ruff]
 target-version = "py311"
 
