@@ -10,9 +10,9 @@ search:
 # I'm Anshul Raj Verma
 
 <style>
-  @media (min-width: 767px) {
+  @media (min-width: 900px) {
     main > div > div.md-content {
-      max-width: 80%;
+      max-width: 75%;
       margin: auto;
     }
   }
@@ -83,5 +83,5 @@ As a student based in Bihar, India; my aspiration is to become a proficient data
 ---
 
 <p align="center" markdown>
-[:fontawesome-solid-paper-plane:{ .bounce }&nbsp; Download Resume](#){ .md-button .md-button--primary }
+[:fontawesome-solid-paper-plane:{ .bounce }&nbsp; Download Resume](https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf){ .md-button .md-button--primary }
 </p>

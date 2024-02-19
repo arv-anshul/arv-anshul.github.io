@@ -6,7 +6,7 @@ socials:
     icon: fontawesome-solid-om
     url: https://arv-anshul.github.io/
   - title: E-Mail
-    icon: octicons-mail-16
+    icon: material-email
     url: mailto:arv.anshul.1864@gmail.com
   - title: Instagram Profile
     icon: simple-instagram
@@ -14,9 +14,12 @@ socials:
   - title: LinkedIn Profile
     icon: simple-linkedin
     url: https://www.linkedin.com/arv-anshul
-  - title: Portfolio as PDF
+  - title: Resume as PDF
     icon: material-account-box
-    url: "#"
+    url: https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf
+  - title: Python Projects on PyPi
+    icon: simple-pypi
+    url: https://pypi.org/user/arv-anshul/
 
 projects:
   - title: YouTube Watch History
@@ -101,6 +104,8 @@ tech_stack:
       icon: simple-precommit
     - title: Material for Mkdocs
       icon: simple-materialformkdocs
+    - icon: simple-starship
+      title: Starship Prompt
   MLOps:
     - title: Docker
       icon: simple-docker
