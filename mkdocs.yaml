@@ -85,6 +85,9 @@ extra:
           data: 0
           note: Thanks for your feedback!
   social:
+    - icon: material/email
+      link: mailto:arv.anshul.1864@gmail.com
+      name: E-Mail
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/arv_anshul
       name: Connect on Instagram
@@ -97,6 +100,9 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arv-anshul
       name: Connect on LinkedIn
+    - icon: material/account-box
+      link: https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf
+      name: Resume as PDF
 
 copyright: |
   Copyright &copy; 2024 <a href="https://github.com/arv-anshul">Anshul Raj Verma</a>
