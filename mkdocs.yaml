@@ -126,6 +126,8 @@ nav:
           - projects/yt-watch-history/index.md
           - projects/yt-watch-history/ctt.md
           - projects/yt-watch-history/channel_reco.md
+      - Spotify Analysis:
+          - projects/spotify-analysis/index.md
   - Blog:
       - blog/index.md
   - About: about.md

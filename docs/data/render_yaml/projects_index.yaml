@@ -22,6 +22,24 @@
     - youtube
   completed_on:
 
+- title: Spotify Analysis
+  description: |
+    Analyse you Spotify Streaming data and get some insights from it like whom & when
+    you listen your favorite Tracks, Artists, Playlists or Albums.
+  urls:
+    github: https://github.com/arv-anshul/spotify-analysis
+    jupyter: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
+  tags:
+    - jupyter
+    - plotly
+    - polars
+    - ruff
+    - rye
+    - scikitlearn
+    - spotify
+    - streamlit
+  completed_on:
+
 - title: E-commerce Scrapper API - FastAPI
   description: |
     Scrape data from E-commerce websites like Flipkart by searching products like
