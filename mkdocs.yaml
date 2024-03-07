@@ -64,7 +64,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - blog
+  - blog:
+      archive_date_format: yyyy/MM
+      archive_url_date_format: yyyy/MM
+      categories_url_format: "c/{slug}"
+      post_url_format: "{slug}"
   - search: null
   - markdownextradata:
       data: docs/data/render_yaml/
