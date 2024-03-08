@@ -50,11 +50,24 @@ slug: spotify-analysis
     └── YourLibrary.json          # User's Spotify library details like likes, albums, artists, etc.
     ```
 
+## Philosophy
+
+I want to analyse my Spotify's Streaming History in a way from which I can know my listening pattern over the time.
+The way Spotify give the **Spotify Wrapped** at the end of every year.
+
+### The Dashboard
+
+!!! failure "Currently not developed!"
+
+    If you want to join for this contact me on my socials [:fontawesome-brands-linkedin:{ .primary }](https://www.linkedin.com/in/arv-anshul "LinkedIn") [:material-email:{ .primary }](mailto:arv.anshul.1864@gmail.com "E-Mail")
+
+There has been a dashboard (using [:simple-streamlit:{ .streamlit }](https://streamlit.io) Streamlit) where other users can upload their `StreamingHistory.json` files to see analysis on their history.
+
 ## Some Awesome Insights
 
-To gather insights from `json` files I've used :simple-polars: [`polars`](https://pola.rs) and thier builtin `.plot` accessor which uses [`hvplot`](https://hvplot.holoviz.org/) library under-the-hood.
+To gather insights from `json` files I've used :simple-polars: [`polars`](https://pola.rs) and their builtin `.plot` accessor which uses [`hvplot`](https://hvplot.holoviz.org/) library under-the-hood.
 
-> See the :simple-jupyter: [Jupyter Notebooks](https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history) to see all the insights.
+:simple-jupyter:{ .lg .middle title="Jupyter Notebooks" } See the [Jupyter Notebooks](https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis) to see all the insights.
 
 ??? abstract "Reference"
 
@@ -85,6 +98,8 @@ To gather insights from `json` files I've used :simple-polars: [`polars`](https:
 - [x] Which daytime user listen most and whom.
 - [x] Tracks which have listened most times in a day.
 - [x] Tracks streaming streak (by day/week).
+- [x] T/As which only played once
+- [x] Dates when user does not played any track
 
 ### Using `Playlist.json`
 
