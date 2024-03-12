@@ -12,3 +12,7 @@ __rough__/
 arv.*
 logs/
 site/
+
+# Do not ignore `requirements.lock` file because
+# it is used to setup the project with `pip`
+!requirements.lock

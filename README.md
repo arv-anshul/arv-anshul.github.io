@@ -19,29 +19,39 @@
 
 ## Setup Locally
 
-1. Clone this repository with `git`:
+Clone this repository with `git`:
 
-    ```bash
-    git clone https://github.com/arv-anshul/arv-anshul.github.io
-    ```
+```bash
+git clone https://github.com/arv-anshul/arv-anshul.github.io.git
+```
 
-2. Create a virtual environemt in the cloned directory, then install requirements from `requirements.txt` file using `pip` command:
+### Install with `rye`
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Install `rye` from [official website](https://rye-up.com) and create virtual environment using `rye`.
 
-3. Now, you can easily serve the `docs/` folder as a website using `mkdocs` commands:
+```bash
+rye sync --no-dev
+```
 
-    ```bash
-    mkdocs serve
-    ```
+Now, you can easily serve the `docs/` folder as a website:
 
-4. Optional, if you want to render all the `.md` as `.html`, `.css` and `.js` scripts, then run:
+```bash
+rye mkdocs serve
+```
 
-    ```bash
-    mkdocs build
-    ```
+### Install with `pip`
+
+Install dependencies from `requirements.lock` (works as `requirements.txt`) file:
+
+```bash
+pip install -r requirements.lock
+```
+
+Now, you can easily serve the `docs/` folder as a website:
+
+```bash
+mkdocs serve
+```
 
 ## Acknowledgement
 
