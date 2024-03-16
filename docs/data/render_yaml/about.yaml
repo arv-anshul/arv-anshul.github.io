@@ -82,6 +82,8 @@ tech_stack:
       icon: simple-jinja
     - title: Bash
       icon: simple-gnubash
+    - title: JSON Schema
+      icon: simple-json
   Frameworks:
     - title: FastAPI
       icon: simple-fastapi
@@ -106,13 +108,21 @@ tech_stack:
       icon: simple-materialformkdocs
     - icon: simple-starship
       title: Starship Prompt
-  MLOps:
+    - title: Ruff
+      icon: simple-ruff
+    - title: Rye
+      icon: simple-rye
+    - title: Jupyter Notebooks
+      icon: simple-jupyter
+  Dev/ML Ops:
     - title: Docker
       icon: simple-docker
     - title: GitHub Actions
       icon: simple-githubactions
     - title: MLFlow
       icon: simple-mlflow
+    - title: PyPI
+      icon: simple-pypi
   Data Science:
     - title: Scikit-Learn
       icon: simple-scikitlearn
@@ -133,9 +143,3 @@ tech_stack:
       icon: simple-pytest
     - title: Pydantic
       icon: simple-pydantic
-    - title: Ruff
-      icon: simple-ruff
-    - title: Rye
-      icon: simple-rye
-    - title: UV
-      icon: simple-ruff
