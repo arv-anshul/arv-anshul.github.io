@@ -8,20 +8,19 @@ slug: spotify-analysis
 # :simple-spotify:{ .spotify title="2024-02-22" } Spotify Analysis
 
 
-{% for project in projects_index %}
-
+{% for project in projects_index.projects %}
 {% if project.title == "Spotify Analysis" %}
 
 <hr>
-<p align="center" markdown>
-{% for type, url in project.urls.items()|sort(attribute=0) %} [:simple-{{ type }}:{ .lg .hover-icon }]({{ url }}){ title="{{ type|title }}" } &nbsp; {% endfor %} :material-slash-forward:{ .lg } &nbsp;
-{% for tag in project.tags|sort %} :simple-{{ tag }}:{ .lg .{{ tag }} .hover-icon-bounce title="{{ tag|title }}"} &nbsp; {% endfor %}
+<p align=center markdown>
+{% for url in project.urls %}[:{{ url.icon }}:{ .light .secondary-hover }]({{ url.url }}){ target=blank_ title="{{ url.title }}" } &nbsp; &nbsp; {% endfor %}
+:material-slash-forward: &nbsp; &nbsp;
+{% for tag in project.tags|sort %} :simple-{{ tag }}:{ .{{ tag }} .hover-icon-bounce title="{{ tag|title }}"} &nbsp; {% endfor %}
 </p>
 <hr>
 
 <p style="text-align: justify;">{{ project.description }}</p>
 {% endif %}
-
 {% endfor %}
 
 

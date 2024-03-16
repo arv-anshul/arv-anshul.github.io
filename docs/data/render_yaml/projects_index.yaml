@@ -1,133 +1,173 @@
-- title: YouTube Watch History
-  description: |
-    Analyse your YouTube Watch History Data and get insights from it like which type of
-    which type of content you likes to watch on which time of the day. I have build ML
-    model which predicts the `contentType` of the videos from their titles.
-  urls:
-    github: https://github.com/arv-anshul/yt-watch-history
-    linkedin: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
-    jupyter: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
-  tags:
-    - docker
-    - fastapi
-    - jupyter
-    - mlflow
-    - mongodb
-    - plotly
-    - polars
-    - pydantic
-    - ruff
-    - scikitlearn
-    - streamlit
-    - youtube
-  completed_on:
+$schema: https://github.com/arv-anshul/arv-anshul.github.io/raw/main/schemas/projects_index-schema.json
+projects:
+  - title: YouTube Watch History
+    description: |
+      Analyse your YouTube Watch History Data and get insights from it like which type of
+      which type of content you likes to watch on which time of the day. I have build ML
+      model which predicts the `contentType` of the videos from their titles.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/yt-watch-history
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
+      - title: Jupyter Notebooks
+        icon: simple-jupyter
+        url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
+    tags:
+      - docker
+      - fastapi
+      - jupyter
+      - mlflow
+      - mongodb
+      - plotly
+      - polars
+      - pydantic
+      - ruff
+      - scikitlearn
+      - streamlit
+      - youtube
+    completed_on: January, 2024
 
-- title: Spotify Analysis
-  description: |
-    Analyse you Spotify Streaming data and get some insights from it like whom & when
-    you listen your favorite Tracks, Artists, Playlists or Albums.
-  urls:
-    github: https://github.com/arv-anshul/spotify-analysis
-    jupyter: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
-  tags:
-    - jupyter
-    - plotly
-    - polars
-    - ruff
-    - rye
-    - scikitlearn
-    - spotify
-    - streamlit
-  completed_on:
+  - title: Spotify Analysis
+    description: |
+      Analyse your Spotify Streaming data and get some insights from it like whom & when
+      you listen your favorite Tracks, Artists, Playlists or Albums.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/spotify-analysis
+      - title: Jupyter Notebooks
+        icon: simple-jupyter
+        url: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
+    tags:
+      - jupyter
+      - plotly
+      - polars
+      - ruff
+      - rye
+      - scikitlearn
+      - spotify
+      - streamlit
+    completed_on:
 
-- title: E-commerce Scrapper API - FastAPI
-  description: |
-    Scrape data from E-commerce websites like Flipkart by searching products like
-    iphone, laptops and more. Also you can export the scrapped data into JOSN format.
-    API will do all the works for you, you have to just make a request with some
-    endpoints.
-  extra_desc:
-    - Modular Coding, Async Programming.
-    - I have also written some tests using `fastapi` builtin `TestClient()`.
-      [See Here](https://github.com/arv-anshul/ecommerce-scrapper-api/tree/main/ecommerce/tests/test_api/test_flipkart){ target=blank_ }
-  urls:
-    github: https://github.com/arv-anshul/ecommerce-scrapper-api
-    linkedin: https://www.linkedin.com/posts/arv-anshul_fastapi-api-ecommerce-activity-7128575593570340864-WE2m?utm_source=share&utm_medium=member_desktop
-  tags:
-    - fastapi
-    - flipkart
-    - pydantic
-  completed_on: Nov, 2023
+  - title: E-commerce Scrapper API - FastAPI
+    description: |
+      Scrape data from E-commerce websites like Flipkart by searching products like
+      iphone, laptops and more. Also you can export the scrapped data into JOSN format.
+      API will do all the works for you, you have to just make a request with some
+      endpoints.
+    extra_desc:
+      - Modular Coding, Async Programming.
+      - I have also written some tests using `fastapi` builtin `TestClient()`.
+        [See Here](https://github.com/arv-anshul/ecommerce-scrapper-api/tree/main/ecommerce/tests/test_api/test_flipkart){ target=blank_ }
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/ecommerce-scrapper-api
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_fastapi-api-ecommerce-activity-7128575593570340864-WE2m?utm_source=share&utm_medium=member_desktop
+    tags:
+      - fastapi
+      - flipkart
+      - pydantic
+    completed_on: November, 2023
 
-- title: Indian Real Estate Analyser and Price Prediction
-  description: |
-    Analyse real estate of India. I have scrapped data from [99acres.com](https://99acres.com).
-    You can also make prediction of property prices by providing you requirements like
-    BHK, AREA, LOCATION and more.
-  extra_desc:
-    - I have made this project end-to-end.
-    - Uses `streamlit` library to show the analysis with beautiful plots from `plotly`.
-  urls:
-    github: https://github.com/arv-anshul/campusx-real-estate
-    linkedin: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
-  tags:
-    - plotly
-    - scikitlearn
-    - streamlit
-  completed_on: Oct, 2023
+  - title: Indian Real Estate Analyser and Price Prediction
+    description: |
+      Analyse real estate of India. I have scrapped data from [99acres.com](https://99acres.com).
+      You can also make prediction of property prices by providing you requirements like
+      BHK, AREA, LOCATION and more.
+    extra_desc:
+      - I have made this project end-to-end.
+      - Uses `streamlit` library to show the analysis with beautiful plots from `plotly`.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/campusx-real-estate
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
+    tags:
+      - plotly
+      - scikitlearn
+      - streamlit
+    completed_on: October, 2023
 
-- title: Curler
-  description: |
-    Curler is a tool which let's you parse `curl` command into python with ease.
-    Also, you can use that parsed object with `requests`, `httpx` like library to make
-    request with `curl` commands.
-  urls:
-    github: https://github.com/arv-anshul/curler
-    linkedin: https://www.linkedin.com/posts/arv-anshul_hey-i-am-happy-to-tell-you-that-i-activity-7118254699127975939-ePyf?utm_source=share&utm_medium=member_desktop
-    pypi: https://pypi.org/p/curler
-  tags:
-    - pypi
-    - python
-  completed_on: Nov, 2023
+  - title: Curler
+    description: |
+      Curler is a tool which let's you parse `curl` command into python with ease.
+      Also, you can use that parsed object with `requests`, `httpx` like library to make
+      request with `curl` commands.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/curler
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_hey-i-am-happy-to-tell-you-that-i-activity-7118254699127975939-ePyf?utm_source=share&utm_medium=member_desktop
+      - title: Package on PyPi
+        icon: simple-pypi
+        url: https://pypi.org/p/curler
+    tags:
+      - pypi
+      - python
+    completed_on: November, 2023
 
-- title: Web Scrapping 99acres.com
-  description: |
-    Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit
-    Web-UI and download the data in **CSV** format.
-  extra_desc:
-    - You have to use `cURL` command to scrape the data. (you can get the curl command from browser's network tab).
-  urls:
-    github: https://github.com/arv-anshul/99acres-scrape
-    kaggle: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
-    linkedin: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
-    streamlit: https://arv-anshul-99acres-2a.streamlit.app/
-  tags:
-    - curl
-    - pandas
-    - python
-    - streamlit
-  completed_on: Oct, 2023
+  - title: Web Scrapping 99acres.com
+    description: |
+      Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit
+      Web-UI and download the data in **CSV** format.
+    extra_desc:
+      - You have to use `cURL` command to scrape the data. (you can get the curl command from browser's network tab).
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/99acres-scrape
+      - title: Datasets on Kaggle
+        icon: simple-kaggle
+        url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
+      - title: Streamlit App
+        icon: simple-streamlit
+        url: https://arv-anshul-99acres-2a.streamlit.app/
+    tags:
+      - curl
+      - pandas
+      - python
+      - streamlit
+    completed_on: October, 2023
 
-- title: CampusX DSMP - Resources
-  description: |
-    This project involves gathering data from a course website's HTML structure, followed by developing Python scripts for parsing and extracting essential data. HTTP requests are then made to obtain session resources, with robust testing and data structure maintenance ensuring integrity. Utilizing `mkdocs` and `mkdocs-material`, a professional web page is generated and hosted on GitHub Pages via CI/CD with GitHub Actions.
-  extra_desc:
-    - Wrote python scripts ([`downloader.py`](https://github.com/arv-anshul/campusx-dsmp/blob/main/src/downloader.py), [`resource_dl.py`](https://github.com/arv-anshul/campusx-dsmp/blob/main/src/resource_dl.py)) to download DSMP course resources from internet.
-    - Used GitHub to store resource files.
-  urls:
-    github: https://github.com/arv-anshul/campusx-dsmp
-    linkedin: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
-    materialformkdocs: https://arv-anshul.github.io/campusx-dsmp/
-  tags:
-    - curl
-    - dotenv
-    - githubactions
-    - githubpages
-    - jinja
-    - json
-    - materialformkdocs
-    - precommit
-    - pytest
-    - python
-    - rye
-  completed_on: Mar, 2023
+  - title: CampusX DSMP - Resources
+    description: |
+      This project involves gathering data from a course website's HTML structure, followed by developing Python scripts for parsing and extracting essential data. HTTP requests are then made to obtain session resources, with robust testing and data structure maintenance ensuring integrity. Utilizing `mkdocs` and `mkdocs-material`, a professional web page is generated and hosted on GitHub Pages via CI/CD with GitHub Actions.
+    extra_desc:
+      - Wrote python scripts ([`downloader.py`](https://github.com/arv-anshul/campusx-dsmp/blob/main/src/downloader.py), [`resource_dl.py`](https://github.com/arv-anshul/campusx-dsmp/blob/main/src/resource_dl.py)) to download DSMP course resources from internet.
+      - Used GitHub to store resource files.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/campusx-dsmp
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
+      - title: Project's Website
+        icon: simple-materialformkdocs
+        url: https://arv-anshul.github.io/campusx-dsmp/
+    tags:
+      - curl
+      - dotenv
+      - githubactions
+      - githubpages
+      - jinja
+      - json
+      - materialformkdocs
+      - precommit
+      - pytest
+      - python
+      - rye
+    completed_on: March, 2023

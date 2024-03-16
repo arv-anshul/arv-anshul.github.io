@@ -8,14 +8,15 @@ hide:
 
 # :octicons-feed-repo-16:{ title="2024-02-16" } CampusX DSMP - Resources
 
-{% for project in projects_index %}
+{% for project in projects_index.projects %}
 
 {% if project.title == "CampusX DSMP - Resources" %}
 
 <hr>
-<p align="center" markdown>
-{% for type, url in project.urls.items()|sort(attribute=0) %} [:simple-{{ type }}:{ .lg .hover-icon }]({{ url }}){ title="{{ type|title }}" } &nbsp; {% endfor %} :material-slash-forward:{ .lg } &nbsp;
-{% for tag in project.tags|sort %} :simple-{{ tag }}:{ .lg .{{ tag }} .hover-icon-bounce title="{{ tag|title }}"} &nbsp; {% endfor %}
+<p align=center markdown>
+{% for url in project.urls %}[:{{ url.icon }}:{ .light .secondary-hover }]({{ url.url }}){ target=blank_ title="{{ url.title }}" } &nbsp; &nbsp; {% endfor %}
+:material-slash-forward: &nbsp; &nbsp;
+{% for tag in project.tags|sort %} :simple-{{ tag }}:{ .{{ tag }} .hover-icon-bounce title="{{ tag|title }}"} &nbsp; {% endfor %}
 </p>
 <hr>
 
