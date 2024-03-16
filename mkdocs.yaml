@@ -132,6 +132,7 @@ nav:
           - projects/yt-watch-history/channel_reco.md
       - Spotify Analysis:
           - projects/spotify-analysis/index.md
+      - projects/campusx-dsmp.md
   - Blog:
       - blog/index.md
   - About: about.md
