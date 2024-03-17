@@ -7,12 +7,18 @@
 .highlight span.filename {
   border-bottom: none;
   border-radius: var(--base-border-radius);
+  display: inline;
   font-family: var(--md-code-font-family);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   margin-bottom: 5px;
   text-align: center;
 }
-.md-typeset pre > code,
 .highlight span.filename + pre > code {
+  border-radius: var(--base-border-radius);
+  border-top-left-radius: 0;
+}
+.md-typeset pre > code {
   border-radius: var(--base-border-radius);
 }
 
