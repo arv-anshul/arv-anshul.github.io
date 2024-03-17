@@ -97,14 +97,3 @@
 .warning-hover:hover {
   color: #ffc107;
 }
-
-/* Change font family of filename present on top of code block. */
-.highlight .filename {
-  font-family: var(--md-code-font-family);
-}
-
-/* Customize admonition layout */
-.md-typeset .admonition {
-  border-width: 0px;
-  border-left-width: 4px;
-}

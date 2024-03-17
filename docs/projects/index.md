@@ -4,14 +4,6 @@
   #my-projects-index {
     display: none;
   }
-  .md-typeset .grid.cards>ul>li {
-    border-radius: 0.8rem;
-    border-width: 2px;
-    padding-bottom: 0.5rem;
-  }
-  .md-typeset .grid.cards>ul>li:hover {
-    box-shadow: 0 0 0.3rem #ffffff40
-  }
 </style>
 
 {% for project in projects_index.projects %}

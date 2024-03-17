@@ -18,11 +18,6 @@ search:
   }
   article > h1 { display: none; }
   #my-projects-index { display: none; }
-  .md-typeset .grid.cards>ul>li {
-    border-radius: 0.8rem;
-    padding-bottom: 0.5rem;
-  }
-  .md-typeset .grid.cards>ul>li:hover { box-shadow: 0 0 0.2rem #ffffff40 }
 </style>
 
 <p style="text-align: center; margin: 0px;" markdown>
