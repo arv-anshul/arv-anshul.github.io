@@ -65,7 +65,7 @@ markdown_extensions:
 
 plugins:
   - blog:
-      archive_date_format: yyyy/MM
+      archive_date_format: MMMM, yyyy
       archive_url_date_format: yyyy/MM
       categories_url_format: "c/{slug}"
       post_url_format: "{slug}"
