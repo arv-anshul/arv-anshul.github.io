@@ -34,3 +34,8 @@
 .md-typeset .md-button {
   border-radius: var(--base-border-radius);
 }
+
+/* Footer: Social Links */
+.md-social__link svg {
+  max-height: 1rem;
+}
