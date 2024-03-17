@@ -25,6 +25,8 @@ I have introduced to Starship Prompt a week ago and it makes my shell prompt ama
 </figcaption>
 </figure>
 
+<!-- more -->
+
 !!! tip "Prerequisites"
 
     - Install Starship Prompt from [official documentation](https://starship.rs/guide/#step-1-install-starship).

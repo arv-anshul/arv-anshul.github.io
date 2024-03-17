@@ -17,6 +17,8 @@ Handling outlier is a big task for data scientist. To handle the outliers we hav
 
 > :calendar: I have written this page as notes very time ago; so if there is any mistake please let me know I'll fix it. Thanks 🤗
 
+<!-- more -->
+
 ## Deletion Based Approach
 
 ### IQR

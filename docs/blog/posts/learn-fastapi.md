@@ -20,6 +20,8 @@ hide:
 
 _A better framework than Flask_{ .secondary title="My Opinion" }. Get production-ready code and API. With automatic interactive documentation. Based on (and fully compatible with) the open standards for APIs: [OpenAPI](https://github.com/OAI/OpenAPI-Specification) (previously known as Swagger) and [JSON Schema](https://json-schema.org/).
 
+<!-- more -->
+
 ### Features
 
 1. **Automatic docs:** Generate documentation for your API automatically.

@@ -21,6 +21,8 @@ That's why we going to take a overview of Decision Tree in this blog.
 
 ## Anatomy of Decision Trees
 
+<!-- more -->
+
 A decision tree is a popular machine learning algorithm used for both classification and regression tasks. It is a tree-like model composed of nodes, where each internal node represents a decision based on a feature, each branch represents the outcome of that decision, and each leaf node represents the final prediction.
 
 - **Root Node**: The topmost node that makes the initial decision.

@@ -25,6 +25,8 @@ title: Clustering Algorithms in ML
 
 ## :material-scatter-plot:  KMeans
 
+<!-- more -->
+
 ### Working Steps
 
 1. You tell the algorithm how many clusters are there in the data (this is assumption which is taken before initialization).
