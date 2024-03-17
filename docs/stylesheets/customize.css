@@ -1,12 +1,19 @@
 :root {
   --admonition-border-left-width: 4px;
-  --grid-cards-border-radius: 0.5rem;
-  --md-button-border-radius: 0.5rem;
+  --base-border-radius: 0.5rem;
 }
 
 /* Change font family of filename present on top of code block. */
-.highlight .filename {
+.highlight span.filename {
+  border-bottom: none;
+  border-radius: var(--base-border-radius);
   font-family: var(--md-code-font-family);
+  margin-bottom: 5px;
+  text-align: center;
+}
+.md-typeset pre > code,
+.highlight span.filename + pre > code {
+  border-radius: var(--base-border-radius);
 }
 
 /* Customize admonition layout */
@@ -17,7 +24,7 @@
 
 /* Grid Cards */
 .md-typeset .grid.cards > ul > li {
-  border-radius: var(--grid-cards-border-radius);
+  border-radius: var(--base-border-radius);
 }
 .md-typeset .grid.cards > ul > li:hover {
   box-shadow: 0 0 0.2rem #ffffff40;
@@ -25,5 +32,5 @@
 
 /* Markdown Button */
 .md-typeset .md-button {
-  border-radius: var(--md-button-border-radius);
+  border-radius: var(--base-border-radius);
 }
