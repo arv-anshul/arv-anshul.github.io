@@ -30,3 +30,13 @@ projects:
     icon: python
     github: https://github.com/arv-anshul/easy-analysis
     status: deprecated
+  - title: Family Tree
+    description: Create family tree using python only and export it in JSON/Mermaid format.
+    icon: python
+    github: https://github.com/arv-anshul/family-tree
+    status: working
+  - title: Markdown Badge
+    description: CLI tool to get simpleicon badges for markdown file.
+    icon: simpleicons
+    github: https://github.com/arv-anshul/md-badges
+    status: deprecated
