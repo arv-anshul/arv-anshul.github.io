@@ -97,3 +97,12 @@
 .warning-hover:hover {
   color: #ffc107;
 }
+
+/* Extra css classes to change layouts */
+.base-border-radius {
+  border-radius: var(--base-border-radius);
+}
+
+.md-typeset .slim-button {
+  padding: .3em 1.3em;
+}
