@@ -1,3 +1,7 @@
+---
+icon: material/notebook-multiple
+---
+
 # My Projects Index
 
 <style>

@@ -2,6 +2,7 @@
 hide:
   - navigation
   - feedback
+icon: octicons/home-fill-24
 ---
 
 <style>
