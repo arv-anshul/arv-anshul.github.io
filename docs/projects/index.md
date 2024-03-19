@@ -33,3 +33,7 @@ icon: material/notebook-multiple
 </div>
 
 {% endfor %}
+
+<p align=center markdown>
+[:octicons-repo-16: Other Projects](others.md){ .md-button .md-button--primary .slim-button }
+</p>
