@@ -1,7 +1,7 @@
 ---
 date:
   created: 2024-02-21
-  updated: 2024-02-21
+  updated: 2024-03-19
 authors:
   - arv-anshul
 description: |
@@ -70,7 +70,7 @@ format = "[](fg:$style)[$symbol ($context)](bg:$style)[](fg:$style)"
 
 ## :art: Color Palette
 
-Did you see `#!toml style = "arv_python"` and `#!toml style = "arv_docker"` in above examples.
+Did you see `style = "arv_python"` and `style = "arv_docker"` in above examples.
 Those are my custom defined **palette** as `"arv-anshul"`.
 
 ```toml
@@ -82,6 +82,35 @@ arv_docker = "026"
 arv_git = "063"
 arv_python = "028"
 arv_custom = "236"
+```
+
+??? warning "Print ANSI Colormap"
+
+    ```bash
+    # Use this function to print ANSI colormap
+    function colormap() {
+        range_start=${1:-1}
+        range_end=${2:-255}
+
+        for i in $(seq $range_start $range_end); do
+            echo -en "\e[48;5;${i}m  ${(l:3::0:)i}  \e[0m "
+            [[ $((i % 10)) -eq 0 ]] && echo
+        done
+        return 0
+    }
+    ```
+
+If you doc't want to use ANSI color format then you also use `starship`'s pre-defined colors: `black`, `red`, `green`, `blue`, `yellow`, `purple`, `cyan`, `white`. You can optionally prefix these with `bright-` to get the bright version (e.g. `bright-white`). [See in documentation](https://starship.rs/advanced-config/#style-strings)
+
+```toml
+palette = "arv-anshul-color"
+
+[palettes.arv-anshul-color]
+arv_dir = "bright-red"
+arv_docker = "bright-blue"
+arv_git = "blue"
+arv_python = "green"
+arv_custom = "black"
 ```
 
 ??? example "Conventions"
@@ -139,9 +168,7 @@ symbol = "󰨞 " # (3)!
 
 ![](../assets/images/with-starship.png "With Starship"){ .heart }
 
-<figcaption>
-If you want to make prompt to look like mine!<br><strong>Checkout my config file</strong>
-</figcaption>
+<figcaption>If you want to make prompt to look like mine! Click below</figcaption>
 </figure>
 
 <p align="center" markdown>
