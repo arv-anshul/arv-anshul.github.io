@@ -84,3 +84,23 @@ del.critic {
   border-bottom-right-radius: var(--base-border-radius);
   border-bottom-left-radius: var(--base-border-radius);
 }
+
+/* Blog - index.md */
+div.md-content header {
+  display: none;
+}
+
+.md-post--excerpt {
+  background-color: var(--md-accent-fg-color--transparent);
+  box-shadow: 0 0 0 1rem var(--md-accent-fg-color--transparent);
+  border-radius: var(--base-border-radius);
+}
+
+.md-post--excerpt .md-post__header {
+  justify-content: center;
+}
+
+.md-post--excerpt .md-post__content > h2,
+.md-post__action {
+  text-align: center;
+}
