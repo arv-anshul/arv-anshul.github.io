@@ -45,3 +45,42 @@
 .md-social__link svg {
   max-height: 1rem;
 }
+
+/* Critic, Mark */
+ins.critic,
+del.critic {
+  text-decoration: none;
+}
+
+.md-typeset .critic,
+.md-typeset mark {
+  border-radius: 0.2rem;
+  padding: 0 0.2rem;
+}
+
+.md-typeset mark {
+  box-shadow: 0 0 0 0.1rem var(--md-typeset-mark-color);
+}
+
+.md-typeset ins.critic {
+  box-shadow: 0 0 0 0.1rem var(--md-typeset-ins-color);
+}
+
+.md-typeset del.critic {
+  box-shadow: 0 0 0 0.1rem var(--md-typeset-del-color);
+}
+
+/* Forms */
+.md-search__form {
+  border-radius: var(--base-border-radius);
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-top-right-radius: var(--base-border-radius);
+  border-top-left-radius: var(--base-border-radius);
+}
+
+[dir="ltr"] .md-search__output {
+  border-bottom-right-radius: var(--base-border-radius);
+  border-bottom-left-radius: var(--base-border-radius);
+}
