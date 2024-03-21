@@ -104,3 +104,8 @@ div.md-content header {
 .md-post__action {
   text-align: center;
 }
+
+/* Table */
+.md-typeset table:not([class]) {
+  border-radius: var(--base-border-radius);
+}
