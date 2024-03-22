@@ -35,9 +35,6 @@ projects:
       Analyse your Spotify Streaming data and get some insights from it like whom & when
       you listen your favorite Tracks, Artists, Playlists or Albums.
     urls:
-      - title: GitHub Repository
-        icon: simple-github
-        url: https://github.com/arv-anshul/spotify-analysis
       - title: Jupyter Notebooks
         icon: simple-jupyter
         url: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
