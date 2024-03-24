@@ -1,0 +1,46 @@
+{
+  "Blogs Frontmatter": {
+    "body": [
+      "---",
+      "date:",
+      "  created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "  updated: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "authors:",
+      "  - arv-anshul",
+      "categories:",
+      "  - ",
+      "description:",
+      "title: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
+      "slug: $TM_FILENAME_BASE",
+      "---",
+      "",
+      "# :tada:{ title=\"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\" }  ${TM_FILENAME_BASE/[-_]/ /g}",
+      ""
+    ],
+    "description": "Frontmatter section for Blogs.",
+    "prefix": "blog-frm",
+    "scope": "markdown"
+  },
+  "Grid Cards": {
+    "body": ["<div class=\"grid cards\" markdown>", "$0", "</div>"],
+    "description": [
+      "Grid Cards template of mkdocs.",
+      "See documentaion: https://squidfunk.github.io/mkdocs-material/reference/grids/"
+    ],
+    "prefix": "grid-cards",
+    "scope": "markdown"
+  },
+  "Projects Frontmatter": {
+    "body": [
+      "---",
+      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "title: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
+      "slug: $TM_FILENAME_BASE",
+      "icon: simple/python",
+      "---"
+    ],
+    "description": "Frontmatter section for Projects.",
+    "prefix": "project-frm",
+    "scope": "markdown"
+  }
+}
