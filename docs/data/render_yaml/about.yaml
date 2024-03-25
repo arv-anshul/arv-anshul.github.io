@@ -112,8 +112,10 @@ tech_stack:
       icon: simple-ruff
     - title: Rye
       icon: simple-rye
-    - title: Jupyter Notebooks
-      icon: simple-jupyter
+    - title: Raycast
+      icon: simple-raycast
+    - title: Zed Code Editor
+      icon: simple-zedindustries
   Dev/ML Ops:
     - title: Docker
       icon: simple-docker
