@@ -1,5 +1,5 @@
 :root {
-  --admonition-border-left-width: 4px;
+  --admonition-border-left-width: 0.2rem;
   --base-border-radius: 0.5rem;
 }
 
@@ -25,6 +25,11 @@
 /* Customize admonition layout */
 .md-typeset .admonition {
   border-width: 0px;
+  border-left-width: var(--admonition-border-left-width);
+}
+
+[dir="ltr"] .md-typeset blockquote {
+  border-radius: 0.2rem;
   border-left-width: var(--admonition-border-left-width);
 }
 
