@@ -84,6 +84,8 @@ tech_stack:
       icon: simple-gnubash
     - title: JSON Schema
       icon: simple-json
+    - title: Rust
+      icon: simple-rust
   Frameworks:
     - title: FastAPI
       icon: simple-fastapi
