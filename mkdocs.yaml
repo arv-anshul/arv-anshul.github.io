@@ -136,6 +136,9 @@ nav:
       - Spotify Analysis:
           - projects/spotify-analysis/index.md
       - projects/campusx-dsmp.md
+  - References:
+      - ref/index.md
+      - ref/bash/tips.md
   - Blog:
       - blog/index.md
   - About: about/index.md
