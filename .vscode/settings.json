@@ -10,6 +10,7 @@
   "yaml.schemas": {
     "schemas/projects_index-schema.json": ["projects_index.yaml"],
     "schemas/other_projects-schema.json": ["other_projects.yaml"],
+    "schemas/friends-schema.json": ["friends.yaml"],
     "https://squidfunk.github.io/mkdocs-material/schema.json": [
       "mkdocs.yaml",
       "mkdocs.yml"
