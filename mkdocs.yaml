@@ -138,7 +138,9 @@ nav:
       - projects/campusx-dsmp.md
   - References:
       - ref/index.md
-      - ref/bash/tips.md
+      - Bash:
+          - ref/bash/tips.md
+          - blog/posts/starship.md
   - Blog:
       - blog/index.md
   - About: about/index.md

@@ -10,6 +10,7 @@ categories:
   - others
 slug: starship-prompt
 title: Starship Prompt
+icon: simple/starship
 ---
 
 # :simple-starship:{ .middle title="2024-02-21" } Starship Prompt
