@@ -6,6 +6,16 @@ hide:
   - feedback
 ---
 
+<style>
+  article > h1 { display: none; }
+  @media (min-width: 900px) {
+    main > div > div.md-content {
+      max-width: 75%;
+      margin: auto;
+    }
+  }
+</style>
+
 <div class="grid cards" markdown>
 
 {% for friend in friends.friends %}
