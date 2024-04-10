@@ -143,6 +143,7 @@ nav:
       - Bash:
           - ref/bash/tips.md
           - blog/posts/starship.md
+          - ref/bash/useful-commands.md
   - Blog:
       - blog/index.md
   - About: about/index.md
