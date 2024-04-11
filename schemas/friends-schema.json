@@ -27,13 +27,11 @@
           },
           "avatar": {
             "description": "Avatar (Picture) to display on webpage.",
-            "type": "string",
-            "pattern": "^https?://\\w+"
+            "type": "string"
           },
           "primaryUrl": {
             "description": "A url which showcase the friend's abilities very well like his/her GitHub or LinkedIn profile link.",
-            "type": "string",
-            "pattern": "^https?://\\w"
+            "type": "string"
           },
           "description": {
             "description": "Describe your friend by providing his/her info like profession, status and more.",
@@ -64,8 +62,7 @@
             "examples": ["Github Profile", "Portfolio Website", "Resume"]
           },
           "url": {
-            "type": "string",
-            "pattern": "https?://\\w+"
+            "type": "string"
           },
           "icon": {
             "$ref": "https://github.com/squidfunk/mkdocs-material/raw/master/docs/schema/assets/icons.json",
