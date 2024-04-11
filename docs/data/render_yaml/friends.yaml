@@ -20,7 +20,10 @@ friends:
         icon: material/file-document
       - title: Personal Website
         url: https://arv-anshul.github.io
-        icon: simple/materialformkdocs
+        icon: material/web
+      - title: Email
+        url: mailto:arv.anshul.1864@gmail.com
+        icon: material/email
   - name: Wcowin
     primaryUrl: https://wcowin.work/
     avatar: https://s1.imagehub.cc/images/2024/02/02/91a767e93d1a344e44c69936464c583e.png
