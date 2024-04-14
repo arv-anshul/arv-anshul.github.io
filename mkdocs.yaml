@@ -144,6 +144,8 @@ nav:
           - ref/bash/tips.md
           - blog/posts/starship.md
           - ref/bash/useful-commands.md
+      - Statistics:
+          - blog/posts/basics-of-statistics.md
   - Blog:
       - blog/index.md
   - About: about/index.md
