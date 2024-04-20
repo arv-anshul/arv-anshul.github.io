@@ -140,6 +140,7 @@ nav:
       - projects/campusx-dsmp.md
   - References:
       - ref/index.md
+      - ref/learn-stuff.md
       - Bash:
           - ref/bash/tips.md
           - blog/posts/starship.md
