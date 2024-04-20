@@ -36,5 +36,6 @@ icon: octicons/home-fill-24
   - :octicons-project-roadmap-16:{ .lg .middle }&nbsp; **My Projects** &nbsp;[:material-link:{ .middle .bounce }](project/index.md)
   - :fontawesome-brands-blogger-b:{ .lg .middle }&nbsp; **My Blogs** &nbsp;[:material-link:{ .middle .bounce }](blog/index.md)
   - :fontawesome-solid-users-viewfinder:{ .lg .middle }&nbsp; **My Friends** &nbsp;[:material-link:{ .middle .bounce }](friends.md)
+  - :fontawesome-solid-user-tie:{ .lg .middle }&nbsp; **Achievements** &nbsp;[:material-link:{ .middle .bounce }](achievements/index.md)
 
 </div>
