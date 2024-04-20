@@ -37,7 +37,7 @@ projects:
         url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
       - title: Project Documents
         icon: material-file-document
-        url: https://arv-anshul.github.io/projects/yt-watch-history
+        url: ../project/yt-watch-history/index.md
   - title: Indian Real Estate Analyser and Price Prediction
     icon: fontawesome-solid-building
     description: |

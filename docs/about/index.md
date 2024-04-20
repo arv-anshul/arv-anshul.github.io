@@ -58,7 +58,7 @@ As a student based in Bihar, India; my aspiration is to become a proficient data
 </div>
 {% endfor %}
 
-<p align="center" markdown>[All Projects](../projects/index.md)</p>
+<p align="center" markdown>[All Projects](../project/index.md)</p>
 
 ---
 

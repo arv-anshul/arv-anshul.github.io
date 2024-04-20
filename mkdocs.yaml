@@ -129,15 +129,15 @@ nav:
       - index.md
       - friends.md
   - Projects:
-      - projects/index.md
-      - projects/others.md
+      - project/index.md
+      - project/others.md
       - Youtube Watch History:
-          - projects/yt-watch-history/index.md
-          - projects/yt-watch-history/ctt.md
-          - projects/yt-watch-history/channel_reco.md
+          - project/yt-watch-history/index.md
+          - project/yt-watch-history/ctt.md
+          - project/yt-watch-history/channel_reco.md
       - Spotify Analysis:
-          - projects/spotify-analysis/index.md
-      - projects/campusx-dsmp.md
+          - project/spotify-analysis/index.md
+      - project/campusx-dsmp.md
   - References:
       - ref/index.md
       - ref/learn-stuff.md
