@@ -52,8 +52,12 @@ topics:
   - header: Pytest
     icon: simple-pytest
     tutorials:
+      - title: Getting started with Pytest - Anthony Sottile
+        url: https://youtu.be/mzlH8lp4ISA
       - title: Unit Testing in Python with pytest
         url: https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS
+      - title: Pytest - FreeCodeCamp
+        url: https://youtu.be/cHYq1MRoyI0
   - header: Web Scrapping
     icon: simple-selenium
     tutorials:
@@ -61,3 +65,14 @@ topics:
         url: ../blog/posts/learn-web-scraping.md
       - title: Discovering Hidden APIs
         url: https://www.youtube.com/playlist?list=PLyb_C2HpOQSCAi67ZF0w-6CvCvZs_OXAB
+  - header: Polars
+    icon: simple-polars
+    tutorials:
+      - title: Why I chose Python & Polars for Data Analysis
+        url: https://youtu.be/39jB8nJBrCI
+      - title: Polars for Begginers - Playlist
+        url: https://www.youtube.com/playlist?list=PLCSi-9pCA1-CVO6HmoUlp5b3gPOmm5HAL
+      - title: One Shot Overview of Polars - Rob Mulla
+        url: https://youtu.be/VHqn7ufiilE
+      - title: Getting Started with Polars - Matt Harrison - PyCon US
+        url: https://www.youtube.com/watch?v=CJ0f45evuME
