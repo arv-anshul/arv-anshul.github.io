@@ -69,6 +69,7 @@ regex==2023.12.25
     # via mkdocs-material
 requests==2.31.0
     # via mkdocs-material
+simpleicons==7.21.0
 six==1.16.0
     # via python-dateutil
 urllib3==2.2.0

@@ -8,11 +8,6 @@ __rough__/
 *__rough__*.*
 *.arv
 *.arv.*
-*.lock
 arv.*
 logs/
 site/
-
-# Do not ignore `requirements.lock` file because
-# it is used to setup the project with `pip`
-!requirements.lock
