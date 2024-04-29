@@ -28,14 +28,16 @@ icon: octicons/home-fill-24
 
 ---
 
-## **Check Also** { align="center" }
-
 <div class="grid cards" markdown>
 
-  - :material-account-box:{ .lg .middle }&nbsp; **Download My Resume** &nbsp;[:material-link:{ .middle .bounce }](https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf)
-  - :octicons-project-roadmap-16:{ .lg .middle }&nbsp; **My Projects** &nbsp;[:material-link:{ .middle .bounce }](project/index.md)
-  - :fontawesome-brands-blogger-b:{ .lg .middle }&nbsp; **My Blogs** &nbsp;[:material-link:{ .middle .bounce }](blog/index.md)
-  - :fontawesome-solid-users-viewfinder:{ .lg .middle }&nbsp; **My Friends** &nbsp;[:material-link:{ .middle .bounce }](friends.md)
-  - :fontawesome-solid-user-tie:{ .lg .middle }&nbsp; **Achievements** &nbsp;[:material-link:{ .middle .bounce }](achievements/index.md)
+[:material-account-box:{ .lg .middle }&nbsp; **Resume** &nbsp;](https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf){ .md-button style="text-align: center; display: block;" }
+
+[:material-notebook-multiple:{ .lg .middle }&nbsp; **Projects** &nbsp;](project/index.md){ .md-button style="text-align: center; display: block;" }
+
+[:fontawesome-brands-blogger-b:{ .lg .middle }&nbsp; **Blogs** &nbsp;](blog/index.md){ .md-button style="text-align: center; display: block;" }
+
+[:fontawesome-solid-users-viewfinder:{ .lg .middle }&nbsp; **Friends** &nbsp;](friends.md){ .md-button style="text-align: center; display: block;" }
+
+[:fontawesome-solid-user-tie:{ .lg .middle }&nbsp; **Achievements** &nbsp;](achievements/index.md){ .md-button style="text-align: center; display: block;" }
 
 </div>
