@@ -61,3 +61,22 @@ friends:
       - title: Email
         url: mailto:ogbesomto4@gmail.com
         icon: material/email
+  - name: Rahul Kumar
+    primaryUrl: https://linkedin.com/in/rahul-kumar30
+    avatar: https://avatars.githubusercontent.com/u/115729063?v=4
+    profession: Data Scientist
+    description:
+      I am a passionate data science enthusiast with a knack for turning complex data
+      into meaningful insights. As a beginner in the field, I am constantly learning
+      and expanding my skill set. My expertise lies in utilizing Python, SQL, different
+      python libraries, machine learning, statistics, and applied mathematics.
+    socials:
+      - title: Github Profile
+        url: https://github.com/rahulkr30
+        icon: simple/github
+      - title: LinkedIn profile
+        url: https://linkedin.com/in/rahul-kumar30
+        icon: simple/linkedin
+      - title: Email
+        url: mailto:rahulkr30101@gmail.com
+        icon: material/email
