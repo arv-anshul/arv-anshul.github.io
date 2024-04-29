@@ -128,7 +128,6 @@ nav:
   - Home:
       - index.md
       - friends.md
-  - achievements/index.md
   - Projects:
       - project/index.md
       - project/others.md
