@@ -38,6 +38,6 @@ icon: octicons/home-fill-24
 
 [:fontawesome-solid-users-viewfinder:{ .lg .middle }&nbsp; **Friends** &nbsp;](friends.md){ .md-button style="text-align: center; display: block;" }
 
-[:fontawesome-solid-user-tie:{ .lg .middle }&nbsp; **Achievements** &nbsp;](achievements/index.md){ .md-button style="text-align: center; display: block;" }
+[:fontawesome-solid-user-tie:{ .lg .middle }&nbsp; **Achievements** &nbsp;](achievements.md){ .md-button style="text-align: center; display: block;" }
 
 </div>
