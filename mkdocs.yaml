@@ -139,6 +139,7 @@ nav:
       - Spotify Analysis:
           - project/spotify-analysis/index.md
       - project/campusx-dsmp.md
+      - project/credit-risk-modeling.md
   - References:
       - ref/index.md
       - ref/learn-stuff.md
