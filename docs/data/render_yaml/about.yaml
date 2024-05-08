@@ -142,6 +142,8 @@ tech_stack:
       icon: material-chart-scatter-plot-hexbin
     - title: Plotly
       icon: simple-plotly
+    - title: Jupyter Notebook
+      icon: simple-jupyter
   Python Libraries:
     - title: Pytest
       icon: simple-pytest

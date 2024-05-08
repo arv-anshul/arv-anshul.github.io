@@ -27,8 +27,18 @@ icon: material/account-box
 </p>
 
 <p style="text-align: justify;" markdown>
-As a student based in Bihar, India; my aspiration is to become a proficient data scientist who seamlessly integrates machine learning models in cloud. Actively exploring diverse facets of data science, including ML, NLP, and MLOps, I have honed my skills in Python, mastering essential concepts like OOPs, and Type Hinting. My proficiency extends to REST API creation, with hands-on experience in FastAPI framework. Notably, I showcase my expertise in web scraping, demonstrated through projects like [ecommerce-scrapper-api](https://github.com/arv-anshul/ecommerce-scrapper-api). Continuously expanding my technological horizons, I have successfully completed multiple ML projects, such as [yt-watch-history](https://github.com/arv-anshul/yt-watch-history), [campusx-real-estate](https://github.com/arv-anshul/campusx-real-estate).
+
+Currently, I am in 12th standard but dedicated to mastering Data Science and ML for the past two years.
+I've built a very good knowledge in Python and Data Science libraries.
+I've developed a solid foundation and applied it to various projects.
+Notably, I showcase my expertise in web scraping, demonstrated through projects like [ecommerce-scrapper-api].
+Continuously expanding my technological horizons, I have successfully completed multiple ML projects, such as [yt-watch-history], [campusx-real-estate].
+
 </p>
+
+[yt-watch-history]: https://github.com/arv-anshul/yt-watch-history
+[campusx-real-estate]: https://github.com/arv-anshul/campusx-real-estate
+[ecommerce-scrapper-api]: https://github.com/arv-anshul/ecommerce-scrapper-api
 
 ---
 
@@ -58,7 +68,7 @@ As a student based in Bihar, India; my aspiration is to become a proficient data
 </div>
 {% endfor %}
 
-<p align="center" markdown>[All Projects](../project/index.md)</p>
+<p align="center" markdown>[==All Projects==](../project/index.md)</p>
 
 ---
 
