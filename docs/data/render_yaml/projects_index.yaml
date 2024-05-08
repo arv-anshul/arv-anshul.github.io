@@ -93,6 +93,27 @@ projects:
       - streamlit
     completed_on: October, 2023
 
+  - title: FreeAPI in Python using FastAPI
+    description: |
+      Created similar APIs present in **freeapi.app** project using Python with FastAPI and MongoDB.
+      I've used Docker so that anyone can easily reproduce this project in their system.
+      I haven't deployed this project but you can use Docker to spawn the APIs in local.
+      You'll get endpoints for todo, quotes, github user and repository and fun endpoints.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/freeapi-py
+      - title: LinkedIn Post
+        icon: simple-linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_im-happy-to-share-this-freeapi-in-python-activity-7192135714594000896-ZRqh?utm_source=share&utm_medium=member_desktop
+    tags:
+      - docker
+      - fastapi
+      - mongodb
+      - python
+      - rye
+    completed_on: May, 2024
+
   - title: Curler
     description: |
       Curler is a tool which let's you parse `curl` command into python with ease.
