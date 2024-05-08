@@ -34,7 +34,7 @@ projects:
     description: |
       Analyse your Spotify Streaming data and get some insights from it like whom & when
       you listen your favorite Tracks, Artists, Playlists or Albums.
-
+      </br>
       Created Jupyter Notebook where you can upload your data and get the analysis by
       running the notebook.
     extra_desc:
