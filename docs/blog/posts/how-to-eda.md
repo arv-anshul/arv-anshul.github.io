@@ -14,10 +14,19 @@ slug: how-to-eda
 icon: material/test-tube
 ---
 
-# :simple-polars:{ title="2024-04-22" } How To Perform EDA
+# :simple-polars:{ title="My go-to blog for EDA" } How To Perform EDA
+
+<figure markdown>
+
+![image for eda - realpython](https://realpython.com/cdn-cgi/image/width=1920,format=auto/https://files.realpython.com/media/Showcase-Polars_Watermarked.4e25d4f6c9a7.jpg){ .base-border-radius width="90%" }
+
+<figcaption>Source: https://realpython.com/polars-python/</figcaption>
+</figure>
 
 Performing EDA on a dataset is very difficult and time taking process because
 there is many thing you can do while performing EDA on your dataset.
+
+<!-- more -->
 
 > I will generally use [`polars`](https://pola.rs) library in this article.
 
