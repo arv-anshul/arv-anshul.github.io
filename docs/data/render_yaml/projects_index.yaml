@@ -34,6 +34,13 @@ projects:
     description: |
       Analyse your Spotify Streaming data and get some insights from it like whom & when
       you listen your favorite Tracks, Artists, Playlists or Albums.
+
+      Created Jupyter Notebook where you can upload your data and get the analysis by
+      running the notebook.
+    extra_desc:
+      - Analyse your Streaming History, Personal Playlists.
+      - Know your top tracks and artists by year, month, week and day.
+      - Know your most played track, artist, playlist by year and month.
     urls:
       - title: Jupyter Notebooks
         icon: simple-jupyter
@@ -47,7 +54,7 @@ projects:
       - scikitlearn
       - spotify
       - streamlit
-    completed_on:
+    completed_on: March, 2024
 
   - title: E-commerce Scrapper API - FastAPI
     description: |
