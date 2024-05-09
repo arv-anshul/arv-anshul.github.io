@@ -10,8 +10,9 @@
       "categories:",
       "  - ",
       "description:",
-      "title: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
+      "title: ${TM_FILENAME_BASE/[-_]/ /g}",
       "slug: $TM_FILENAME_BASE",
+      "icon: simple/blogger",
       "---",
       "",
       "# :tada:{ title=\"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\" }  ${TM_FILENAME_BASE/[-_]/ /g}",
@@ -22,7 +23,13 @@
     "scope": "markdown"
   },
   "Grid Cards": {
-    "body": ["<div class=\"grid cards\" markdown>", "$0", "</div>"],
+    "body": [
+      "<div class=\"grid cards\" markdown>",
+      "",
+      "${1:$TM_SELECTED_TEXT}",
+      "",
+      "</div>"
+    ],
     "description": [
       "Grid Cards template of mkdocs.",
       "See documentaion: https://squidfunk.github.io/mkdocs-material/reference/grids/"
@@ -42,5 +49,16 @@
     "description": "Frontmatter section for Projects.",
     "prefix": "project-frm",
     "scope": "markdown"
+  },
+  "Figure Tag": {
+    "body": [
+      "<figure markdown>",
+      "",
+      "${1:$TM_SELECTED_TEXT}",
+      "",
+      "</figure>"
+    ],
+    "prefix": "figure",
+    "description": "figure tag to center the items."
   }
 }
