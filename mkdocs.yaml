@@ -143,6 +143,7 @@ nav:
   - References:
       - ref/index.md
       - ref/learn-stuff.md
+      - ref/resume-tips.md
       - Bash:
           - ref/bash/tips.md
           - blog/posts/starship.md
