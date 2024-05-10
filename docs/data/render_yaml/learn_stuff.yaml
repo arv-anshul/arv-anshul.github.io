@@ -76,3 +76,26 @@ topics:
         url: https://youtu.be/VHqn7ufiilE
       - title: Getting Started with Polars - Matt Harrison - PyCon US
         url: https://www.youtube.com/watch?v=CJ0f45evuME
+  - header: Bash
+    icon: simple-windowsterminal
+    tutorials:
+      - title: 50 Linux Commands Every Developer Must Know 🔥
+        url: https://www.youtube.com/watch?v=l32UR9DcjLg
+      - title: you need to learn BASH Scripting RIGHT NOW!!
+        url: https://www.youtube.com/playlist?list=PLIhvC56v63IKioClkSNDjW7iz-6TFvLwS
+  - header: MongoDB
+    icon: simple-mongodb
+    tutorials:
+      - title: MongoDB Tutorial in 1 Hour
+        url: https://www.youtube.com/watch?v=J6mDkcqU_ZE
+      - title: MongoDB aggregation Pipelines
+        url: https://www.youtube.com/playlist?list=PLRAV69dS1uWQ6CZCehxKy0rjkqhQ2Z88t
+  - header: SQL
+    icon: simple-mysql
+    tutorials:
+      - title: Basic DBMS and SQL Full - CampusX
+        url: https://www.youtube.com/playlist?list=PLBv9GORP5VkclmbvgNaEB3GBFc-weefX7
+      - title: SQL for Data Science - CampusX
+        url: https://www.youtube.com/playlist?list=PLKnIA16_RmvYun1_5r9Fb4eQigioPB7yn
+      - title: Complete SQL Course For Data Science - CampusX
+        url: https://www.youtube.com/watch?v=nopIGY1zJE0
