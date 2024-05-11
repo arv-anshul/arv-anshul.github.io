@@ -83,3 +83,19 @@ $ pwd
 /User/Home  # For MacOS
 $ pycls  # Remove all cache files and folders in the directory and sub-dirs
 ```
+
+## :simple-homebrew: HomeBrew
+
+### :octicons-arrow-right-16: Update, Clean and Doctor
+
+```bash
+brew update && brew cleanup --prune=all && brew doctor
+```
+
+### :octicons-arrow-right-16: Uninstall unused dependencies
+
+```bash
+brew autoremove # (1)!
+```
+
+1. Check [docs](https://docs.brew.sh/Manpage#autoremove---dry-run) for `autoremove` command.
