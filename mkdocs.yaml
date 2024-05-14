@@ -129,6 +129,9 @@ nav:
       - index.md
       - friends.md
       - achievements.md
+      - anime.md
+      - movies-and-shows.md
+      - music.md
   - Projects:
       - project/index.md
       - project/others.md

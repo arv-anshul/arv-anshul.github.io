@@ -1,0 +1,76 @@
+# NOTES
+# poster: Refer to https://www.cinematerial.com/
+# thoughts: If you want you can skip this and just write one liners or `""` (blank quote)
+movies:
+  - title: Karwaan
+    type: Movie
+    poster: https://media-cache.cinematerial.com/p/500x/rq5ktoyd/karwaan-indian-movie-poster.jpg
+    thoughts: |
+      Just watch and chill. My one of the best feel good movie. I've watched this 2 times.
+      Highly recommended!
+  - title: Arrival
+    type: Movie
+    poster: https://cdn.cinematerial.com/p/297x/cuwd95j1/arrival-movie-poster-md.jpg
+    thoughts: |
+      The first movie I've watched in the English language (with concentration) was an
+      amazing experience. After watching this movie, I became a fan of the director.
+  - title: The Glory
+    type: K-Drama
+    poster: https://media-cache.cinematerial.com/p/500x/ks8xihxq/the-glory-international-video-on-demand-movie-cover.jpg
+    thoughts: |
+      First time I realize Why K-Drama is so addictive! I am just hooked with this series.
+      Brutal bully, amazing storyline and (on top it) amazing performances.
+  - title: Mask Girl
+    type: K-Drama
+    poster: https://images.ctfassets.net/4cd45et68cgf/Nn8YFefPMordoYaSJz7i6/071686fca51df89ecabab24e1c1b5c4b/ko_mg_main_momi_vertical_27x40_rgb_pre_1.jpeg
+    thoughts: |
+      Each episodes were from different person's perspective which makes it more thrilling to watch.
+      The blend of subtle social commentry in the start of the story is nice.
+  - title: Moving
+    type: K-Drama
+    poster: https://cdn.cinematerial.com/p/297x/curn9eto/moving-movie-poster-md.jpg?v=1690529318
+    thoughts: |
+      Don't judge this series on the name of it "Moving" (Who think this?).
+      A very different take on superheroes in each episode you will see different heroes story.
+
+musics:
+  - title: The Way That Lovers Do
+    type: Album
+    link: https://open.spotify.com/album/4WLh56ZjwINYBNhaxLvEhA
+    poster: https://i.scdn.co/image/ab67616d0000b27316168e9d75e544b005bc0a0a
+  - title: Bharat Chauhan
+    type: Artist
+    link: https://open.spotify.com/artist/2sSTjTnRtGa3KrEjMoMaAe
+    poster: https://i.scdn.co/image/ab67616d0000b27331c51cec72330ebf106e51ae
+  - title: Usne Kaha Tha
+    type: Bharat Chauhan
+    link: https://open.spotify.com/track/4X9JYjukuRn0oJgvk79mck
+    poster: https://i.scdn.co/image/ab67616d0000b2736641bb3425f07a819bf44d13
+  - title: Ghar
+    type: Bharat Chauhan
+    link: https://open.spotify.com/track/3zZ4VnqnGURgm5fYRLy4JV
+    poster: https://i.scdn.co/image/ab67616d0000b27393dcf551e62456f5dcbd80e1
+  - title: AMAN
+    type: Artist
+    link: https://open.spotify.com/artist/2fbOTJal9uKzOkYEWxaiCK
+    poster: https://i.scdn.co/image/ab67616d0000b27379eb415fdfffb78870db0c39
+  - title: Suno
+    type: Album
+    link: https://open.spotify.com/album/3pHRNlVpIx4PBBXxBkoUTZ
+    poster: https://i.scdn.co/image/ab67616d0000b2737f8011441f4d43a9a6bba9d5
+  - title: Carrie & Lowell
+    type: Album
+    link: https://open.spotify.com/album/0U8DeqqKDgIhIiWOdqiQXE
+    poster: https://i.scdn.co/image/ab67616d0000b2734dfbe36486a0e8655b119660
+  - title: Piyush Bhisekar
+    type: Artist
+    link: https://open.spotify.com/artist/3HUf0l1HSBzHw0F5UhBOpA
+    poster: https://i.scdn.co/image/ab67616d0000b273e6fb23f4e22d728c77b4ae6d
+  - title: Wajah
+    type: Piyushh Bhisekar
+    link: https://open.spotify.com/album/5gzjNeBbZlD3bDMKDxNCTL
+    poster: https://i.scdn.co/image/ab67616d0000b2737847351d98dbb915ca5734d6
+  - title: A Suitable Boy
+    type: Album
+    link: https://open.spotify.com/album/1TEK4k9Rsqk6C0p5uRFre2
+    poster: https://i.scdn.co/image/ab67616d0000b27384adbe022c36be7b40cf1805
