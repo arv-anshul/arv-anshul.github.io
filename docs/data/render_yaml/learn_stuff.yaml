@@ -99,3 +99,15 @@ topics:
         url: https://www.youtube.com/playlist?list=PLKnIA16_RmvYun1_5r9Fb4eQigioPB7yn
       - title: Complete SQL Course For Data Science - CampusX
         url: https://www.youtube.com/watch?v=nopIGY1zJE0
+  - header: HTML
+    icon: simple-html5
+    tutorials:
+      - title: Front-End Development - Sheryians Coding School
+        url: https://www.youtube.com/playlist?list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-
+  - header: CSS
+    icon: simple-css3
+    tutorials:
+      - title: Tailwind CSS Tutorial For Beginners in Hindi - Hitesh Choudhary
+        url: https://www.youtube.com/watch?v=_9mTJ84uL1Q
+      - title: Learn Tailwind CSS - FreeCodeCamp
+        url: https://www.youtube.com/watch?v=ft30zcMlFao
