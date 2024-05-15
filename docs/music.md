@@ -3,13 +3,15 @@ date: 2024-05-14
 title: Music
 slug: music
 icon: material/music-box
+search:
+  exclude: true
 hide:
   - feedback
   - navigation
   - toc
 ---
 
-# :material-music-note: Movies & Shows List { align="center" }
+# :material-music-note: Music :material-music-note: { align="center" }
 
 <div class="grid cards" markdown>
 

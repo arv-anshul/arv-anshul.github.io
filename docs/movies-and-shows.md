@@ -3,13 +3,15 @@ date: 2024-05-14
 title: Movies & Shows
 slug: movies
 icon: material/movie-open
+search:
+  exclude: true
 hide:
   - feedback
   - navigation
   - toc
 ---
 
-# :material-movie-open: Movies & Shows List { align="center" }
+# :material-movie-open: Movies & Shows List :material-movie-open: { align="center" }
 
 <div class="grid cards" markdown>
 

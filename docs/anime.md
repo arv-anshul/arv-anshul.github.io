@@ -3,6 +3,8 @@ date: 2024-04-26
 title: Anime
 slug: anime
 icon: simple/funimation
+search:
+  exclude: true
 hide:
   - feedback
   - navigation
