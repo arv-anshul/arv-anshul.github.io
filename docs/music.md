@@ -9,21 +9,13 @@ hide:
   - toc
 ---
 
-<style>
-    .md-typeset .grid {
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
-    }
-</style>
-
 # :material-music-note: Movies & Shows List { align="center" }
 
 <div class="grid cards" markdown>
 
-{% for music in recommendations.musics %}
+{% for music in recommendations.musics | sort(attribute="title") %}
 
-  - <p align="center">[![poster]({{ music.poster }}){ width=200px .base-border-radius }]({{ music.link }})</p>
-
-    <p align="center">**{{ music.title }}** • <span class="secondary">{{ music.type }}</span></p>
+  <iframe style="border-radius:12px" src="{{ music.link | replace('.com/', '.com/embed/') }}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 {% endfor %}
 
