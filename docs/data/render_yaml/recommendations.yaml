@@ -32,6 +32,20 @@ movies:
     thoughts: |
       Don't judge this series on the name of it "Moving" (Who think this?).
       A very different take on superheroes in each episode you will see different heroes story.
+  - title: Lapataa Ladies
+    type: Movie
+    poster: https://cdn.cinematerial.com/p/297x/v4uq4y3q/laapataa-ladies-indian-movie-poster-md.jpg
+    thoughts: |
+      Amazing experience, it transfers you to vilages of Bihar (literally).
+      Best movie where feminism is addressed in a way that you will understand what
+      they want to say. Social Commentary, Feminism, Comic Timing, Discipline and more.
+  - title: Past Lives
+    type: Movie
+    poster: https://cdn.cinematerial.com/p/297x/sbrurk0o/past-lives-movie-poster-md.jpg?v=1679590319
+    thoughts: |
+      I just feel the love between them in the last scene. See how to live with burden
+      to feel love toward someone (here applied on both). Very Slow But Practical.
+      I want to watch again. It has only one song it is one of my favorite.
 
 musics:
   - title: The Way That Lovers Do
@@ -74,3 +88,35 @@ musics:
     type: Album
     link: https://open.spotify.com/album/1TEK4k9Rsqk6C0p5uRFre2
     poster: https://i.scdn.co/image/ab67616d0000b27384adbe022c36be7b40cf1805
+  - title: Quiet Eyes
+    type: Sharon Van Etten
+    link: https://open.spotify.com/track/2r1pq34i8ddPXyxvfqDBCG
+    poster: https://i.scdn.co/image/ab67616d0000b27341cf2eba2ea2689dc5b7771d
+  - title: BREACH
+    type: Album
+    link: https://open.spotify.com/album/0KsNopmZLaB71o6i2nw95I
+    poster: https://i.scdn.co/image/ab67616d0000b2731ea4bf9b7234808c24213509
+  - title: The Wonder of You
+    type: Villagers
+    link: https://open.spotify.com/track/3gwurt17Arq2OTWaM7qZPW
+    poster: https://i.scdn.co/image/ab67616d0000b273e8dd2a7971a9c1b7de16707e
+  - title: Love in the Time of Socialism
+    type: Yellow House
+    link: https://open.spotify.com/track/0JuJ0M9ZaKDwXms3rUh1Hk
+    poster: https://i.scdn.co/image/ab67616d0000b273238d9d43908b01587500d8cf
+  - title: Kaavish
+    type: Artist
+    link: https://open.spotify.com/artist/6znPk9JRNmg6uyB6h8nJu3
+    poster: https://i.scdn.co/image/ab676161000051747bead374c81ec6c20df39c9d
+  - title: Bayaan
+    type: Artist
+    link: https://open.spotify.com/artist/3atMq790wQ7IqjeSO0HFeP
+    poster: https://i.scdn.co/image/ab67616100005174ecec5ecc868fe58d57faae0d
+  - title: Raani
+    type: Shashwat Bulusu
+    link: https://open.spotify.com/track/4Kd45JGzTjzkmfcT1eeKV6
+    poster: https://i.scdn.co/image/ab67616d0000b273b471a630abfc562f195a8edb
+  - title: The Tamashabeens
+    type: Artist
+    link: https://open.spotify.com/artist/6dArdZ3NhrB1sbyo2s5poV
+    poster: https://i.scdn.co/image/ab67616d0000b27363f253af35eee6721a0584e8
