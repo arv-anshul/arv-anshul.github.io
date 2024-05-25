@@ -13,6 +13,12 @@ hide:
 
 # :material-music-note: Music :material-music-note: { align="center" }
 
+<p align="center" markdown>
+
+[:simple-spotify: &nbsp;My Spotify Profile](https://open.spotify.com/user/wk6gxe954mv4qbttc4tnvyw8t){ .md-button .slim-button align="center" }
+
+</p>
+
 <div class="grid cards" markdown>
 
 {% for music in recommendations.musics | sort(attribute="title") %}
