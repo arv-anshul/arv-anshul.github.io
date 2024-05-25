@@ -13,6 +13,12 @@ hide:
 
 # :material-movie-open: Movies & Shows List :material-movie-open: { align="center" }
 
+<p align="center" markdown>
+
+[:simple-imdb: &nbsp;My IMDB List](https://www.imdb.com/user/ur173640968/lists){ .md-button .slim-button align="center" }
+
+</p>
+
 <div class="grid cards" markdown>
 
 {% for movie in recommendations.movies %}
