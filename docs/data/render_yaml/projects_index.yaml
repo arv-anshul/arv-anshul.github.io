@@ -6,9 +6,12 @@ projects:
       which type of content you likes to watch on which time of the day. I have build ML
       model which predicts the `contentType` of the videos from their titles.
     urls:
-      - title: GitHub Repository
+      - title: GitHub Repository (v1)
         icon: simple-github
         url: https://github.com/arv-anshul/yt-watch-history
+      - title: GitHub Repository (v2)
+        icon: simple-github
+        url: https://github.com/arv-anshul/yt-watch-history-v2
       - title: LinkedIn Post
         icon: simple-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
