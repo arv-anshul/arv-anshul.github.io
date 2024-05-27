@@ -74,6 +74,15 @@ plugins:
   - search: null
   - markdownextradata:
       data: docs/data/render_yaml/
+  - redirects:
+      redirect_maps:
+        campusx-dsmp.md: https://arv-anshul.github.io/campusx
+        gh.md: https://github.com/arv-anshul
+        github.md: https://github.com/arv-anshul
+        linkedin.md: https://linkedin.com/in/arv-anshul
+        notebooks.md: https://github.com/arv-anshul/notebooks
+        project/yt-watch-history-v2/index.md: project/yt-watch-history/index.md
+        projects/index.md: project/index.md
 
 extra:
   analytics:
