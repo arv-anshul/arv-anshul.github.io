@@ -118,6 +118,8 @@ tech_stack:
       icon: simple-raycast
     - title: Zed Code Editor
       icon: simple-zedindustries
+    - title: Taskfile
+      icon: simple-task
   Dev/ML Ops:
     - title: Docker
       icon: simple-docker
