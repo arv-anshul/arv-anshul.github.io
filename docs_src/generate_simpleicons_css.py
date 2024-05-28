@@ -7,6 +7,7 @@ using `simpleicons` library.
 Go to simple-icons website: https://simpleicons.org
 Check `simpleicons` library: https://github.com/sachinraja/simple-icons-py
 """
+
 from __future__ import annotations
 
 import json
@@ -27,8 +28,10 @@ UNAVAILABLE_ICONS = {
     "materialformkdocs": "526CFE",
     "polars": "CD792C",
     "pydantic": "E92063",
+    "raycast": "FF6363",
     "ruff": "D7FF64",
     "rye": "90c820",
+    "zedindustries": "084CCF",
 }
 
 logging.basicConfig(

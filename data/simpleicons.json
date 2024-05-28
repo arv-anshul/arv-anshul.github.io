@@ -30,12 +30,17 @@
   "pypi",
   "pytest",
   "python",
+  "raycast",
   "ruff",
+  "rust",
   "rye",
   "scikitlearn",
+  "spotify",
   "sqlite",
   "starship",
   "streamlit",
+  "task",
   "visualstudiocode",
-  "youtube"
+  "youtube",
+  "zedindustries"
 ]
