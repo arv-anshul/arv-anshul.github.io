@@ -28,6 +28,8 @@
 .instagram-hover:hover { color: #E4405F; }
 .jinja { color: #B41717; }
 .jinja-hover:hover { color: #B41717; }
+.json { color: var(--md-typeset-color); }
+.json-hover:hover { color: var(--md-typeset-color); }
 .jupyter { color: #F37626; }
 .jupyter-hover:hover { color: #F37626; }
 .kaggle { color: #20BEFF; }
@@ -68,8 +70,8 @@
 .raycast-hover:hover { color: #FF6363; }
 .ruff { color: #D7FF64; }
 .ruff-hover:hover { color: #D7FF64; }
-.rust { color: #000000; }
-.rust-hover:hover { color: #000000; }
+.rust { color: var(--md-typeset-color); }
+.rust-hover:hover { color: var(--md-typeset-color); }
 .rye { color: #90c820; }
 .rye-hover:hover { color: #90c820; }
 .scikitlearn { color: #F7931E; }
