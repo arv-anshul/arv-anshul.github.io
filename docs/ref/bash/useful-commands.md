@@ -99,3 +99,26 @@ brew autoremove # (1)!
 ```
 
 1. Check [docs](https://docs.brew.sh/Manpage#autoremove---dry-run) for `autoremove` command.
+
+## :simple-arc: Arc
+
+### :octicons-arrow-right-16: Change ARC.app Icon
+
+<figure markdown>
+
+![arc logos](https://gist.github.com/assets/7717888/fdfbbb6f-ba07-46b9-bdbf-6ef43009479b)
+
+<figcaption markdown>[Source Gist](https://gist.github.com/gabe565/9654eea08a9f6c7c1f593049e5bed243)</figcaption>
+</figure>
+
+```bash
+defaults write company.thebrowser.Browser currentAppIconName candy # favorite
+```
+
+<figure markdown>
+
+| Candy Arc   | Hologram       | Neon       | Fluted Glass      | Schoolbook       | Colorful       |
+| ----------- | -------------- | ---------- | ----------------- | ---------------- | -------------- |
+| **`candy`** | **`hologram`** | **`neon`** | **`flutedGlass`** | **`schoolbook`** | **`colorful`** |
+
+</figure>
