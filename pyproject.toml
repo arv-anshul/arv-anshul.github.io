@@ -1,7 +1,7 @@
 [project]
 name = "arv-anshul-github-io"
 version = "0.1.0"
-description = "My personal website using `mkdocs-material`."
+description = "Portfolio, blogs, recommendations, resources and more on my personal website."
 authors = [{ name = "Anshul Raj Verma", email = "arv.anshul.1864@gamail.com" }]
 readme = "README.md"
 requires-python = ">= 3.11"
