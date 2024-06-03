@@ -111,3 +111,10 @@ topics:
         url: https://www.youtube.com/watch?v=_9mTJ84uL1Q
       - title: Learn Tailwind CSS - FreeCodeCamp
         url: https://www.youtube.com/watch?v=ft30zcMlFao
+  - header: Taskfile
+    icon: simple-task
+    tutorials:
+      - title: Taskfile Official Docs
+        url: https://taskfile.dev
+      - title: Intro to Taskfile - Overview
+        url: https://youtu.be/Z7EnwBaJzCk
