@@ -21,6 +21,9 @@
 .md-typeset pre > code {
   border-radius: var(--base-border-radius);
 }
+.highlight .c1 {
+    font-style: italic;
+}
 
 /* Customize admonition layout */
 .md-typeset .admonition {
