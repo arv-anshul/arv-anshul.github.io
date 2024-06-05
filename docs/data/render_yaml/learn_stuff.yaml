@@ -30,6 +30,8 @@ topics:
         url: https://www.youtube.com/watch?v=tz82ola3oy0
       - title: Git CLI Cheatsheet · GitHub Gist
         url: https://gist.github.com/hofmannsven/6814451
+      - title: Atlassian Documentation on GIT
+        url: https://www.atlassian.com/git
   - header: Async Programming
     icon: simple-python
     tutorials:
