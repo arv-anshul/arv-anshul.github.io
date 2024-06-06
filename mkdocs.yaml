@@ -82,6 +82,7 @@ plugins:
         github.md: https://github.com/arv-anshul
         linkedin.md: https://linkedin.com/in/arv-anshul
         notebooks.md: https://github.com/arv-anshul/notebooks
+        project/notebooks.md: https://github.com/arv-anshul/notebooks
         project/yt-watch-history-v2/index.md: project/yt-watch-history/index.md
         projects/index.md: project/index.md
 
@@ -145,6 +146,7 @@ nav:
   - Projects:
       - project/index.md
       - project/others.md
+      - project/notebooks.md
       - Youtube Watch History:
           - project/yt-watch-history/index.md
           - project/yt-watch-history/ctt.md
