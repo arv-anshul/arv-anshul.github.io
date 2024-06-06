@@ -170,22 +170,19 @@ projects:
       - streamlit
     completed_on: October, 2023
 
-  - title: CampusX DSMP - Resources
+  - title: CampusX Resources
     description: |
       This project involves gathering data from a course website's HTML structure, followed by developing Python scripts for parsing and extracting essential data. HTTP requests are then made to obtain session resources, with robust testing and data structure maintenance ensuring integrity. Utilizing `mkdocs` and `mkdocs-material`, a professional web page is generated and hosted on GitHub Pages via CI/CD with GitHub Actions.
-    extra_desc:
-      - Wrote python scripts ([`downloader.py`](https://github.com/arv-anshul/campusx-dsmp/blob/main/src/downloader.py), [`resource_dl.py`](https://github.com/arv-anshul/campusx-dsmp/blob/main/src/resource_dl.py)) to download DSMP course resources from internet.
-      - Used GitHub to store resource files.
     urls:
       - title: GitHub Repository
         icon: simple-github
-        url: https://github.com/arv-anshul/campusx-dsmp
+        url: https://github.com/arv-anshul/campusx
       - title: LinkedIn Post
         icon: simple-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
       - title: Project's Website
         icon: simple-materialformkdocs
-        url: https://arv-anshul.github.io/campusx-dsmp/
+        url: https://arv-anshul.github.io/campusx
     tags:
       - curl
       - dotenv
