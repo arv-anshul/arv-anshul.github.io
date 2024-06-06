@@ -83,6 +83,7 @@ plugins:
         linkedin.md: https://linkedin.com/in/arv-anshul
         notebooks.md: https://github.com/arv-anshul/notebooks
         project/notebooks.md: https://github.com/arv-anshul/notebooks
+        project/dotfiles.md: https://github.com/arv-anshul/dotfiles
         project/yt-watch-history-v2/index.md: project/yt-watch-history/index.md
         projects/index.md: project/index.md
 
@@ -157,6 +158,7 @@ nav:
           - project/spotify-analysis/index.md
       - project/campusx-dsmp.md
       - project/credit-risk-modeling.md
+      - project/dotfiles.md
   - References:
       - ref/index.md
       - ref/learn-stuff.md
