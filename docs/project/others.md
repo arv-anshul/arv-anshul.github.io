@@ -13,7 +13,7 @@ hide:
 
 {% for project in other_projects.projects %}
 
-  - :simple-{{ project.icon }}:{ .lg .{{ project.icon }} title="Status: {{ project.status|title }}" } &nbsp; **{{ project.title }}**{ title="Status: {{ project.status|title }}" }
+  - :simple-{{ project.icon }}:{ .lg .{{ project.icon }} title="Status: {{ project.status|title }}" } &nbsp; **{{ project.title }}**{ .{{ project.icon }} }
 
     ---
 
