@@ -40,11 +40,17 @@
   "Projects Frontmatter": {
     "body": [
       "---",
-      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "date:",
+      "  created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "  updated: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
       "title: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
+      "description: ",
       "slug: $TM_FILENAME_BASE",
       "icon: simple/python",
-      "---"
+      "---",
+      "",
+      "# :simple-python: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
+      ""
     ],
     "description": "Frontmatter section for Projects.",
     "prefix": "project-frm",
