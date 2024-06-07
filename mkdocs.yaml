@@ -163,6 +163,8 @@ nav:
       - ref/index.md
       - ref/learn-stuff.md
       - ref/resume-tips.md
+      - Python:
+          - ref/python/rye.md
       - Bash:
           - ref/bash/tips.md
           - blog/posts/starship.md
