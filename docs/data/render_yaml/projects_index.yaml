@@ -2,9 +2,10 @@ $schema: https://github.com/arv-anshul/arv-anshul.github.io/raw/main/schemas/pro
 projects:
   - title: YouTube Watch History
     description: |
-      Analyse your YouTube Watch History Data and get insights from it like which type of
-      which type of content you likes to watch on which time of the day. I have build ML
-      model which predicts the `contentType` of the videos from their titles.
+      A streamlit app where you can upload your **YouTube Watch History Data** to see insights on your viewing pattern.
+      Your data will go through a ML Model which predicts the **ContentType** of each video your have watch. The app
+      fetches more details of each video through **YouTube API**. There is also a **Channel Recommender System** in the
+      app which recommend you similar channels on the basis of channel's video titles and tags they had used.
     urls:
       - title: GitHub Repository (v1)
         icon: simple-github
