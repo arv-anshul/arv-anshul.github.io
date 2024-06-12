@@ -170,6 +170,8 @@ nav:
           - ref/bash/useful-commands.md
       - Statistics:
           - blog/posts/basics-of-statistics.md
+      - Deep Learning:
+          - ref/deep-learning/index.md
   - Blog:
       - blog/index.md
   - About: about/index.md
