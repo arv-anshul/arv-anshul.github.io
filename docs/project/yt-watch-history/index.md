@@ -2,6 +2,8 @@
 title: YouTube Watch History
 icon: simple/youtube
 date: 2024-01-21
+hide:
+  - toc
 ---
 
 # :simple-youtube:{ title="2024-01-21" } YouTube Watch History
@@ -19,68 +21,47 @@ date: 2024-01-21
 </p>
 <hr>
 
+## Overview
+
+<p align="justify" markdown>{{ project.description }}</p>
+
 {% endif %}
 {% endfor %}
 
 </p>
 
-This project can analyse your YouTube Watch History and shows some beautiful plots which depict how your watching patterns are changes over daytime and months.
+## Explanation
 
-Uses machine learning to tag youtube videos with the required **Content Type**. And then using content type this app show some insights.
+1. **Project Introduction**: Hello, I am Anshul Raj Verma and I am exited to share my end-to-end Machine Learning
+   project where I've used **FastAPI, Streamlit, MongoDB and Docker** as tech stack. Also **this is version 2 of the
+   project** because the **version 1 got very complicated** and its hard to modify and refactor the codes there that's
+   why created new version 2 where I am trying keep better attention on project architecture.
 
-!!! example "Channel Reccommendation System"
+2. **Project Overview**: This project consists a streamlit app where you can upload your **YouTube Watch History Data**
+   to see insights on your viewing pattern. Your data will go through a ML Model which predicts the **ContentType** of
+   each uploaded video. The app fetches more details of each video through **YouTube API**. There is also a **Channel
+   Recommender System** in project which recommend you similar channels on the basis of channel's videos title and tags
+   they had used.
 
-    You have to upload your subscribed channels list for this then, try to analyse channels to recommend you some similar channels which make similar contents.
+3. **Components of Project**: The project is divided into three major components **Backend API**, **ML** & **Frontend**.
 
-!!! danger "Demo Video of the APP"
+    - **Backend API**: This is a FastAPI app which interacts with MongoDB database where YouTube videos details were
+      stored and it also fetches YouTube videos details from official **YouTube Data API** (for this you requires the
+      `API_KEY`).
+    - **ML**: Here the code for ML Model were present through they will get trained and do predcitions on user's
+      uploaded data after some preprocessing. The ML Models get served as API through a FastAPI app.
+    - **Frontend**: Here all the above components meets and work together to show awesome insights on user's uploaded
+      data. This is a streamlit web app where users can upload their watch history data and see insights. Here above API
+      services were called to fetch videos details from official YouTube API, to store data in database, to make
+      predcitions using ML Models, to recommend channels and etc.
 
-    I will record a video where I will show how to use this app to get insights about you watching patterns.
+4. **Project Architecture**: I have created some diagrams to showcase the project's architecture and for that created a
+   [dedicated page](v2-architecture.md).
 
-## :octicons-log-16: Features
+5. **Containerization with Docker**: All the three components (**Backend API**, **ML** & **Frontend**) of project were
+   containerized using docker and used `docker compose` to wrap all three images in a container.
+   [`uv`](https://astral.sh/uv) is used to install packages in docker images. `mongodb` image is used as database for
+   the project.
 
-- [x] &nbsp; :simple-scikitlearn: &nbsp; **Channel Reccommendation** in `frontend`.
-- [x] &nbsp; :simple-mlflow: &nbsp; Used MLFlow for model monitoring.
-- [x] &nbsp; :simple-docker: &nbsp; Setup the project using Docker Compose.
-- [x] &nbsp; :simple-scikitlearn: &nbsp; **Channel Reccommendation** using channel's videos' `#!py "title"` and `#!py "tags"`.
-- [x] &nbsp; :simple-scikitlearn: &nbsp; Built **Content Type Tagging of videos** prediction system.
-- [x] &nbsp; :simple-fastapi: &nbsp; Backend APIs with FastAPI.
-- [x] &nbsp; :simple-youtube: &nbsp; Fetch data of YouTube videos from **YouTube Data API v3**.
-- [x] &nbsp; :simple-streamlit: &nbsp; Caption for each plots and graphs which describe them.
-- [x] &nbsp; :simple-plotly: &nbsp; Beautiful plots and graphs to showcase the insights about User's watching patterns.
-
-## :people_hugging: Discussions
-
-<div class="grid cards" markdown>
-
-  - ### **Error while importing model**
-
-    ---
-
-    > _This is my 3<sup>rd</sup> iteration on this improvement/refactoring approach._
-
-    I am facing problems while designing the ML systems of this project. I am not able to figure out where to train the model and then how to make the predition from it. Because I am getting error while importing the model using `dill`, `pickle` and `joblib` all.
-
-    I am only figure out that if you change your module structure then it the model importing trow `ModuleNotFoundError`. But when I export and import the model in a constraint environment (means the path of exporting and importing are same) then model works fine.
-
-    So whatever I was doing in these 2 weeks is not fully correct from the point of view of ML systems. Because this approach is not feasible for model to import and make prediction.
-
-    **To solve this** I have to rethink about the structure of the project maybe I should stick with the previous path.
-
-</div>
-
-## :fontawesome-solid-tags: Releases
-
-### [**`v0.1.0`**](https://github.com/arv-anshul/yt-watch-history/releases/tag/v0.1.0)
-
-- Refactor `ml` model training and prediction pipeline.
-- One docker volume for both app as data.
-- Add `channel_reco` in `frontend`.
-
-### [**`v0.0.1`**](https://github.com/arv-anshul/yt-watch-history/releases/tag/v0.0.1)
-
-- Containerise `backend` and `frontend` using Docker Compose.
-- APIs to make prediction using ML models.
-- Tag youtube videos with their **Content Type** using machine learning.
-- APIs to interact with **MongoDB** database.
-- APIs to fetch data from **YouTube Data API v3**.
-- Plots to show user's watch time insights.
+6. **More in Project**: As I am learning MLOps concepts I am trying to implement them in this project because planning
+   to add DVC and MLFlow into the project.
