@@ -59,27 +59,27 @@
 }
 
 .light {
-  color: #f8f9fa;
+  color: var(--md-default-fg-color);
 }
 
 .light-hover:hover {
-  color: #f8f9fa;
+  color: var(--md-default-fg-color);
 }
 
 .primary {
-  color: #007bff;
+  color: var(--md-accent-fg-color);
 }
 
 .primary-hover:hover {
-  color: #007bff;
+  color: var(--md-accent-fg-color);
 }
 
 .secondary {
-  color: #6c757d;
+  color: var(--md-default-fg-color--light);
 }
 
 .secondary-hover:hover {
-  color: #6c757d;
+  color: var(--md-default-fg-color--light);
 }
 
 .success {
@@ -104,5 +104,5 @@
 }
 
 .md-typeset .slim-button {
-  padding: .3em 1.3em;
+  padding: 0.3em 1.3em;
 }
