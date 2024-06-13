@@ -8,7 +8,7 @@
       "description": "Define all your projects in a array.",
       "type": "array",
       "items": {
-        "required": ["description", "github", "icon", "status", "title"],
+        "required": ["description", "github", "icon", "title"],
         "additionalProperties": false,
         "properties": {
           "title": {
@@ -31,12 +31,6 @@
             "type": "string",
             "default": "https://github.com/arv-anshul/",
             "pattern": "https?://\\w+"
-          },
-          "status": {
-            "description": "Current project status.",
-            "type": "string",
-            "enum": ["deprecated", "old", "working"],
-            "default": "working"
           }
         }
       }
