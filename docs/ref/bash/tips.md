@@ -79,3 +79,9 @@ $ open `!!`
 open `brew --prefix`
 # Now Finder.app opens at "/opt/homebrew" path
 ```
+
+### Uninstall Apps from Mac
+
+Unistall and remove all app data from your Mac using
+[this script](https://github.com/sunknudsen/privacy-guides/raw/master/how-to-clean-uninstall-macos-apps-using-appcleaner-open-source-alternative/app-cleaner.sh).
+For more information [see this](https://youtu.be/0nVOB0EE5ps) youtube video.
