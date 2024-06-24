@@ -67,6 +67,8 @@ topics:
         url: ../blog/posts/learn-web-scraping.md
       - title: Discovering Hidden APIs
         url: https://www.youtube.com/playlist?list=PLyb_C2HpOQSCAi67ZF0w-6CvCvZs_OXAB
+      - title: Web Scraping with Selenium and Python - Blog
+        url: https://scrapfly.io/blog/web-scraping-with-selenium-and-python/
   - header: Polars
     icon: simple-polars
     tutorials:
@@ -120,3 +122,14 @@ topics:
         url: https://taskfile.dev
       - title: Intro to Taskfile - Overview
         url: https://youtu.be/Z7EnwBaJzCk
+  - header: Playwright
+    icon: simple-playwright
+    tutorials:
+      - title: Playwright Python - Official Docs
+        url: https://playwright.dev/python/
+      - title: Playwright & Python - Beginner
+        url: https://www.youtube.com/playlist?list=PLRzwgpycm-FjH31TQHWyA879H_vP1rzmp
+      - title: More Web Scraping Stuff
+        url: \#web-scraping
+      - title: Web Scraping with Playwright and Python - Blog
+        url: https://scrapfly.io/blog/web-scraping-with-playwright-and-python/
