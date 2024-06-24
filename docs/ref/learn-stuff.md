@@ -10,7 +10,7 @@ I am sharing those resources which I've used to learn below listed things like ^
 
 {% for topic in learn_stuff.topics|sort(attribute="header") %}
 
-## :{{ topic.icon }}:&nbsp; {{ loop.index }}. **{{ topic.header }}** { .{{ topic.icon | replace("simple-", "") }} }
+## :{{ topic.icon }}:&nbsp; **{{ topic.header }}** { .{{ topic.icon | replace("simple-", "") }} }
 
     {% for item in topic.tutorials %}
 
