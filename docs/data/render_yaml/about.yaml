@@ -97,6 +97,10 @@ tech_stack:
       icon: simple-mysql
     - title: SQLite
       icon: simple-sqlite
+    - title: Selenium
+      icon: simple-selenium
+    - title: Playwright
+      icon: simple-playwright
   Dev Tools:
     - title: VS-Code
       icon: simple-visualstudiocode

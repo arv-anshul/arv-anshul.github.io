@@ -52,6 +52,8 @@
 .obsidian-hover:hover { color: #483699; }
 .pandas { color: #150458; }
 .pandas-hover:hover { color: #150458; }
+.playwright { color: #2EAD33; }
+.playwright-hover:hover { color: #2EAD33; }
 .plotly { color: #3F4F75; }
 .plotly-hover:hover { color: #3F4F75; }
 .polars { color: #CD792C; }
@@ -76,6 +78,8 @@
 .rye-hover:hover { color: #90c820; }
 .scikitlearn { color: #F7931E; }
 .scikitlearn-hover:hover { color: #F7931E; }
+.selenium { color: #43B02A; }
+.selenium-hover:hover { color: #43B02A; }
 .spotify { color: #1DB954; }
 .spotify-hover:hover { color: #1DB954; }
 .sqlite { color: #003B57; }
