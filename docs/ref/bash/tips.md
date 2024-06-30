@@ -85,3 +85,9 @@ open `brew --prefix`
 Unistall and remove all app data from your Mac using
 [this script](https://github.com/sunknudsen/privacy-guides/raw/master/how-to-clean-uninstall-macos-apps-using-appcleaner-open-source-alternative/app-cleaner.sh).
 For more information [see this](https://youtu.be/0nVOB0EE5ps) youtube video.
+
+### Remove Mac's "Login Items"
+
+1. Go to `/Library/LaunchAgents` and `/Library/LaunchDaemons` path.
+2. Check for the login item names and delete them.
+3. This propcess might asks for password.
