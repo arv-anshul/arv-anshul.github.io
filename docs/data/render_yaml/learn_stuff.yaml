@@ -133,3 +133,8 @@ topics:
         url: \#web-scraping
       - title: Web Scraping with Playwright and Python - Blog
         url: https://scrapfly.io/blog/web-scraping-with-playwright-and-python/
+  - header: Langchain
+    icon: simple-langchain
+    tutorials:
+      - title: LangChain Master Class For Beginners 2024 [+20 Examples, LangChain V0.2]
+        url: https://youtu.be/yF9kGESAi3M
