@@ -71,7 +71,21 @@ movies:
     type: Movie
     poster: https://media-cache.cinematerial.com/p/500x/j2k5s5s4/dead-poets-society-movie-poster.jpg
     thoughts: |
-      When I watched it first time I was in 10th and I think it was my first to experience a movie like that (don't know the explanation) and after that I love these kind of movies. (Carpe Diem)
+      When I watched it first time I was in 10th and I think it was my first to experience a movie
+      like that (don't know the explanation) and after that I love these kind of movies. (Carpe Diem)
+  - title: Love Life
+    type: Movie
+    poster: https://media-cache.cinematerial.com/p/500x/tzhhh0j7/love-life-japanese-movie-poster.jpg
+    thoughts: |
+      Intense tragic japanese family drama. Honestly, I couldn't understand much why are the
+      characters are doing this specially the main character (Taeko). Tried to watch video essay
+      around it but couldn't found any.
+  - title: Maharaja
+    type: Movie
+    poster: https://media-cache.cinematerial.com/p/500x/tlqkoge9/maharaja-indian-movie-poster.jpg
+    thoughts: |
+      Engaging thriller with amazing performance by Vijay Sethupathi. As the mystery unfolds you
+      just praises the writer. When you find the actual truth you'll CRY; really.
 
 musics:
   - title: The Way That Lovers Do
