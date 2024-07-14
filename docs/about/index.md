@@ -50,6 +50,25 @@ Continuously expanding my technological horizons, I have successfully completed 
 
 ---
 
+<h2 class="light" align="center"><strong>Experiences</strong></h2>
+
+{% for exp in about.experiences %}
+
+<div class="grid cards" markdown>
+
+  - **{{ exp.title }}**<br>
+    <small>{{ exp.company }} **•** {{ exp.period }}</small>
+
+    ---
+
+    {% for point in exp.points %}
+    - :{{ point.icon }}: {{ point.desc }}
+    {% endfor %}
+
+</div>
+
+{% endfor %}
+
 <h2 class="light" align="center"><strong>Projects</strong></h2>
 
 {% for project in about.projects %}

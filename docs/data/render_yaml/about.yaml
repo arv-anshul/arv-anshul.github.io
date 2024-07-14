@@ -70,6 +70,18 @@ projects:
         icon: simple-streamlit
         url: https://arv-anshul-99acres-2a.streamlit.app/
 
+experiences:
+  - title: Data Science Intern
+    company: LeapX.ai
+    period: July 2024 - Present
+    points:
+      - icon: simple-scrapy
+        desc: A web-scraper using Scrapy framework which scrapes data and stores it in database using pipeline.
+      - icon: simple-streamlit
+        desc: A streamlit dashboard which analyses real-estate data and cluster affluent areas and plot them on map.
+      - icon: simple-openai
+        desc: A chatbot powered by OpenAI LLMs to query your AD campaigns data, also plot graphs on your query.
+
 tech_stack:
   Languages:
     - title: Python
