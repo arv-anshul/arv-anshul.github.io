@@ -72,8 +72,14 @@ plugins:
       pagination_per_page: 5
       pagination_format: $link_first $link_previous ~2~ $link_next $link_last
   - search: null
-  - markdownextradata:
-      data: docs/data/render_yaml/
+  - macros:
+      include_yaml:
+        - about: docs/data/render_yaml/about.yaml
+        - friends: docs/data/render_yaml/friends.yaml
+        - learn_stuff: docs/data/render_yaml/learn_stuff.yaml
+        - other_projects: docs/data/render_yaml/other_projects.yaml
+        - projects_index: docs/data/render_yaml/projects_index.yaml
+        - recommendations: docs/data/render_yaml/recommendations.yaml
   - redirects:
       redirect_maps:
         campusx-dsmp.md: https://arv-anshul.github.io/campusx
