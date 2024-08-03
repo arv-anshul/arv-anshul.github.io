@@ -96,8 +96,9 @@ Continuously expanding my technological horizons, I have successfully completed 
 <div class="grid cards" markdown>
 {% for stack, techs in about.tech_stack.items()|sort(attribute=0) %}
   - **{{ stack }}**
+  {: align=center style="margin-bottom: 0;" }
 
-    ---
+    <hr style="margin-top: 0.3em; margin-bottom: 0.8em;">
 
     <p align="center" style="margin: 0;">
     {% for tech in techs|sort(attribute='title') %}:{{ tech.icon }}:{ .lg .hover-icon-bounce .{{ tech.icon|replace("simple-", "") }} title="{{ tech.title }}" } &nbsp; {% endfor %}
