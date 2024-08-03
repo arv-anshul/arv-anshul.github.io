@@ -94,8 +94,6 @@ tech_stack:
       icon: simple-jinja
     - title: Bash
       icon: simple-gnubash
-    - title: JSON Schema
-      icon: simple-json
     - title: Rust
       icon: simple-rust
   Frameworks:
@@ -160,8 +158,8 @@ tech_stack:
       icon: material-chart-scatter-plot-hexbin
     - title: Plotly
       icon: simple-plotly
-    - title: Jupyter Notebook
-      icon: simple-jupyter
+    - title: Hugging Face
+      icon: simple-huggingface
   Python Libraries:
     - title: Pytest
       icon: simple-pytest
