@@ -6,7 +6,7 @@ authors = [{ name = "Anshul Raj Verma", email = "arv.anshul.1864@gamail.com" }]
 readme = "README.md"
 requires-python = ">= 3.11"
 dependencies = [
-    "mkdocs-material==9.5.27",
+    "mkdocs-material==9.5.31",
     "mkdocs-macros-plugin==1.0.5",
     "mkdocs-redirects==1.2.1",
 ]
