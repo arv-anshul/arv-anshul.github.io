@@ -109,23 +109,17 @@ tech_stack:
       icon: simple-sqlite
     - title: Selenium
       icon: simple-selenium
+    - title: Taipy
+      icon: simple-taipy
+    - title: Scrapy
+      icon: simple-scrapy
   Dev Tools:
-    - title: VS-Code
-      icon: material-microsoft-visual-studio-code
-    - title: Obsdian
-      icon: simple-obsidian
     - title: Arc Browser
       icon: simple-arc
     - title: pre-commit
       icon: simple-precommit
-    - title: Material for Mkdocs
-      icon: simple-materialformkdocs
     - icon: simple-starship
       title: Starship Prompt
-    - title: Ruff
-      icon: simple-ruff
-    - title: Rye
-      icon: simple-rye
     - title: Raycast
       icon: simple-raycast
     - title: Zed Code Editor
@@ -150,16 +144,20 @@ tech_stack:
       icon: simple-pandas
     - title: Numpy
       icon: simple-numpy
-    - title: Matplotlib
-      icon: material-chart-scatter-plot
-    - title: Seaborn
-      icon: material-chart-scatter-plot-hexbin
     - title: Plotly
       icon: simple-plotly
     - title: Hugging Face
       icon: simple-huggingface
-  Python Libraries:
+    - title: LangChain
+      icon: simple-langchain
+  Python Specific:
     - title: Pytest
       icon: simple-pytest
     - title: Pydantic
       icon: simple-pydantic
+    - title: Ruff
+      icon: simple-ruff
+    - title: Rye
+      icon: simple-rye
+    - title: Material for Mkdocs
+      icon: simple-materialformkdocs
