@@ -147,7 +147,7 @@ symbol = "󰨞 " # (3)!
 
 1. :simple-github:
 2. :material-file-document-multiple:
-3. :simple-visualstudiocode:
+3. :material-microsoft-visual-studio-code:
 
 ??? example "Conventions"
 

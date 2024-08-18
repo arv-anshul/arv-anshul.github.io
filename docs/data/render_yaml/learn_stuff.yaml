@@ -81,7 +81,7 @@ topics:
       - title: Getting Started with Polars - Matt Harrison - PyCon US
         url: https://www.youtube.com/watch?v=CJ0f45evuME
   - header: Bash
-    icon: simple-windowsterminal
+    icon: simple-gnubash
     tutorials:
       - title: 50 Linux Commands Every Developer Must Know 🔥
         url: https://www.youtube.com/watch?v=l32UR9DcjLg
@@ -123,7 +123,7 @@ topics:
       - title: Intro to Taskfile - Overview
         url: https://youtu.be/Z7EnwBaJzCk
   - header: Playwright
-    icon: simple-playwright
+    icon: performing_arts
     tutorials:
       - title: Playwright Python - Official Docs
         url: https://playwright.dev/python/

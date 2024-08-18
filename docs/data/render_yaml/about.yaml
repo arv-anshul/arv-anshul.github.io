@@ -109,11 +109,9 @@ tech_stack:
       icon: simple-sqlite
     - title: Selenium
       icon: simple-selenium
-    - title: Playwright
-      icon: simple-playwright
   Dev Tools:
     - title: VS-Code
-      icon: simple-visualstudiocode
+      icon: material-microsoft-visual-studio-code
     - title: Obsdian
       icon: simple-obsidian
     - title: Arc Browser

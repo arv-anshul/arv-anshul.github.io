@@ -107,10 +107,10 @@ docker run -it my_python_container
 
     **Visual Studio Code - Docs**{ .success }
 
-    - :simple-visualstudiocode:{ .visualstudiocode }&nbsp; [Working with containers in Visual Studio Code](https://code.visualstudio.com/remote/advancedcontainers/overview)
-    - :simple-visualstudiocode:{ .visualstudiocode }&nbsp; [Build and run a Python app in a container | VSCode](https://code.visualstudio.com/docs/containers/quickstart-python)
+    - :material-microsoft-visual-studio-code:{ .visualstudiocode }&nbsp; [Working with containers in Visual Studio Code](https://code.visualstudio.com/remote/advancedcontainers/overview)
+    - :material-microsoft-visual-studio-code:{ .visualstudiocode }&nbsp; [Build and run a Python app in a container | VSCode](https://code.visualstudio.com/docs/containers/quickstart-python)
 
-## :simple-windowsterminal: `docker`
+## :simple-gnubash: `docker`
 
 #### 1. `docker run`
 

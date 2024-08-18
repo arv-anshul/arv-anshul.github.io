@@ -7,7 +7,7 @@ icon: material/keyboard
 
 # Useful Commands
 
-## :simple-windowsterminal: Bash
+## :simple-gnubash: Bash
 
 ### :octicons-arrow-right-16: Display ANSI colors with their color-code.
 
