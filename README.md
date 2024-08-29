@@ -25,32 +25,13 @@ Clone this repository with `git`:
 git clone https://github.com/arv-anshul/arv-anshul.github.io.git
 ```
 
-### Install with `rye`
+> I have used [`uv`](https://astral.sh/uv) to manage this project, so we'll proceed with `uv`.
 
-Install `rye` from [official website](https://rye-up.com) and create virtual environment using `rye`.
-
-```bash
-rye sync --no-dev
-```
-
-Now, you can easily serve the `docs/` folder as a website:
+First [install `uv`](https://docs.astral.sh/uv/getting-started/installation/), then directly run below command to
+**serve the website** at `http://localhost:8000`:
 
 ```bash
-rye mkdocs serve
-```
-
-### Install with `pip`
-
-Install dependencies from `requirements.lock` (works as `requirements.txt`) file:
-
-```bash
-pip install -r requirements.lock
-```
-
-Now, you can easily serve the `docs/` folder as a website:
-
-```bash
-mkdocs serve
+uv run mkdocs serve
 ```
 
 ## Acknowledgement
