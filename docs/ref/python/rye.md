@@ -10,6 +10,10 @@ icon: simple/rye
 
 # :simple-rye: Rye
 
+!!! failure "Do not use Rye!"
+
+    There's a **new and better tool for the same** called [`uv`](https://docs.astral.sh/uv).
+
 ## :fontawesome-solid-gears: Important settings for Rye
 
 1. Use `UV` internally in Rye. Enable `uv` with below command:
