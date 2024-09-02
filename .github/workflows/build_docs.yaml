@@ -26,4 +26,4 @@ jobs:
       - name: Finally build docs and publish
         env:
           GOOGLE_ANALYTICS_PROPERTY: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY }}
-        run: uv run mkdocs gh-deploy --force
+        run: uv run --no-dev mkdocs gh-deploy --force
