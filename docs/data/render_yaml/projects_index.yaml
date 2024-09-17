@@ -1,5 +1,24 @@
 $schema: https://github.com/arv-anshul/arv-anshul.github.io/raw/main/schemas/projects_index-schema.json
 projects:
+  - title: Canvas AI
+    description: |
+      Parse and Analyse image containing mathematical expression or problem (it can be in a drawing format) using AI to
+      give a structured response by leveraging Langchain framework. Also created API out of it using FastAPI which has
+      containerized with Docker.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/canvas-ai
+    tags:
+      - docker
+      - fastapi
+      - googlegemini
+      - langchain
+      - precommit
+      - pydantic
+      - ruff
+    completed_on: September, 2024
+
   - title: YouTube Watch History
     description: |
       A streamlit app where you can upload your **YouTube Watch History Data** to see insights on your viewing pattern.
