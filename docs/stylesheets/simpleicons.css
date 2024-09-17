@@ -22,6 +22,8 @@
 .githubactions-hover:hover { color: #2088FF; }
 .gnubash { color: #4EAA25; }
 .gnubash-hover:hover { color: #4EAA25; }
+.googlegemini { color: #8E75B2; }
+.googlegemini-hover:hover { color: #8E75B2; }
 .html5 { color: #E34F26; }
 .html5-hover:hover { color: #E34F26; }
 .huggingface { color: #FFD21E; }
@@ -78,8 +80,8 @@
 .ruff-hover:hover { color: #D7FF64; }
 .rust { color: var(--md-typeset-color); }
 .rust-hover:hover { color: var(--md-typeset-color); }
-.rye { color: #90c820; }
-.rye-hover:hover { color: #90c820; }
+.rye { color: #90C820; }
+.rye-hover:hover { color: #90C820; }
 .scikitlearn { color: #F7931E; }
 .scikitlearn-hover:hover { color: #F7931E; }
 .scrapy { color: #60A839; }
