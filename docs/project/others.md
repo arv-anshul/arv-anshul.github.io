@@ -13,13 +13,13 @@ hide:
 
 {% for project in other_projects.projects %}
 
-  - :simple-{{ project.icon }}:{: .lg .{{ project.icon }} } &nbsp; **{{ project.title }}**{: .{{ project.icon }} }
+  {% set color_class = project.icon.removeprefix("simple-") %}
+
+  - :{{ project.icon }}:{: .lg .{{ color_class }} } &nbsp; [**{{ project.title }}**{: .{{ color_class }} }]({{ project.url }})
 
     ---
 
     {{ project.description }}
-
-    [:octicons-arrow-right-24: GitHub]({{ project.github }})
 
 {% endfor %}
 
