@@ -20,55 +20,14 @@ socials:
   - title: Python Projects on PyPi
     icon: simple-pypi
     url: https://pypi.org/user/arv-anshul/
+  - title: HuggingFace Profile
+    icon: simple-huggingface
+    url: https://hf.co/arv-anshul
 
-projects:
-  - title: YouTube Watch History
-    icon: simple-youtube
-    description: |
-      Analyse your YouTube Watch History Data and get insights from it like which type
-      of which type of content you likes to watch on which time of the day. I have build
-      ML model which predicts the `contentType` of the videos from their titles.
-    links:
-      - title: Repository on GitHub
-        icon: simple-github
-        url: https://github.com/arv-anshul/yt-watch-history
-      - title: Jupyter Notebooks
-        icon: simple-jupyter
-        url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
-      - title: Project Documents
-        icon: material-file-document
-        url: ../project/yt-watch-history/index.md
-  - title: Indian Real Estate Analyser and Price Prediction
-    icon: fontawesome-solid-building
-    description: |
-      Analyse real estate of India. I have scrapped data from
-      [99acres.com](https://99acres.com). You can also make prediction of property
-      prices by providing you requirements like BHK, AREA, LOCATION and more.
-    links:
-      - title: Repository on GitHub
-        icon: simple-github
-        url: https://github.com/arv-anshul/campusx-real-estate
-      - title: Post on LinkedIn
-        icon: simple-linkedin
-        url: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
-  - title: Web Scrape 99acres.com
-    icon: simple-scrapy
-    description: |
-      Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit Web-UI
-      and download the data in **CSV** format.
-    links:
-      - title: Repository on GitHub
-        icon: simple-github
-        url: https://github.com/arv-anshul/99acres-scrape
-      - title: Datasets on Kaggle
-        icon: simple-kaggle
-        url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
-      - title: Post on LinkedIn
-        icon: simple-linkedin
-        url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
-      - title: Streamlit App
-        icon: simple-streamlit
-        url: https://arv-anshul-99acres-2a.streamlit.app/
+project_ids:
+  - canvas-ai.md
+  - yt-watch-history/index.md
+  - https://github.com/arv-anshul/campusx-real-estate
 
 experiences:
   - title: Data Science Intern
@@ -107,8 +66,6 @@ tech_stack:
       icon: simple-mysql
     - title: SQLite
       icon: simple-sqlite
-    - title: Selenium
-      icon: simple-selenium
     - title: Taipy
       icon: simple-taipy
     - title: Scrapy
@@ -157,7 +114,5 @@ tech_stack:
       icon: simple-pydantic
     - title: Ruff
       icon: simple-ruff
-    - title: Rye
-      icon: simple-rye
     - title: Material for Mkdocs
       icon: simple-materialformkdocs

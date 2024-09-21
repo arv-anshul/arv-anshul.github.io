@@ -71,9 +71,12 @@ Continuously expanding my technological horizons, I have successfully completed 
 
 <h2 class="light" align="center"><strong>Projects</strong></h2>
 
-{% for project in about.projects %}
+{% for project_id in about.project_ids %}
+    {% set project = projects_index.projects[project_id] %}
+
 <div class="grid cards" markdown>
-  - :{{ project.icon }}:&nbsp; **{{ project.title }}**
+
+  - **{{ project.title }}**
 
     <p style="text-align: justify;" markdown>
     {{ project.description }}
@@ -81,10 +84,14 @@ Continuously expanding my technological horizons, I have successfully completed 
 
     ---
 
-    <p align=center>
-    {% for link in project.links %} [:{{ link.icon }}:{ .light .secondary-hover }]({{ link.url }} "{{ link.title }}"){ target=blank_ } &nbsp; &nbsp; {% endfor %}
+    <p align=center markdown>
+    {% for url in project.urls %}[:{{ url.icon }}:{: .light .secondary-hover }]({{ url.url }}){: target=blank_ title="{{ url.title }}" } &nbsp; &nbsp; {% endfor %}
+    :material-slash-forward: &nbsp; &nbsp;
+    {% for tag in project.tags|sort %} :simple-{{ tag }}:{: .hover-icon title="{{ tag|title }}"} &nbsp; {% endfor %}
     </p>
+
 </div>
+
 {% endfor %}
 
 <p align="center" markdown>[==All Projects==](../project/index.md)</p>
