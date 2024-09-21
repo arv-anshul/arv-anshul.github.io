@@ -10,13 +10,13 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/canvas-ai
     tags:
+      - astral
       - docker
       - fastapi
       - googlegemini
       - langchain
       - precommit
       - pydantic
-      - ruff
     completed_on: September, 2024
 
   - title: YouTube Watch History
