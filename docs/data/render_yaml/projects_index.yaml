@@ -55,7 +55,7 @@ projects:
       - youtube
     completed_on: January, 2024
 
-  spotify-analysis/index.md:
+  spotify-analysis.md:
     title: Spotify Analysis
     description: |
       Analyse your Spotify Streaming data and get some insights from it like whom & when

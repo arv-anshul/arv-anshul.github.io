@@ -7,7 +7,7 @@ slug: spotify-analysis
 
 # :simple-spotify:{ .spotify title="2024-02-22" } Spotify Analysis
 
-{% set project = projects_index.projects["spotify-analysis/index.md"] %}
+{% set project = projects_index.projects["spotify-analysis.md"] %}
 
 <hr>
 <p align=center markdown>
