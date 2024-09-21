@@ -6,8 +6,9 @@ icon: fontawesome/solid/brain
 
 # :simple-musicbrainz: Learn Stuff from Tutorials
 
-I am sharing those resources which I've used to learn below listed things like **Docker**, **Pydantic**, **FastAPI** and
-more. I generally learn from YouTube or Blogs.
+Shared some resources which I have used to learn these technologies. Enjoy!!
+
+!!! danger "Need to refactor this page and make it more verbose."
 
 {% for topic in learn_stuff.topics|sort(attribute="header") %}
 
