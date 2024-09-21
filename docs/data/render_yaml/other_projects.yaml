@@ -1,5 +1,9 @@
 $schema: https://raw.githubusercontent.com/arv-anshul/arv-anshul.github.io/main/schemas/other_projects-schema.json
 projects:
+  - title: Md Badges CLI
+    description: CLI tool to get SimpleIcons badges in multiple format, written in Rust.
+    icon: simple-rust
+    url: https://github.com/arv-anshul/thrust/tree/main/md_badges
   - title: Web Scrape 99acres.com
     description: Scrape 99acres.com with python using curl and export data as CSV.
     icon: simple-streamlit
