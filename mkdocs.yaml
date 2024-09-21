@@ -1,5 +1,3 @@
-repo_url: https://github.com/arv-anshul/arv-anshul.github.io
-repo_name: arv-anshul.github.io
 site_author: Anshul Raj Verma
 site_description: Anshul's personal website for showcasing his learnings, blogs and more.
 site_name: ARV
@@ -98,14 +96,14 @@ extra:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_PROPERTY
     feedback:
-      title: 🤔 Was this page helpful? 🤔
+      title: Did you like it?
       ratings:
         - icon: fontawesome/solid/face-grin-wink
-          name: This page was helpful!
+          name: Yep!
           data: 1
           note: Thanks for your feedback!
         - icon: fontawesome/solid/face-frown
-          name: This page could be improved!
+          name: Nope!
           data: 0
           note: Thanks for your feedback!
   social:
@@ -115,9 +113,12 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/_batookm
       name: Connect on Instagram
-    - icon: fontawesome/brands/python
+    - icon: simple/pypi
       link: https://pypi.org/user/arv-anshul/
       name: See My Python Projects PyPi
+    - icon: simple/huggingface
+      link: https://hf.co/arv-anshul
+      name: HuggingFace Profile
     - icon: fontawesome/brands/github
       link: https://github.com/arv-anshul
       name: See my GitHub Profile
