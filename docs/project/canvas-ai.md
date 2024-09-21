@@ -8,9 +8,7 @@ hide:
 
 # :simple-googlegemini:{: title="Inspired by '1GbJQ7fHgqo'" } Canvas AI
 
-{% for project in projects_index.projects %}
-
-{% if project.title == "Canvas AI" %}
+{% set project = projects_index.projects["canvas-ai.md"] %}
 
 <hr>
 <p align=center markdown>
@@ -21,10 +19,6 @@ hide:
 <hr>
 
 {{ project.description }}
-
-{% endif %}
-
-{% endfor %}
 
 ## Prompt Examples
 

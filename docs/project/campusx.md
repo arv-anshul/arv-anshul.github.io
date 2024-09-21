@@ -8,9 +8,7 @@ hide:
 
 # :octicons-feed-repo-16:{ title="2024-02-16" } CampusX Resources
 
-{% for project in projects_index.projects %}
-
-{% if project.title == "CampusX Resources" %}
+{% set project = projects_index.projects["canvas-ai.md"] %}
 
 <hr>
 <p align=center markdown>
@@ -19,10 +17,6 @@ hide:
 {% for tag in project.tags|sort %} :simple-{{ tag }}:{ .{{ tag }} .hover-icon-bounce title="{{ tag|title }}"} &nbsp; {% endfor %}
 </p>
 <hr>
-
-{% endif %}
-
-{% endfor %}
 
 <figure markdown>
   <a href="https://arv-anshul.github.io/campusx">

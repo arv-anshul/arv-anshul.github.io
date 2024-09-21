@@ -7,9 +7,7 @@ slug: spotify-analysis
 
 # :simple-spotify:{ .spotify title="2024-02-22" } Spotify Analysis
 
-
-{% for project in projects_index.projects %}
-{% if project.title == "Spotify Analysis" %}
+{% set project = projects_index.projects["spotify-analysis/index.md"] %}
 
 <hr>
 <p align=center markdown>
@@ -20,9 +18,6 @@ slug: spotify-analysis
 <hr>
 
 <p style="text-align: justify;">{{ project.description }}</p>
-{% endif %}
-{% endfor %}
-
 
 !!! question "How to get my Spotify data?"
 

@@ -10,11 +10,23 @@ icon: material/notebook-multiple
   }
 </style>
 
-{% for project in projects_index.projects %}
+{% for project_id, project in projects_index.projects.items() %}
+
+    {% set icon = ":material-book-sync:" %}
+    {% set hover_classes = ".hover-icon-bounce .warning-hover" %}
+    {% set title = "Currently Working" %}
+
+    {% if project.completed_on %}
+        {% set icon = ":material-book-check:" %}
+        {% set hover_classes = ".hover-icon-bounce .success-hover" %}
+        {% set title = project.completed_on %}
+    {% endif %}
+
+    {% set project_hover_icon = icon + "{: " + hover_classes + " title='" + title + "'}" %}
 
 <div class="grid cards" markdown >
 
-  - ## {% if project.completed_on %} :material-book-check:{ .hover-icon-bounce .success-hover title="{{ project.completed_on }}" } {% else %} :material-book-sync:{ .hover-icon-bounce .warning-hover title="Currently Working" } {% endif %} **{{ project.title }}**
+  - ## {{ project_hover_icon }} [**{{ project.title }}**]({{ project_id }}){: style="color: var(--md-typeset-color);" }
 
     {{ project.description }}{ style="text-align: justify;" }
 

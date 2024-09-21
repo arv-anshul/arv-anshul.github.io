@@ -10,8 +10,7 @@ hide:
 
 <p align="center" markdown>
 
-{% for project in projects_index.projects %}
-{% if project.title == "YouTube Watch History" %}
+{% set project = projects_index.projects["yt-watch-history/index.md"] %}
 
 <hr>
 <p align=center markdown>
@@ -24,9 +23,6 @@ hide:
 ## Overview
 
 <p align="justify" markdown>{{ project.description }}</p>
-
-{% endif %}
-{% endfor %}
 
 </p>
 

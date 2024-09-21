@@ -1,6 +1,7 @@
-$schema: https://github.com/arv-anshul/arv-anshul.github.io/raw/main/schemas/projects_index-schema.json
+$schema: https://raw.githubusercontent.com/arv-anshul/arv-anshul.github.io/main/schemas/projects_index-schema.json
 projects:
-  - title: Canvas AI
+  canvas-ai.md:
+    title: Canvas AI
     description: |
       Parse and Analyse image containing mathematical expression or problem (it can be in a drawing format) using AI to
       give a structured response by leveraging Langchain framework. Also created API out of it using FastAPI which has
@@ -19,7 +20,8 @@ projects:
       - pydantic
     completed_on: September, 2024
 
-  - title: YouTube Watch History
+  yt-watch-history/index.md:
+    title: YouTube Watch History
     description: |
       A streamlit app where you can upload your **YouTube Watch History Data** to see insights on your viewing pattern.
       Your data will go through a ML Model which predicts the **ContentType** of each video your have watch. The app
@@ -53,7 +55,8 @@ projects:
       - youtube
     completed_on: January, 2024
 
-  - title: Spotify Analysis
+  spotify-analysis/index.md:
+    title: Spotify Analysis
     description: |
       Analyse your Spotify Streaming data and get some insights from it like whom & when
       you listen your favorite Tracks, Artists, Playlists or Albums.
@@ -79,7 +82,8 @@ projects:
       - streamlit
     completed_on: March, 2024
 
-  - title: E-commerce Scrapper API - FastAPI
+  https://github.com/arv-anshul/ecommerce-scrapper-api:
+    title: E-commerce Scrapper API - FastAPI
     description: |
       Scrape data from E-commerce websites like Flipkart by searching products like
       iphone, laptops and more. Also you can export the scrapped data into JOSN format.
@@ -102,7 +106,8 @@ projects:
       - pydantic
     completed_on: November, 2023
 
-  - title: Indian Real Estate Analyser and Price Prediction
+  https://github.com/arv-anshul/campusx-real-estate:
+    title: Indian Real Estate Analyser and Price Prediction
     description: |
       Analyse real estate of India. I have scrapped data from [99acres.com](https://99acres.com).
       You can also make prediction of property prices by providing you requirements like
@@ -123,7 +128,8 @@ projects:
       - streamlit
     completed_on: October, 2023
 
-  - title: FreeAPI in Python using FastAPI
+  https://github.com/arv-anshul/freeapi-py:
+    title: FreeAPI in Python using FastAPI
     description: |
       Created similar APIs present in **freeapi.app** project using Python with FastAPI and MongoDB.
       I've used Docker so that anyone can easily reproduce this project in their system.
@@ -144,7 +150,8 @@ projects:
       - rye
     completed_on: May, 2024
 
-  - title: Curler
+  https://github.com/arv-anshul/curler:
+    title: Curler
     description: |
       Curler is a tool which let's you parse `curl` command into python with ease.
       Also, you can use that parsed object with `requests`, `httpx` like library to make
@@ -164,7 +171,8 @@ projects:
       - python
     completed_on: November, 2023
 
-  - title: Web Scrapping 99acres.com
+  https://github.com/arv-anshul/99acres-scrape:
+    title: Web Scrapping 99acres.com
     description: |
       Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit
       Web-UI and download the data in **CSV** format.
@@ -190,7 +198,8 @@ projects:
       - streamlit
     completed_on: October, 2023
 
-  - title: CampusX Resources
+  campusx.md:
+    title: CampusX Resources
     description: |
       This project involves gathering data from a course website's HTML structure, followed by developing Python scripts for parsing and extracting essential data. HTTP requests are then made to obtain session resources, with robust testing and data structure maintenance ensuring integrity. Utilizing `mkdocs` and `mkdocs-material`, a professional web page is generated and hosted on GitHub Pages via CI/CD with GitHub Actions.
     urls:

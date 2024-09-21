@@ -6,7 +6,7 @@
   "properties": {
     "projects": {
       "description": "Define all your projects in a array.",
-      "type": "array",
+      "type": "object",
       "items": {
         "$ref": "#/definitions/project"
       }
