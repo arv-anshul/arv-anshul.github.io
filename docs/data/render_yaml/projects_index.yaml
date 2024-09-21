@@ -16,8 +16,8 @@ projects:
       - fastapi
       - googlegemini
       - langchain
-      - precommit
       - pydantic
+      - streamlit
     completed_on: September, 2024
 
   yt-watch-history/index.md:
@@ -43,16 +43,13 @@ projects:
     tags:
       - docker
       - fastapi
-      - jupyter
       - mlflow
       - mongodb
       - plotly
       - polars
       - pydantic
-      - ruff
       - scikitlearn
       - streamlit
-      - youtube
     completed_on: January, 2024
 
   spotify-analysis.md:
