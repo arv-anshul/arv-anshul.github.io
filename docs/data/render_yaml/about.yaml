@@ -25,9 +25,12 @@ socials:
     url: https://hf.co/arv-anshul
 
 project_ids:
-  - canvas-ai.md
-  - yt-watch-history/index.md
-  - https://github.com/arv-anshul/campusx-real-estate
+  - id: canvas-ai.md
+    icon: simple-googlegemini
+  - id: yt-watch-history/index.md
+    icon: simple-youtube
+  - id: https://github.com/arv-anshul/campusx-real-estate
+    icon: fontawesome-solid-building
 
 experiences:
   - title: Data Science Intern

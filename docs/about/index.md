@@ -71,12 +71,12 @@ Continuously expanding my technological horizons, I have successfully completed 
 
 <h2 class="light" align="center"><strong>Projects</strong></h2>
 
-{% for project_id in about.project_ids %}
-    {% set project = projects_index.projects[project_id] %}
+{% for sl_project in about.project_ids %}
+    {% set project = projects_index.projects[sl_project.id] %}
 
 <div class="grid cards" markdown>
 
-  - **{{ project.title }}**
+  - :{{ sl_project.icon }}: **{{ project.title }}**
 
     <p style="text-align: justify;" markdown>
     {{ project.description }}
