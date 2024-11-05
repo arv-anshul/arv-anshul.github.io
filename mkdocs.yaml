@@ -161,6 +161,7 @@ nav:
           - project/yt-watch-history/channel_reco.md
           - project/yt-watch-history/v2-architecture.md
           - project/yt-watch-history/v2-channel_reco.md
+      - project/yt-comment-analyser.md
       - project/spotify-analysis.md
       - project/campusx.md
       - project/credit-risk-modeling.md
