@@ -4,6 +4,12 @@ title: Learn Stuff
 icon: fontawesome/solid/brain
 ---
 
+<style>
+  .md-typeset ul:has(.topic-li) {
+    list-style-type: none;
+  }
+</style>
+
 # :simple-musicbrainz: Learn Stuff from Tutorials
 
 Shared some resources which I have used to learn these technologies. Enjoy!!
@@ -16,7 +22,8 @@ Shared some resources which I have used to learn these technologies. Enjoy!!
 
     {% for item in topic.tutorials %}
 
-- [{{ item.title }}]({{ item.url }}){ target="_blank" }
+- :{{ item.type }}: [{{ item.title }}]({{ item.url }}){ target="_blank" }
+{: .topic-li }
 
     {% endfor %}
 

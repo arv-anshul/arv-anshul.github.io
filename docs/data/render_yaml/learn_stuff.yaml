@@ -3,151 +3,249 @@ topics:
     icon: simple-pydantic
     tutorials:
       - title: Pydantic Introduction - Models, Fields, Constrained Types, Validator Functions and Model Exports
-        url: https://www.youtube.com/watch?v=i4jespFbA1c
-      - title: Do We Still Need Dataclasses? // PYDANTIC Tutorial
-        url: https://www.youtube.com/watch?v=Vj-iU-8_xLs
+        author: null
+        url: https://youtu.be/i4jespFbA1c
+        type: octicons-video-16
+      - title: Do We Still Need Dataclasses? Pydantic Tutorial
+        author: null
+        url: https://youtu.be/Vj-iU-8_xLs
+        type: octicons-video-16
       - title: Why You Should Use Pydantic in 2024 | Tutorial
-        url: https://www.youtube.com/watch?v=502XOB0u8OY
+        author: null
+        url: https://youtu.be/502XOB0u8OY
+        type: octicons-video-16
   - header: FastAPI
     icon: simple-fastapi
     tutorials:
-      - title: Learn FastAPI - Blog
+      - title: Learn FastAPI Blog
+        author: arv-anshul
         url: ../blog/posts/learn-fastapi.md
-      - title: FastAPI - A python framework | Full Course
-        url: https://www.youtube.com/watch?v=7t2alSnE2-I
-      - title: FastAPI Tutorial - Building RESTful APIs with Python - YouTube
-        url: https://www.youtube.com/watch?v=GN6ICac3OXY
-      - title: FastAPI Tutorial in Hindi | Lets build a Notes app using FastAPI, MongoDB & Bootstrap 🔥 - YouTube
-        url: https://www.youtube.com/watch?v=52c7Kxp_14E
-      - title: FastAPI Tutorials - Playlist
-        url: https://www.youtube.com/playlist?list=PLK8U0kF0E_D6l19LhOGWhVZ3sQ6ujJKq_
+        type: material-file-document
+      - title: FastAPI - A python framework
+        author: null
+        url: https://youtu.be/7t2alSnE2-I
+        type: octicons-video-16
+      - title: FastAPI Tutorial - Building RESTful APIs with Python
+        author: null
+        url: https://youtu.be/GN6ICac3OXY
+        type: octicons-video-16
+      - title: FastAPI Tutorial in Hindi | Lets build a Notes app using FastAPI, MongoDB & Bootstrap
+        author: null
+        url: https://youtu.be/52c7Kxp_14E
+        type: octicons-video-16
+      - title: FastAPI Tutorials
+        author: null
+        url: https://youtube.com/playlist?list=PLK8U0kF0E_D6l19LhOGWhVZ3sQ6ujJKq_
+        type: material-playlist-play
   - header: Git
     icon: simple-git
     tutorials:
       - title: Complete Git and GitHub Tutorial
-        url: https://www.youtube.com/watch?v=apGV9Kg7ics
-      - title: Complete GIT in 1 video - YouTube
-        url: https://www.youtube.com/watch?v=tz82ola3oy0
+        author: null
+        url: https://youtu.be/apGV9Kg7ics
+        type: octicons-video-16
+      - title: Complete GIT in 1 video
+        author: null
+        url: https://youtu.be/tz82ola3oy0
+        type: octicons-video-16
       - title: Git CLI Cheatsheet · GitHub Gist
+        author: null
         url: https://gist.github.com/hofmannsven/6814451
+        type: material-file-document
       - title: Atlassian Documentation on GIT
+        author: null
         url: https://www.atlassian.com/git
+        type: material-file-document
   - header: Async Programming
     icon: simple-python
     tutorials:
-      - title: Making multiple HTTP requests using Python (synchronous, multiprocessing, multithreading, asyncio) - YouTube
-        url: https://www.youtube.com/watch?v=R4Oz8JUuM4s
-      - title: Demystifying Python's Async and Await Keywords - YouTube
-        url: https://www.youtube.com/watch?v=F19R_M4Nay4
-      - title: Asyncio in Python - Full Tutorial - YouTube
-        url: https://www.youtube.com/watch?v=Qb9s3UiMSTA
+      - title: Making multiple HTTP requests using Python (synchronous, multiprocessing, multithreading, asyncio)
+        author: IndianPythonista
+        url: https://youtu.be/R4Oz8JUuM4s
+        type: octicons-video-16
+      - title: Demystifying Python's Async and Await Keywords
+        author: null
+        url: https://youtu.be/F19R_M4Nay4
+        type: octicons-video-16
+      - title: Asyncio in Python | Tutorial
+        author: null
+        url: https://youtu.be/Qb9s3UiMSTA
+        type: octicons-video-16
   - header: Docker
     icon: simple-docker
     tutorials:
-      - title: Learn Docker - Blog
+      - title: Learn Docker
+        author: arv-anshul
         url: ../blog/posts/learn-docker.md
+        type: material-file-document
   - header: Regex
     icon: material-regex
     tutorials:
       - title: RegEx in Python
-        url: https://www.youtube.com/playlist?list=PLyb_C2HpOQSDxe5Y9viJ0JDqGUCetboxB
+        author: IndianPythonista
+        url: https://youtube.com/playlist?list=PLyb_C2HpOQSDxe5Y9viJ0JDqGUCetboxB
+        type: material-playlist-play
   - header: Pytest
     icon: simple-pytest
     tutorials:
-      - title: Getting started with Pytest - Anthony Sottile
+      - title: Getting started with Pytest
+        author: Anthony Sottile
         url: https://youtu.be/mzlH8lp4ISA
+        type: octicons-video-16
       - title: Unit Testing in Python with pytest
-        url: https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS
+        author: null
+        url: https://youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS
+        type: material-playlist-play
       - title: Pytest - FreeCodeCamp
+        author: null
         url: https://youtu.be/cHYq1MRoyI0
+        type: octicons-video-16
   - header: Web Scrapping
     icon: simple-selenium
     tutorials:
       - title: Learn Web Scraping
+        author: null
         url: ../blog/posts/learn-web-scraping.md
+        type: material-file-document
       - title: Discovering Hidden APIs
-        url: https://www.youtube.com/playlist?list=PLyb_C2HpOQSCAi67ZF0w-6CvCvZs_OXAB
-      - title: Web Scraping with Selenium and Python - Blog
+        author: null
+        url: https://youtube.com/playlist?list=PLyb_C2HpOQSCAi67ZF0w-6CvCvZs_OXAB
+        type: material-playlist-play
+      - title: Web Scraping with Selenium and Python
+        author: null
         url: https://scrapfly.io/blog/web-scraping-with-selenium-and-python/
+        type: material-file-document
   - header: Polars
     icon: simple-polars
     tutorials:
       - title: Why I chose Python & Polars for Data Analysis
+        author: null
         url: https://youtu.be/39jB8nJBrCI
-      - title: Polars for Begginers - Playlist
-        url: https://www.youtube.com/playlist?list=PLCSi-9pCA1-CVO6HmoUlp5b3gPOmm5HAL
-      - title: One Shot Overview of Polars - Rob Mulla
+        type: octicons-video-16
+      - title: Polars for Begginers
+        author: null
+        url: https://youtube.com/playlist?list=PLCSi-9pCA1-CVO6HmoUlp5b3gPOmm5HAL
+        type: material-playlist-play
+      - title: One Shot Overview of Polars
+        author: Rob Mulla
         url: https://youtu.be/VHqn7ufiilE
-      - title: Getting Started with Polars - Matt Harrison - PyCon US
-        url: https://www.youtube.com/watch?v=CJ0f45evuME
+        type: octicons-video-16
+      - title: Getting Started with Polars
+        author: Matt Harrison
+        url: https://youtu.be/CJ0f45evuME
+        type: octicons-video-16
   - header: Bash
     icon: simple-gnubash
     tutorials:
       - title: 50 Linux Commands Every Developer Must Know 🔥
-        url: https://www.youtube.com/watch?v=l32UR9DcjLg
+        author: null
+        url: https://youtu.be/l32UR9DcjLg
+        type: octicons-video-16
       - title: you need to learn BASH Scripting RIGHT NOW!!
-        url: https://www.youtube.com/playlist?list=PLIhvC56v63IKioClkSNDjW7iz-6TFvLwS
+        author: null
+        url: https://youtube.com/playlist?list=PLIhvC56v63IKioClkSNDjW7iz-6TFvLwS
+        type: material-playlist-play
   - header: MongoDB
     icon: simple-mongodb
     tutorials:
       - title: MongoDB Tutorial in 1 Hour
-        url: https://www.youtube.com/watch?v=J6mDkcqU_ZE
+        author: null
+        url: https://youtu.be/J6mDkcqU_ZE
+        type: octicons-video-16
       - title: MongoDB aggregation Pipelines
-        url: https://www.youtube.com/playlist?list=PLRAV69dS1uWQ6CZCehxKy0rjkqhQ2Z88t
+        author: null
+        url: https://youtube.com/playlist?list=PLRAV69dS1uWQ6CZCehxKy0rjkqhQ2Z88t
+        type: material-playlist-play
   - header: SQL
     icon: simple-mysql
     tutorials:
-      - title: Basic DBMS and SQL Full - CampusX
-        url: https://www.youtube.com/playlist?list=PLBv9GORP5VkclmbvgNaEB3GBFc-weefX7
-      - title: SQL for Data Science - CampusX
-        url: https://www.youtube.com/playlist?list=PLKnIA16_RmvYun1_5r9Fb4eQigioPB7yn
-      - title: Complete SQL Course For Data Science - CampusX
-        url: https://www.youtube.com/watch?v=nopIGY1zJE0
+      - title: Basic DBMS and SQL Full
+        author: CampusX
+        url: https://youtube.com/playlist?list=PLBv9GORP5VkclmbvgNaEB3GBFc-weefX7
+        type: material-playlist-play
+      - title: SQL for Data Science
+        author: CampusX
+        url: https://youtube.com/playlist?list=PLKnIA16_RmvYun1_5r9Fb4eQigioPB7yn
+        type: material-playlist-play
+      - title: Complete SQL Course For Data Science
+        author: CampusX
+        url: https://youtu.be/nopIGY1zJE0
+        type: octicons-video-16
   - header: HTML
     icon: simple-html5
     tutorials:
-      - title: Front-End Development - Sheryians Coding School
-        url: https://www.youtube.com/playlist?list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-
+      - title: Front-End Development
+        author: Sheryians Coding School
+        url: https://youtube.com/playlist?list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-
+        type: material-playlist-play
   - header: CSS
     icon: simple-css3
     tutorials:
-      - title: Tailwind CSS Tutorial For Beginners in Hindi - Hitesh Choudhary
-        url: https://www.youtube.com/watch?v=_9mTJ84uL1Q
-      - title: Learn Tailwind CSS - FreeCodeCamp
-        url: https://www.youtube.com/watch?v=ft30zcMlFao
+      - title: Tailwind CSS Tutorial For Beginners in Hindi
+        author: Hitesh Choudhary
+        url: https://youtu.be/_9mTJ84uL1Q
+        type: octicons-video-16
+      - title: Learn Tailwind CSS
+        author: FreeCodeCamp
+        url: https://youtu.be/ft30zcMlFao
+        type: octicons-video-16
   - header: Taskfile
     icon: simple-task
     tutorials:
-      - title: Taskfile Official Docs
+      - title: Taskfile
+        author: Official Docs
         url: https://taskfile.dev
-      - title: Intro to Taskfile - Overview
+        type: material-book
+      - title: Overview to Taskfile
+        author: null
         url: https://youtu.be/Z7EnwBaJzCk
+        type: octicons-video-16
   - header: Playwright
     icon: performing_arts
     tutorials:
-      - title: Playwright Python - Official Docs
+      - title: Playwright Python
+        author: Official Docs
         url: https://playwright.dev/python/
+        type: material-book
       - title: Playwright & Python - Beginner
-        url: https://www.youtube.com/playlist?list=PLRzwgpycm-FjH31TQHWyA879H_vP1rzmp
+        author: null
+        url: https://youtube.com/playlist?list=PLRzwgpycm-FjH31TQHWyA879H_vP1rzmp
+        type: material-playlist-play
       - title: More Web Scraping Stuff
+        author: null
         url: \#web-scraping
-      - title: Web Scraping with Playwright and Python - Blog
+        type: material-file-document
+      - title: Web Scraping with Playwright and Python
+        author: null
         url: https://scrapfly.io/blog/web-scraping-with-playwright-and-python/
+        type: material-file-document
   - header: Langchain
     icon: simple-langchain
     tutorials:
       - title: LangChain Master Class For Beginners 2024 [+20 Examples, LangChain V0.2]
+        author: null
         url: https://youtu.be/yF9kGESAi3M
+        type: octicons-video-16
   - header: Rust
     icon: simple-rust
     tutorials:
-      - title: The Rust Book - Piyush Garg
-        url: https://www.youtube.com/playlist?list=PLinedj3B30sAnCkwmMb5Ape5Ibqp0R5bP
-      - title: Rust Programming Tutorial 🦀 - Trevor Sullivan
-        url: https://www.youtube.com/playlist?list=PLDbRgZ0OOEpUkWDGqp91ODn0dk7LPBAUL
-      - title: Rust Talks - No Boilerplate
-        url: https://www.youtube.com/playlist?list=PLZaoyhMXgBzoM9bfb5pyUOT3zjnaDdSEP
-      - title: Learn Rust Programming - FreeCodeCamp
+      - title: The Rust Book
+        author: Piyush Garg
+        url: https://youtube.com/playlist?list=PLinedj3B30sAnCkwmMb5Ape5Ibqp0R5bP
+        type: material-playlist-play
+      - title: Rust Programming Tutorial 🦀
+        author: Trevor Sullivan
+        url: https://youtube.com/playlist?list=PLDbRgZ0OOEpUkWDGqp91ODn0dk7LPBAUL
+        type: material-playlist-play
+      - title: Rust Talks
+        author: No Boilerplate
+        url: https://youtube.com/playlist?list=PLZaoyhMXgBzoM9bfb5pyUOT3zjnaDdSEP
+        type: material-playlist-play
+      - title: Learn Rust Programming
+        author: FreeCodeCamp
         url: https://youtu.be/BpPEoZW5IiY
-      - title: The Rust Lang Book - Let's Get Rusty
-        url: https://www.youtube.com/playlist?list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8
+        type: octicons-video-16
+      - title: The Rust Lang Book
+        author: Let's Get Rusty
+        url: https://youtube.com/playlist?list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8
+        type: material-playlist-play
