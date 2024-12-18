@@ -113,12 +113,6 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/_batookm
       name: Connect on Instagram
-    - icon: simple/pypi
-      link: https://pypi.org/user/arv-anshul/
-      name: See My Python Projects PyPi
-    - icon: simple/huggingface
-      link: https://hf.co/arv-anshul
-      name: HuggingFace Profile
     - icon: fontawesome/brands/github
       link: https://github.com/arv-anshul
       name: See my GitHub Profile
