@@ -38,7 +38,7 @@ extend-select = [
     "RUF",
     "S",
     "SIM",
-    "TCH",
+    "TC",
     "UP",
     "W",
     "YTT",
