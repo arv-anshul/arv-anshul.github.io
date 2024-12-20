@@ -19,6 +19,11 @@ icon: material/account-box
   }
   article > h1 { display: none; }
   #my-projects-index { display: none; }
+  .md-typeset ul:has(.experiences-li) { list-style-type: none; }
+  .md-typeset ul li:has(.experiences-li),
+  .md-typeset ul li.experiences-li {
+    margin-left: 0;
+  }
 </style>
 
 <p style="text-align: center; margin: 0px;" markdown>
@@ -59,10 +64,11 @@ Continuously expanding my technological horizons, I have successfully completed 
   - **{{ exp.title }}**<br>
     <small>{{ exp.company }} **•** {{ exp.period }}</small>
 
-    ---
+    {% if exp.points|length %} --- {% endif %}
 
     {% for point in exp.points %}
     - :{{ point.icon }}: {{ point.desc }}
+    {: .experiences-li }
     {% endfor %}
 
 </div>

@@ -28,8 +28,8 @@ project_ids:
 
 experiences:
   - title: Data Science Intern
-    company: LeapX.ai
-    period: July 2024 - Present
+    company: "@LeapX.ai"
+    period: July 2024 - Nov 2024 (5 months)
     points:
       - icon: simple-scrapy
         desc: A web-scraper using Scrapy framework which scrapes data and stores it in database using pipeline.
