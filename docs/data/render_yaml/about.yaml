@@ -52,6 +52,8 @@ tech_stack:
       icon: simple-gnubash
     - title: Rust
       icon: simple-rust
+    - title: JavaScript
+      icon: simple-javascript
   Frameworks:
     - title: FastAPI
       icon: simple-fastapi
@@ -113,3 +115,14 @@ tech_stack:
       icon: simple-ruff
     - title: Material for Mkdocs
       icon: simple-materialformkdocs
+  Frontend Frameworks:
+    - title: pnpm
+      icon: simple-pnpm
+    - title: ShadCN UI
+      icon: simple-shadcnui
+    - title: Tailwind CSS
+      icon: simple-tailwindcss
+    - title: Vite
+      icon: simple-vite
+    - title: VueJs
+      icon: simple-vuedotjs
