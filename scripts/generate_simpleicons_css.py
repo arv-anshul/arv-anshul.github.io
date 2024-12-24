@@ -42,7 +42,7 @@ def _fetch_icons_with_slug() -> list[dict[str, str]]:
 def _fetch_icons_with_hex():
     with urlopen(SIMPLE_ICON_JSON_URL) as response:  # noqa: S310
         data = json.loads(response.read().decode("utf-8"))
-    return [{"title": icon["title"], "hex": icon["hex"]} for icon in data["icons"]]
+    return [{"title": icon["title"], "hex": icon["hex"]} for icon in data]
 
 
 def get_all_icons_dict() -> dict[str, str]:
