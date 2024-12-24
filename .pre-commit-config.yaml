@@ -8,3 +8,11 @@ repos:
         args: [--unsafe]
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: generate_simpleicons_css
+        name: generate_simpleicons_css
+        entry: uv run scripts/generate_simpleicons_css.py
+        language: system
+        pass_filenames: false
+        files: ^(data/simpleicons\.json|scripts/generate_simpleicons_css\.py)$
