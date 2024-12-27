@@ -19,12 +19,12 @@ socials:
     url: https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf
 
 project_ids:
+  - id: yt-comment-sentiment/index.md
+    icon: simple-youtube
   - id: canvas-ai.md
     icon: simple-googlegemini
   - id: yt-watch-history/index.md
     icon: simple-youtube
-  - id: https://github.com/arv-anshul/campusx-real-estate
-    icon: fontawesome-solid-building
 
 experiences:
   - title: Data Science Intern
