@@ -20,7 +20,7 @@ repos:
     hooks:
       - id: generate_simpleicons_css
         name: generate_simpleicons_css
-        entry: uv run scripts/generate_simpleicons_css.py
+        entry: uv run hooks/generate_simpleicons_css.py
         language: system
         pass_filenames: false
-        files: ^(data/simpleicons\.json|scripts/generate_simpleicons_css\.py)$
+        files: ^(data/simpleicons\.json|hooks/generate_simpleicons_css\.py)$
