@@ -108,6 +108,8 @@
 .taipy-hover:hover { color: #FF371A; }
 .task { color: #29BEB0; }
 .task-hover:hover { color: #29BEB0; }
+.uv { color: #DE5FE9; }
+.uv-hover:hover { color: #DE5FE9; }
 .visualstudiocode { color: var(--md-typeset-color); }
 .visualstudiocode-hover:hover { color: var(--md-typeset-color); }
 .vite { color: #646CFF; }

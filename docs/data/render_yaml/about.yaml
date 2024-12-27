@@ -115,6 +115,8 @@ tech_stack:
       icon: simple-ruff
     - title: Material for Mkdocs
       icon: simple-materialformkdocs
+    - title: UV
+      icon: simple-uv
   Frontend Frameworks:
     - title: pnpm
       icon: simple-pnpm
