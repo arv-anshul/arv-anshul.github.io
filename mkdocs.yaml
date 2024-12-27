@@ -155,7 +155,11 @@ nav:
           - project/yt-watch-history/channel_reco.md
           - project/yt-watch-history/v2-architecture.md
           - project/yt-watch-history/v2-channel_reco.md
-      - project/yt-comment-analyser.md
+      - YT Comment Sentiment:
+          - project/yt-comment-sentiment/index.md
+          - project/yt-comment-sentiment/ml.md
+          - project/yt-comment-sentiment/backend.md
+          - project/yt-comment-sentiment/frontend.md
       - project/spotify-analysis.md
       - project/campusx.md
       - project/credit-risk-modeling.md

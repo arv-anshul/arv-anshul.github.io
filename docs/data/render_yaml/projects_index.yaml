@@ -1,5 +1,33 @@
 $schema: https://raw.githubusercontent.com/arv-anshul/arv-anshul.github.io/main/schemas/projects_index-schema.json
 projects:
+  yt-comment-sentiment/index.md:
+    title: YouTube Comment Sentiment
+    description: |
+      An end-to-end machine learning project to predict sentiment of comments on YouTube videos. It uses **NLP** and
+      **ML** to predict sentiment of comments. Backend made using FastAPI and hosted on Render.com. Frontend made using
+      VueJs and hosted on GitHub Pages.
+    urls:
+      - title: GitHub Repository
+        icon: simple-github
+        url: https://github.com/arv-anshul/yt-comment-sentiment
+      - title: Deployed WebApp
+        icon: simple-githubpages
+        url: https://arv-anshul.github.io/yt-comment-sentiment/
+    tags:
+      - docker
+      - fastapi
+      - githubpages
+      - mlflow
+      - polars
+      - pydantic
+      - render
+      - shadcnui
+      - uv
+      - vite
+      - vuedotjs
+      - youtube
+    completed_on: December, 2024
+
   canvas-ai.md:
     title: Canvas AI
     description: |

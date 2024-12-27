@@ -1,15 +1,15 @@
 ---
-title: YT Comment Analyzer
-icon: simple/youtube
+title: ML Side
+icon: simple/mlflow
 date: 2024-11-04
 description: |
   YouTube comment sentiment analyzer/predictor using ML model.
-  #end-to-end #mlflow #polars #sentiment-analysis
+  #scikit-learn #mlflow #polars #sentiment-analysis #youtube #comments
 hide:
   - toc
 ---
 
-# YouTube Comment Analyzer
+# YT Comment Sentiment - ML Side
 
 ## Data Handling Steps
 
