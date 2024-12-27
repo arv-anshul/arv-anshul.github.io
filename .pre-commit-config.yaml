@@ -10,6 +10,14 @@ repos:
       - id: trailing-whitespace
   - repo: local
     hooks:
+      - id: prettify_simpleicons_json
+        name: prettify_simpleicons_json
+        entry: uv run hooks/prettify_simpleicons_json.py
+        language: system
+        pass_filenames: false
+        files: ^(data/simpleicons\.json|hooks/prettify_simpleicons_json\.py)$
+  - repo: local
+    hooks:
       - id: generate_simpleicons_css
         name: generate_simpleicons_css
         entry: uv run scripts/generate_simpleicons_css.py
