@@ -178,6 +178,7 @@ nav:
           - blog/posts/basics-of-statistics.md
       - Deep Learning:
           - ref/deep-learning/index.md
+          - ref/deep-learning/finetune-transformers.md
   - Blog:
       - blog/index.md
   - About: about/index.md
