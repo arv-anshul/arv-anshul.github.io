@@ -80,3 +80,27 @@ friends:
       - title: Email
         url: mailto:rahulkr30101@gmail.com
         icon: material/email
+  - name: Dipanjan Pathak
+    primaryUrl: https://dipanjan.tech/
+    avatar: https://avatars.githubusercontent.com/u/140088331?v=4
+    profession: Data Scientist
+    description:
+      A data science enthusiast with full-stack web development expertise, passionate
+      about problem-solving and learning new technologies. Focused on creating
+      data-driven solutions, improving processes, and leveraging data science
+      and development skills to build impactful applications and contribute to
+      innovative, technology-driven projects.
+      Check all my [projects on website](https://dipanjan.tech/).
+    socials:
+      - title: Github Profile
+        url: https://github.com/dipanjanpathak
+        icon: simple/github
+      - title: LinkedIn profile
+        url: https://www.linkedin.com/in/dipanjanpathak/
+        icon: simple/linkedin
+      - title: Email
+        url: mailto:dipanjanpathak@gmail.com
+        icon: material/email
+      - title: Personal Website
+        url: https://dipanjan.tech/
+        icon: material/web
