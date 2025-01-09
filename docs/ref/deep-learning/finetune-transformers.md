@@ -38,6 +38,17 @@ Precess the data and check the `labels`.
 !!! abstract "Related Docs"
     - [:simple-huggingface:{: .huggingface } Preprocess Data](https://huggingface.co/docs/transformers/v4.47.1/en/preprocessing)
 
+### Train-Val-Test Dataset
+
+Split the data into train, validation and test data. Before doing this you have consider many things like:
+
+- How to tokenize the data with certain `padding`, `truncation`, `max_length`, `return_tensors`, etc.?
+- Do you need to shuffle the data? (Only shuffle train dataset)
+- Which object you will use to store the data? (`datsets.Dataset` or `torch.utils.data.DataLoader`)
+- Representation or data type of **labels** column? This will be different for different type of problems you have to
+  make sure that the data is in correct format.
+- Is DataCollator required?
+
 ### Tokenize Data
 
 You need to tokenize the data before sending it to model to trained on. _It is done using  respective model's tokenizer._
@@ -95,6 +106,19 @@ A pre-trained model which we are going to finetune using our custom dataset.
 !!! abstract "Related Docs"
     - [:simple-huggingface:{: .huggingface } Optimization Strategies](https://huggingface.co/docs/transformers/main_classes/optimizer_schedules)
     - [`transformers.Trainer`](https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/trainer#trainer)
+    - [:simple-youtube:{: .youtube } Better Fine Tuning by Matt Williams](https://www.youtube.com/watch?v=W2QuK9TwYXs)
+
+#### PEFT Methods
+
+PEFT offers parameter-efficient methods for finetuning large pretrained models by training a smaller number of
+parameters using a reparametrization method like [**LoRA**](https://huggingface.co/docs/peft/package_reference/lora) and
+more.
+
+!!! abstract "Related Docs"
+    - [:simple-huggingface:{: .huggingface } PEFT Quicktour](https://huggingface.co/docs/peft/quicktour)
+    - [LoRA](https://huggingface.co/docs/peft/developer_guides/lora)
+    - [LoRA Methods](https://huggingface.co/docs/peft/task_guides/lora_based_methods)
+    - [Quantization](https://huggingface.co/docs/peft/developer_guides/quantization)
 
 ### Evaluate Model
 
