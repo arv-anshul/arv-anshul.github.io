@@ -19,7 +19,7 @@ topics:
     tutorials:
       - title: Learn FastAPI Blog
         author: arv-anshul
-        url: ../blog/posts/learn-fastapi.md
+        url: ./learn-fastapi.md
         type: material-file-document
       - title: FastAPI - A python framework
         author: null
@@ -76,7 +76,7 @@ topics:
     tutorials:
       - title: Learn Docker
         author: arv-anshul
-        url: ../blog/posts/learn-docker.md
+        url: ./learn-docker.md
         type: material-file-document
   - header: Regex
     icon: material-regex
@@ -105,7 +105,7 @@ topics:
     tutorials:
       - title: Learn Web Scraping
         author: null
-        url: ../blog/posts/learn-web-scraping.md
+        url: ./learn-web-scraping.md
         type: material-file-document
       - title: Discovering Hidden APIs
         author: null
@@ -213,7 +213,7 @@ topics:
         type: material-playlist-play
       - title: More Web Scraping Stuff
         author: null
-        url: \#web-scraping
+        url: \#web-scrapping
         type: material-file-document
       - title: Web Scraping with Playwright and Python
         author: null
