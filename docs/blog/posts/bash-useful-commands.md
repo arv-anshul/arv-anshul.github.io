@@ -1,7 +1,13 @@
 ---
-date:
-  created: 2024-04-10
-  updated: 2024-04-10
+date: 2024-04-10
+authors:
+  - arv-anshul
+categories:
+  - bash
+  - tips
+description:
+title: Bash Useful Commands
+slug: bash-useful-commands
 icon: material/keyboard
 ---
 
@@ -25,6 +31,8 @@ function colormap() {
 ```
 
 > The `colormap` function will print the ANSI colors with codes in your terminal.
+
+<!-- more -->
 
 ```bash
 $ colormap           # (000 - 255)
