@@ -1,6 +1,12 @@
 ---
 date: 2025-01-05
 title: Finetune Transformers
+authors:
+  - arv-anshul
+categories:
+  - deep-learning
+  - pytorch
+  - transformers
 description: References to finetune Transformers from HuggingFace using Pytorch or TensorFlow.
 slug: finetune-transformers
 icon: simple/huggingface
@@ -24,6 +30,8 @@ usecase. BTW, you can always refer to [HuggingFace documentation](https://huggin
     > [`transformers.TrainingArguments`](https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/trainer#transformers.TrainingArguments)
     > and [`transformers.Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer) which reduces the
     > manual looping complexity.
+
+<!-- more -->
 
 ## Finetune Process
 
