@@ -1,5 +1,10 @@
 ---
 date: 2024-05-09
+authors:
+  - arv-anshul
+categories:
+  - others
+description: Some tips to follow while creating your resume.
 title: Resume Tips
 slug: resume-tips
 icon: material/newspaper
@@ -14,6 +19,8 @@ hide:
 ## :memo: Important Points To Follow
 
 By implementing these strategies, you can elevate your Resume/CV to effectively communicate your qualifications and stand out among the competition in today's job market.
+
+<!-- more -->
 
 <div class="grid cards" markdown>
 

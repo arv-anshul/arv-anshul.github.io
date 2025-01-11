@@ -1,6 +1,12 @@
 ---
 date: 2024-04-19
+authors:
+  - arv-anshul
+categories:
+  - others
+description: Some resources from where I have learned techs, concepts and more. Just a small collection.
 title: Learn Stuff
+slug: learn-stuff
 icon: fontawesome/solid/brain
 ---
 
@@ -13,6 +19,8 @@ icon: fontawesome/solid/brain
 # :simple-musicbrainz: Learn Stuff from Tutorials
 
 Shared some resources which I have used to learn these technologies. Enjoy!!
+
+<!-- more -->
 
 !!! danger "Need to refactor this page and make it more verbose."
 
