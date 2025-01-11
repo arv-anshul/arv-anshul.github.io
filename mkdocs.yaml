@@ -69,6 +69,7 @@ plugins:
       post_url_format: "{slug}"
       pagination_per_page: 5
       pagination_format: $link_first $link_previous ~2~ $link_next $link_last
+      post_excerpt: required
   - search: null
   - macros:
       include_yaml:
