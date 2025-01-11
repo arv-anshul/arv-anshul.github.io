@@ -1,15 +1,17 @@
 ---
-date:
-  created: 2024-06-10
-  updated: 2024-06-10
-title: Deep Learning
+date: 2024-06-10
+title: Intro to Deep Learning
+authors:
+  - arv-anshul
+categories:
+  - deep-learning
 description: |
   List of some related concepts of Deep Learning like Perceptron and MLP; including notations, coding examples.
-slug: deep-learning
+slug: intro-to-deep-learning
 icon: simple/pytorch
 ---
 
-# :simple-pytorch: Deep Learning
+# :simple-pytorch: Intro to Deep Learning
 
 ## Machine Learning VS Deep Learning
 
@@ -21,6 +23,8 @@ icon: simple/pytorch
 ## :simple-n8n: Perceptron
 
 **Perceptron the building block of Deep Learning.**
+
+<!-- more -->
 
 <figure markdown>
 
