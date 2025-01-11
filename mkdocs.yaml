@@ -111,9 +111,6 @@ extra:
     - icon: material/email
       link: mailto:arv.anshul.1864@gmail.com
       name: E-Mail
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/_batookm
-      name: Connect on Instagram
     - icon: fontawesome/brands/github
       link: https://github.com/arv-anshul
       name: See my GitHub Profile
