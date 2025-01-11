@@ -1,10 +1,21 @@
 ---
+date: 2024-04-07
+authors:
+  - arv-anshul
+categories:
+  - bash
+  - tips
+description: Some terminal or bash tricks you may find useful for your workflow.
+title: Bash Tips
+slug: bash-tips
 icon: material/tooltip-plus
 ---
 
 # Bash: Tips and Tricks
 
 This page contains some Tips and Tricks which are helpful to work with Bash scripts or Terminals. I have mentioned only those tips and tricks which I uses most in my daily routine, BTW you can refer to links which I have shared to know all the tips and tricks.
+
+<!-- more -->
 
 ## Tips by `asottile`
 
