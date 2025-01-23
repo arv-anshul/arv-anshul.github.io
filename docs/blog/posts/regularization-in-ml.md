@@ -39,22 +39,22 @@ Ridge Regression is a technique used in regression analysis to tackle the proble
 
 The objective function for Ridge Regression is given by:
 
-$$
+```math
 \text{minimize}\left( \sum_{i=1}^{n} \left( y_i - \beta_0 - \sum_{j=1}^{p} x_{ij}\beta_j \right)^2 + \lambda \sum_{j=1}^{p} \beta_j^2 \right)
-$$
+```
 
 Where:
 
-- $(n)$ represents the number of data points.
-- $(p)$ represents the number of predictors or features.
-- $(x_{ij})$ denotes the value of the $(j^{th})$ feature for the $(i^{th})$ data point.
-- $(y_i)$ represents the observed output for the $(i^{th})$ data point.
-- $(\beta_0, \beta_1, \beta_2, \dots, \beta_p)$ are the regression coefficients.
-- $(\lambda)$ is the hyperparameter that controls the regularization strength.
+- `#!math (n)` represents the number of data points.
+- `#!math (p)` represents the number of predictors or features.
+- `#!math (x_{ij})` denotes the value of the `#!math (j^{th})` feature for the `#!math (i^{th})` data point.
+- `#!math (y_i)` represents the observed output for the `#!math (i^{th})` data point.
+- `#!math (\beta_0, \beta_1, \beta_2, \dots, \beta_p)` are the regression coefficients.
+- `#!math (\lambda)` is the hyperparameter that controls the regularization strength.
 
-The first part of the equation is the **standard least squares regression term**, which aims to minimize the squared difference between the predicted and actual output. The second part is the penalty term, which is the sum of squares of the coefficients $(\beta)$ multiplied by the regularization parameter $(\lambda)$.
+The first part of the equation is the **standard least squares regression term**, which aims to minimize the squared difference between the predicted and actual output. The second part is the penalty term, which is the sum of squares of the coefficients `#!math (\beta)` multiplied by the regularization parameter `#!math (\lambda)`.
 
-The hyperparameter $(\lambda)$ controls the trade-off between fitting the model to the training data and preventing overfitting by keeping the coefficients small. A larger $(\lambda)$ leads to a stronger penalty, effectively shrinking the coefficients toward zero. This helps to reduce the model's complexity, making it less sensitive to the noise in the data.
+The hyperparameter `#!math (\lambda)` controls the trade-off between fitting the model to the training data and preventing overfitting by keeping the coefficients small. A larger `#!math (\lambda)` leads to a stronger penalty, effectively shrinking the coefficients toward zero. This helps to reduce the model's complexity, making it less sensitive to the noise in the data.
 
 Ridge Regression is a powerful tool in situations where multi-collinearity among predictors exists. By adding this penalty term, it stabilizes the coefficients and reduces their variance, thus improving the model's generalization and robustness when dealing with new, unseen data.
 
@@ -68,22 +68,22 @@ Lasso Regression, short for "Least Absolute Shrinkage and Selection Operator," i
 
 The objective function for Lasso Regression is given by:
 
-$$
+```math
 \text{minimize}\left( \sum_{i=1}^{n} \left( y_i - \beta_0 - \sum_{j=1}^{p} x_{ij}\beta_j \right)^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right)
-$$
+```
 
 Where:
 
-- $(n)$ represents the number of data points.
-- $(p)$ represents the number of predictors or features.
-- $(x_{ij})$ denotes the value of the $(j^{th})$ feature for the $(i^{th})$ data point.
-- $(y_i)$ represents the observed output for the $(i^{th})$ data point.
-- $(\beta_0, \beta_1, \beta_2, \dots, \beta_p)$ are the regression coefficients.
-- $(\lambda)$ is the hyperparameter that controls the regularization strength.
+- `#!math (n)` represents the number of data points.
+- `#!math (p)` represents the number of predictors or features.
+- `#!math (x_{ij})` denotes the value of the `#!math (j^{th})` feature for the `#!math (i^{th})` data point.
+- `#!math (y_i)` represents the observed output for the `#!math (i^{th})` data point.
+- `#!math (\beta_0, \beta_1, \beta_2, \dots, \beta_p)` are the regression coefficients.
+- `#!math (\lambda)` is the hyperparameter that controls the regularization strength.
 
-The first part of the equation is the standard least squares regression term that minimizes the squared difference between the predicted and actual output. The second part is the penalty term, which is the sum of the absolute values of the coefficients $(\beta)$ multiplied by the regularization parameter $(\lambda)$.
+The first part of the equation is the standard least squares regression term that minimizes the squared difference between the predicted and actual output. The second part is the penalty term, which is the sum of the absolute values of the coefficients `#!math (\beta)` multiplied by the regularization parameter `#!math (\lambda)`.
 
-The hyperparameter $(\lambda)$ controls the trade-off between fitting the model to the training data and keeping the coefficients small. In Lasso Regression, the absolute value of the coefficients' sum is used as the penalty. This has the effect of forcing some coefficients to be exactly zero, effectively performing variable selection by eliminating less influential features. The sparsity induced by L1 regularization makes Lasso Regression particularly useful when dealing with datasets with a large number of features, as it can automatically perform feature selection.
+The hyperparameter `#!math (\lambda)` controls the trade-off between fitting the model to the training data and keeping the coefficients small. In Lasso Regression, the absolute value of the coefficients' sum is used as the penalty. This has the effect of forcing some coefficients to be exactly zero, effectively performing variable selection by eliminating less influential features. The sparsity induced by L1 regularization makes Lasso Regression particularly useful when dealing with datasets with a large number of features, as it can automatically perform feature selection.
 
 Implementing Lasso Regression involves finding the optimal values for the coefficients by minimizing the combined error and penalty term. Various optimization techniques like coordinate descent or sub-gradient methods can be employed to achieve this.
 
@@ -93,9 +93,9 @@ In conclusion, Lasso Regression with L1 regularization is a valuable tool for no
 
 This is the combination of both L1 and L2 regularization.
 
-$$
+```math
 \text{minimize}\left( \sum_{i=1}^{n} \left( y_i - \beta_0 - \sum_{j=1}^{p} x_{ij}\beta_j \right)^2 + \lambda_1 \sum_{j=1}^{p} |\beta_j| + \lambda_2 \sum_{j=1}^{p} \beta_j^2 \right)
-$$
+```
 
 ---
 

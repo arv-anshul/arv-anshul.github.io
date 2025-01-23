@@ -116,15 +116,17 @@ An R-Squared ^^value of 0 means that the model explains or predicts 0% of the re
 
 ??? tip "Formula for R Squared"
 
-    $$ \text{R}^2 = 1 - \frac{\text{RSS}}{\text{TSS}} $$
+    ```math
+    \text{R}^2 = 1 - \frac{\text{RSS}}{\text{TSS}}
+    ```
 
     <figure markdown>
 
     | Symbol | Description |
     | ---: | :--- |
-    | $\text{R}^2$ | Coefficient of determination |
-    | $\text{RSS}$ | Sum of squares of residuals |
-    | $\text{TSS}$ | Total sum of squares |
+    | `#!math \text{R}^2` | Coefficient of determination |
+    | `#!math \text{RSS}` | Sum of squares of residuals |
+    | `#!math \text{TSS}` | Total sum of squares |
 
     </figure>
 
@@ -148,7 +150,7 @@ On the other hand, ^^Adjusted R2 score only increases if the newly added predict
 
 ## What-if there is one feature related to another then, what should we do with them?
 
-1. Keep any one of them after checking the correlation with target feature $(y)$ whichever has low correlation; drop them and keep only one.
+1. Keep any one of them after checking the correlation with target feature `#!math (y)` whichever has low correlation; drop them and keep only one.
 2. Use [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) (with [`sklearn.compose.ColumnTransformer`](https://scikit-learn.org/stable/modules/generated/sklearn.compose.ColumnTransformer.html)) to combine them as one and use that transformed column.
 
 ## What is Regularization? - Why to use Regularization? - What happen in Regularization?

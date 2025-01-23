@@ -110,7 +110,7 @@ Mainly outliers can affect Decision Trees while working with regression problems
 
 ### Cost Complexity Function in Decision Tree
 
-The cost complexity function in decision trees is a crucial concept related to pruning techniques. It involves a tradeoff between error (cost) and tree size (complexity) to find an optimal tree. The cost complexity of a tree, denoted as $R_{c_p}(T)$, is the sum of its risk (error) and a "cost complexity" factor $c_p$ multiplied by the tree size $T$. This function is used in cost complexity pruning to minimize the cross-validated prediction error and prevent overfitting. By adjusting the cost complexity parameter $c_p$, decision trees can be pruned effectively to improve generalization to test data. :simple-perplexity:{ .secondary }
+The cost complexity function in decision trees is a crucial concept related to pruning techniques. It involves a tradeoff between error (cost) and tree size (complexity) to find an optimal tree. The cost complexity of a tree, denoted as `#!math R_{c_p}(T)`, is the sum of its risk (error) and a "cost complexity" factor `#!math c_p` multiplied by the tree size `#!math T`. This function is used in cost complexity pruning to minimize the cross-validated prediction error and prevent overfitting. By adjusting the cost complexity parameter `#!math c_p`, decision trees can be pruned effectively to improve generalization to test data. :simple-perplexity:{ .secondary }
 
 :simple-scikitlearn:{ .scikitlearn } [`plot_cost_complexity_pruning`](https://scikit-learn.org/stable/auto_examples/tree/plot_cost_complexity_pruning.html)
 
@@ -173,7 +173,7 @@ It depends on your domain knowledge or you can use hit & try method.
 
 ### How do `#!py "balanced"` value assign weights?
 
-It assigns $\frac{1}{n}$ weight value to each class labels where $n$ is the count of data points present the following class.
+It assigns `#!math \frac{1}{n}` weight value to each class labels where `#!math n` is the count of data points present the following class.
 
 ---
 

@@ -32,14 +32,14 @@ icon: simple/pytorch
 
 </figure>
 
-$$
+```math
 \sum = w_1x_1 + w_2x_2 + ... + w_nx_n + b
-$$
+```
 
-Now after calculating the $\sum$ you will use a activation function $\varphi$ which is applied to the weighted sum to
+Now after calculating the `#!math \sum` you will use a activation function `#!math \varphi` which is applied to the weighted sum to
 introduce non-linearity.
 
-> For example, $\varphi$ can be a step function whose output is either 0 or 1.
+> For example, `#!math \varphi` can be a step function whose output is either 0 or 1.
 
 ### Important Points on Perceptron
 
@@ -101,14 +101,16 @@ involves the following steps:
 
 ??? info "Hidden layers in Notation"
 
-    $$h^{l} = f(W^{l}h^{(l-1)} + b^{l})$$
+    ```math
+    h^{l} = f(W^{l}h^{(l-1)} + b^{l})
+    ```
 
     where:
 
-    - $W^{l}$ is the weight matrix for layer $l$.
-    - $b^{l}$ is the bias vector for layer $l$.
-    - $f$ is the activation function (e.g., ReLU).
-    - $h^{(l-1)}$ is the output from the previous layer.
+    - `#!math W^{l}` is the weight matrix for layer `#!math l`.
+    - `#!math b^{l}` is the bias vector for layer `#!math l`.
+    - `#!math f` is the activation function (e.g., ReLU).
+    - `#!math h^{(l-1)}` is the output from the previous layer.
 
 3. **Output Layer:** The final layer produces predictions, often applying a specific activation function (e.g., softmax
    for classification or linear activation for regression).
@@ -148,14 +150,18 @@ between predicted and actual outputs. It works in the following steps:
 
 ??? info "Backward Propagation with Notation"
 
-    $$W^{l} = W^{l} - \eta \frac{\partial \mathcal{L}}{\partial W^{l}}$$
+    ```math
+    W^{l} = W^{l} - \eta \frac{\partial \mathcal{L}}{\partial W^{l}}
+    ```
 
-    $$b^{l} = b^{l} - \eta \frac{\partial \mathcal{L}}{\partial b^{l}}$$
+    ```math
+    b^{l} = b^{l} - \eta \frac{\partial \mathcal{L}}{\partial b^{l}}
+    ```
 
     where:
 
-    - $\eta$ is the learning rate.
-    - $\mathcal{L}$ is the loss function.
+    - `#!math \eta` is the learning rate.
+    - `#!math \mathcal{L}` is the loss function.
 
 ```python title="Example using PyTorch"
 import torch

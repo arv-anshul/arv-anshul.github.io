@@ -24,7 +24,7 @@ hide:
 | **What is it?**     | Generally, researchers try to reject or disprove it.                                                | Researchers try to accept or prove it.                                                                              |
 | **Testing Process** | Indirect and Implicit                                                                               | Direct and Explicit                                                                                                 |
 | **p-value**         | Null hypothesis is rejected if the p-value is less than the alpha-value; otherwise, it is accepted. | An alternative hypothesis is accepted if the p-value is less than the alpha-value otherwise, it is rejected.        |
-| **Notation**        | $H_0$                                                                                               | $H_1$                                                                                                               |
+| **Notation**        | `#!math H_0`                                                                                               | `#!math H_1`                                                                                                               |
 | **Symbol**          | Used Equality Symbol **(=, ≥, ≤)**                                                                  | Inequality Symbol **(≠, <, >)**                                                                                     |
 
 <!-- more -->
@@ -44,9 +44,9 @@ hide:
 
 {++**Hypotheses**++}
 
-: **Null Hypothesis $(H_0)$**: The average score of students using the new teaching method is the same as or lower than the average score of students using the traditional method $(H_0: \mu_{\text{new}} \le \mu_{\text{traditional}})$.
+: **Null Hypothesis `#!math (H_0)`**: The average score of students using the new teaching method is the same as or lower than the average score of students using the traditional method `#!math (H_0:\mu_{\text{new}} \le \mu_{\text{traditional}})`.
 
-    **Alternative Hypothesis $(H_a)$**: The average score of students using the new teaching method is higher than the average score of students using the traditional method $(H_a: \mu_{\text{new}} \gt \mu_{\text{traditional}})$.
+    **Alternative Hypothesis `#!math (H_a)`**: The average score of students using the new teaching method is higher than the average score of students using the traditional method `#!math (H_a:\mu_{\text{new}} \gt \mu_{\text{traditional}})`.
 
 {++**Steps**++}
 

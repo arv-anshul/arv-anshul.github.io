@@ -170,21 +170,25 @@ Here are the key concepts associated with Gaussian Mixture Models:
 
 1. **Gaussian Distribution (Normal Distribution)**: A probability distribution that is characterized by its mean (μ) and standard deviation (σ). The probability density function of a Gaussian distribution is given by:
 
-$$ f(x; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right) $$
+```math
+f(x; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
+```
 
 2. **Mixture Model**: A combination of multiple probability distributions. In the case of GMMs, these are Gaussian distributions.
 
 3. **Parameters of GMM**:
 
-    - **Weights $(πi)$**: The probabilities associated with each component (Gaussian distribution). They represent the likelihood of a data point belonging to a specific cluster.
-    - **Means $(μi)$**: The mean values of the Gaussian distributions.
-    - **Covariance Matrices $(Σi)$**: The covariance matrices representing the shape and orientation of the Gaussian distributions.
+    - **Weights `#!math (πi)`**: The probabilities associated with each component (Gaussian distribution). They represent the likelihood of a data point belonging to a specific cluster.
+    - **Means `#!math (μi)`**: The mean values of the Gaussian distributions.
+    - **Covariance Matrices `#!math (Σi)`**: The covariance matrices representing the shape and orientation of the Gaussian distributions.
 
 4. **Probability Density Function of GMM**:
 
-$$ P(x) = \sum_{i=1}^{k} \pi_i \cdot \mathcal{N}(x; \mu_i, \Sigma_i) $$
+```math
+P(x) = \sum_{i=1}^{k} \pi_i \cdot \mathcal{N}(x; \mu_i, \Sigma_i)
+```
 
-   where $\mathcal{N}(x; \mu_i, \Sigma_i)$ is the probability density function of the $i^{th}$ Gaussian distribution.
+   where `#!math \mathcal{N}(x; \mu_i, \Sigma_i)` is the probability density function of the `#!math i^{th}` Gaussian distribution.
 
 ### Working Steps
 

@@ -115,7 +115,7 @@ Plot the 5-number summary of data with BoxPlot.
 
 **What is 5-number summary of a data?**
 
-This represents the $(\text{Q1} - 1.5*\text{IQR})$, 25th %tile $(\text{Q1})$, 50th %tile, 75th %tile $(\text{Q3})$ and $(\text{Q3} + 1.5*\text{IQR})$ values of data.
+This represents the `#!math (\text{Q1} - 1.5*\text{IQR})`, 25th %tile `#!math (\text{Q1})`, 50th %tile, 75th %tile `#!math (\text{Q3})` and `#!math (\text{Q3} + 1.5*\text{IQR})` values of data.
 
 > BoxPlot easily shows the outliers of the data.
 

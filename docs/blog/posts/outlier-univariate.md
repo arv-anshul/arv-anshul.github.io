@@ -23,9 +23,9 @@ Handling outlier is a big task for data scientist. To handle the outliers we hav
 
 ### IQR
 
-In this method by using Inter Quartile Range(IQR), we detect outliers. IQR tells us the variation in the data set. Any value, which is beyond the range of $-1.5 \ast IQR$ to $1.5 \ast IQR$ treated as outliers.
+In this method by using Inter Quartile Range(IQR), we detect outliers. IQR tells us the variation in the data set. Any value, which is beyond the range of `#!math -1.5 \ast IQR` to `#!math 1.5 \ast IQR` treated as outliers.
 
-The concept of quartiles and IQR can best be visualized from the boxplot. It has the minimum and maximum point defined as $Q1 - 1.5 \ast IQR$ and $Q3 + 1.5 \ast IQR$ respectively. Any point outside this range is outlier.
+The concept of quartiles and IQR can best be visualized from the boxplot. It has the minimum and maximum point defined as `#!math Q1 - 1.5 \ast IQR` and `#!math Q3 + 1.5 \ast IQR` respectively. Any point outside this range is outlier.
 
 !!! failure "Cons"
 
@@ -72,11 +72,11 @@ def apply_iqr_deletion(df: pd.DataFrame, columns: list[str], *tiles: tuple[float
 
 This method assumes that **the variable has a Gaussian distribution**. It represents the number of standard deviations an observation is away from the mean.
 
-In this method we calculate the z-score with $Z = \frac{(x_i - \bar{x})}{\sigma}$ of the feature then set a threshold (generally as ±3) then remove the data point which are $\ge 3$ and $\le -3$.
+In this method we calculate the z-score with `#!math Z = \frac{(x_i - \bar{x})}{\sigma}` of the feature then set a threshold (generally as ±3) then remove the data point which are `#!math \ge 3` and `#!math \le -3`.
 
 !!! tip
 
-    You can also **calculate absolute value of every z-score** then just one constraint is required as $\ge 3$.
+    You can also **calculate absolute value of every z-score** then just one constraint is required as `#!math \ge 3`.
 
 !!! failure "Cons"
 

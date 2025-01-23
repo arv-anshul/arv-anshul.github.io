@@ -56,13 +56,15 @@ Decision trees use various loss functions depending on the task:
 
 Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled. For a binary classification problem, the Gini impurity (Gini index) for a node is calculated as follows:
 
-$$ \text{Gini(D)} = 1 - \sum_{i=1}^{c} (p_i)^2 $$
+```math
+\text{Gini(D)} = 1 - \sum_{i=1}^{c} (p_i)^2
+```
 
 Where:
 
-- $(D)$ is the dataset at the node.
-- $(c)$ is the number of classes.
-- $(p_i)$ is the probability of choosing a data point of class $i$.
+- `#!math (D)` is the dataset at the node.
+- `#!math (c)` is the number of classes.
+- `#!math (p_i)` is the probability of choosing a data point of class `#!math i`.
 
 ### Example
 
@@ -71,11 +73,17 @@ Consider a node with 30 samples, distributed among two classes (A and B) as foll
 - Class A: 15 samples
 - Class B: 15 samples
 
-$$ \text{Gini(D)} = 1 - \left(\left(\frac{15}{30}\right)^2 + \left(\frac{15}{30}\right)^2\right) $$
+```math
+\text{Gini(D)} = 1 - \left(\left(\frac{15}{30}\right)^2 + \left(\frac{15}{30}\right)^2\right)
+```
 
-$$ \text{Gini(D)} = 1 - \left(\frac{1}{4} + \frac{1}{4}\right) $$
+```math
+\text{Gini(D)} = 1 - \left(\frac{1}{4} + \frac{1}{4}\right)
+```
 
-$$ \text{Gini(D)} = 1 - \frac{1}{2} = \frac{1}{2} $$
+```math
+\text{Gini(D)} = 1 - \frac{1}{2} = \frac{1}{2}
+```
 
 The goal during the tree-building process is to minimize the Gini impurity at each node.
 

@@ -115,13 +115,13 @@ The variance is the average of the squared differences between each data point a
 
 |                       Sample Variance                        |                  Population Variance                   |
 | :----------------------------------------------------------: | :----------------------------------------------------: |
-| $ \sigma^2 = \frac{\sum\_{i=1}^{n} (x_i - \bar{x})^2}{n-1} $ | $ \sigma^2 = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N} $ |
+| `#!math \sigma^2 = \frac{\sum\_{i=1}^{n} (x_i - \bar{x})^2}{n-1}` | `#!math \sigma^2 = \frac{\sum\_{i=1}^{N} (x_i - \mu)^2}{N}` |
 
 </figure>
 
 !!! question "Why `n-1` in Sample Variance?"
 
-    By dividing by $(n−1)$, we make the sample variance an unbiased estimator of the population variance. This correction is particularly important when dealing with small sample sizes, as it helps to reduce bias in the estimation of the population variance.
+    By dividing by `#!math (n−1)`, we make the sample variance an unbiased estimator of the population variance. This correction is particularly important when dealing with small sample sizes, as it helps to reduce bias in the estimation of the population variance.
 
 ### Standard Deviation
 
@@ -131,7 +131,7 @@ The standard deviation is the square root of the variance. It is a widely used m
 
 |                  Sample Standard Deviation                  |               Population Standard Deviation                |
 | :---------------------------------------------------------: | :--------------------------------------------------------: |
-| $ s = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}} $ | $ \sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}} $ |
+| `#!math s = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}}` | `#!math \sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}` |
 
 </figure>
 
@@ -139,7 +139,7 @@ The standard deviation is the square root of the variance. It is a widely used m
 
 CV is the ratio of the standard deviation to the mean expressed as a percentage. It is used to compare the variability of datasets with mean. CV is a statistical measure that expresses the amount of variability in a dataset relative to the mean.
 
-### $$ \frac{\sigma}{\mu} \cdot 100 = \text{CV}\% $$
+### `#!math \frac{\sigma}{\mu} \cdot 100 = \text{CV}\%`
 
 #### Why Coefficient of Variation exits?
 
@@ -164,7 +164,7 @@ It involves the use of probability theory to estimate the likelihood of certain 
 
 Covariance is a statistical measure that describes the degree to which two variables are linearly related. It measures how much two variables change together, such that when one variable increases, does the other variable also increase, or does it decrease?
 
-### $$ \text{Cov}(x, y) = \frac{\sum_{i = 0}^{n}{(x_i - \bar{x}) (y_i - \bar{y})}}{n - 1} $$
+### `#!math \text{Cov}(x, y) = \frac{\sum_{i = 0}^{n}{(x_i - \bar{x}) (y_i - \bar{y})}}{n - 1}`
 
 #### Interpretation
 
@@ -185,7 +185,7 @@ One limitation of covariance is that it does not tell us about the strength of t
 
 Correlation refers to a statistical relationship between two or more variables. Specifically, it measures the degree to which two variables are related and how they tend to change together.
 
-### $$ \text{Correlation} = \frac{\text{Cov}(x, y)}{\sigma x * \sigma y} $$
+### `#!math \text{Correlation} = \frac{\text{Cov}(x, y)}{\sigma x * \sigma y}`
 
 #### Interpretation
 
