@@ -1,4 +1,4 @@
-$schema: https://raw.githubusercontent.com/arv-anshul/arv-anshul.github.io/main/schemas/other_projects-schema.json
+$schema: https://arv-anshul.github.io/schema/other_projects.json
 projects:
   - title: Md Badges CLI
     description: CLI tool to get SimpleIcons badges in multiple format, written in Rust.

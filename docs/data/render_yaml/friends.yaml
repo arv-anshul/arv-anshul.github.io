@@ -1,4 +1,4 @@
-$schema: https://github.com/arv-anshul/arv-anshul.github.io/raw/main/schemas/friends-schema.json
+$schema: https://arv-anshul.github.io/schema/friends.json
 friends:
   - name: Anshul Raj Verma
     primaryUrl: https://arv-anshul.github.io/about
