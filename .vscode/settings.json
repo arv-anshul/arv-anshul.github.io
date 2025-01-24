@@ -10,9 +10,9 @@
     "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
   ],
   "yaml.schemas": {
-    "schemas/projects_index-schema.json": ["projects_index.yaml"],
-    "schemas/other_projects-schema.json": ["other_projects.yaml"],
-    "schemas/friends-schema.json": ["friends.yaml"],
+    "docs/schema/projects_index.json": ["projects_index.yaml"],
+    "docs/schema/other_projects.json": ["other_projects.yaml"],
+    "docs/schema/friends.json": ["friends.yaml"],
     "https://squidfunk.github.io/mkdocs-material/schema.json": [
       "mkdocs.yaml",
       "mkdocs.yml"

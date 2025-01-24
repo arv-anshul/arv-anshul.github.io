@@ -1,4 +1,4 @@
-$schema: https://raw.githubusercontent.com/arv-anshul/arv-anshul.github.io/main/schemas/projects_index-schema.json
+$schema: https://arv-anshul.github.io/schema/projects_index.json
 projects:
   yt-comment-sentiment/index.md:
     title: YouTube Comment Sentiment
