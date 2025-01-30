@@ -1,91 +1,103 @@
 # NOTES
-# poster: Refer to https://www.cinematerial.com/
+# poster: Refer to https://tmdb.org (make sure to follow link's format and length)
 # thoughts: If you want you can skip this and just write one liners or `""` (blank quote)
 movies:
   - title: Karwaan
     type: Movie
-    poster: https://media-cache.cinematerial.com/p/500x/rq5ktoyd/karwaan-indian-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/vzyfwkImcnbBhRhrS7cLjjmlzFZ.jpg
     thoughts: |
       Just watch and chill. My one of the best feel good movie. I've watched this 2 times.
       Highly recommended!
   - title: Arrival
     type: Movie
-    poster: https://cdn.cinematerial.com/p/297x/cuwd95j1/arrival-movie-poster-md.jpg
+    poster: https://image.tmdb.org/t/p/w300/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg
     thoughts: |
       The first movie I've watched in the English language (with concentration) was an
       amazing experience. After watching this movie, I became a fan of the director.
   - title: The Glory
     type: K-Drama
-    poster: https://media-cache.cinematerial.com/p/500x/ks8xihxq/the-glory-international-video-on-demand-movie-cover.jpg
+    poster: https://image.tmdb.org/t/p/w300/k74X2pBO4hTVArSBn1M1wuMMGJG.jpg
     thoughts: |
       First time I realize Why K-Drama is so addictive! I am just hooked with this series.
       Brutal bully, amazing storyline and (on top it) amazing performances.
   - title: Mask Girl
     type: K-Drama
-    poster: https://images.ctfassets.net/4cd45et68cgf/Nn8YFefPMordoYaSJz7i6/071686fca51df89ecabab24e1c1b5c4b/ko_mg_main_momi_vertical_27x40_rgb_pre_1.jpeg
+    poster: https://image.tmdb.org/t/p/w300/6SP6NiyFxzUaegvg4TB3TMZlv8H.jpg
     thoughts: |
       Each episodes were from different person's perspective which makes it more thrilling to watch.
       The blend of subtle social commentry in the start of the story is nice.
   - title: Moving
     type: K-Drama
-    poster: https://cdn.cinematerial.com/p/297x/curn9eto/moving-movie-poster-md.jpg?v=1690529318
+    poster: https://image.tmdb.org/t/p/w300/vf9SNXNAFqzKBGksFwrXhkg9cb7.jpg
     thoughts: |
       Don't judge this series on the name of it "Moving" (Who think this?).
       A very different take on superheroes in each episode you will see different heroes story.
-  - title: Lapataa Ladies
+  - title: Laapataa Ladies
     type: Movie
-    poster: https://cdn.cinematerial.com/p/297x/v4uq4y3q/laapataa-ladies-indian-movie-poster-md.jpg
+    poster: https://image.tmdb.org/t/p/w300/g8kvGupn62RdywcE85QO2S0v3r8.jpg
     thoughts: |
       Amazing experience, it transfers you to vilages of Bihar (literally).
       Best movie where feminism is addressed in a way that you will understand what
       they want to say. Social Commentary, Feminism, Comic Timing, Discipline and more.
   - title: Past Lives
     type: Movie
-    poster: https://cdn.cinematerial.com/p/297x/sbrurk0o/past-lives-movie-poster-md.jpg?v=1679590319
+    poster: https://image.tmdb.org/t/p/w300/rzO71VFu7CpJMfF5TQNMj0d1lSV.jpg
     thoughts: |
       I just feel the love between them in the last scene. See how to live with burden
       to feel love toward someone (here applied on both). Very Slow But Practical.
       I want to watch again. It has only one song it is one of my favorite.
   - title: Spaceman
     type: Movie
-    poster: https://media-cache.cinematerial.com/p/500x/v24iwlzy/spaceman-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/f46WvKEsBn98WJbPJcO47ZoKn6B.jpg
     thoughts: |
       You feel emotion from a very different perspective. It feels very slow and senseless in first
       part but after interval it is gem (full of philosophies and emotions). And in the last you'll
       cry. (पतले मानस)
   - title: DareDevil
     type: Show
-    poster: https://media-cache.cinematerial.com/p/500x/5yal3bzv/daredevil-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/QWbPaDxiB6LW2LjASknzYBvjMj.jpg
     thoughts: |
       My favorite superhero show. All three seasons are masterpiece. Top notch action choreography,
       villian's storyline and I don't want to talk about Charlie Cox's performance. While watching
       this I feel that I will'be this :ninja:
   - title: The Whale
     type: Movie
-    poster: https://media-cache.cinematerial.com/p/500x/ucj6wiqv/the-whale-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg
     thoughts: |
       Sad but full of positivity. Its like art film. Deeply touching emotions. Best performance by
       lead-actor. Favorite character is **Liz** because she supports cares and understand her friend
       in the most difficult time.
   - title: Dead Poet Society
     type: Movie
-    poster: https://media-cache.cinematerial.com/p/500x/j2k5s5s4/dead-poets-society-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/hmGAF5NDoYB6S39UONevjHCESOI.jpg
     thoughts: |
       When I watched it first time I was in 10th and I think it was my first to experience a movie
       like that (don't know the explanation) and after that I love these kind of movies. (Carpe Diem)
   - title: Love Life
     type: Movie
-    poster: https://media-cache.cinematerial.com/p/500x/tzhhh0j7/love-life-japanese-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/5OSTURpAJCFsUydL6w4JPx48SSQ.jpg
     thoughts: |
       Intense tragic japanese family drama. Honestly, I couldn't understand much why are the
       characters are doing this specially the main character (Taeko). Tried to watch video essay
       around it but couldn't found any.
   - title: Maharaja
     type: Movie
-    poster: https://media-cache.cinematerial.com/p/500x/tlqkoge9/maharaja-indian-movie-poster.jpg
+    poster: https://image.tmdb.org/t/p/w300/3WgxA2nSzAgMR4DYDty0O9wx68x.jpg
     thoughts: |
       Engaging thriller with amazing performance by Vijay Sethupathi. As the mystery unfolds you
       just praises the writer. When you find the actual truth you'll CRY; really.
+  - title: Meiyazhagan
+    type: Movie
+    poster: https://image.tmdb.org/t/p/w300/ngDEH7YqVaMCAD4LpNxRl6ScJnw.jpg
+    thoughts: |
+      A feel good movie to remember your precious time with your loved ones. Just forget the old
+      bad memories to live along for better future.
+  - title: My Liberation Notes
+    type: K-Drama
+    poster: https://image.tmdb.org/t/p/w300/olmfFeKZyQoTwj9Zo3Y5IUaioPB.jpg
+    thoughts: |
+      Now I know I love "Slice Of Life" genre. It just hit you with thoughts which make live better
+      with less worry. And from now I will explore more in Slice of Life genre. Thanks.
 
 musics:
   - title: The Way That Lovers Do
@@ -106,12 +118,8 @@ musics:
     link: https://open.spotify.com/artist/3HUf0l1HSBzHw0F5UhBOpA
   - title: Hai Bharosa
     link: https://open.spotify.com/album/5gzjNeBbZlD3bDMKDxNCTL
-  - title: A Suitable Boy
-    link: https://open.spotify.com/album/1TEK4k9Rsqk6C0p5uRFre2
   - title: Quiet Eyes
     link: https://open.spotify.com/track/2r1pq34i8ddPXyxvfqDBCG
-  - title: BREACH
-    link: https://open.spotify.com/album/0KsNopmZLaB71o6i2nw95I
   - title: The Wonder of You
     link: https://open.spotify.com/track/3gwurt17Arq2OTWaM7qZPW
   - title: Love in the Time of Socialism
@@ -120,17 +128,21 @@ musics:
     link: https://open.spotify.com/artist/6znPk9JRNmg6uyB6h8nJu3
   - title: Bayaan
     link: https://open.spotify.com/artist/3atMq790wQ7IqjeSO0HFeP
-  - title: Raani
-    link: https://open.spotify.com/track/4Kd45JGzTjzkmfcT1eeKV6
   - title: The Tamashabeens
     link: https://open.spotify.com/artist/6dArdZ3NhrB1sbyo2s5poV
-  - title: Mysore Se Ayi
-    link: https://open.spotify.com/track/3oXygAEuFopjsohfGjQfv7
   - title: Deepak Peace
     link: https://open.spotify.com/artist/4kOGyPDgRSeIxlxMrlzyQw
-  - title: Vichhorha
-    link: https://open.spotify.com/track/0edqJqeltkMdQJ2fGXFzab
   - title: Nilaavil Ellame
     link: https://open.spotify.com/track/2Ro2GzcCjPcwrR5lFk9PsY
   - title: Maya Ke Mausam
     link: https://open.spotify.com/track/3xcLisVw7AaqhGz0JpCIB5
+  - title: My Liberation Notes
+    link: https://open.spotify.com/album/41DOBN48kjQv9eDJj7C9xw
+  - title: Gor Badan Gadrail
+    link: https://open.spotify.com/track/4o8oITfP6icsmhcsfz48li
+  - title: Mere Gaon Aaoge
+    link: https://open.spotify.com/album/2i7V2X4DBLvHQavOk4N2J9
+  - title: folklore
+    link: https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr
+  - title: evermore
+    link: https://open.spotify.com/album/2Xoteh7uEpea4TohMxjtaq
