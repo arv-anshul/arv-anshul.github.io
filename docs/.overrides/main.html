@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+<!-- Set title variable -->
+{% if page.meta and page.meta.title %}
+    {% set title = page.meta.title ~ ' | ' ~ config.site_name %}
+{% elif page.title and not page.is_homepage %}
+    {% set title = page.title | striptags ~ ' | ' ~ config.site_name %}
+{% else %}
+    {% set title = config.site_name %}
+{% endif %}
+
+<!-- Set description variable -->
+{% if page.meta and page.meta.description %}
+    {% set description = page.meta.description %}
+{% else %}
+    {% set description = title %}
+{% endif %}
+
+{% block extrahead %}
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ page.canonical_url if page.canonical_url else config.site_url }}" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/743063632/6f3af08f-216b-4ab6-a2a4-e8165efc15d7" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="{{ page.canonical_url if page.canonical_url else config.site_url }}" />
+<meta property="twitter:title" content="{{ title }}" />
+<meta property="twitter:description" content="{{ description }}" />
+<meta property="twitter:image" content="https://repository-images.githubusercontent.com/743063632/6f3af08f-216b-4ab6-a2a4-e8165efc15d7" />
+
+<!-- copied from https://github.com/astral-sh/ruff/blob/56f956a238/docs/.overrides/main.html -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://arv-anshul.github.io/data/assets/favicon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://arv-anshul.github.io/data/assets/favicon.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://arv-anshul.github.io/data/assets/favicon.png"/>
+<link rel="mask-icon" href="https://arv-anshul.github.io/data/assets/favicon.png" color="#14151A"/>
+<meta name="msapplication-TileColor" content="#14151A"/>
+<meta name="theme-color" content="#14151A"/>
+<meta name="robots" content="index,follow"/>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ARV Personal Website",
+        "url": "https://arv-anshul.github.io"
+    }
+</script>
+{% endblock %}
