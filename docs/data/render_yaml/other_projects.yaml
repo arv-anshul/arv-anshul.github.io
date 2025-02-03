@@ -1,5 +1,15 @@
 $schema: https://arv-anshul.github.io/schema/other_projects.json
 projects:
+  - title: Scrape Hockey Data
+    description: |
+      Scrape Hockey data from Hockey website. Already scraped data present
+      [on Kaggle](https://www.kaggle.com/datasets/arvanshul/hockey-india-league-2025/data).
+    icon: simple-scrapy
+    url: https://github.com/arv-anshul/hockey
+  - title: Resume Generator
+    description: Generate your Resume/CV using JSON data.
+    icon: material-newspaper
+    url: https://github.com/arv-anshul/resume
   - title: Md Badges CLI
     description: CLI tool to get SimpleIcons badges in multiple format, written in Rust.
     icon: simple-rust
