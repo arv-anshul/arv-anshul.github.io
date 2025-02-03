@@ -104,5 +104,5 @@ By implementing these strategies, you can elevate your Resume/CV to effectively 
 ---
 
 <p align="center" markdown>
-[:fontawesome-solid-paper-plane:{ .bounce }&nbsp; Download My Resume](https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf){ .md-button .md-button--primary }
+[:fontawesome-solid-paper-plane:{ .bounce }&nbsp; Download My Resume]({{ resume_url }}){ .md-button .md-button--primary }
 </p>

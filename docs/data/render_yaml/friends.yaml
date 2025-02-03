@@ -16,8 +16,8 @@ friends:
         url: https://linkedin.com/in/arv-anshul
         icon: simple/linkedin
       - title: Resume
-        url: https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf
-        icon: material/file-document
+        url: resume.md
+        icon: material/newspaper
       - title: Personal Website
         url: https://arv-anshul.github.io
         icon: material/web

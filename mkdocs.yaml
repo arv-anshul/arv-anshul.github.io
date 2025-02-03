@@ -101,8 +101,10 @@ plugins:
         project/dotfiles.md: https://github.com/arv-anshul/dotfiles
         project/yt-watch-history-v2/index.md: project/yt-watch-history/index.md
         projects/index.md: project/index.md
+        resume.md: https://arv-anshul.github.io/resume/pdf/resume-02.pdf
 
 extra:
+  resume_url: https://arv-anshul.github.io/resume/pdf/resume-02.pdf
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_PROPERTY
@@ -127,8 +129,8 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/arv-anshul
       name: Connect on LinkedIn
-    - icon: material/account-box
-      link: https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf
+    - icon: material/newspaper
+      link: /resume
       name: Resume as PDF
 
 copyright: |
@@ -149,6 +151,7 @@ nav:
       - anime.md
       - movies.md
       - music.md
+      - resume.md
   - Projects:
       - project/index.md
       - project/others.md

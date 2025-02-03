@@ -12,8 +12,8 @@ socials:
     icon: simple-linkedin
     url: https://www.linkedin.com/arv-anshul
   - title: Resume as PDF
-    icon: material-account-box
-    url: https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf
+    icon: material-newspaper
+    url: /resume
 
 project_ids:
   - id: yt-comment-sentiment/index.md

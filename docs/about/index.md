@@ -122,5 +122,5 @@ Continuously expanding my technological horizons, I have successfully completed 
 ---
 
 <p align="center" markdown>
-[:fontawesome-solid-paper-plane:{ .bounce }&nbsp; Download Resume](https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf){ .md-button .md-button--primary }
+[:fontawesome-solid-paper-plane:{ .bounce }&nbsp; Download Resume]({{ resume_url }}){ .md-button .md-button--primary }
 </p>

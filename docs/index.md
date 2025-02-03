@@ -36,7 +36,7 @@ icon: octicons/home-fill-24
 
 [:material-notebook-multiple:{ .lg .middle }&nbsp; **Projects** &nbsp;](project/index.md){ .md-button style="text-align: center; display: block;" }
 
-[:material-newspaper:{ .lg .middle }&nbsp; **Resume** &nbsp;](https://github.com/arv-anshul/arv-anshul/raw/main/resume_arv-anshul.pdf){ .md-button style="text-align: center; display: block;" }
+[:material-newspaper:{ .lg .middle }&nbsp; **Resume** &nbsp;](resume.md){ .md-button style="text-align: center; display: block;" }
 
 [:fontawesome-solid-users-viewfinder:{ .lg .middle }&nbsp; **Friends** &nbsp;](friends.md){ .md-button style="text-align: center; display: block;" }
 
