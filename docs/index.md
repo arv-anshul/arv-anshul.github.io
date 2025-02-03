@@ -19,10 +19,10 @@ icon: octicons/home-fill-24
 
 <p style="text-align: center; margin: 0px;">
   <img src="https://avatars.githubusercontent.com/u/111767754?v=4" alt="arv-anshul" style="width: 16em; border-radius: 50%;" />
-
   <p style="text-align: center; font-size: 25px; margin: 0px;"><strong>Anshul Raj Verma</strong></p>
   <p style="text-align: center; margin: 0px;">
-    Hey, I am Anshul Raj Verma and I am a Data Scientist. I am Learning ML, NLP and MLOps and also building projects which helps me to grow and learn from mistakes which I have done during building the project.
+    Hey, I am Anshul Raj Verma and I am a Data Scientist. I am Learning ML, DL, GenAI and MLOps, also building projects
+    which helps me to grow and learn from mistakes which I have done during building the projects.
   </p>
 </p>
 
@@ -37,6 +37,8 @@ icon: octicons/home-fill-24
 [:material-notebook-multiple:{ .lg .middle }&nbsp; **Projects** &nbsp;](project/index.md){ .md-button style="text-align: center; display: block;" }
 
 [:material-newspaper:{ .lg .middle }&nbsp; **Resume** &nbsp;](resume.md){ .md-button style="text-align: center; display: block;" }
+
+[:simple-github:{ .lg .middle }&nbsp; **GitHub** &nbsp;](https://github.com/arv-anshul){ .md-button style="text-align: center; display: block;" }
 
 [:fontawesome-solid-users-viewfinder:{ .lg .middle }&nbsp; **Friends** &nbsp;](friends.md){ .md-button style="text-align: center; display: block;" }
 
