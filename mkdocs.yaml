@@ -24,7 +24,6 @@ theme:
     - navigation.path
     - navigation.tabs
     - navigation.top
-    - search.highlight
     - search.suggest
   palette:
     scheme: slate
