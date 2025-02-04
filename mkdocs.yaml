@@ -45,9 +45,7 @@ markdown_extensions:
           format:
             !!python/object/apply:pymdownx.arithmatex.arithmatex_inline_format
             kwds: { which: generic }
-  - pymdownx.keys
   - pymdownx.mark
-  - pymdownx.snippets
   - pymdownx.tilde
   - tables
   - pymdownx.tasklist:
