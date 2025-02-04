@@ -100,10 +100,10 @@ plugins:
         project/dotfiles.md: https://github.com/arv-anshul/dotfiles
         project/yt-watch-history-v2/index.md: project/yt-watch-history/index.md
         projects/index.md: project/index.md
-        resume.md: https://arv-anshul.github.io/resume/pdf/resume-02.pdf
+        resume.md: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/resume-02.pdf
 
 extra:
-  resume_url: https://arv-anshul.github.io/resume/pdf/resume-02.pdf
+  resume_url: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/resume-02.pdf
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_PROPERTY
