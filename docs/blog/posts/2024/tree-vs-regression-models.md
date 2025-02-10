@@ -29,8 +29,8 @@ Tree based models and Regression models are widely used [Machine Learning] model
 
 These models are also great choice for :fontawesome-user-tie: interviewers so from these models they ask many [interview questions]. This blog mainly focuses on tree based models.
 
-[Machine Learning]: ../c/ml.md
-[interview questions]: ../c/interview-questions.md
+[Machine Learning]: ../../c/ml.md
+[interview questions]: ../../c/interview-questions.md
 
 <!-- more -->
 

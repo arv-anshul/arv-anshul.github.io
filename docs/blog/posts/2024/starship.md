@@ -17,9 +17,9 @@ icon: simple/starship
 
 <figure markdown>
 
-![](../assets/images/without-starship.png "Without Starship")
+![](assets/images/without-starship.png "Without Starship")
 
-![](../assets/images/with-starship.png "With Starship")
+![](assets/images/with-starship.png "With Starship")
 
 <figcaption>
 I have introduced to Starship Prompt a week ago and it makes my shell prompt amazing.
@@ -167,7 +167,7 @@ symbol = "󰨞 " # (3)!
 
 <figure markdown>
 
-![](../assets/images/with-starship.png "With Starship"){ .heart }
+![](assets/images/with-starship.png "With Starship"){ .heart }
 
 <figcaption>If you want to make prompt to look like mine! Click below</figcaption>
 </figure>
