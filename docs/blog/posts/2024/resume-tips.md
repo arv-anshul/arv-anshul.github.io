@@ -1,15 +1,12 @@
 ---
 date: 2024-05-09
-authors:
-  - arv-anshul
-categories:
-  - others
-description: Some tips to follow while creating your resume.
+authors: [arv-anshul]
+categories: [others]
 title: Resume Tips
+description: Some tips to follow while creating your resume.
 slug: resume-tips
 icon: material/newspaper
-hide:
-    - toc
+hide: [toc]
 ---
 
 # :material-newspaper:{ title="By Rohan Azad Sir" } Resume Tips

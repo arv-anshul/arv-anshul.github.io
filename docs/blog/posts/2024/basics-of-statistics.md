@@ -1,13 +1,7 @@
 ---
-date:
-  created: 2024-04-12
-  updated: 2024-04-14
-authors:
-  - arv-anshul
-  - campusx
-categories:
-  - ml
-  - statistics
+date: 2024-04-12
+authors: [arv-anshul, campusx]
+categories: [ml, statistics]
 description: Learn basics of Descriptive and Inferential Statistics for ML.
 title: Basics of Statistics for ML
 slug: basics-of-statistics

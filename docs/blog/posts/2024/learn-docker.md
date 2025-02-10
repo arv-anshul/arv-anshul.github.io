@@ -1,13 +1,11 @@
 ---
 date: 2024-03-17
-authors:
-  - arv-anshul
-  - chatgpt
-categories:
-  - mlops
-description: Learn Docker, Dockerfile, .dockerignore
+authors: [arv-anshul, chatgpt]
+categories: [mlops]
 title: Learn Docker
+description: Learn Docker, Dockerfile, .dockerignore
 slug: learn-docker
+icon: simple/docker
 ---
 
 # :simple-docker:{ .docker title="2023-12-30 10:42" } Learn Docker

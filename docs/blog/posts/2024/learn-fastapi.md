@@ -1,17 +1,11 @@
 ---
-date:
-  created: 2024-03-17
-  updated: 2024-03-17
-authors:
-  - arv-anshul
-description: |
-  Learn FastAPI framework from basic to advance with free tutorials and official docs.
-categories:
-  - others
-slug: learn-fastapi
+date: 2024-03-17
+authors: [arv-anshul]
+categories: [others]
 title: Learn FastAPI
-hide:
-  - toc
+description: Learn FastAPI framework from basic to advance with free tutorials and official docs.
+slug: learn-fastapi
+hide: [toc]
 ---
 
 # :simple-fastapi:{ .fastapi title="2024-03-17" } Learn FastAPI

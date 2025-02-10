@@ -1,12 +1,8 @@
 ---
 date: 2025-01-05
+authors: [arv-anshul]
+categories: [deep-learning, pytorch, transformers]
 title: Finetune Transformers
-authors:
-  - arv-anshul
-categories:
-  - deep-learning
-  - pytorch
-  - transformers
 description: References to finetune Transformers from HuggingFace using Pytorch or TensorFlow.
 slug: finetune-transformers
 icon: simple/huggingface

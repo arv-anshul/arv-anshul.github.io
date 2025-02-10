@@ -1,13 +1,7 @@
 ---
-date:
-  created: 2024-12-27
-  updated: 2024-12-27
-authors:
-  - arv-anshul
-categories:
-  - python
-  - docker
-  - fastapi
+date: 2024-12-27
+authors: [arv-anshul]
+categories: [python, docker, fastapi]
 description: Dockerize your FastAPI app which is managed with uv easily.
 title: Dockerize - FastAPI - UV
 slug: docker-fastapi-uv

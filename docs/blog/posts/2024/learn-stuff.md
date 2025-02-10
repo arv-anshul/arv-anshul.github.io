@@ -1,11 +1,9 @@
 ---
 date: 2024-04-19
-authors:
-  - arv-anshul
-categories:
-  - others
-description: Some resources from where I have learned techs, concepts and more. Just a small collection.
+authors: [arv-anshul]
+categories: [others]
 title: Learn Stuff
+description: Some resources from where I have learned techs, concepts and more. Just a small collection.
 slug: learn-stuff
 icon: fontawesome/solid/brain
 ---

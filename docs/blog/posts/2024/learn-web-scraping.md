@@ -1,16 +1,11 @@
 ---
-date:
-  created: 2024-03-23
-  updated: 2024-03-23
-authors:
-  - arv-anshul
-description: Learn Web Scraping from resources which I used to learn it.
-categories:
-  - others
-slug: learn-web-scraping
+date: 2024-03-23
+authors: [arv-anshul]
+categories: [others]
 title: Learn Web Scraping
-hide:
-  - toc
+description: Learn Web Scraping from resources which I used to learn it.
+slug: learn-web-scraping
+hide: [toc]
 ---
 
 # :material-search-web:{ .lg .middle .info title="2024-03-23" } Learn Web Scraping

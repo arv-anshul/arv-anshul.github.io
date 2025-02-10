@@ -1,17 +1,12 @@
 ---
-date:
-  created: 2024-03-25
-  updated: 2024-03-29
-authors:
-  - arv-anshul
+date: 2024-03-25
+authors: [arv-anshul]
 description: A basic introduction to Hypothesis Testing.
-categories:
-  - ml
-  - interview-questions
-slug: hypothesis-testing-introduction
+categories: [ml, interview-questions]
 title: Introduction To Hypothesis Testing
-hide:
-  - toc
+slug: hypothesis-testing-introduction
+icon: material/test-tube
+hide: [toc]
 ---
 
 # :test_tube:{ date="2024-03-25" } Introduction To Hypothesis Testing

@@ -1,29 +1,15 @@
 ---
-date:
-  created: 2024-03-21
-  updated: 2024-03-22
-authors:
-  - arv-anshul
-  - campusx
-description: |
-  Major difference between Tree based models and Regression models.
-categories:
-  - ml
-  - interview-questions
-slug: tree-vs-regression-models
+date: 2024-03-21
+authors: [arv-anshul, campusx]
+categories: [ml, interview-questions]
 title: Tree VS Regression Models
-hide:
-  - toc
+description: Major difference between Tree based models and Regression models.
+slug: tree-vs-regression-models
+icon: material/family-tree
+hide: [toc]
 ---
 
-# :palm_tree:{ title="From CampusX Trail Session" } Tree VS Regression Models
-
-<figure markdown>
-
-![tree-vs-regression-models](https://www.freecodecamp.org/news/content/images/2022/08/LinearModels-1.png){ .base-border-radius style="width: 90%;" }
-
-<figcaption>Source: www.freecodecamp.org</figcaption>
-</figure>
+# :material-family-tree:{ title="From CampusX Trail Session" } Tree VS Regression Models
 
 Tree based models and Regression models are widely used [Machine Learning] models. So more you know about them is better for you. Also, many concepts from these models are borrowed by advance [Machine Learning] models like Gradient Boosting, XGBoost, etc.
 

@@ -1,12 +1,9 @@
 ---
 date: 2024-06-10
+authors: [arv-anshul]
+categories: [deep-learning]
 title: Intro to Deep Learning
-authors:
-  - arv-anshul
-categories:
-  - deep-learning
-description: |
-  List of some related concepts of Deep Learning like Perceptron and MLP; including notations, coding examples.
+description: List of some related concepts of Deep Learning like Perceptron and MLP; including notations, coding examples.
 slug: intro-to-deep-learning
 icon: simple/pytorch
 ---

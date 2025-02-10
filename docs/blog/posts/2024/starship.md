@@ -1,13 +1,8 @@
 ---
-date:
-  created: 2024-02-21
-  updated: 2024-03-19
-authors:
-  - arv-anshul
-description: |
-  The minimal, blazing-fast, and infinitely customizable prompt for any shell!
-categories:
-  - others
+date: 2024-02-21
+authors: [arv-anshul]
+description: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+categories: [others]
 slug: starship-prompt
 title: Starship Prompt
 icon: simple/starship

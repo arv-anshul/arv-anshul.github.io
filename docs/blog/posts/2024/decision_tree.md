@@ -1,14 +1,8 @@
 ---
-date:
-  created: 2024-01-29
-  updated: 2024-01-29
-authors:
-  - arv-anshul
-  - chatgpt
-description: |
-  An overview of Decision Tree algorithm in Machine Learning.
-categories:
-  - ml
+date: 2024-01-29
+authors: [arv-anshul, chatgpt]
+description: An overview of Decision Tree algorithm in Machine Learning.
+categories: [ml]
 slug: overview-decision-tree
 title: "Overview: Decision Tree"
 ---

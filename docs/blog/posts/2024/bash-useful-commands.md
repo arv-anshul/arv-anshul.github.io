@@ -1,11 +1,7 @@
 ---
 date: 2024-04-10
-authors:
-  - arv-anshul
-categories:
-  - bash
-  - tips
-description:
+authors: [arv-anshul]
+categories: [bash, tips]
 title: Bash Useful Commands
 slug: bash-useful-commands
 icon: material/keyboard

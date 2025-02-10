@@ -1,17 +1,14 @@
 ---
-date:
-  created: 2024-03-17
-  updated: 2024-03-17
-authors:
-  - arv-anshul
-category:
-  - eda
-description: Learn how to handle outlier using various univariate methods.
+date: 2024-03-17
+authors: [arv-anshul]
+category: [eda]
 title: Handle Outliers - Univariate
+description: Learn how to handle outlier using various univariate methods.
 slug: outlier-univariate
+icon: material/chart-histogram
 ---
 
-# :calendar:{ title="Thursday, 20 July 2023 10:38 AM" } Handle Outliers - Univariate
+# :material-chart-histogram:{ title="2024-03-17" } Handle Outliers - Univariate
 
 Handling outlier is a big task for data scientist. To handle the outliers we have many different methods to handle them **i.e. IQR, Z-score, Mean-Median Imputation, Winsorization, etc**. We are going to discuss only univariate methods to handle outliers.
 

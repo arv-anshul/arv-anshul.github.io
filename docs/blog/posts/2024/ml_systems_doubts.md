@@ -1,11 +1,8 @@
 ---
 date: 2024-01-24
-authors:
-  - arv-anshul
-description: >
-  My doubts around creating and working ML Systems.
-categories:
-  - mlops
+authors: [arv-anshul]
+categories: [mlops]
+description: My doubts around creating and working ML Systems.
 links:
   - projects/yt-watch-history/index.md
   - https://github.com/arv-anshul/yt-watch-history/

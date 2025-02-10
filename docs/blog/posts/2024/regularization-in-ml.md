@@ -1,13 +1,9 @@
 ---
 date: 2024-03-17
-authors:
-  - arv-anshul
-  - campusx
-  - chatgpt
-category:
-  - ml
-description: Regularization in ML essentially Lasso, Ridge and ElasticNet.
+authors: [arv-anshul, campusx, chatgpt]
+category: [ml]
 title: Regularization in ML
+description: Regularization in ML essentially Lasso, Ridge and ElasticNet.
 slug: regularization-in-ml
 ---
 

@@ -1,21 +1,14 @@
 ---
-date:
-  created: 2024-03-12
-  updated: 2024-03-18
-authors:
-  - arv-anshul
-  - campusx
-  - chatgpt
-description: |
-  Some important Interview Questions on Regression Algorithms.
-categories:
-  - ml
-  - interview-questions
-slug: regression-interview-questions
+date: 2024-03-12
+authors: [arv-anshul, campusx, chatgpt]
+categories: [ml, interview-questions]
 title: Regression Interview Questions
+description: Some important Interview Questions on Regression Algorithms.
+slug: regression-interview-questions
+icon: material/chart-line
 ---
 
-# Regression Interview Questions
+# :material-chart-line: Regression Interview Questions
 
 <figure markdown>
 

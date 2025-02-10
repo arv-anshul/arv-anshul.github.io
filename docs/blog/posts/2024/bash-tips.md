@@ -1,12 +1,9 @@
 ---
 date: 2024-04-07
-authors:
-  - arv-anshul
-categories:
-  - bash
-  - tips
-description: Some terminal or bash tricks you may find useful for your workflow.
+authors: [arv-anshul]
+categories: [bash, tips]
 title: Bash Tips
+description: Some terminal or bash tricks you may find useful for your workflow.
 slug: bash-tips
 icon: material/tooltip-plus
 ---

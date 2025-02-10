@@ -1,15 +1,8 @@
 ---
-date:
-  created: 2024-02-06
-  updated: 2024-02-13
-authors:
-  - arv-anshul
-  - campusx
-  - chatgpt
-description: |
-  Overview of clustering algorithms in Machine Learning.
-categories:
-  - ml
+date: 2024-02-06
+authors: [arv-anshul, campusx, chatgpt]
+categories: [ml]
+description: Overview of clustering algorithms in Machine Learning.
 slug: clustering-algo
 title: Clustering Algorithms in ML
 ---

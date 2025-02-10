@@ -1,14 +1,8 @@
 ---
-date:
-  created: 2024-04-22
-  updated: 2024-04-22
-authors:
-  - arv-anshul
-categories:
-  - eda
-  - statistics
-description: |
-  Explained the process through which you can perform astonishing EDA on your datasets.
+date: 2024-04-22
+authors: [arv-anshul]
+categories: [eda, statistics]
+description: Explained the process through which you can perform astonishing EDA on your datasets.
 title: How To Perform EDA
 slug: how-to-eda
 icon: material/test-tube
