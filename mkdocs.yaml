@@ -90,9 +90,6 @@ plugins:
       redirect_maps:
         campusx-dsmp.md: https://arv-anshul.github.io/campusx
         campusx-dsmp/resources.md: https://arv-anshul.github.io/campusx/dsmp2
-        gh.md: https://github.com/arv-anshul
-        github.md: https://github.com/arv-anshul
-        linkedin.md: https://linkedin.com/in/arv-anshul
         notebooks.md: https://github.com/arv-anshul/notebooks
         project/notebooks.md: https://github.com/arv-anshul/notebooks
         project/dotfiles.md: https://github.com/arv-anshul/dotfiles
