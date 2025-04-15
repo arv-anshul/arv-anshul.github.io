@@ -68,7 +68,7 @@ I have done lots of project on Web Scraping but while doing those web scraping p
 
 **My Projects Related to Web Scraping**{ .success title="You can learn from these too." }<br><br>
 
-[![campusx-logo](https://avatars.githubusercontent.com/u/53361867?v=4){ .twemoji .sm .middle .base-border-radius } `campusx-dsmp`](https://arv-anshul.github.io/campusx-dsmp){ .md-button .slim-button target="blank_" }
+[![campusx-logo](https://github.com/campusx-official.png){ .twemoji .sm .middle .base-border-radius } `campusx-dsmp`](https://arv-anshul.github.io/campusx-dsmp){ .md-button .slim-button target="blank_" }
 [:simple-github:{ .middle } `99acres-scrape`](https://github.com/arv-anshul/99acres-scrape){ .md-button .slim-button target="blank_" }
 [:simple-github:{ .middle } `ecommerce-scrapper-api`](https://github.com/arv-anshul/ecommerce-scrapper-api){ .md-button .slim-button target="blank_" }
 [:simple-github:{ .middle } `pw-api`](https://github.com/arv-anshul/pw-api){ .md-button .slim-button target="blank_" }

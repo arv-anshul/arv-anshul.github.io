@@ -2,7 +2,7 @@ $schema: https://arv-anshul.github.io/schema/friends.json
 friends:
   - name: Anshul Raj Verma
     primaryUrl: https://arv-anshul.github.io/about
-    avatar: https://avatars.githubusercontent.com/u/111767754?v=4
+    avatar: https://github.com/arv-anshul.png
     profession: Data Scientist
     description: |
       I am learning Data Science, ML and DL for 3 years. Very fluent in Python language,
