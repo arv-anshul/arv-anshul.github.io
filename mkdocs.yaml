@@ -99,6 +99,13 @@ plugins:
 
 extra:
   resume_url: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/resume-02.pdf
+  avatar_url: https://github.com/arv-anshul.png
+  intro_text: |
+    Hello! I'm Anshul Raj Verma, a Data Scientist passionate about harnessing GenAI to solve real-world problems.
+    Since 2021, I've sharpened my skills through a six-month Data Science & AI internship and a series of self-driven
+    projects, becoming proficient in Python and Data Science concepts. I've also built end-to-end GenAI applications
+    using LangChain, LangGraph, LlamaIndex, and core MCP concepts—experience that's fueled my drive to design
+    intelligent, scalable solutions.
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_PROPERTY

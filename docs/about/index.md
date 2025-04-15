@@ -27,23 +27,10 @@ icon: material/account-box
 </style>
 
 <p style="text-align: center; margin: 0px;" markdown>
-  <img src="https://avatars.githubusercontent.com/u/111767754?v=4" alt="arv-anshul" style="width: 300px; border-radius: 50%;" />
+  <img src="{{ avatar_url }}" alt="arv-anshul" style="width: 300px; border-radius: 50%;" />
   <p class="light" style="text-align: center; font-size: 25px; margin: 0px;"><strong>Anshul Raj Verma</strong></p>
 </p>
-
-<p style="text-align: justify;" markdown>
-
-Currently, I am in 12th standard but dedicated to mastering Data Science and ML for the past two years.
-I've built a very good knowledge in Python and Data Science libraries.
-I've developed a solid foundation and applied it to various projects.
-Notably, I showcase my expertise in web scraping, demonstrated through projects like [ecommerce-scrapper-api].
-Continuously expanding my technological horizons, I have successfully completed multiple ML projects, such as [yt-watch-history], [campusx-real-estate].
-
-</p>
-
-[yt-watch-history]: https://github.com/arv-anshul/yt-watch-history
-[campusx-real-estate]: https://github.com/arv-anshul/campusx-real-estate
-[ecommerce-scrapper-api]: https://github.com/arv-anshul/ecommerce-scrapper-api
+<p style="text-align: justify;" markdown>{{ intro_text }}</p>
 
 ---
 
