@@ -2,7 +2,7 @@
 date: 2024-04-26
 title: Anime
 slug: anime
-icon: simple/funimation
+icon: material/flower
 search:
   exclude: true
 hide:
@@ -11,7 +11,7 @@ hide:
   - toc  # TODO: Uncomment this when list became very big.
 ---
 
-# :simple-funimation: Anime { align="center" }
+# :material-flower: Anime { align="center" }
 
 ## :knot:{ title="In KOTA" } **Your Name**
 

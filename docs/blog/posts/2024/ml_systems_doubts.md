@@ -4,7 +4,7 @@ authors: [arv-anshul]
 categories: [mlops]
 description: My doubts around creating and working ML Systems.
 links:
-  - projects/yt-watch-history/index.md
+  - project/yt-watch-history/index.md
   - https://github.com/arv-anshul/yt-watch-history/
 ---
 
@@ -22,7 +22,7 @@ I've been working on a **project of Machine Learning** where I am using :simple-
 
 <!-- more -->
 
-In my project [:material-book:{ .secondary }](https://github.com/arv-anshulyt-watch-history "Project on GitHub") `yt-watch-history`, I am using MLFlow (but not using it also) means I have written code to train the model with MLFlow but I can also train without it (and I always use this only).
+In my project [:material-book:{ .secondary }](https://github.com/arv-anshul/yt-watch-history "Project on GitHub") `yt-watch-history`, I am using MLFlow (but not using it also) means I have written code to train the model with MLFlow but I can also train without it (and I always use this only).
 
 !!! question
     1. Should I train the model using MLFLow or just do the model monitoring while Hyper-parameter Tuning?
