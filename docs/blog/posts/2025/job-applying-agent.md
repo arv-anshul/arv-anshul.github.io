@@ -69,3 +69,38 @@ LinkedIn profile and their Resume.
 
 - How to use messages? (With .stream method)
 - How to implement async tools? (For profile scraping and resume parsing purpose)
+
+---
+
+# 🔎 Job Finder - Raycast Note
+
+## Current Plan
+
+We planned to provided a platform where both Employee and Employer list their skills and requirements and then we will provide a interface where both Employee and Employer will finder their match on the basis of their skills and requirements.
+
+## Problem *(with Current Plan)*
+
+- As we are no one who is going to use product the idea Employer listing is hard to be gain success on, so I decided to to drop it. *(read next)*
+- We can scrape websites like LinkedIn, Naukri, etc. and gather data related to Jobs and make the platform only for Employee *(as name suggests ****Job Finder****).*
+
+## Platform Usage
+
+- User will upload its Resume/CV on our website.
+- We will parse their CV using OCR and extract a structure information for our usecase.
+- We will then asks the user to fill a partially filled form to get full info about the user.
+- The form is already filled by the info we extracted from user’s CV.
+- Then, we will recommend most similar Jobs we got in our database.
+
+## Future Plans
+
+- We may also provide a service to create a resume by filling a simple form.
+
+## References
+
+- [jsonresume.org](https://jsonresume.org/getting-started): For custom resume creation.
+
+## Resourses
+
+- [https://towardsdatascience.com/ai-powered-information-extraction-and-matchmaking-0408c93ec1b9/?sk=623aaf8837df5630ed60c40e66766553](https://towardsdatascience.com/ai-powered-information-extraction-and-matchmaking-0408c93ec1b9/?sk=623aaf8837df5630ed60c40e66766553)
+- [https://github.com/luillyfe/resume-insights](https://github.com/luillyfe/resume-insights)
+-
