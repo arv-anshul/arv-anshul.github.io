@@ -98,7 +98,7 @@ plugins:
         resume.md: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/resume-02.pdf
 
 extra:
-  resume_url: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/resume-02.pdf
+  resume_url: /resume
   avatar_url: https://github.com/arv-anshul.png
   intro_text: |
     Hello! I'm Anshul Raj Verma, a Data Scientist passionate about harnessing GenAI to solve real-world problems.
