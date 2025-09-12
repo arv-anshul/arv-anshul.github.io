@@ -30,7 +30,7 @@ projects:
     url: https://github.com/arv-anshul/notebooks/tree/main/election-2024
   - title: Custom YouTube Theme
     description: A Distraction Free Stylus CSS theme for YouTube.com.
-    icon: simple-css3
+    icon: simple-css
     url: https://github.com/arv-anshul/Distraction-Free-YT-Stylus
   - title: Markdown Badge
     description: CLI tool to get simpleicon badges for markdown file.

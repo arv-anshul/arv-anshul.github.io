@@ -15,7 +15,7 @@ SIMPLEICONS_CSS_PATH = Path("docs/stylesheets/simpleicons.css")
 SIMPLEICONS_JSON_PATH = Path("data/simpleicons.json")
 
 SLUG_DATA_URL = "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/slugs.md"  # fmt: skip
-SIMPLE_ICON_JSON_URL = "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/_data/simple-icons.json"
+SIMPLE_ICON_JSON_URL = "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/data/simple-icons.json"
 
 
 def _fetch_icons_with_slug() -> list[dict[str, str]]:

@@ -9,7 +9,7 @@ socials:
     icon: material-email
     url: mailto:arv.anshul.1864@gmail.com
   - title: LinkedIn Profile
-    icon: simple-linkedin
+    icon: fontawesome-brands-linkedin
     url: https://www.linkedin.com/arv-anshul
   - title: Resume as PDF
     icon: material-newspaper
@@ -36,39 +36,33 @@ experiences:
         desc: A chatbot powered by OpenAI LLMs to query your AD campaigns data, also plot graphs on your query.
 
 tech_stack:
-  Languages:
+  Programming Languages:
     - title: Python
       icon: simple-python
     - title: HTML
       icon: simple-html5
     - title: CSS
-      icon: simple-css3
-    - title: Jinja
-      icon: simple-jinja
+      icon: simple-css
     - title: Bash
       icon: simple-gnubash
     - title: Rust
       icon: simple-rust
     - title: JavaScript
       icon: simple-javascript
-  Frameworks:
+    - title: Go
+      icon: simple-go
+    - title: TypeScript
+      icon: simple-typescript
+  Backend Tools:
     - title: FastAPI
       icon: simple-fastapi
-    - title: Streamlit
-      icon: simple-streamlit
     - title: MongoDB
       icon: simple-mongodb
     - title: MySQL
       icon: simple-mysql
-    - title: SQLite
-      icon: simple-sqlite
-    - title: Taipy
-      icon: simple-taipy
-    - title: Scrapy
-      icon: simple-scrapy
+    - title: Redis
+      icon: simple-redis
   Dev Tools:
-    - title: Arc Browser
-      icon: simple-arc
     - title: pre-commit
       icon: simple-precommit
     - icon: simple-starship
@@ -77,9 +71,11 @@ tech_stack:
       icon: simple-raycast
     - title: Zed Code Editor
       icon: simple-zedindustries
-    - title: Taskfile
-      icon: simple-task
-  Dev/ML Ops:
+    - title: Typst
+      icon: simple-typst
+    - title: Google Gemini
+      icon: simple-googlegemini
+  Dev Ops & ML Ops:
     - title: Docker
       icon: simple-docker
     - title: GitHub Actions
@@ -88,7 +84,7 @@ tech_stack:
       icon: simple-mlflow
     - title: PyPI
       icon: simple-pypi
-  Data Science:
+  Data Science & GenAI:
     - title: Scikit-Learn
       icon: simple-scikitlearn
     - title: Polars
@@ -103,7 +99,9 @@ tech_stack:
       icon: simple-huggingface
     - title: LangChain
       icon: simple-langchain
-  Python Specific:
+    - title: Model Context Protocol
+      icon: simple-modelcontextprotocol
+  Python Tools:
     - title: Pytest
       icon: simple-pytest
     - title: Pydantic
@@ -114,9 +112,9 @@ tech_stack:
       icon: simple-materialformkdocs
     - title: UV
       icon: simple-uv
-  Frontend Frameworks:
-    - title: pnpm
-      icon: simple-pnpm
+    - title: Scrapy
+      icon: simple-scrapy
+  Frontend Tools:
     - title: ShadCN UI
       icon: simple-shadcnui
     - title: Tailwind CSS

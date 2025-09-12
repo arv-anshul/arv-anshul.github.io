@@ -179,7 +179,7 @@ topics:
         url: https://youtube.com/playlist?list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-
         type: material-playlist-play
   - header: CSS
-    icon: simple-css3
+    icon: simple-css
     tutorials:
       - title: Tailwind CSS Tutorial For Beginners in Hindi
         author: Hitesh Choudhary

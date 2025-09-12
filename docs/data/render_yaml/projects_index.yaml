@@ -63,7 +63,7 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/yt-watch-history-v2
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
       - title: Jupyter Notebooks
         icon: simple-jupyter
@@ -123,7 +123,7 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/ecommerce-scrapper-api
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_fastapi-api-ecommerce-activity-7128575593570340864-WE2m?utm_source=share&utm_medium=member_desktop
     tags:
       - fastapi
@@ -145,7 +145,7 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/campusx-real-estate
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
     tags:
       - plotly
@@ -165,7 +165,7 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/freeapi-py
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_im-happy-to-share-this-freeapi-in-python-activity-7192135714594000896-ZRqh?utm_source=share&utm_medium=member_desktop
     tags:
       - docker
@@ -186,7 +186,7 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/curler
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_hey-i-am-happy-to-tell-you-that-i-activity-7118254699127975939-ePyf?utm_source=share&utm_medium=member_desktop
       - title: Package on PyPi
         icon: simple-pypi
@@ -211,7 +211,7 @@ projects:
         icon: simple-kaggle
         url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
       - title: Streamlit App
         icon: simple-streamlit
@@ -232,7 +232,7 @@ projects:
         icon: simple-github
         url: https://github.com/arv-anshul/campusx
       - title: LinkedIn Post
-        icon: simple-linkedin
+        icon: fontawesome-brands-linkedin
         url: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
       - title: Project's Website
         icon: simple-materialformkdocs
