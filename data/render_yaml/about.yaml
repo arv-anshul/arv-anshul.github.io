@@ -1,0 +1,125 @@
+socials:
+  - title: GitHub Profile
+    icon: simple-github
+    url: https://github.com/arv-anshul/
+  - title: Personal Website
+    icon: fontawesome-solid-om
+    url: https://arv-anshul.github.io/
+  - title: E-Mail
+    icon: material-email
+    url: mailto:arv.anshul.1864@gmail.com
+  - title: LinkedIn Profile
+    icon: fontawesome-brands-linkedin
+    url: https://www.linkedin.com/arv-anshul
+  - title: Resume as PDF
+    icon: material-newspaper
+    url: /resume
+
+project_ids:
+  - id: yt-comment-sentiment/index.md
+    icon: simple-youtube
+  - id: canvas-ai.md
+    icon: simple-googlegemini
+  - id: yt-watch-history/index.md
+    icon: simple-youtube
+
+experiences:
+  - title: Data Science Intern
+    company: "@LeapX.ai"
+    period: July 2024 - Nov 2024 (5 months)
+    points:
+      - icon: simple-scrapy
+        desc: A web-scraper using Scrapy framework which scrapes data and stores it in database using pipeline.
+      - icon: simple-streamlit
+        desc: A streamlit dashboard which analyses real-estate data and cluster affluent areas and plot them on map.
+      - icon: simple-openai
+        desc: A chatbot powered by OpenAI LLMs to query your AD campaigns data, also plot graphs on your query.
+
+tech_stack:
+  Programming Languages:
+    - title: Python
+      icon: simple-python
+    - title: HTML
+      icon: simple-html5
+    - title: CSS
+      icon: simple-css
+    - title: Bash
+      icon: simple-gnubash
+    - title: Rust
+      icon: simple-rust
+    - title: JavaScript
+      icon: simple-javascript
+    - title: Go
+      icon: simple-go
+    - title: TypeScript
+      icon: simple-typescript
+  Backend Tools:
+    - title: FastAPI
+      icon: simple-fastapi
+    - title: MongoDB
+      icon: simple-mongodb
+    - title: MySQL
+      icon: simple-mysql
+    - title: Redis
+      icon: simple-redis
+  Dev Tools:
+    - title: pre-commit
+      icon: simple-precommit
+    - icon: simple-starship
+      title: Starship Prompt
+    - title: Raycast
+      icon: simple-raycast
+    - title: Zed Code Editor
+      icon: simple-zedindustries
+    - title: Typst
+      icon: simple-typst
+    - title: Google Gemini
+      icon: simple-googlegemini
+  Dev Ops & ML Ops:
+    - title: Docker
+      icon: simple-docker
+    - title: GitHub Actions
+      icon: simple-githubactions
+    - title: MLFlow
+      icon: simple-mlflow
+    - title: PyPI
+      icon: simple-pypi
+  Data Science & GenAI:
+    - title: Scikit-Learn
+      icon: simple-scikitlearn
+    - title: Polars
+      icon: simple-polars
+    - title: Pandas
+      icon: simple-pandas
+    - title: Numpy
+      icon: simple-numpy
+    - title: Plotly
+      icon: simple-plotly
+    - title: Hugging Face
+      icon: simple-huggingface
+    - title: LangChain
+      icon: simple-langchain
+    - title: Model Context Protocol
+      icon: simple-modelcontextprotocol
+  Python Tools:
+    - title: Pytest
+      icon: simple-pytest
+    - title: Pydantic
+      icon: simple-pydantic
+    - title: Ruff
+      icon: simple-ruff
+    - title: Material for Mkdocs
+      icon: simple-materialformkdocs
+    - title: UV
+      icon: simple-uv
+    - title: Scrapy
+      icon: simple-scrapy
+  Frontend Tools:
+    - title: ShadCN UI
+      icon: simple-shadcnui
+    - title: Tailwind CSS
+      icon: simple-tailwindcss
+    - title: Vite
+      icon: simple-vite
+    - title: VueJs
+      icon: simple-vuedotjs

@@ -1,0 +1,2465 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Built frontend of project using VueJs + Vite and hosted on GitHub Pages.
+#frontend #vuejs #tailwind #vite #shadcn #githubpages
+">
+      
+      
+        <meta name="author" content="Anshul Raj Verma">
+      
+      
+        <link rel="canonical" href="https://arv-anshul.github.io/project/yt-comment-sentiment/frontend/">
+      
+      
+        <link rel="prev" href="../backend/">
+      
+      
+        <link rel="next" href="../../spotify-analysis/">
+      
+      
+      <link rel="icon" href="../../../data/assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Frontend Side - ARV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Rubik";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleicons.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-ZD389G0M3J"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-ZD389G0M3J",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-ZD389G0M3J",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://arv-anshul.github.io/project/yt-comment-sentiment/frontend/" />
+<meta property="og:title" content="Frontend Side | ARV" />
+<meta property="og:description" content="Built frontend of project using VueJs + Vite and hosted on GitHub Pages.
+#frontend #vuejs #tailwind #vite #shadcn #githubpages
+" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/743063632/6f3af08f-216b-4ab6-a2a4-e8165efc15d7" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://arv-anshul.github.io/project/yt-comment-sentiment/frontend/" />
+<meta property="twitter:title" content="Frontend Side | ARV" />
+<meta property="twitter:description" content="Built frontend of project using VueJs + Vite and hosted on GitHub Pages.
+#frontend #vuejs #tailwind #vite #shadcn #githubpages
+" />
+<meta property="twitter:image" content="https://repository-images.githubusercontent.com/743063632/6f3af08f-216b-4ab6-a2a4-e8165efc15d7" />
+
+<!-- copied from https://github.com/astral-sh/ruff/blob/56f956a238/docs/.overrides/main.html -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://arv-anshul.github.io/data/assets/favicon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://arv-anshul.github.io/data/assets/favicon.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://arv-anshul.github.io/data/assets/favicon.png"/>
+<link rel="mask-icon" href="https://arv-anshul.github.io/data/assets/favicon.png" color="#14151A"/>
+<meta name="msapplication-TileColor" content="#14151A"/>
+<meta name="theme-color" content="#14151A"/>
+<meta name="robots" content="index,follow"/>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ARV Personal Website",
+        "url": "https://arv-anshul.github.io"
+    }
+</script>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yt-comment-sentiment-frontend-side" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ARV" class="md-header__button md-logo" aria-label="ARV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M388.7 4.7c6.2-6.2 16.4-6.2 22.6 0l16 16c6.2 6.2 6.2 16.4 0 22.6l-16 16c-6.2 6.2-16.4 6.2-22.6 0l-16-16c-6.2-6.2-6.2-16.4 0-22.6zM176 160c-10.8 0-20.8 3.6-28.8 9.6-14.1 10.6-34.2 7.8-44.8-6.4s-7.8-34.2 6.4-44.8c18.7-14.1 42-22.4 67.2-22.4 61.9 0 112 50.1 112 112 0 17.2-3.9 33.5-10.8 48h49.7c12.7 0 24.9-5 33.9-14.1l20.7-20.7c18.7-18.7 44.1-29.3 70.6-29.3 55.2 0 99.9 44.7 99.9 99.9v96.1c0 55.2-44.8 100-100 100S352 443.2 352 388v-4c0-17.7 14.3-32 32-32s32 14.3 32 32v4c0 19.9 16.1 36 36 36s36-16.1 36-36v-96.1c0-19.8-16.1-35.9-35.9-35.9-9.5 0-18.6 3.8-25.4 10.5L406 287.2c-21 21-49.4 32.8-79.1 32.8h-26.8c12.6 19.6 19.9 42.8 19.9 68 0 75.2-65 132-140 132S40 463.2 40 388c0-17.7 14.3-32 32-32s32 14.3 32 32c0 35.3 31.7 68 76 68s76-32.7 76-68-31.7-68-76-68h-20c-17.7 0-32-14.3-32-32s14.3-32 32-32h16c26.5 0 48-21.5 48-48s-21.5-48-48-48m161.1-99.9c-11-13.8-31.1-16.2-45-5.2s-16.2 31.1-5.2 45C312.6 132.2 354.4 152 400 152s87.4-19.8 113.1-52.1c11-13.8 8.7-34-5.2-45s-34-8.7-45 5.2C450.3 76 427.5 88 400 88s-50.3-12-62.9-27.9"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frontend Side
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144z"/></svg>
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.05 9H7.06V6h1.99V4.03H7.06v-1c0-1.11.89-1.99 1.99-1.99h5.98V8l2.47-1.5L20 8V1.04h1c1.05 0 2 .96 2 1.99V17c0 1.03-.95 2-2 2H9.05c-1.05 0-1.99-.95-1.99-2v-1h1.99v-2H7.06v-3h1.99zM1 18h2v-3H1v-2h2v-3H1V8h2V5h2v3H3v2h2v3H3v2h2v3H3v2h2v1h16v2H5a2 2 0 0 1-2-2v-1H1z"/></svg>
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M446.6 222.7c-1.8-8-6.8-15.4-12.5-18.5-1.8-1-13-2.2-25-2.7-20.1-.9-22.3-1.3-28.7-5-10.1-5.9-12.8-12.3-12.9-29.5-.1-33-13.8-63.7-40.9-91.3-19.3-19.7-40.9-33-65.5-40.5-5.9-1.8-19.1-2.4-63.3-2.9-69.4-.8-84.8.6-108.4 10C45.9 59.5 14.7 96.1 3.3 142.9 1.2 151.7.7 165.8.2 246.8c-.6 101.5.1 116.4 6.4 136.5 15.6 49.6 59.9 86.3 104.4 94.3 14.8 2.7 197.3 3.3 216 .8 32.5-4.4 58-17.5 81.9-41.9 17.3-17.7 28.1-36.8 35.2-62.1 4.9-17.6 4.5-142.8 2.5-151.7m-322.1-63.6c7.8-7.9 10-8.2 58.8-8.2 43.9 0 45.4.1 51.8 3.4 9.3 4.7 13.4 11.3 13.4 21.9 0 9.5-3.8 16.2-12.3 21.6-4.6 2.9-7.3 3.1-50.3 3.3-26.5.2-47.7-.4-50.8-1.2-16.6-4.7-22.8-28.5-10.6-40.8m191.8 199.8-14.9 2.4-77.5.9c-68.1.8-87.3-.4-90.9-2-7.1-3.1-13.8-11.7-14.9-19.4-1.1-7.3 2.6-17.3 8.2-22.4 7.1-6.4 10.2-6.6 97.3-6.7 89.6-.1 89.1-.1 97.6 7.8 12.1 11.3 9.5 31.2-4.9 39.4"/></svg>
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2"/></svg>
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ARV" class="md-nav__button md-logo" aria-label="ARV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M388.7 4.7c6.2-6.2 16.4-6.2 22.6 0l16 16c6.2 6.2 6.2 16.4 0 22.6l-16 16c-6.2 6.2-16.4 6.2-22.6 0l-16-16c-6.2-6.2-6.2-16.4 0-22.6zM176 160c-10.8 0-20.8 3.6-28.8 9.6-14.1 10.6-34.2 7.8-44.8-6.4s-7.8-34.2 6.4-44.8c18.7-14.1 42-22.4 67.2-22.4 61.9 0 112 50.1 112 112 0 17.2-3.9 33.5-10.8 48h49.7c12.7 0 24.9-5 33.9-14.1l20.7-20.7c18.7-18.7 44.1-29.3 70.6-29.3 55.2 0 99.9 44.7 99.9 99.9v96.1c0 55.2-44.8 100-100 100S352 443.2 352 388v-4c0-17.7 14.3-32 32-32s32 14.3 32 32v4c0 19.9 16.1 36 36 36s36-16.1 36-36v-96.1c0-19.8-16.1-35.9-35.9-35.9-9.5 0-18.6 3.8-25.4 10.5L406 287.2c-21 21-49.4 32.8-79.1 32.8h-26.8c12.6 19.6 19.9 42.8 19.9 68 0 75.2-65 132-140 132S40 463.2 40 388c0-17.7 14.3-32 32-32s32 14.3 32 32c0 35.3 31.7 68 76 68s76-32.7 76-68-31.7-68-76-68h-20c-17.7 0-32-14.3-32-32s14.3-32 32-32h16c26.5 0 48-21.5 48-48s-21.5-48-48-48m161.1-99.9c-11-13.8-31.1-16.2-45-5.2s-16.2 31.1-5.2 45C312.6 132.2 354.4 152 400 152s87.4-19.8 113.1-52.1c11-13.8 8.7-34-5.2-45s-34-8.7-45 5.2C450.3 76 427.5 88 400 88s-50.3-12-62.9-27.9"/></svg>
+
+    </a>
+    ARV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144z"/></svg>
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64v72c0 13.3 10.7 24 24 24s24-10.7 24-24V64c0-8.8 7.2-16 16-16h72c13.3 0 24-10.7 24-24S149.3 0 136 0zm376 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h72c8.8 0 16 7.2 16 16v72c0 13.3 10.7 24 24 24s24-10.7 24-24V64c0-35.3-28.7-64-64-64zM48 376c0-13.3-10.7-24-24-24S0 362.7 0 376v72c0 35.3 28.7 64 64 64h72c13.3 0 24-10.7 24-24s-10.7-24-24-24H64c-8.8 0-16-7.2-16-16zm528 0c0-13.3-10.7-24-24-24s-24 10.7-24 24v72c0 8.8-7.2 16-16 16h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h72c35.3 0 64-28.7 64-64zM288 216a56 56 0 1 0 0-112 56 56 0 1 0 0 112m0 40c-53 0-96 43-96 96v24c0 13.3 10.7 24 24 24h144c13.3 0 24-10.7 24-24v-24c0-53-43-96-96-96m192-64a48 48 0 1 0-96 0 48 48 0 1 0 96 0m-312 80.3c-49.3 4.1-88 45.3-88 95.7v10.7c0 11.8 9.6 21.3 21.3 21.3h46.8c-2.7-7.5-4.1-15.6-4.1-24v-24c0-29.5 8.8-56.9 24-79.7M427.9 400h46.8c11.8 0 21.3-9.6 21.3-21.3V368c0-50.3-38.7-91.6-88-95.7 15.2 22.8 24 50.2 24 79.7v24c0 8.4-1.4 16.5-4.1 24M192 192a48 48 0 1 0-96 0 48 48 0 1 0 96 0"/></svg>
+  
+  <span class="md-ellipsis">
+    Friends
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../anime/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 13a9 9 0 0 0 9 9c0-5-4.03-9-9-9m9-7.5A2.5 2.5 0 0 1 14.5 8a2.5 2.5 0 0 1-2.5 2.5A2.5 2.5 0 0 1 9.5 8 2.5 2.5 0 0 1 12 5.5m-6.4 4.75a2.5 2.5 0 0 0 2.5 2.5c.53 0 1.02-.17 1.4-.44v.19A2.5 2.5 0 0 0 12 15a2.5 2.5 0 0 0 2.5-2.5v-.19c.38.27.87.44 1.4.44a2.5 2.5 0 0 0 2.5-2.5c0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.26 1.43-2.25a2.5 2.5 0 0 0-2.5-2.5c-.53 0-1.02.16-1.4.44V3.5A2.5 2.5 0 0 0 12 1a2.5 2.5 0 0 0-2.5 2.5v.19c-.38-.28-.87-.44-1.4-.44a2.5 2.5 0 0 0-2.5 2.5c0 .99.59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25M12 22a9 9 0 0 0 9-9c-5 0-9 4-9 9"/></svg>
+  
+  <span class="md-ellipsis">
+    Anime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../movies/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20.84 2.18-3.93.78 2.74 3.54 1.97-.4zm-6.87 1.36L12 3.93l2.75 3.53 1.96-.39zm-4.9.96-1.97.41 2.75 3.53 1.96-.39zm-4.91 1-.98.19a2 2 0 0 0-1.57 2.35L2 10l4.9-.97zM2 10v10a2 2 0 0 0 2 2h16c1.11 0 2-.89 2-2V10z"/></svg>
+  
+  <span class="md-ellipsis">
+    Movies & Shows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 9h-3v5.5a2.5 2.5 0 0 1-2.5 2.5A2.5 2.5 0 0 1 8 14.5a2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.5V7h4m3-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg>
+  
+  <span class="md-ellipsis">
+    Music
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resume/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11H4V8h16m0 7h-7v-2h7m0 6h-7v-2h7m-9 2H4v-6h7m9.33-8.33L18.67 3 17 4.67 15.33 3l-1.66 1.67L12 3l-1.67 1.67L8.67 3 7 4.67 5.33 3 3.67 4.67 2 3v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V3z"/></svg>
+  
+  <span class="md-ellipsis">
+    Anshul Raj Verma - Resume
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.05 9H7.06V6h1.99V4.03H7.06v-1c0-1.11.89-1.99 1.99-1.99h5.98V8l2.47-1.5L20 8V1.04h1c1.05 0 2 .96 2 1.99V17c0 1.03-.95 2-2 2H9.05c-1.05 0-1.99-.95-1.99-2v-1h1.99v-2H7.06v-3h1.99zM1 18h2v-3H1v-2h2v-3H1V8h2V5h2v3H3v2h2v3H3v2h2v3H3v2h2v1h16v2H5a2 2 0 0 1-2-2v-1H1z"/></svg>
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.5 2.5 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.5 2.5 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Other Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799M20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427M4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056m7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.36 9.36 0 0 0-3.393-4.547 9.24 9.24 0 0 0-5.377-1.728A9.24 9.24 0 0 0 6.95 3.73a9.36 9.36 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424m.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.36 9.36 0 0 0 3.394 4.547A9.24 9.24 0 0 0 12.33 21a9.24 9.24 0 0 0 5.377-1.729 9.36 9.36 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Notebooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../canvas-ai/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg>
+  
+  <span class="md-ellipsis">
+    Canvas AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../yt-watch-history/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg>
+  
+  <span class="md-ellipsis">
+    Youtube Watch History
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Youtube Watch History
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yt-watch-history/ctt/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56-2.93 2.93-2.083 8.53-1.088 9.525.805.804 6.595 1.843 9.526-1.088a10 10 0 0 0 .584-.643q.064-.437.489-1.106a1.9 1.9 0 0 1-.537.176q-.217.398-.676.855-.53.503-.76.656a.8.8 0 0 1-.437.152q-.524 0-.494-.924-.33.474-.612.7a.9.9 0 0 1-.578.224q-.292 0-.496-.273a1.03 1.03 0 0 1-.193-.507 4 4 0 0 1-.726.583q-.335.197-.74.197-.45 0-.727-.288a.98.98 0 0 1-.257-.524v.004q-.45.414-.79.611a1.3 1.3 0 0 1-.649.197.7.7 0 0 1-.571-.275q-.218-.275-.218-.739 0-.695.302-1.67.301-.976.733-1.797l.842-.312a.2.2 0 0 1 .06-.013q.095 0 .157.14.06.142.061.38 0 .677-.312 1.31-.31.633-.974 1.352-.027.345-.027.474 0 .289.106.458.107.17.282.169a.7.7 0 0 0 .382-.13q.198-.127.602-.523.04-.626.482-1.142.487-.57 1.08-.569.308 0 .494.16a.52.52 0 0 1 .186.417q0 .687-1.459 1.114.133.646.693.646a.8.8 0 0 0 .417-.117q.194-.115.575-.497.048-.378.259-.728.273-.45.701-.73.427-.278.756-.278.415 0 .58.381l.677-.374h.186l-.292.971q-.225.732-.226 1.004 0 .285.202.285.129 0 .285-.137.156-.138.437-.42v.001q.215-.233.392-.494-.285-.127-.285-.375 0-.255.174-.545.173-.29.479-.29.258 0 .258.265 0 .209-.149.596.55-.06.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732-1.019-1.02-2.408-1.5-3.895-1.471m4.725 8.203a9 9 0 0 1-1.333 2.151 1 1 0 0 0-.012.147q0 .252.14.423.139.17.34.17.444-.001 1.254-.787-.002.06-.003.121 0 .219.036.666l.733-.172q0-.3.01-.474.016-.236.066-.517.03-.166.152-.315l.186-.216a5 5 0 0 1 .378-.397q.093-.083.162-.13a.26.26 0 0 1 .123-.046q.083 0 .083.106 0 .105-.156.497-.292.73-.292 1.084 0 .262.136.418a.45.45 0 0 0 .358.155q.548 0 1.313-.808v-.381q-.542.64-.784.64-.163 0-.163-.2 0-.15.195-.65.285-.73.285-1.048a.46.46 0 0 0-.112-.319.36.36 0 0 0-.282-.127q-.247 0-.567.233-.319.234-.863.84.08-.393.335-1.08l-.809.156a6.5 6.5 0 0 0-.399 1.074q-.06.234-.092.48a8 8 0 0 1-.49.45.38.38 0 0 1-.229.08.21.21 0 0 1-.174-.082.35.35 0 0 1-.064-.222q0-.15.056-.343t.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854-1.352 1.352-1.07 3.827.631 5.527 1.7 1.701 4.95 1.21 5.527.632.467-.466 1.07-3.827-.631-5.527-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362.428.684h-.198l-.357-.575-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717q0 .056.02.075.018.02.074.02a.2.2 0 0 0 .078-.01v.141a1 1 0 0 1-.136.014.23.23 0 0 1-.15-.043.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258q.121 0 .207.038.085.036.13.11a.26.26 0 0 1 .045.173h-.176q-.009-.167-.208-.167a.3.3 0 0 0-.164.041.13.13 0 0 0-.06.117q0 .053.045.088.045.036.15.06l.16.039a.47.47 0 0 1 .224.105q.07.069.07.186a.3.3 0 0 1-.052.175.33.33 0 0 1-.152.116.6.6 0 0 1-.226.041q-.205 0-.309-.088-.103-.089-.109-.269h.176q.006.056.017.084a.2.2 0 0 0 .034.054q.066.065.204.065a.3.3 0 0 0 .177-.045.14.14 0 0 0 .067-.119.12.12 0 0 0-.038-.09.3.3 0 0 0-.124-.055l-.156-.038a1 1 0 0 1-.159-.05.4.4 0 0 1-.098-.061.2.2 0 0 1-.058-.083.3.3 0 0 1-.016-.108q0-.144.109-.232a.45.45 0 0 1 .29-.087m1.035 0a.5.5 0 0 1 .202.043.35.35 0 0 1 .187.212.6.6 0 0 1 .023.126h-.168a.26.26 0 0 0-.078-.168.24.24 0 0 0-.17-.06.25.25 0 0 0-.155.05.3.3 0 0 0-.1.144.7.7 0 0 0-.034.224.6.6 0 0 0 .035.214.3.3 0 0 0 .101.135.26.26 0 0 0 .157.048q.213 0 .256-.252h.167a.5.5 0 0 1-.065.22.35.35 0 0 1-.146.138.5.5 0 0 1-.216.048.45.45 0 0 1-.246-.066.44.44 0 0 1-.161-.192.7.7 0 0 1-.057-.293q0-.128.032-.233a.5.5 0 0 1 .095-.182.4.4 0 0 1 .15-.117.45.45 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618q-.121 0-.356.611-.232.61-.459 1.71.422-.468.683-1.05.262-.58.262-.999a.46.46 0 0 0-.036-.197q-.038-.075-.093-.075zm4.662 1.797q-.332 0-.629.563-.296.564-.296 1.038 0 .18.088.29a.27.27 0 0 0 .223.111q.332 0 .625-.565.294-.566.294-1.043a.46.46 0 0 0-.083-.29.27.27 0 0 0-.222-.104m-2.848.007q-.219 0-.417.333-.2.332-.2.866.849-.238.849-.881 0-.318-.232-.318"/></svg>
+  
+  <span class="md-ellipsis">
+    ContentType Prediction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yt-watch-history/channel_reco/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56-2.93 2.93-2.083 8.53-1.088 9.525.805.804 6.595 1.843 9.526-1.088a10 10 0 0 0 .584-.643q.064-.437.489-1.106a1.9 1.9 0 0 1-.537.176q-.217.398-.676.855-.53.503-.76.656a.8.8 0 0 1-.437.152q-.524 0-.494-.924-.33.474-.612.7a.9.9 0 0 1-.578.224q-.292 0-.496-.273a1.03 1.03 0 0 1-.193-.507 4 4 0 0 1-.726.583q-.335.197-.74.197-.45 0-.727-.288a.98.98 0 0 1-.257-.524v.004q-.45.414-.79.611a1.3 1.3 0 0 1-.649.197.7.7 0 0 1-.571-.275q-.218-.275-.218-.739 0-.695.302-1.67.301-.976.733-1.797l.842-.312a.2.2 0 0 1 .06-.013q.095 0 .157.14.06.142.061.38 0 .677-.312 1.31-.31.633-.974 1.352-.027.345-.027.474 0 .289.106.458.107.17.282.169a.7.7 0 0 0 .382-.13q.198-.127.602-.523.04-.626.482-1.142.487-.57 1.08-.569.308 0 .494.16a.52.52 0 0 1 .186.417q0 .687-1.459 1.114.133.646.693.646a.8.8 0 0 0 .417-.117q.194-.115.575-.497.048-.378.259-.728.273-.45.701-.73.427-.278.756-.278.415 0 .58.381l.677-.374h.186l-.292.971q-.225.732-.226 1.004 0 .285.202.285.129 0 .285-.137.156-.138.437-.42v.001q.215-.233.392-.494-.285-.127-.285-.375 0-.255.174-.545.173-.29.479-.29.258 0 .258.265 0 .209-.149.596.55-.06.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732-1.019-1.02-2.408-1.5-3.895-1.471m4.725 8.203a9 9 0 0 1-1.333 2.151 1 1 0 0 0-.012.147q0 .252.14.423.139.17.34.17.444-.001 1.254-.787-.002.06-.003.121 0 .219.036.666l.733-.172q0-.3.01-.474.016-.236.066-.517.03-.166.152-.315l.186-.216a5 5 0 0 1 .378-.397q.093-.083.162-.13a.26.26 0 0 1 .123-.046q.083 0 .083.106 0 .105-.156.497-.292.73-.292 1.084 0 .262.136.418a.45.45 0 0 0 .358.155q.548 0 1.313-.808v-.381q-.542.64-.784.64-.163 0-.163-.2 0-.15.195-.65.285-.73.285-1.048a.46.46 0 0 0-.112-.319.36.36 0 0 0-.282-.127q-.247 0-.567.233-.319.234-.863.84.08-.393.335-1.08l-.809.156a6.5 6.5 0 0 0-.399 1.074q-.06.234-.092.48a8 8 0 0 1-.49.45.38.38 0 0 1-.229.08.21.21 0 0 1-.174-.082.35.35 0 0 1-.064-.222q0-.15.056-.343t.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854-1.352 1.352-1.07 3.827.631 5.527 1.7 1.701 4.95 1.21 5.527.632.467-.466 1.07-3.827-.631-5.527-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362.428.684h-.198l-.357-.575-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717q0 .056.02.075.018.02.074.02a.2.2 0 0 0 .078-.01v.141a1 1 0 0 1-.136.014.23.23 0 0 1-.15-.043.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258q.121 0 .207.038.085.036.13.11a.26.26 0 0 1 .045.173h-.176q-.009-.167-.208-.167a.3.3 0 0 0-.164.041.13.13 0 0 0-.06.117q0 .053.045.088.045.036.15.06l.16.039a.47.47 0 0 1 .224.105q.07.069.07.186a.3.3 0 0 1-.052.175.33.33 0 0 1-.152.116.6.6 0 0 1-.226.041q-.205 0-.309-.088-.103-.089-.109-.269h.176q.006.056.017.084a.2.2 0 0 0 .034.054q.066.065.204.065a.3.3 0 0 0 .177-.045.14.14 0 0 0 .067-.119.12.12 0 0 0-.038-.09.3.3 0 0 0-.124-.055l-.156-.038a1 1 0 0 1-.159-.05.4.4 0 0 1-.098-.061.2.2 0 0 1-.058-.083.3.3 0 0 1-.016-.108q0-.144.109-.232a.45.45 0 0 1 .29-.087m1.035 0a.5.5 0 0 1 .202.043.35.35 0 0 1 .187.212.6.6 0 0 1 .023.126h-.168a.26.26 0 0 0-.078-.168.24.24 0 0 0-.17-.06.25.25 0 0 0-.155.05.3.3 0 0 0-.1.144.7.7 0 0 0-.034.224.6.6 0 0 0 .035.214.3.3 0 0 0 .101.135.26.26 0 0 0 .157.048q.213 0 .256-.252h.167a.5.5 0 0 1-.065.22.35.35 0 0 1-.146.138.5.5 0 0 1-.216.048.45.45 0 0 1-.246-.066.44.44 0 0 1-.161-.192.7.7 0 0 1-.057-.293q0-.128.032-.233a.5.5 0 0 1 .095-.182.4.4 0 0 1 .15-.117.45.45 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618q-.121 0-.356.611-.232.61-.459 1.71.422-.468.683-1.05.262-.58.262-.999a.46.46 0 0 0-.036-.197q-.038-.075-.093-.075zm4.662 1.797q-.332 0-.629.563-.296.564-.296 1.038 0 .18.088.29a.27.27 0 0 0 .223.111q.332 0 .625-.565.294-.566.294-1.043a.46.46 0 0 0-.083-.29.27.27 0 0 0-.222-.104m-2.848.007q-.219 0-.417.333-.2.332-.2.866.849-.238.849-.881 0-.318-.232-.318"/></svg>
+  
+  <span class="md-ellipsis">
+    Channel Recommender System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yt-watch-history/v2-architecture/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.99 2.115A12.22 12.22 0 0 0 12 10.149 12.22 12.22 0 0 0 .01 2.115a12.23 12.23 0 0 0 5.32 10.604 6.56 6.56 0 0 1 2.845 5.423v3.754h7.65v-3.754a6.56 6.56 0 0 1 2.844-5.423 12.22 12.22 0 0 0 5.32-10.604Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Architecture for V2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yt-watch-history/v2-channel_reco/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56-2.93 2.93-2.083 8.53-1.088 9.525.805.804 6.595 1.843 9.526-1.088a10 10 0 0 0 .584-.643q.064-.437.489-1.106a1.9 1.9 0 0 1-.537.176q-.217.398-.676.855-.53.503-.76.656a.8.8 0 0 1-.437.152q-.524 0-.494-.924-.33.474-.612.7a.9.9 0 0 1-.578.224q-.292 0-.496-.273a1.03 1.03 0 0 1-.193-.507 4 4 0 0 1-.726.583q-.335.197-.74.197-.45 0-.727-.288a.98.98 0 0 1-.257-.524v.004q-.45.414-.79.611a1.3 1.3 0 0 1-.649.197.7.7 0 0 1-.571-.275q-.218-.275-.218-.739 0-.695.302-1.67.301-.976.733-1.797l.842-.312a.2.2 0 0 1 .06-.013q.095 0 .157.14.06.142.061.38 0 .677-.312 1.31-.31.633-.974 1.352-.027.345-.027.474 0 .289.106.458.107.17.282.169a.7.7 0 0 0 .382-.13q.198-.127.602-.523.04-.626.482-1.142.487-.57 1.08-.569.308 0 .494.16a.52.52 0 0 1 .186.417q0 .687-1.459 1.114.133.646.693.646a.8.8 0 0 0 .417-.117q.194-.115.575-.497.048-.378.259-.728.273-.45.701-.73.427-.278.756-.278.415 0 .58.381l.677-.374h.186l-.292.971q-.225.732-.226 1.004 0 .285.202.285.129 0 .285-.137.156-.138.437-.42v.001q.215-.233.392-.494-.285-.127-.285-.375 0-.255.174-.545.173-.29.479-.29.258 0 .258.265 0 .209-.149.596.55-.06.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732-1.019-1.02-2.408-1.5-3.895-1.471m4.725 8.203a9 9 0 0 1-1.333 2.151 1 1 0 0 0-.012.147q0 .252.14.423.139.17.34.17.444-.001 1.254-.787-.002.06-.003.121 0 .219.036.666l.733-.172q0-.3.01-.474.016-.236.066-.517.03-.166.152-.315l.186-.216a5 5 0 0 1 .378-.397q.093-.083.162-.13a.26.26 0 0 1 .123-.046q.083 0 .083.106 0 .105-.156.497-.292.73-.292 1.084 0 .262.136.418a.45.45 0 0 0 .358.155q.548 0 1.313-.808v-.381q-.542.64-.784.64-.163 0-.163-.2 0-.15.195-.65.285-.73.285-1.048a.46.46 0 0 0-.112-.319.36.36 0 0 0-.282-.127q-.247 0-.567.233-.319.234-.863.84.08-.393.335-1.08l-.809.156a6.5 6.5 0 0 0-.399 1.074q-.06.234-.092.48a8 8 0 0 1-.49.45.38.38 0 0 1-.229.08.21.21 0 0 1-.174-.082.35.35 0 0 1-.064-.222q0-.15.056-.343t.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854-1.352 1.352-1.07 3.827.631 5.527 1.7 1.701 4.95 1.21 5.527.632.467-.466 1.07-3.827-.631-5.527-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362.428.684h-.198l-.357-.575-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717q0 .056.02.075.018.02.074.02a.2.2 0 0 0 .078-.01v.141a1 1 0 0 1-.136.014.23.23 0 0 1-.15-.043.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258q.121 0 .207.038.085.036.13.11a.26.26 0 0 1 .045.173h-.176q-.009-.167-.208-.167a.3.3 0 0 0-.164.041.13.13 0 0 0-.06.117q0 .053.045.088.045.036.15.06l.16.039a.47.47 0 0 1 .224.105q.07.069.07.186a.3.3 0 0 1-.052.175.33.33 0 0 1-.152.116.6.6 0 0 1-.226.041q-.205 0-.309-.088-.103-.089-.109-.269h.176q.006.056.017.084a.2.2 0 0 0 .034.054q.066.065.204.065a.3.3 0 0 0 .177-.045.14.14 0 0 0 .067-.119.12.12 0 0 0-.038-.09.3.3 0 0 0-.124-.055l-.156-.038a1 1 0 0 1-.159-.05.4.4 0 0 1-.098-.061.2.2 0 0 1-.058-.083.3.3 0 0 1-.016-.108q0-.144.109-.232a.45.45 0 0 1 .29-.087m1.035 0a.5.5 0 0 1 .202.043.35.35 0 0 1 .187.212.6.6 0 0 1 .023.126h-.168a.26.26 0 0 0-.078-.168.24.24 0 0 0-.17-.06.25.25 0 0 0-.155.05.3.3 0 0 0-.1.144.7.7 0 0 0-.034.224.6.6 0 0 0 .035.214.3.3 0 0 0 .101.135.26.26 0 0 0 .157.048q.213 0 .256-.252h.167a.5.5 0 0 1-.065.22.35.35 0 0 1-.146.138.5.5 0 0 1-.216.048.45.45 0 0 1-.246-.066.44.44 0 0 1-.161-.192.7.7 0 0 1-.057-.293q0-.128.032-.233a.5.5 0 0 1 .095-.182.4.4 0 0 1 .15-.117.45.45 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618q-.121 0-.356.611-.232.61-.459 1.71.422-.468.683-1.05.262-.58.262-.999a.46.46 0 0 0-.036-.197q-.038-.075-.093-.075zm4.662 1.797q-.332 0-.629.563-.296.564-.296 1.038 0 .18.088.29a.27.27 0 0 0 .223.111q.332 0 .625-.565.294-.566.294-1.043a.46.46 0 0 0-.083-.29.27.27 0 0 0-.222-.104m-2.848.007q-.219 0-.417.333-.2.332-.2.866.849-.238.849-.881 0-.318-.232-.318"/></svg>
+  
+  <span class="md-ellipsis">
+    Channel Recommender System V2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg>
+  
+  <span class="md-ellipsis">
+    YT Comment Sentiment
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            YT Comment Sentiment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.883.002a12.044 12.044 0 0 0-9.326 19.463l3.668-2.694A7.573 7.573 0 0 1 12.043 4.45v2.867l6.908-5.14A12 12 0 0 0 11.883.002m9.562 4.533L17.777 7.23a7.573 7.573 0 0 1-5.818 12.322v-2.867l-6.908 5.14a12.046 12.046 0 0 0 16.394-17.29"/></svg>
+  
+  <span class="md-ellipsis">
+    ML Side
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .039c-6.627 0-12 5.354-12 11.96-.001 6.606 5.372 11.963 12 11.962S24.001 18.605 24 12 18.627.039 12 .039m-.829 5.415h7.55l-7.58 5.329h5.182L5.28 18.543Q8.226 12 11.171 5.455"/></svg>
+  
+  <span class="md-ellipsis">
+    Backend Side
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78ZM12 14.08 5.16 2.23h4.43L12 6.41l2.41-4.18h4.43Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Frontend Side
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78ZM12 14.08 5.16 2.23h4.43L12 6.41l2.41-4.18h4.43Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Frontend Side
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-followed" class="md-nav__link">
+    <span class="md-ellipsis">
+      What I followed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-type-of-problems-i-have-faced" class="md-nav__link">
+    <span class="md-ellipsis">
+      What type of problems I have faced?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What type of problems I have faced?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      VueJs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spotify-analysis/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0m5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02m1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6s.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2m.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3"/></svg>
+  
+  <span class="md-ellipsis">
+    Spotify Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../campusx/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M5.5 4A1.5 1.5 0 0 0 4 5.5v5c0 .828.5 1.5 1 1.5v-1a1 1 0 0 1 1-1h5v1h-1v1h1.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5Zm.5 7.25v2.514a.25.25 0 0 0 .426.178l.898-.888a.25.25 0 0 1 .352 0l.898.888A.25.25 0 0 0 9 13.764V11H6.25a.25.25 0 0 0-.25.25"/></svg>
+  
+  <span class="md-ellipsis">
+    CampusX Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credit-risk-modeling/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.5 1 2 6v2h19V6m-5 4v7h3v-7M2 22h19v-3H2m8-9v7h3v-7m-9 0v7h3v-7z"/></svg>
+  
+  <span class="md-ellipsis">
+    Credit Risk Modeling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dotfiles/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.038 4.9 13.461.402a2.86 2.86 0 0 0-2.923.001L2.961 4.9A3.02 3.02 0 0 0 1.5 7.503v8.995c0 1.073.557 2.066 1.462 2.603l7.577 4.497a2.86 2.86 0 0 0 2.922 0l7.577-4.497a3.02 3.02 0 0 0 1.462-2.603V7.503A3.02 3.02 0 0 0 21.038 4.9M15.17 18.946l.013.646c.001.078-.05.167-.111.198l-.383.22c-.061.031-.111-.007-.112-.085l-.007-.635c-.328.136-.66.169-.872.084-.04-.016-.057-.075-.041-.142l.139-.584a.24.24 0 0 1 .069-.121.2.2 0 0 1 .036-.026q.033-.017.062-.006c.229.077.521.041.802-.101.357-.181.596-.545.592-.907-.003-.328-.181-.465-.613-.468-.55.001-1.064-.107-1.072-.917-.007-.667.34-1.361.889-1.8l-.007-.652c-.001-.08.048-.168.111-.2l.37-.236c.061-.031.111.007.112.087l.006.653c.273-.109.511-.138.726-.088.047.012.067.076.048.151l-.144.578a.26.26 0 0 1-.065.116.2.2 0 0 1-.038.028.1.1 0 0 1-.057.009c-.098-.022-.332-.073-.699.113-.385.195-.52.53-.517.778.003.297.155.387.681.396.7.012 1.003.318 1.01 1.023.007.689-.362 1.433-.928 1.888m3.973-1.087c0 .06-.008.116-.058.145l-1.916 1.164c-.05.029-.09.004-.09-.056v-.494c0-.06.037-.093.087-.122l1.887-1.129c.05-.029.09-.004.09.056zm1.316-11.062-7.168 4.427c-.894.523-1.553 1.109-1.553 2.187v8.833c0 .645.26 1.063.66 1.184a2.3 2.3 0 0 1-.398.039c-.42 0-.833-.114-1.197-.33L3.226 18.64a2.5 2.5 0 0 1-1.201-2.142V7.503c0-.881.46-1.702 1.201-2.142L10.803.863a2.34 2.34 0 0 1 2.394 0l7.577 4.498a2.48 2.48 0 0 1 1.164 1.732c-.252-.536-.818-.682-1.479-.296"/></svg>
+  
+  <span class="md-ellipsis">
+    Dotfiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M446.6 222.7c-1.8-8-6.8-15.4-12.5-18.5-1.8-1-13-2.2-25-2.7-20.1-.9-22.3-1.3-28.7-5-10.1-5.9-12.8-12.3-12.9-29.5-.1-33-13.8-63.7-40.9-91.3-19.3-19.7-40.9-33-65.5-40.5-5.9-1.8-19.1-2.4-63.3-2.9-69.4-.8-84.8.6-108.4 10C45.9 59.5 14.7 96.1 3.3 142.9 1.2 151.7.7 165.8.2 246.8c-.6 101.5.1 116.4 6.4 136.5 15.6 49.6 59.9 86.3 104.4 94.3 14.8 2.7 197.3 3.3 216 .8 32.5-4.4 58-17.5 81.9-41.9 17.3-17.7 28.1-36.8 35.2-62.1 4.9-17.6 4.5-142.8 2.5-151.7m-322.1-63.6c7.8-7.9 10-8.2 58.8-8.2 43.9 0 45.4.1 51.8 3.4 9.3 4.7 13.4 11.3 13.4 21.9 0 9.5-3.8 16.2-12.3 21.6-4.6 2.9-7.3 3.1-50.3 3.3-26.5.2-47.7-.4-50.8-1.2-16.6-4.7-22.8-28.5-10.6-40.8m191.8 199.8-14.9 2.4-77.5.9c-68.1.8-87.3-.4-90.9-2-7.1-3.1-13.8-11.7-14.9-19.4-1.1-7.3 2.6-17.3 8.2-22.4 7.1-6.4 10.2-6.6 97.3-6.7 89.6-.1 89.1-.1 97.6 7.8 12.1 11.3 9.5 31.2-4.9 39.4"/></svg>
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2025/07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    July, 2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2025/02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    February, 2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2025/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    January, 2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    December, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    June, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    May, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    April, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    March, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    February, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    January, 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    bash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/deep-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    deep-learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/eda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    eda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/fastapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fastapi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/interview-questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    interview-questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    llm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/mlops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mlops
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    others
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pytorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    statistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/c/transformers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    transformers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-followed" class="md-nav__link">
+    <span class="md-ellipsis">
+      What I followed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-type-of-problems-i-have-faced" class="md-nav__link">
+    <span class="md-ellipsis">
+      What type of problems I have faced?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What type of problems I have faced?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      VueJs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="yt-comment-sentiment-frontend-side">YT Comment Sentiment - Frontend Side<a class="headerlink" href="#yt-comment-sentiment-frontend-side" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Technology</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><img alt="pnpm" src="https://img.shields.io/badge/pnpm-F69220?logo=pnpm&amp;logoColor=fff&amp;style=square" /></td>
+<td style="text-align: left;">A fast and efficient package manager for JavaScript projects, known for its disk space usage.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><img alt="shadcn/vue" src="https://img.shields.io/badge/shadcn/vue-000000?logo=shadcnui&amp;logoColor=fff&amp;style=square" /></td>
+<td style="text-align: left;">A customizable component library for building elegant UIs in modern web applications.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&amp;logoColor=fff&amp;style=square" /></td>
+<td style="text-align: left;">A utility-first CSS framework for creating custom designs quickly and efficiently.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><img alt="Vite" src="https://img.shields.io/badge/Vite-646CFF?logo=vite&amp;logoColor=fff&amp;style=square" /></td>
+<td style="text-align: left;">A next-generation frontend build tool for blazing-fast development and hot module replacement.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><img alt="Vue.js" src="https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&amp;logoColor=fff&amp;style=square" /></td>
+<td style="text-align: left;">A progressive JavaScript framework for building user interfaces and single-page applications.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-i-followed">What I followed?<a class="headerlink" href="#what-i-followed" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ol>
+<li>Documentation is the most important resource for your learning and I followed it thoroughly.</li>
+<li>Took help of <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.282 9.821a5.99 5.99 0 0 0-.516-4.91 6.05 6.05 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.99 5.99 0 0 0-3.998 2.9 6.05 6.05 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.05 6.05 0 0 0 6.515 2.9A5.99 5.99 0 0 0 13.26 24a6.06 6.06 0 0 0 5.772-4.206 6 6 0 0 0 3.997-2.9 6.06 6.06 0 0 0-.747-7.073zM13.26 22.43a4.48 4.48 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.8.8 0 0 0 .392-.681v-6.737l2.02 1.168a.07.07 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494M3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.77.77 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646M2.34 7.896a4.5 4.5 0 0 1 2.366-1.973V11.6a.77.77 0 0 0 .388.677l5.815 3.354-2.02 1.168a.08.08 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855-5.833-3.387L15.119 7.2a.08.08 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023-.141-.085-4.774-2.782a.78.78 0 0 0-.785 0L9.409 9.23V6.897a.07.07 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08-4.778 2.758a.8.8 0 0 0-.393.681zm1.097-2.365 2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5Z"/></svg></span> ChatGPT to solve bugs and asked questions related to these frameworks/tools.</li>
+</ol>
+</div>
+<ul>
+<li>Followed <a href="https://youtu.be/VeNfHj6MhgA">only one YouTube video</a> to learn <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78ZM12 14.08 5.16 2.23h4.43L12 6.41l2.41-4.18h4.43Z"/></svg></span> VueJs.</li>
+<li>Used <a href="https://shadcn-vue.com">shadcn/vue</a> as components library. <em class="secondary">Just followed the docs.</em></li>
+<li>Whole <a href=""><code>build_frontend.yaml</code></a> Github Action workflow written by ChatGPT, isn't it amazing <img alt="🤯" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f92f.svg" title=":exploding_head:" />.</li>
+</ul>
+<p>Although, I didn't have much knowledge of Vue, Vite and ShadCN like frameworks/tools but their documentations and
+ChatGPT helped me so much that I am able to <strong>learn, build, diagnose and deploy</strong> the frontend in almost 2-3 days.</p>
+<p>Yes, some credits goes my past knowledge of programming because that's why I able to figure out how do things works and
+how handle them by doing right things.</p>
+<h2 id="what-type-of-problems-i-have-faced">What type of problems I have faced?<a class="headerlink" href="#what-type-of-problems-i-have-faced" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>हे भगवान!</strong> While learning and working on this frontend project, sometime I get messed up with very silly typo
+mistakes in JavaScript.</p>
+</blockquote>
+<p>The things you are building happily in local will totally change when you are trying to deploy it and I have faced this
+too <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f622.svg" title=":cry:" />.</p>
+<h3 id="vuejs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78ZM12 14.08 5.16 2.23h4.43L12 6.41l2.41-4.18h4.43Z"/></svg></span> VueJs<a class="headerlink" href="#vuejs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>How to emit data from Child component to Parent component in VueJs?<ul>
+<li><a href="https://www.geeksforgeeks.org/how-to-update-parent-data-from-child-component-in-vuejs/">GFG Article</a></li>
+<li><a href="https://vueschool.io/articles/vuejs-tutorials/techniques-for-sharing-data-between-vue-js-components/">Vue School Article</a></li>
+<li>Also take a look into official docs to know best practices for this.</li>
+</ul>
+</li>
+<li>How to create and work with forms?</li>
+<li>How to use <a href="https://vuejs.org/guide/components/v-model.html"><code>v-model</code></a>?</li>
+</ul>
+<h3 id="vite"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.286 10.578.512-8.657a.306.306 0 0 1 .247-.282L17.377.006a.306.306 0 0 1 .353.385l-1.558 5.403a.306.306 0 0 0 .352.385l2.388-.46a.306.306 0 0 1 .332.438l-6.79 13.55-.123.19a.3.3 0 0 1-.252.14c-.177 0-.35-.152-.305-.369l1.095-5.301a.306.306 0 0 0-.388-.355l-1.433.435a.306.306 0 0 1-.389-.354l.69-3.375a.306.306 0 0 0-.37-.36l-2.32.536a.306.306 0 0 1-.374-.316zm14.976-7.926L17.284 3.74l-.544 1.887 2.077-.4a.8.8 0 0 1 .84.369.8.8 0 0 1 .034.783L12.9 19.93l-.013.025-.015.023-.122.19a.8.8 0 0 1-.672.37.83.83 0 0 1-.634-.302.8.8 0 0 1-.16-.67l1.029-4.981-1.12.34a.81.81 0 0 1-.86-.262.8.8 0 0 1-.165-.67l.63-3.08-2.027.468a.81.81 0 0 1-.768-.233.8.8 0 0 1-.217-.6l.389-6.57-7.44-1.33a.612.612 0 0 0-.64.906L11.58 23.691a.612.612 0 0 0 1.066-.004l11.26-20.135a.612.612 0 0 0-.644-.9"/></svg></span> Vite<a class="headerlink" href="#vite" title="Permanent link">&para;</a></h3>
+<ul>
+<li>While deciding how to setup proxy in Docker because I've setup it using Vite and it works like charm in local but
+  while writing <code>Dockerfile</code> I am able to figure out the solution.<ul>
+<li>Proxy is used in <a href="https://youtu.be/VeNfHj6MhgA">VueJs YouTube video</a> and thats why I have followed it.</li>
+<li><a href="https://vite.dev/config/server-options.html#server-proxy">See this docs</a></li>
+</ul>
+</li>
+<li>While
+  <a href="https://www.baeldung.com/linux/nginx-config-environment-variables#3-docker-compose">handle environment variables in <code>nginx.conf</code></a>
+  file in Docker environment. I have used ChatGPT read articles but didn't get to solution.</li>
+<li>How to work with <a href="https://vite.dev/guide/env-and-mode.html">different <code>.env</code> files in Vite</a>.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Did you like it?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Yep!" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m130.7-203.1c11.9-3.7 23.9 6.3 19.6 18.1C383.9 388.3 325 432.1 256 432.1s-127.9-43.9-150.3-105.2c-4.3-11.8 7.7-21.8 19.6-18.1C164.5 321 209 327.9 256 327.9s91.5-6.9 130.7-19.1zM328 196c-11 0-20 9-20 20s-9 20-20 20-20-9-20-20c0-33.1 26.9-60 60-60h16c33.1 0 60 26.9 60 60 0 11-9 20-20 20s-20-9-20-20-9-20-20-20zm-152-20a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Nope!" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m90.6-113.9c-20.4-28-53.4-46.1-90.6-46.1s-70.2 18.1-90.6 46.1c-7.8 10.7-22.8 13.1-33.5 5.3s-13.1-22.8-5.3-33.5C155.7 330 202.8 304 256 304s100.3 26 129.4 65.9c7.8 10.7 5.4 25.7-5.3 33.5s-25.7 5.4-33.5-5.3M144 208a32 32 0 1 1 64 0 32 32 0 1 1-64 0m192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href="https://github.com/arv-anshul">Anshul Raj Verma</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:arv.anshul.1864@gmail.com" target="_blank" rel="noopener" title="E-Mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/arv-anshul" target="_blank" rel="noopener" title="See my GitHub Profile" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/arv-anshul" target="_blank" rel="noopener" title="Connect on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="/resume" target="_blank" rel="noopener" title="Resume as PDF" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11H4V8h16m0 7h-7v-2h7m0 6h-7v-2h7m-9 2H4v-6h7m9.33-8.33L18.67 3 17 4.67 15.33 3l-1.66 1.67L12 3l-1.67 1.67L8.67 3 7 4.67 5.33 3 3.67 4.67 2 3v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.path", "navigation.tabs", "navigation.top", "search.suggest"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
