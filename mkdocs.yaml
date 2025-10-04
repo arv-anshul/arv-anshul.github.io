@@ -95,7 +95,7 @@ plugins:
         project/dotfiles.md: https://github.com/arv-anshul/dotfiles
         project/yt-watch-history-v2/index.md: project/yt-watch-history/index.md
         projects/index.md: project/index.md
-        resume.md: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/resume-02.pdf
+        resume.md: https://cdn.statically.io/gh/arv-anshul/resume/main/pdf/basic.pdf
 
 extra:
   resume_url: /resume
