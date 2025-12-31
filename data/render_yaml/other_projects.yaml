@@ -1,0 +1,58 @@
+$schema: https://arv-anshul.github.io/schema/other_projects.json
+projects:
+  - title: Scrape Hockey Data
+    description: |
+      Scrape Hockey data from Hockey website. Already scraped data present
+      [on Kaggle](https://www.kaggle.com/datasets/arvanshul/hockey-india-league-2025/data).
+    icon: simple-scrapy
+    url: https://github.com/arv-anshul/hockey
+  - title: Resume Generator
+    description: Generate your Resume/CV using JSON data.
+    icon: material-newspaper
+    url: https://github.com/arv-anshul/resume
+  - title: Md Badges CLI
+    description: CLI tool to get SimpleIcons badges in multiple format, written in Rust.
+    icon: simple-rust
+    url: https://github.com/arv-anshul/thrust/tree/main/md_badges
+  - title: Web Scrape 99acres.com
+    description: Scrape 99acres.com with python using curl and export data as CSV.
+    icon: simple-streamlit
+    url: https://github.com/arv-anshul/99acres-scrape
+  - title: Personal Website
+    description: Website from markdown files using mkdocs-material.
+    icon: simple-materialformkdocs
+    url: https://github.com/arv-anshul/arv-anshul.github.io
+  - title: Election 2024 Dashboard
+    description: |
+      A live streamlit dashboard to track the seats share of political partries.
+      Data is being fetched from ECI website.
+    icon: simple-streamlit
+    url: https://github.com/arv-anshul/notebooks/tree/main/election-2024
+  - title: Custom YouTube Theme
+    description: A Distraction Free Stylus CSS theme for YouTube.com.
+    icon: simple-css
+    url: https://github.com/arv-anshul/Distraction-Free-YT-Stylus
+  - title: Markdown Badge
+    description: CLI tool to get simpleicon badges for markdown file.
+    icon: simple-simpleicons
+    url: https://gist.github.com/arv-anshul/f4ccfd9258f24ffa9769dfca9b9e091b
+  - title: Attendance System
+    description: Attendance System with MongoDB and Streamlit.
+    icon: simple-mongodb
+    url: https://github.com/arv-anshul/attendance-system
+  - title: IPL APIs
+    description: IPL API using Flask framework and ipl dataset.
+    icon: simple-flask
+    url: https://github.com/arv-anshul/ipl-api
+  - title: Ineuron Projects Docs Generator
+    description: A automated way to create project's document for Ineuron Portal Projects.
+    icon: simple-files
+    url: https://github.com/arv-anshul/ineuron-project-docs-template
+  - title: Family Tree
+    description: Create family tree using python only and export it in JSON/Mermaid format.
+    icon: simple-python
+    url: https://github.com/arv-anshul/family-tree
+  - title: Easy Analysis
+    description: A python package to perform Data Analysis easily.
+    icon: simple-python
+    url: https://github.com/arv-anshul/easy-analysis

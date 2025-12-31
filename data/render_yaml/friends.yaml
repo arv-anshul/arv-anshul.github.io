@@ -1,0 +1,106 @@
+$schema: https://arv-anshul.github.io/schema/friends.json
+friends:
+  - name: Anshul Raj Verma
+    primaryUrl: https://arv-anshul.github.io/about
+    avatar: https://github.com/arv-anshul.png
+    profession: Data Scientist
+    description: |
+      I am learning Data Science, ML and DL for 3 years. Very fluent in Python language,
+      I had built many ML projects using frameworks like FastAPI and Streamlit. You can
+      check all my [projects on website](https://arv-anshul.github.io/project).
+    socials:
+      - title: Github Profile
+        url: https://github.com/arv-anshul
+        icon: simple/github
+      - title: LinkedIn Profile
+        url: https://linkedin.com/in/arv-anshul
+        icon: simple/linkedin
+      - title: Resume
+        url: resume.md
+        icon: material/newspaper
+      - title: Personal Website
+        url: https://arv-anshul.github.io
+        icon: material/web
+      - title: Email
+        url: mailto:arv.anshul.1864@gmail.com
+        icon: material/email
+  - name: Wcowin
+    primaryUrl: https://wcowin.work/
+    avatar: https://s1.imagehub.cc/images/2024/02/02/91a767e93d1a344e44c69936464c583e.png
+    profession: College Student
+    description: |
+      I am a junior from China. I love programming technology and have done some
+      research on web development and AI large models. You can learn more about me
+      through [my website](https://wcowin.work/).
+    socials:
+      - title: Github Profile
+        url: https://github.com/Wcowin
+        icon: simple/github
+      - title: Personal Website
+        url: https://wcowin.work/
+        icon: material/web
+      - title: Email
+        url: mailto:<wangkewen821@gmail.com>
+        icon: material/email
+  - name: Somto Ogbe
+    primaryUrl: https://linkedin.com/in/somto-ogbe
+    avatar: https://s1.imagehub.cc/images/2024/04/27/a7230b57d5855ab7d231032e20572156.jpeg
+    profession: Student
+    description: |
+      I am a Python Developer from Nigeria with keen interest in Backend Development
+      and Data Science. I've very strong knowledge of Django, Flask and FastAPI for
+      Web development and also have a solid foundation in Machine Learning and Deep
+      Learning especially in Computer Vision. I just love to see things work!
+    socials:
+      - title: Github Profile
+        url: https://github.com/somtoval
+        icon: simple/github
+      - title: LinkedIn profile
+        url: https://linkedin.com/in/somto-ogbe
+        icon: simple/linkedin
+      - title: Email
+        url: mailto:ogbesomto4@gmail.com
+        icon: material/email
+  - name: Rahul Kumar
+    primaryUrl: https://linkedin.com/in/rahul-kumar30
+    avatar: https://avatars.githubusercontent.com/u/115729063?v=4
+    profession: Data Scientist
+    description:
+      I am a passionate data science enthusiast with a knack for turning complex data
+      into meaningful insights. As a beginner in the field, I am constantly learning
+      and expanding my skill set. My expertise lies in utilizing Python, SQL, different
+      python libraries, machine learning, statistics, and applied mathematics.
+    socials:
+      - title: Github Profile
+        url: https://github.com/rahulkr30
+        icon: simple/github
+      - title: LinkedIn profile
+        url: https://linkedin.com/in/rahul-kumar30
+        icon: simple/linkedin
+      - title: Email
+        url: mailto:rahulkr30101@gmail.com
+        icon: material/email
+  - name: Dipanjan Pathak
+    primaryUrl: https://dipanjan.tech/
+    avatar: https://avatars.githubusercontent.com/u/140088331?v=4
+    profession: Data Scientist
+    description:
+      A data science enthusiast with full-stack web development expertise, passionate
+      about problem-solving and learning new technologies. Focused on creating
+      data-driven solutions, improving processes, and leveraging data science
+      and development skills to build impactful applications and contribute to
+      innovative, technology-driven projects.
+      Check all my [projects on website](https://dipanjan.tech/).
+    socials:
+      - title: Github Profile
+        url: https://github.com/dipanjanpathak
+        icon: simple/github
+      - title: LinkedIn profile
+        url: https://www.linkedin.com/in/dipanjanpathak/
+        icon: simple/linkedin
+      - title: Email
+        url: mailto:dipanjanpathak@gmail.com
+        icon: material/email
+      - title: Personal Website
+        url: https://dipanjan.tech/
+        icon: material/web
