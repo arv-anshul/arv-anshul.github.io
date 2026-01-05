@@ -5,9 +5,8 @@ friends:
     avatar: https://github.com/arv-anshul.png
     profession: Data Scientist
     description: |
-      I am learning Data Science, ML and DL for 3 years. Very fluent in Python language,
-      I had built many ML projects using frameworks like FastAPI and Streamlit. You can
-      check all my [projects on website](https://arv-anshul.github.io/project).
+      A Data Scientist passionate about harnessing GenAI to solve real-world problems.
+      Check my [projects on website](https://arv-anshul.github.io/project).
     socials:
       - title: Github Profile
         url: https://github.com/arv-anshul
@@ -24,6 +23,7 @@ friends:
       - title: Email
         url: mailto:arv.anshul.1864@gmail.com
         icon: material/email
+
   - name: Wcowin
     primaryUrl: https://wcowin.work/
     avatar: https://s1.imagehub.cc/images/2024/02/02/91a767e93d1a344e44c69936464c583e.png
@@ -42,6 +42,7 @@ friends:
       - title: Email
         url: mailto:<wangkewen821@gmail.com>
         icon: material/email
+
   - name: Somto Ogbe
     primaryUrl: https://linkedin.com/in/somto-ogbe
     avatar: https://s1.imagehub.cc/images/2024/04/27/a7230b57d5855ab7d231032e20572156.jpeg
@@ -61,6 +62,7 @@ friends:
       - title: Email
         url: mailto:ogbesomto4@gmail.com
         icon: material/email
+
   - name: Rahul Kumar
     primaryUrl: https://linkedin.com/in/rahul-kumar30
     avatar: https://avatars.githubusercontent.com/u/115729063?v=4
@@ -80,6 +82,7 @@ friends:
       - title: Email
         url: mailto:rahulkr30101@gmail.com
         icon: material/email
+
   - name: Dipanjan Pathak
     primaryUrl: https://dipanjan.tech/
     avatar: https://avatars.githubusercontent.com/u/140088331?v=4
