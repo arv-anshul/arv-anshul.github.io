@@ -9,7 +9,7 @@ socials:
     icon: material-email
     url: mailto:arv.anshul.1864@gmail.com
   - title: LinkedIn Profile
-    icon: fontawesome-brands-linkedin
+    icon: material-linkedin
     url: https://www.linkedin.com/arv-anshul
   - title: Resume as PDF
     icon: material-newspaper

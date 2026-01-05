@@ -14,7 +14,7 @@ friends:
         icon: simple/github
       - title: LinkedIn Profile
         url: https://linkedin.com/in/arv-anshul
-        icon: simple/linkedin
+        icon: material/linkedin
       - title: Resume
         url: resume.md
         icon: material/newspaper
@@ -57,7 +57,7 @@ friends:
         icon: simple/github
       - title: LinkedIn profile
         url: https://linkedin.com/in/somto-ogbe
-        icon: simple/linkedin
+        icon: material/linkedin
       - title: Email
         url: mailto:ogbesomto4@gmail.com
         icon: material/email
@@ -76,7 +76,7 @@ friends:
         icon: simple/github
       - title: LinkedIn profile
         url: https://linkedin.com/in/rahul-kumar30
-        icon: simple/linkedin
+        icon: material/linkedin
       - title: Email
         url: mailto:rahulkr30101@gmail.com
         icon: material/email
@@ -97,7 +97,7 @@ friends:
         icon: simple/github
       - title: LinkedIn profile
         url: https://www.linkedin.com/in/dipanjanpathak/
-        icon: simple/linkedin
+        icon: material/linkedin
       - title: Email
         url: mailto:dipanjanpathak@gmail.com
         icon: material/email
