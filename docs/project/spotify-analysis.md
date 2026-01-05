@@ -53,7 +53,7 @@ The way Spotify give the **Spotify Wrapped** at the end of every year.
 
 !!! failure "Currently not developed!"
 
-    If you want to join for this contact me on my socials [:fontawesome-brands-linkedin:{ .primary }](https://www.linkedin.com/in/arv-anshul "LinkedIn") [:material-email:{ .primary }](mailto:arv.anshul.1864@gmail.com "E-Mail")
+    If you want to join for this contact me on my socials [:material-linkedin:{ .primary }](https://www.linkedin.com/in/arv-anshul "LinkedIn") [:material-email:{ .primary }](mailto:arv.anshul.1864@gmail.com "E-Mail")
 
 There has been a dashboard (using [:simple-streamlit:{ .streamlit }](https://streamlit.io) Streamlit) where other users can upload their `StreamingHistory.json` files to see analysis on their history.
 
