@@ -12,9 +12,9 @@ icon: material/chart-histogram
 
 Handling outlier is a big task for data scientist. To handle the outliers we have many different methods to handle them **i.e. IQR, Z-score, Mean-Median Imputation, Winsorization, etc**. We are going to discuss only univariate methods to handle outliers.
 
-> :calendar: I have written this page as notes very time ago; so if there is any mistake please let me know I'll fix it. Thanks 🤗
-
 <!-- more -->
+
+> :calendar: I have written this page as notes very time ago; so if there is any mistake please let me know I'll fix it. Thanks 🤗
 
 ## Deletion Based Approach
 

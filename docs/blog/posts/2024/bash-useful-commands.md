@@ -9,6 +9,10 @@ icon: material/keyboard
 
 # Useful Commands
 
+Some daily life useful commands.
+
+<!-- more -->
+
 ## :simple-gnubash: Bash
 
 ### :octicons-arrow-right-16: Display ANSI colors with their color-code.
@@ -27,8 +31,6 @@ function colormap() {
 ```
 
 > The `colormap` function will print the ANSI colors with codes in your terminal.
-
-<!-- more -->
 
 ```bash
 $ colormap           # (000 - 255)

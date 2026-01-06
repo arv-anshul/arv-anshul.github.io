@@ -10,11 +10,11 @@ hide: [toc]
 
 # :simple-fastapi:{ .fastapi title="2024-03-17" } Learn FastAPI
 
-[![FastAPI Logo](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)](https://fastapi.tiangolo.com/)
-
 _A better framework than Flask_{ .secondary title="My Opinion" }. Get production-ready code and API. With automatic interactive documentation. Based on (and fully compatible with) the open standards for APIs: [OpenAPI](https://github.com/OAI/OpenAPI-Specification) (previously known as Swagger) and [JSON Schema](https://json-schema.org/).
 
 <!-- more -->
+
+[![FastAPI Logo](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)](https://fastapi.tiangolo.com/)
 
 ### Features
 

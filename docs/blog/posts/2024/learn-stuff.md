@@ -8,13 +8,13 @@ slug: learn-stuff
 icon: fontawesome/solid/brain
 ---
 
+# :simple-musicbrainz: Learn Stuff from Tutorials
+
 <style>
   .md-typeset ul:has(.topic-li) {
     list-style-type: none;
   }
 </style>
-
-# :simple-musicbrainz: Learn Stuff from Tutorials
 
 Shared some resources which I have used to learn these technologies. Enjoy!!
 

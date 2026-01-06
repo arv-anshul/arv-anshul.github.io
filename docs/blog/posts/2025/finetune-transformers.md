@@ -14,6 +14,8 @@ Learning how to **finetune a BERT model using PyTorch/TensorFlow from HuggingFac
 because there are so many ways and methods to do it that you will not able to figure out which is the best for my
 usecase. BTW, you can always refer to [HuggingFace documentation](https://huggingface.co/docs/transformers/training).
 
+<!-- more -->
+
 ??? info "For example!"
 
     1. Choose between :simple-pytorch: PyTorch and :simple-tensorflow: TensorFlow. _(let choose :simple-pytorch:)_{: .secondary }
@@ -26,8 +28,6 @@ usecase. BTW, you can always refer to [HuggingFace documentation](https://huggin
     > [`transformers.TrainingArguments`](https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/trainer#transformers.TrainingArguments)
     > and [`transformers.Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer) which reduces the
     > manual looping complexity.
-
-<!-- more -->
 
 ## Finetune Process
 

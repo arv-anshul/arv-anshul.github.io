@@ -12,6 +12,8 @@ icon: material/cloud-search
 
 A search engine which can redirect to the website according to the user's query.
 
+<!-- more -->
+
 ## Approach
 
 1. Get user's query.
@@ -19,7 +21,6 @@ A search engine which can redirect to the website according to the user's query.
 3. Finally redirect to the top resultant URL.
 4. Alternatively, we can also recommend most relevant results in dropdown menu for ease of redirection for user.
 
-<!-- more -->
 
 ## Why someone use this search engine?
 

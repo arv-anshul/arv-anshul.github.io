@@ -12,13 +12,13 @@ icon: simple/docker
 
 Docker is a platform designed to simplify the process of creating, deploying, and managing applications using containers. Containers enable developers to package an application with all its dependencies into a standardized unit for seamless deployment across different environments.
 
+<!-- more -->
+
 ### :hammer_and_wrench: Components of Docker
 
 1. [Dockerfile](#dockerfile)
 2. [.dockerignore](#dockerignore)
 3. docker-compose.yaml
-
-<!-- more -->
 
 ## `Dockerfile`
 

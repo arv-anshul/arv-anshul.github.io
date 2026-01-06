@@ -12,6 +12,8 @@ icon: simple/docker
 
 Let's dockerize my [`yt-comment-sentiment`][yt-comment-sentiment] project which is a FastAPI app managed via UV.
 
+<!-- more -->
+
 ## Official Docs
 
 - :simple-fastapi:{: .fastapi } FastAPI [docs for Dockerization](https://fastapi.tiangolo.com/deployment/docker/)
@@ -21,8 +23,6 @@ Let's dockerize my [`yt-comment-sentiment`][yt-comment-sentiment] project which 
 ## :thinking: Then, Why this?
 
 I also consider above docs to fulfill my requirements but this includes:
-
-<!-- more -->
 
 - Multistage build to reduce final image size.
 - Best and Flexible practices to use `uv` in Docker.

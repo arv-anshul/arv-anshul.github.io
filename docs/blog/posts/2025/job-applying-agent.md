@@ -10,6 +10,10 @@ hide: [toc]
 
 # :material-robot:{ title="Sagar from CampusX group" } Job Applying Agent
 
+**A project idea,** to create an AI Agent which recommends Jobs on the basis of user's CV and Job Description.
+
+<!-- more -->
+
 ## Requirements
 
 | Requirements          | Description                                              | Extra                                                                                          |
@@ -17,8 +21,6 @@ hide: [toc]
 | Framework             | Langchain                                                | We will eventually try to drop it. But if this is a showcase project then a framework is best. |
 | Job Opening Data      | Jobs where agent will apply                              | Maybe agent will fetch data on-the-go by web scraping.                                         |
 | User Login (LinkedIn) | Need to login the user on the platform in order to apply |                                                                                                |
-
-<!-- more -->
 
 ## Agent Workflow
 

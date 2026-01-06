@@ -10,6 +10,8 @@ icon: simple/pytorch
 
 # :simple-pytorch: Intro to Deep Learning
 
+<!-- more -->
+
 ## Machine Learning VS Deep Learning
 
 1. As the shape of data increases the ML models cannot able to capture its underlying patterns but deep learning
@@ -20,8 +22,6 @@ icon: simple/pytorch
 ## :simple-n8n: Perceptron
 
 **Perceptron the building block of Deep Learning.**
-
-<!-- more -->
 
 <figure markdown>
 

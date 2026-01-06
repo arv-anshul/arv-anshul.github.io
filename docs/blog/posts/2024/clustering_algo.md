@@ -9,6 +9,8 @@ title: Clustering Algorithms in ML
 
 # :material-chart-scatter-plot:{ title="2024-02-06" } Clustering Algorithms in ML
 
+<!-- more -->
+
 ## Applications of Clustering
 
 - **Customer Segmentation**: To show personalized ADs to customers.
@@ -17,8 +19,6 @@ title: Clustering Algorithms in ML
 - **Image Segmentation**: You can create segments in photos to represent different objects in the photo.
 
 ## :material-scatter-plot:  KMeans
-
-<!-- more -->
 
 ### Working Steps
 

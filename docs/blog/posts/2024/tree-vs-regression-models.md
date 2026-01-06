@@ -13,12 +13,12 @@ hide: [toc]
 
 Tree based models and Regression models are widely used [Machine Learning] models. So more you know about them is better for you. Also, many concepts from these models are borrowed by advance [Machine Learning] models like Gradient Boosting, XGBoost, etc.
 
+<!-- more -->
+
 These models are also great choice for :fontawesome-user-tie: interviewers so from these models they ask many [interview questions]. This blog mainly focuses on tree based models.
 
 [Machine Learning]: ../../c/ml.md
 [interview questions]: ../../c/interview-questions.md
-
-<!-- more -->
 
 | :simple-perplexity:{ .light } Aspect | Decision Trees &nbsp;:octicons-info-16:{ .bounce title="Decision Trees does not represent all tree based models" }                               | Regression Models                                                                     |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |

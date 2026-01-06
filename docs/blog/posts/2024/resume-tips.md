@@ -11,13 +11,13 @@ hide: [toc]
 
 # :material-newspaper:{ title="By Rohan Azad Sir" } Resume Tips
 
-> **NOTE:** I am writing this article from the POV of Data Scientists.
-
-## :memo: Important Points To Follow
-
 By implementing these strategies, you can elevate your Resume/CV to effectively communicate your qualifications and stand out among the competition in today's job market.
 
 <!-- more -->
+
+> **NOTE:** I am writing this article from the POV of Data Scientists.
+
+## :memo: Important Points To Follow
 
 <div class="grid cards" markdown>
 

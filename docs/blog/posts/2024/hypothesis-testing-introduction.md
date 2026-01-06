@@ -11,6 +11,10 @@ hide: [toc]
 
 # :test_tube:{ date="2024-03-25" } Introduction To Hypothesis Testing
 
+Are you a Null Hypothesis or an Alternate Hypothesis? _What does this question means?_
+
+<!-- more -->
+
 ## :boxing_glove: Null V/S Alternative Hypothesis
 
 | Parameter           | Null Hypothesis                                                                                     | Alternative Hypothesis                                                                                              |
@@ -21,8 +25,6 @@ hide: [toc]
 | **p-value**         | Null hypothesis is rejected if the p-value is less than the alpha-value; otherwise, it is accepted. | An alternative hypothesis is accepted if the p-value is less than the alpha-value otherwise, it is rejected.        |
 | **Notation**        | `#!math H_0`                                                                                               | `#!math H_1`                                                                                                               |
 | **Symbol**          | Used Equality Symbol **(=, ≥, ≤)**                                                                  | Inequality Symbol **(≠, <, >)**                                                                                     |
-
-<!-- more -->
 
 !!! abstract
 

@@ -10,9 +10,13 @@ icon: material/chart-line
 
 # :material-chart-line: Regression Interview Questions
 
+In an interview, questions around regression model is very prominent. So, let's study some interview questions around it.
+
+<!-- more -->
+
 <figure markdown>
 
-![assumptions-of-linear-regression](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/B97-Header-Image.jpg){ .base-border-radius style="filter: invert(100%);" }
+![assumptions-of-linear-regression](https://media.geeksforgeeks.org/wp-content/uploads/20241025105428904464/Assumptions-of-Linear-Regression.webp){ .base-border-radius style="filter: invert(100%);" }
 
 <figcaption>5 Assumptions of Linear Regression</figcaption>
 </figure>
@@ -26,8 +30,6 @@ There are about 5 main assumption while training a Linear Regression Model which
 Relationship of every input feature must be **linear** with output feature.
 
 ### 2. Multi-Collinearity
-
-<!-- more -->
 
 !!! question "What is Multi-Collinearity?"
 

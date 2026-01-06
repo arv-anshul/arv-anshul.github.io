@@ -10,14 +10,16 @@ hide: [toc]
 
 # :material-search-web:{ .lg .middle .info title="2024-03-23" } Learn Web Scraping
 
+Web scraping is a very essential tool for programmers to learn to gather data from websites. Specifically, for Data Scientists web scraping is goto tool to gather data from websites. We can use `bs4.BeautifulSoup` or `selenium` in Python to scrape any website.
+
+<!-- more -->
+
 <figure markdown>
 
 ![web scraping - real python](https://realpython.com/cdn-cgi/image/width=1920,format=auto/https://files.realpython.com/media/Python-Basics-Chapter-on-Web-Scraping_Watermarked.f8d56f56c22c.jpg){ .base-border-radius width="90%" }
 
 <figcaption>Source: https://realpython.com/python-web-scraping-practical-introduction</figcaption>
 </figure>
-
-Web scraping is a very essential tool for programmers to learn to gather data from websites. Specifically, for Data Scientists web scraping is goto tool to gather data from websites. We can use `bs4.BeautifulSoup` or `selenium` in Python to scrape any website.
 
 You can see some of my projects where I scraped websites like [99acres.com](https://99acres.com){ target="blank_" }, [flipkart.com](https://flipkart.com){ target="blank_" }, [housing.com](https://housin.com){ target="blank_" } and gather useful data for my Data Science projects like [arv-anshul/campusx-real-estate](https://github.com/arv-anshul/campusx-real-estate).
 
@@ -26,8 +28,6 @@ You can see some of my projects where I scraped websites like [99acres.com](http
 **{--I have learned Web Scraping from YouTube only.--}**{ title="😎" }
 
 </p>
-
-<!-- more -->
 
 ## YouTube Videos
 
