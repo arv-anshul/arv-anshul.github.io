@@ -5,7 +5,7 @@ categories: [mlops]
 description: My doubts around creating and working ML Systems.
 links:
   - project/yt-watch-history/index.md
-  - https://github.com/arv-anshul/yt-watch-history/
+  - "📝 GitHub Repo": https://github.com/arv-anshul/yt-watch-history/
 ---
 
 # ML Systems Dobuts
