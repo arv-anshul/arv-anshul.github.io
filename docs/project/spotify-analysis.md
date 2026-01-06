@@ -1,5 +1,5 @@
 ---
-created-on: 2024-02-22
+date: 2024-02-22
 icon: simple/spotify
 title: Spotify Analysis
 slug: spotify-analysis
