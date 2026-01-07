@@ -15,7 +15,6 @@ theme:
   logo: null
   favicon: data/assets/favicon.png
   features:
-    - content.code.annotate
     - content.code.copy
     - content.code.select
     - content.tabs.link

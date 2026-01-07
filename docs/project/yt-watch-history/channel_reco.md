@@ -23,13 +23,13 @@ def get_vectorizer() -> ColumnTransformer:
     title_transformer = TfidfVectorizer(
         max_features=7000,
         ngram_range=(1, 2),
-        preprocessor=preprocess_title,# (1)!
+        preprocessor=preprocess_title,  # Preprocess texts of `title` column.
         stop_words="english",
     )
     tags_transformer = TfidfVectorizer(
         max_features=5000,
         ngram_range=(1, 2),
-        preprocessor=preprocess_tags,# (2)!
+        preprocessor=preprocess_tags,  # Preprocess texts of `tags` column.
         stop_words="english",
     )
     transformer = ColumnTransformer(
@@ -40,9 +40,6 @@ def get_vectorizer() -> ColumnTransformer:
     )
     return transformer
 ```
-
-1. Function to preprocess texts of `#!py "title"` column.
-2. Function to preprocess texts of `#!py "tags"` column.
 
 ### Data to Export
 
@@ -64,12 +61,10 @@ def training(
         pl.lit(transformed_data.toarray()).alias("transformed_data")  # type: ignore
     )
 
-    dump_object(transformer, CH_RECO_TRANSFORMER_PATH) # (1)!
+    dump_object(transformer, CH_RECO_TRANSFORMER_PATH)  # Export `ColumnTransformer` object.
     # Export dataframe as parquet format for lesser size
     title_tags_trf_df.write_parquet(CH_RECO_TRANSFORMER_DATA_PATH)
 ```
-
-1. 👀 Here, I'm exporting `ColumnTransformer` object.
 
 !!! info "What is `parquet` format?"
 

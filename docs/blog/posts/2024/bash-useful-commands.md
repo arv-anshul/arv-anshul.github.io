@@ -55,7 +55,7 @@ alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 ```
 
 ```bash
-$ glog # (1)!
+$ glog
 * 6914e04 - (HEAD -> main, origin/main) 📝 Update docs/index.md (5 hours ago) <Anshul Raj Verma>
 *   3d91241 - Merge branch 'new/friends-page' (5 hours ago) <Anshul Raj Verma>
 |\
@@ -67,8 +67,6 @@ $ glog # (1)!
 * ecc8e94 - ✨ Add new nav item "References" (3 days ago) <Anshul Raj Verma>
 * 3bea521 - ✨ Add Rust icon on about page (5 days ago) <Anshul Raj Verma>
 ```
-
-1. Date: 10-04-2024
 
 ## :simple-python: Python
 
@@ -101,10 +99,10 @@ brew update && brew cleanup --prune=all && brew doctor
 ### :octicons-arrow-right-16: Uninstall unused dependencies
 
 ```bash
-brew autoremove # (1)!
+brew autoremove
 ```
 
-1. Check [docs](https://docs.brew.sh/Manpage#autoremove---dry-run) for `autoremove` command.
+> Check [docs](https://docs.brew.sh/Manpage#autoremove---dry-run) for `autoremove` command.
 
 ## :simple-arc: Arc
 

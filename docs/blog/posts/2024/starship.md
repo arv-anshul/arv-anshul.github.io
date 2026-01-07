@@ -42,23 +42,20 @@ You can customize your prompt for each programming languages you uses like :simp
 
 ```toml
 [python]
-symbol = "" # (1)!
+symbol = ""
 style = "arv_python"
 format = "[](fg:$style)[$symbol( $version)[( \\($virtualenv\\))](bold bg:$style)](bg:$style)[](fg:$style)"
 ```
-
-1. :simple-python:
 
 ### **Example:** :simple-docker: Docker
 
 ```toml
 [docker_context]
-symbol = "" # (1)!
+symbol = ""
 style = "arv_docker"
 format = "[](fg:$style)[$symbol ($context)](bg:$style)[](fg:$style)"
 ```
 
-1. :simple-docker:
 
 ??? example "Conventions"
 
@@ -124,25 +121,21 @@ arv_custom = "black"
 detect_folders = [".github"]
 format = "[$symbol]($style)"
 style = "bg:arv_custom"
-symbol = " " # (1)!
+symbol = " "
 
 [custom.mkdocs]
 detect_files = ["mkdocs.yaml", "mkdocs.yml"]
 detect_folders = ["docs"]
 format = "[$symbol]($style)"
 style = "bg:arv_custom"
-symbol = "󱔗 " # (2)!
+symbol = "󱔗 "
 
 [custom.vscode]
 detect_folders = [".vscode"]
 format = "[$symbol]($style)"
 style = "bg:arv_custom"
-symbol = "󰨞 " # (3)!
+symbol = "󰨞 "
 ```
-
-1. :simple-github:
-2. :material-file-document-multiple:
-3. :material-microsoft-visual-studio-code:
 
 ??? example "Conventions"
 
