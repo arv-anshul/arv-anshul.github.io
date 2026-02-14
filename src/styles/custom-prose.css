@@ -2,6 +2,13 @@
   --prose-media-border-radius: var(--radius);
 }
 
+/*
+ * Image within <figure> having <figcaption> tag
+*/
+.custom-prose figure figcaption {
+  text-align: center;
+}
+
 /* ==========================================================================
  * rehype-pretty-code: Figure + Title (figcaption) styling
  *
@@ -36,7 +43,7 @@
 
 /* Remove the individual border & radius from <pre> when inside a titled
    figure, since the figure wrapper already provides them. */
-.custom-prose figure[data-rehype-pretty-code-figure] > pre {
+.custom-prose figure[data-rehype-pretty-code-figure]>pre {
   border: none;
   border-radius: 0;
   margin-top: 0;

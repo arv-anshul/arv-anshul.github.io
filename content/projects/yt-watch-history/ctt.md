@@ -10,7 +10,7 @@ categories: [project, ml]
 I am building the ContentType Prediction System from scratch, this it is robuster, flexible and scalable.
 
 <figure>
-    <img src="./assets/ml-system-diagram.png" alt="ml-system-diagram.png" />
+    <img class="bg-gray-800 dark:bg-transparent" src="../assets/ml-system-diagram.png" alt="ml-system-diagram.png" />
     <figcaption>ML System Diagram for "ContentType Prediction System"</figcaption>
 </figure>
 
@@ -50,6 +50,6 @@ I have think a custom monitoring pipeline where you pass the model and params wi
 calculate the score and log it with `mlflow`.
 
 <figure>
-    <img src="assets/mlflow-monitoring-draft-1.png" alt="mlflow-monitoring-draft-1.png" />
+    <img src="../assets/mlflow-monitoring-draft-1.png" alt="mlflow-monitoring-draft-1.png" />
     <figcaption>MLFlow UI showing scores of multiple trained models on bar chart.</figcaption>
 </figure>
