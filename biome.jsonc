@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core", "ultracite/biome/astro"],
+  "overrides": [
+    {
+      "includes": ["src/components/starwind/**/*"],
+      "linter": {
+        "enabled": false
+      }
+    },
+    {
+      "includes": [
+        "src/pages/blog/index.astro",
+        "src/pages/resume/index.astro"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          }
+        }
+      }
+    }
+  ]
+}

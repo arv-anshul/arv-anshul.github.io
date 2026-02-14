@@ -1,0 +1,255 @@
+$schema: https://arv-anshul.github.io/schema/projects_index.json
+projects:
+  - relative_url: /projects/yt-comment-sentiment
+    title: YouTube Comment Sentiment
+    description: |
+      An end-to-end machine learning project to predict sentiment of comments on YouTube videos. It uses **NLP** and
+      **ML** to predict sentiment of comments. Backend made using FastAPI and hosted on Render.com. Frontend made using
+      VueJs and hosted on GitHub Pages.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/yt-comment-sentiment
+      - name: Deployed WebApp
+        icon: simple-icons:githubpages
+        url: https://arv-anshul.github.io/yt-comment-sentiment/
+    tech_icons:
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:githubpages
+      - simple-icons:mlflow
+      - simple-icons:polars
+      - simple-icons:pydantic
+      - simple-icons:render
+      - simple-icons:shadcnui
+      - simple-icons:uv
+      - simple-icons:vite
+      - simple-icons:vuedotjs
+      - simple-icons:youtube
+    completed_on: December, 2024
+
+  - relative_url: /projects/canvas-ai
+    title: Canvas AI
+    description: |
+      Parse and Analyse image containing mathematical expression or problem (it can be in a drawing format) using AI to
+      give a structured response by leveraging Langchain framework. Also created API out of it using FastAPI which has
+      containerized with Docker.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/canvas-ai
+    tech_icons:
+      - simple-icons:astral
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:googlegemini
+      - simple-icons:langchain
+      - simple-icons:pydantic
+      - simple-icons:streamlit
+    completed_on: September, 2024
+
+  - relative_url: /projects/yt-watch-history
+    title: YouTube Watch History
+    description: |
+      A streamlit app where you can upload your **YouTube Watch History Data** to see insights on your viewing pattern.
+      Your data will go through a ML Model which predicts the **ContentType** of each video your have watch. The app
+      fetches more details of each video through **YouTube API**. There is also a **Channel Recommender System** in the
+      app which recommend you similar channels on the basis of channel's video titles and tags they had used.
+    urls:
+      - name: Repository (v1)
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/yt-watch-history
+      - name: Repository (v2)
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/yt-watch-history-v2
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
+      - name: Notebooks
+        icon: simple-icons:jupyter
+        url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
+    tech_icons:
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:mlflow
+      - simple-icons:mongodb
+      - simple-icons:plotly
+      - simple-icons:polars
+      - simple-icons:pydantic
+      - simple-icons:scikitlearn
+      - simple-icons:streamlit
+    completed_on: January, 2024
+
+  - relative_url: /projects/spotify-analysis
+    title: Spotify Analysis
+    description: |
+      Analyse your Spotify Streaming data and get some insights from it like whom & when
+      you listen your favorite Tracks, Artists, Playlists or Albums.
+      </br>
+      Created Jupyter Notebook where you can upload your data and get the analysis by
+      running the notebook.
+    highlights:
+      - Analyse your Streaming History, Personal Playlists.
+      - Know your top tracks and artists by year, month, week and day.
+      - Know your most played track, artist, playlist by year and month.
+    urls:
+      - name: Jupyter Notebooks
+        icon: simple-icons:jupyter
+        url: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
+    tech_icons:
+      - simple-icons:jupyter
+      - simple-icons:plotly
+      - simple-icons:polars
+      - simple-icons:ruff
+      - simple-icons:rye
+      - simple-icons:scikitlearn
+      - simple-icons:spotify
+      - simple-icons:streamlit
+    completed_on: March, 2024
+
+  - relative_url: null
+    title: E-commerce Scrapper API - FastAPI
+    description: |
+      Scrape data from E-commerce websites like Flipkart by searching products like
+      iphone, laptops and more. Also you can export the scrapped data into JOSN format.
+      API will do all the works for you, you have to just make a request with some
+      endpoints.
+    highlights:
+      - Modular Coding, Async Programming.
+      - Point 2
+      - I have also written some tests using `fastapi` builtin `TestClient()`.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/ecommerce-scrapper-api
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_fastapi-api-ecommerce-activity-7128575593570340864-WE2m?utm_source=share&utm_medium=member_desktop
+    tech_icons:
+      - simple-icons:fastapi
+      - simple-icons:flipkart
+      - simple-icons:pydantic
+    completed_on: November, 2023
+
+  - relative_url: null
+    title: Indian Real Estate Analyser and Price Prediction
+    description: |
+      Analyse real estate of India. I have scrapped data from [99acres.com](https://99acres.com).
+      You can also make prediction of property prices by providing you requirements like
+      BHK, AREA, LOCATION and more.
+    highlights:
+      - I have made this project end-to-end.
+      - Point 2
+      - Uses `streamlit` library to show the analysis with beautiful plots from `plotly`.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/campusx-real-estate
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
+    tech_icons:
+      - simple-icons:plotly
+      - simple-icons:scikitlearn
+      - simple-icons:streamlit
+    completed_on: October, 2023
+
+  - relative_url: null
+    title: FreeAPI in Python using FastAPI
+    description: |
+      Created similar APIs present in **freeapi.app** project using Python with FastAPI and MongoDB.
+      I've used Docker so that anyone can easily reproduce this project in their system.
+      I haven't deployed this project but you can use Docker to spawn the APIs in local.
+      You'll get endpoints for todo, quotes, github user and repository and fun endpoints.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/freeapi-py
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_im-happy-to-share-this-freeapi-in-python-activity-7192135714594000896-ZRqh?utm_source=share&utm_medium=member_desktop
+    tech_icons:
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:mongodb
+      - simple-icons:python
+      - simple-icons:rye
+    completed_on: May, 2024
+
+  - relative_url: null
+    title: Curler
+    description: |
+      Curler is a tool which let's you parse `curl` command into python with ease.
+      Also, you can use that parsed object with `requests`, `httpx` like library to make
+      request with `curl` commands.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/curler
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_hey-i-am-happy-to-tell-you-that-i-activity-7118254699127975939-ePyf?utm_source=share&utm_medium=member_desktop
+      - name: PyPi
+        icon: simple-icons:pypi
+        url: https://pypi.org/p/curler
+    tech_icons:
+      - simple-icons:pypi
+      - simple-icons:python
+    completed_on: November, 2023
+
+  - relative_url: null
+    title: Web Scrapping 99acres.com
+    description: |
+      Scrape [99acres.com](https://99acres.com){ target=blank_ } with a Streamlit
+      Web-UI and download the data in **CSV** format.
+    highlights:
+      - You have to use `cURL` command to scrape the data. (you can get the curl command from browser's network tab).
+      - Point 2
+      - Point 3
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/99acres-scrape
+      - name: Datasets
+        icon: simple-icons:kaggle
+        url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
+      - name: App
+        icon: simple-icons:streamlit
+        url: https://arv-anshul-99acres-2a.streamlit.app/
+    tech_icons:
+      - simple-icons:curl
+      - simple-icons:pandas
+      - simple-icons:python
+      - simple-icons:streamlit
+    completed_on: October, 2023
+
+  - relative_url: /projects/campusx
+    title: CampusX Resources
+    description: |
+      This project involves gathering data from a course website's HTML structure, followed by developing Python scripts for parsing and extracting essential data. HTTP requests are then made to obtain session resources, with robust testing and data structure maintenance ensuring integrity. Utilizing `mkdocs` and `mkdocs-material`, a web page is generated and hosted on GitHub Pages via CI/CD with GitHub Actions.
+    urls:
+      - name: Repository
+        icon: simple-icons:github
+        url: https://github.com/arv-anshul/campusx
+      - name: Post
+        icon: lucide:linkedin
+        url: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
+      - name: Website
+        icon: simple-icons:materialformkdocs
+        url: https://arv-anshul.github.io/campusx
+    tech_icons:
+      - simple-icons:curl
+      - simple-icons:dotenv
+      - simple-icons:githubactions
+      - simple-icons:githubpages
+      - simple-icons:jinja
+      - simple-icons:json
+      - simple-icons:materialformkdocs
+      - simple-icons:precommit
+      - simple-icons:pytest
+      - simple-icons:python
+      - simple-icons:rye
+    completed_on: March, 2023

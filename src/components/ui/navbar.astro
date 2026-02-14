@@ -1,0 +1,93 @@
+---
+// Component from https://tailkits.com/ui/free/
+import { Icon } from "astro-icon/components";
+import OmSvg from "public/favicon.svg";
+import { ThemeToggle } from "@/components/starwind/theme-toggle";
+import { cn } from "@/lib/utils";
+import Button from "../starwind/button";
+
+interface Props {
+  sticky?: boolean;
+}
+
+const { sticky = false } = Astro.props;
+
+const homeLink = {
+  href: "/",
+  title: "ARV",
+  alt: "Om Logo",
+};
+
+const middleLinks = [
+  { href: "/projects", title: "Projects", icon: "lucide:rocket" },
+  { href: "/blog", title: "Blog", icon: "lucide:newspaper" },
+  { href: "/journal", title: "Journal", icon: "lucide:notebook-pen" },
+];
+
+const endLinks = [
+  { href: "/resume", title: "Resume", icon: "lucide:scroll-text" },
+  {
+    href: "https://github.com/arv-anshul",
+    title: "GitHub",
+    icon: "simple-icons:github",
+  },
+];
+---
+
+<header
+  class={cn(
+    "backdrop-blur-sm font-mono bg-accent/95",
+    sticky ? "sticky top-0 z-40" : "",
+  )}
+>
+  <div
+    class="flex items-center justify-between md:w-2/3 xl:w-3/5 mx-auto px-4 md:px-0 gap-x-4 py-1"
+  >
+    <!-- Home/Logo -->
+    <div class="flex items-center">
+      <a href={homeLink.href} title={homeLink.title} class="flex items-center">
+        <OmSvg
+          class="fill-foreground stroke-foreground"
+          height="30"
+          width="30"
+        />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="ml-2 mr-auto">
+      <ul class="flex items-center gap-5">
+        {middleLinks.map((link) => (
+            <li>
+              <a
+                class="flex items-center gap-x-1 text-sm font-medium text-foreground hover:opacity-70 transition-opacity"
+                href={link.href}
+              >
+                <Icon name={link.icon} class="hidden md:inline" />
+                {link.title}
+              </a>
+            </li>
+          ))}
+      </ul>
+    </nav>
+
+    <!-- End Links (Desktop Icons) -->
+    <div class="flex items-center gap-x-10 justify-self-end">
+      <div class="flex items-center gap-x-1">
+        {endLinks.map((link) => (
+            <Button
+              href={link.href}
+              title={link.title}
+              variant="ghost"
+              size="icon"
+              class="hover:opacity-70 transition-opacity"
+            >
+              <Icon name={link.icon} />
+            </Button>
+          ))}
+
+        <ThemeToggle size="sm" />
+      </div>
+    </div>
+  </div>
+</header>

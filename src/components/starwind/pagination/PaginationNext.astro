@@ -1,0 +1,32 @@
+---
+import ChevronRight from "@tabler/icons/outline/chevron-right.svg";
+import type { HTMLAttributes } from "astro/types";
+import { tv, type VariantProps } from "tailwind-variants";
+
+import { ButtonVariants } from "@/components/starwind/button";
+
+import PaginationLink from "./PaginationLink.astro";
+
+type Props = HTMLAttributes<"a"> & {
+  size?: VariantProps<typeof ButtonVariants.button>["size"];
+};
+
+export const paginationNext = tv({ base: "group gap-1" });
+
+const { class: className, size = "md", ...rest } = Astro.props;
+---
+
+<PaginationLink
+  aria-label="Go to next page"
+  size={size}
+  class={paginationNext({ class: className })}
+  data-slot="pagination-next"
+  {...rest}
+>
+  <slot />
+  <slot name="icon">
+    <ChevronRight
+      class="size-4 transition-transform group-hover:translate-x-1"
+    />
+  </slot>
+</PaginationLink>

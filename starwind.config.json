@@ -1,0 +1,43 @@
+{
+  "$schema": "https://starwind.dev/config-schema.json",
+  "tailwind": {
+    "css": "src/styles/global.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "componentDir": "src/components",
+  "components": [
+    {
+      "name": "prose",
+      "version": "1.0.0"
+    },
+    {
+      "name": "item",
+      "version": "1.0.0"
+    },
+    {
+      "name": "separator",
+      "version": "1.0.0"
+    },
+    {
+      "name": "card",
+      "version": "2.0.0"
+    },
+    {
+      "name": "button",
+      "version": "2.3.0"
+    },
+    {
+      "name": "toggle",
+      "version": "1.0.1"
+    },
+    {
+      "name": "theme-toggle",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pagination",
+      "version": "3.0.2"
+    }
+  ]
+}

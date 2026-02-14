@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { tv } from "tailwind-variants";
+
+type Props = HTMLAttributes<"div">;
+
+export const cardDescription = tv({
+  base: "text-base text-muted-foreground group-data-[size=sm]/card:text-sm",
+});
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<div
+  class={cardDescription({ class: className })}
+  data-slot="card-description"
+  {...rest}
+>
+  <slot />
+</div>

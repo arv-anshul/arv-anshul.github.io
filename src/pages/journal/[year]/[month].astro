@@ -1,0 +1,56 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import FrontmatterCard from "@/components/frontmatter-card.astro";
+import Prose from "@/components/starwind/prose/Prose.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
+import "remark-github-alerts/styles/github-base.css";
+import "remark-github-alerts/styles/github-colors-light.css";
+import "remark-github-alerts/styles/github-colors-dark-class.css";
+import "@/styles/katex.min.css";
+import "@/styles/custom-prose.css";
+
+interface Props {
+  journal: CollectionEntry<"journal">;
+}
+
+export const getStaticPaths = (async () => {
+  const journals = await getCollection("journal");
+  return journals.map((journal) => {
+    const [year, month] = journal.id.split("/");
+    return {
+      params: { year, month },
+      props: { journal },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { journal } = Astro.props as Props;
+const { Content } = await render(journal);
+---
+
+<BaseLayout
+  title={`${journal.data.title} - ARV Journal`}
+  description={journal.data.description}
+  class="md:max-w-3/5"
+  seo={{
+    basic: {
+      title: journal.data.title,
+      type: "website",
+      image: new URL(`og.webp`, Astro.url).toString(),
+      url: Astro.url,
+    },
+    article: {
+      publishedTime: journal.data.pubDate.toUTCString(),
+      authors: [journal.data.author],
+      tags: journal.data.categories,
+    },
+  }}
+>
+  <FrontmatterCard data={journal.data} backPageUrl="/journal" />
+  <article class="mt-10 w-full">
+    <Prose class="max-w-auto w-full custom-prose">
+      <Content />
+    </Prose>
+  </article>
+</BaseLayout>

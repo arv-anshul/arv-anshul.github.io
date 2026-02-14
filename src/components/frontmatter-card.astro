@@ -1,0 +1,108 @@
+---
+import type { InferEntrySchema } from "astro:content";
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/starwind/item";
+import { cn } from "@/lib/utils";
+
+interface BaseProps {
+  data: InferEntrySchema<"blog" | "projects">;
+}
+
+type SmallProps = BaseProps &
+  HTMLAttributes<"a"> & {
+    variant: "small";
+    backPageUrl?: never;
+  };
+
+type DefaultProps = BaseProps &
+  HTMLAttributes<"section"> & {
+    variant?: "default";
+    backPageUrl?: string;
+  };
+
+type Props = SmallProps | DefaultProps;
+
+const {
+  data,
+  variant = "default",
+  backPageUrl,
+  class: className,
+  ...props
+} = Astro.props as Props;
+
+const isSmall = variant === "small";
+---
+
+<Item
+  as={isSmall ? "a" : "section"}
+  variant={isSmall ? "outline" : "muted"}
+  class={cn(
+    "flex flex-col items-start gap-2",
+    isSmall && "h-full",
+    !isSmall && "w-full border-muted",
+    className,
+  )}
+  {...props}
+>
+  <div class:list={["flex justify-between w-full", !isSmall && "items-start"]}>
+    <ItemContent class="flex flex-col gap-1">
+      <ItemTitle
+        class:list={[
+          "font-heading font-bold",
+          isSmall ? "text-xl" : "text-4xl",
+        ]}
+      >
+        {data.title}
+      </ItemTitle>
+      <p class="flex gap-3 text-xs text-muted-foreground">
+        <span class="flex gap-0.5" title="Published Date">
+          <Icon name="lucide:calendar" size={15} />
+          {data.pubDate.toLocaleDateString("en-IN", {
+              year: "numeric",
+              month: "short",
+              day: "2-digit",
+            })}
+        </span>
+        <span class="flex gap-0.5" title="Author">
+          <Icon name="lucide:user-pen" size={15} />
+          {data.author}
+        </span>
+      </p>
+    </ItemContent>
+    <ItemMedia>
+      <Icon
+        name={data.icon}
+        title={`Blog Icon: ${data.icon}`}
+        class:list={[
+          "rounded-md p-2",
+          isSmall ? "bg-muted size-15" : "size-18",
+        ]}
+      />
+    </ItemMedia>
+  </div>
+
+  <ItemDescription class="text-wrap mb-auto">
+    {data.description}
+  </ItemDescription>
+
+  {!isSmall && backPageUrl && (
+      <a
+        href={backPageUrl}
+        class="group flex items-center gap-0.5 text-sm font-medium transition-colors hover:text-muted-foreground"
+      >
+        <Icon
+          name="lucide:arrow-left"
+          size={18}
+          class="transition-transform duration-300 group-hover:-translate-x-0.5"
+        />
+        <span>Back</span>
+      </a>
+    )}
+</Item>

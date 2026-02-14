@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/starwind/item";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { loadInfoData } from "@/lib/data-loaders/info";
+
+const referLinks = [
+  {
+    description: "See my projects in detail.",
+    url: "/projects",
+    title: "Projects",
+    icon: "lucide:rocket",
+  },
+  {
+    description: "See my resume.",
+    url: "/resume",
+    title: "Resume",
+    icon: "lucide:scroll-text",
+  },
+  {
+    description: "Read my blogs.",
+    url: "/blog",
+    title: "Blog",
+    icon: "lucide:newspaper",
+  },
+  {
+    description: "See some of my friends.",
+    url: "/friends",
+    title: "Friends",
+    icon: "lucide:users",
+  },
+  {
+    description: "Visit my LinkedIn profile.",
+    url: "https://linkedin.com/in/arv-anshul",
+    title: "LinkedIn",
+    icon: "simple-icons:linkedin",
+  },
+  {
+    description: "See my GitHub profile.",
+    url: "https://github.com/arv-anshul",
+    title: "GitHub",
+    icon: "simple-icons:github",
+  },
+];
+
+const info = await loadInfoData();
+---
+
+<BaseLayout nav={{ sticky: true }} title="Home - ARV">
+  <div class="gap-10 flex flex-col items-center justify-center text-center">
+    <header class="flex flex-col items-center gap-5">
+      <Image
+        alt="arv-anshul"
+        class="w-60 rounded-full"
+        src={info.avatar_url}
+        width="300"
+        height="300"
+      />
+      <h1 class="font-bold text-3xl">{info.name}</h1>
+      <p class="text-justify">{info.intro_text}</p>
+    </header>
+
+    <section class="w-full">
+      <h2 class="font-heading font-bold text-2xl" id="refer-to">Refer To</h2>
+
+      <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
+        {referLinks.map((item) => (
+            <Item variant="outline" as="a" href={item.url}>
+              <ItemMedia variant="icon" class="border-none rounded">
+                <Icon name={item.icon} />
+              </ItemMedia>
+              <ItemContent class="text-start gap-0">
+                <ItemTitle class="line-clamp-1">{item.title}</ItemTitle>
+                <ItemDescription class="text-xs">
+                  {item.description}
+                </ItemDescription>
+              </ItemContent>
+              <ItemContent>
+                <Icon name="lucide:arrow-right" size={18} />
+              </ItemContent>
+            </Item>
+          ))}
+      </ItemGroup>
+    </section>
+
+    <section class="w-full">
+      <h2 class="font-heading font-bold text-2xl" id="tech-stack">
+        Tech Stack
+      </h2>
+
+      <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {Object.entries(info.tech_stack).map(([category, items]) => (
+            <Item variant="outline" class="flex flex-col gap-3">
+              <ItemTitle class="font-bold">{category}</ItemTitle>
+              <ItemDescription class="flex flex-wrap justify-center gap-3">
+                {items
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map((tech) => (
+                    <Icon
+                      name={tech.icon}
+                      title={tech.icon.split(":")[1]}
+                      size={22}
+                    />
+                  ))}
+              </ItemDescription>
+            </Item>
+          ))}
+      </ItemGroup>
+    </section>
+  </div>
+</BaseLayout>

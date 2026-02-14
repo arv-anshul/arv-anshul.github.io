@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/base-layout.astro";
+
+const journals = await getCollection("journal");
+
+import type { CollectionEntry } from "astro:content";
+
+// Assuming your journal collection type (adjust as needed)
+type Journal = CollectionEntry<"journal">;
+
+// 1. Sort the journals by date (descending)
+const sortedJournals: Journal[] = journals.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+// 2. Group journals by Year
+const groupedJournals: Record<number, Journal[]> = sortedJournals.reduce(
+  (acc, journal) => {
+    const year = journal.data.pubDate.getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(journal);
+    return acc;
+  },
+  {} as Record<number, Journal[]>
+);
+
+// 3. Get the years as an array and sort them descending
+const years: number[] = Object.keys(groupedJournals)
+  .map(Number)
+  .sort((a, b) => b - a);
+---
+
+<BaseLayout
+  title="Journal - ARV"
+  description="Weekly Journals written by ARV."
+  nav={{ sticky: true }}
+>
+  <div class="text-center">
+    <h1 class="font-heading text-3xl font-bold mb-6">Weekly Journals</h1>
+    <div>
+      {years.map((year) => (
+          <section class="mt-6">
+            <h2 class="font-heading text-2xl font-bold mb-4">{year}</h2>
+            <div class="flex flex-col items-center">
+              {groupedJournals[year].map((journal) => (
+                <a
+                  href={`/journal/${journal.id}`}
+                  class="w-fit text-lg hover:text-muted-foreground"
+                >
+                  {journal.data.title}
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+    </div>
+  </div>
+</BaseLayout>

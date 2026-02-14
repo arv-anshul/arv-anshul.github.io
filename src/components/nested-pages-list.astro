@@ -1,0 +1,107 @@
+---
+import type { InferEntrySchema } from "astro:content";
+import { removeTrailingForwardSlash } from "@astrojs/internal-helpers/path";
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+
+interface Page {
+  id: string;
+  data: InferEntrySchema<"projects">;
+}
+
+interface Props extends HTMLAttributes<"nav"> {
+  pages: Page[];
+}
+
+const { pages, class: className } = Astro.props;
+
+// Sort pages: index first, then by date (newest first) or title
+const sortedPages = [...pages].sort((a, b) => {
+  if (!removeTrailingForwardSlash(a.id).includes("/")) {
+    return -1;
+  }
+  if (!removeTrailingForwardSlash(b.id).includes("/")) {
+    return 1;
+  }
+  if (a.data.pubDate && b.data.pubDate) {
+    return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
+---
+
+<nav class:list={["rounded-md border border-muted overflow-hidden", className]}>
+  <details>
+    <summary
+      class="flex items-center gap-2 px-4 py-2.5 cursor-pointer select-none text-sm font-semibold text-foreground bg-muted hover:bg-accent transition-colors duration-200 list-none [&::-webkit-details-marker]:hidden"
+    >
+      <Icon name="lucide:layers" class="size-4 opacity-70" />
+      <span>Related Pages</span>
+      <span
+        class="ml-auto font-bold text-lg text-muted-foreground leading-none"
+      >
+        {sortedPages.length}
+      </span>
+      <Icon
+        name="lucide:chevron-down"
+        class="size-3.5 shrink-0 transition-transform duration-200 [[open]>&]:rotate-180"
+      />
+    </summary>
+
+    <ul class="divide-y divide-border" role="list">
+      {sortedPages.map((page) => {
+          const isActive = removeTrailingForwardSlash(
+            Astro.url.pathname,
+          ).endsWith(page.id);
+          const isIndex = !removeTrailingForwardSlash(page.id).includes("/");
+
+          return (
+            <li>
+              <a
+                href={`/projects/${page.id}`}
+                class:list={[
+                  "group flex items-start gap-3 px-4 py-3 transition-colors duration-200",
+                  isActive
+                    ? "bg-muted text-foreground"
+                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                ]}
+                aria-current={isActive ? "page" : undefined}
+              >
+                {page.data.icon && (
+                  <span
+                    class:list={[
+                      "text-xl mt-0.5 shrink-0 transition-transform duration-200 group-hover:scale-110",
+                      isActive ? "opacity-100" : "opacity-60",
+                    ]}
+                    aria-hidden="true"
+                  >
+                    <Icon name={page.data.icon} />
+                  </span>
+                )}
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span
+                      class:list={[
+                        "text-sm font-medium",
+                        isActive && "text-foreground",
+                      ]}
+                    >
+                      {page.data.title}
+                    </span>
+                    {isIndex && (
+                      <span class="font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded-full font-mono text-xs text-primary bg-muted border border-primary leading-none">
+                        Index
+                      </span>
+                    )}
+                  </div>
+                  <p class="text-xs text-muted-foreground line-clamp-1">
+                    {page.data.description}
+                  </p>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+    </ul>
+  </details>
+</nav>

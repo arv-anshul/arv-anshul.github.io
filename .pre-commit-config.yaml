@@ -1,0 +1,42 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args:
+          - --maxkb=5000 # 5MB
+
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.1.15
+    hooks:
+      - id: rumdl
+      - id: rumdl-fmt
+
+  - repo: local
+    hooks:
+      - id: ultracite
+        name: ultracite
+        entry: bun x ultracite fix
+        language: system
+        types_or: [javascript, jsx, ts, tsx, json, css, astro]
+        pass_filenames: false
+
+      - id: dprint
+        name: dprint
+        entry: dprint fmt
+        language: system
+        types_or: [markdown, mdx, toml, yaml]
+        pass_filenames: false
+
+      - id: build-check
+        name: build check
+        entry: bun run build
+        language: system
+        always_run: true
+        pass_filenames: false
+        stages: [pre-push]
+        verbose: true

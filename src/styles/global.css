@@ -1,0 +1,180 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/geist-mono";
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/forms";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--starwind-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--starwind-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-accent: var(--primary-accent);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-accent: var(--secondary-accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-error: var(--error);
+  --color-error-foreground: var(--error-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-outline: var(--outline);
+
+  --radius-xs: calc(var(--radius) - 0.3rem);
+  --radius-sm: calc(var(--radius) - 0.175rem);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 0.125rem);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+  --radius-2xl: calc(var(--radius) + 0.375rem);
+  --radius-3xl: calc(var(--radius) + 0.5rem);
+
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+
+  --color-sidebar: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-outline: var(--sidebar-outline);
+}
+
+:root {
+  --background: var(--color-zinc-50);
+  --foreground: var(--color-zinc-900);
+  --card: var(--color-zinc-50);
+  --card-foreground: var(--color-zinc-900);
+  --popover: var(--color-zinc-50);
+  --popover-foreground: var(--color-zinc-900);
+  --primary: var(--color-cyan-600);
+  --primary-foreground: var(--color-zinc-50);
+  --primary-accent: var(--color-cyan-500);
+  --secondary: var(--color-violet-500);
+  --secondary-foreground: var(--color-zinc-50);
+  --secondary-accent: var(--color-violet-400);
+  --muted: var(--color-zinc-100);
+  --muted-foreground: var(--color-zinc-500);
+  --accent: var(--color-zinc-100);
+  --accent-foreground: var(--color-zinc-800);
+  --info: var(--color-sky-400);
+  --info-foreground: var(--color-sky-950);
+  --success: var(--color-emerald-400);
+  --success-foreground: var(--color-emerald-950);
+  --warning: var(--color-amber-400);
+  --warning-foreground: var(--color-amber-950);
+  --error: var(--color-rose-400);
+  --error-foreground: var(--color-rose-950);
+  --border: var(--color-zinc-200);
+  --input: var(--color-zinc-200);
+  --outline: var(--color-zinc-400);
+  --radius: 0.375rem;
+  --font-heading: "Inter Variable", var(--font-sans);
+  --font-mono: "Geist Mono Variable", monospace;
+
+  /* sidebar variables */
+  --sidebar-background: var(--color-zinc-50);
+  --sidebar-foreground: var(--color-zinc-900);
+  --sidebar-primary: var(--color-cyan-600);
+  --sidebar-primary-foreground: var(--color-zinc-50);
+  --sidebar-accent: var(--color-zinc-100);
+  --sidebar-accent-foreground: var(--color-zinc-800);
+  --sidebar-border: var(--color-zinc-200);
+  --sidebar-outline: var(--color-zinc-400);
+}
+
+.dark {
+  --background: var(--color-zinc-950);
+  --foreground: var(--color-zinc-100);
+  --card: var(--color-zinc-900);
+  --card-foreground: var(--color-zinc-100);
+  --popover: var(--color-zinc-800);
+  --popover-foreground: var(--color-zinc-100);
+  --primary: var(--color-cyan-400);
+  --primary-foreground: var(--color-zinc-950);
+  --primary-accent: var(--color-cyan-300);
+  --secondary: var(--color-violet-400);
+  --secondary-foreground: var(--color-zinc-950);
+  --secondary-accent: var(--color-violet-300);
+  --muted: var(--color-zinc-800);
+  --muted-foreground: var(--color-zinc-400);
+  --accent: var(--color-zinc-800);
+  --accent-foreground: var(--color-zinc-200);
+  --info: var(--color-sky-300);
+  --info-foreground: var(--color-sky-950);
+  --success: var(--color-emerald-300);
+  --success-foreground: var(--color-emerald-950);
+  --warning: var(--color-amber-300);
+  --warning-foreground: var(--color-amber-950);
+  --error: var(--color-rose-400);
+  --error-foreground: var(--color-rose-950);
+  --border: --alpha(var(--color-zinc-100) / 10%);
+  --input: --alpha(var(--color-zinc-100) / 15%);
+  --outline: var(--color-zinc-500);
+
+  /* sidebar variables */
+  --sidebar-background: var(--color-zinc-900);
+  --sidebar-foreground: var(--color-zinc-100);
+  --sidebar-primary: var(--color-cyan-400);
+  --sidebar-primary-foreground: var(--color-zinc-950);
+  --sidebar-accent: var(--color-zinc-800);
+  --sidebar-accent-foreground: var(--color-zinc-200);
+  --sidebar-border: var(--color-zinc-800);
+  --sidebar-outline: var(--color-zinc-500);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-outline/50;
+  }
+
+  body {
+    @apply bg-background text-foreground scheme-light dark:scheme-dark;
+    font-family: "Inter Variable", var(--font-sans);
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}

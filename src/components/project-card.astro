@@ -1,0 +1,69 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+import { Button } from "@/components/starwind/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/starwind/card";
+import type { ProjectsData } from "@/lib/data-loaders/projects";
+import { cn } from "@/lib/utils";
+
+type Project = ProjectsData["projects"][number];
+
+interface Props extends HTMLAttributes<"div"> {
+  project: Project;
+}
+
+const { project, class: className, ...props } = Astro.props as Props;
+---
+
+<Card class={cn("gap-4 pt-4", className)} {...props}>
+  <CardHeader class="flex flex-wrap justify-between items-start px-4">
+    <div>
+      <CardTitle class="flex items-center gap-1 font-bold">
+        {project.relative_url ? (
+            <a
+              href={project.relative_url}
+              class="flex items-center gap-1 hover:text-muted-foreground transition-colors"
+            >
+              {project.title}
+              <Icon name="lucide:link" size={15} />
+            </a>
+          ) : (
+            project.title
+          )}
+      </CardTitle>
+      <CardDescription class="text-xs">{project.completed_on}</CardDescription>
+    </div>
+
+    <div class="flex gap-1">
+      {project.urls.map((item) => (
+          <Button
+            size="icon-sm"
+            variant="outline"
+            href={item.url}
+            title={item.name}
+          >
+            <Icon name={item.icon} title={item.name} />
+          </Button>
+        ))}
+    </div>
+  </CardHeader>
+
+  <CardContent class="text-justify mb-auto px-4 line-clamp-10 md:line-clamp-8">
+    {project.description}
+  </CardContent>
+
+  <CardFooter class="flex-wrap justify-center gap-3 p-3 border-t border-muted">
+    {project.tech_icons.map((tag) => (
+        <span class="inline-flex items-center justify-center">
+          <Icon name={tag} size="18" />
+        </span>
+      ))}
+  </CardFooter>
+</Card>

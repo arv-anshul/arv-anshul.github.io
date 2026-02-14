@@ -1,0 +1,73 @@
+{
+  "prettier": {
+    "allowed": false
+  },
+  "formatter": "language_server",
+  "format_on_save": "on",
+  "lsp": {
+    "typescript-language-server": {
+      "settings": {
+        "typescript": {
+          "preferences": {
+            "includePackageJsonAutoImports": "on"
+          }
+        }
+      }
+    }
+  },
+  "code_actions_on_format": {
+    "source.fixAll.biome": true,
+    "source.organizeImports.biome": true
+  },
+  "languages": {
+    "Astro": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "Markdown": {
+      "formatter": {
+        "language_server": {
+          "name": "dprint"
+        }
+      }
+    },
+    "TOML": {
+      "formatter": {
+        "language_server": {
+          "name": "dprint"
+        }
+      }
+    },
+    "YAML": {
+      "formatter": {
+        "language_server": {
+          "name": "dprint"
+        }
+      }
+    }
+  }
+}

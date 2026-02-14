@@ -1,0 +1,93 @@
+.custom-prose {
+  --prose-media-border-radius: var(--radius);
+}
+
+/* ==========================================================================
+ * rehype-pretty-code: Figure + Title (figcaption) styling
+ *
+ * HTML structure produced by rehype-pretty-code with title="...":
+ *   <figure data-rehype-pretty-code-figure>
+ *     <figcaption data-rehype-pretty-code-title ...>Title</figcaption>
+ *     <pre ...><code>...</code></pre>
+ *   </figure>
+ * ========================================================================== */
+
+/* Figure wrapper — reset prose defaults so the title and code block are
+   visually joined as a single unit. */
+.custom-prose figure[data-rehype-pretty-code-figure] {
+  margin-top: var(--sw-prose-spacing);
+  margin-bottom: var(--sw-prose-spacing);
+  overflow: hidden;
+  border: 1px solid var(--sw-prose-pre-border-color);
+  border-radius: var(--sw-prose-pre-border-radius);
+}
+
+/* Title bar */
+.custom-prose figcaption[data-rehype-pretty-code-title] {
+  font-family: var(--font-mono);
+  font-size: var(--sw-prose-code-size);
+  font-weight: 500;
+  color: var(--color-muted-foreground);
+  background-color: color-mix(in srgb, var(--color-muted) 50%, transparent);
+  border-bottom: 1px solid var(--sw-prose-pre-border-color);
+  padding: 0.5rem 1rem;
+  margin-top: 0;
+}
+
+/* Remove the individual border & radius from <pre> when inside a titled
+   figure, since the figure wrapper already provides them. */
+.custom-prose figure[data-rehype-pretty-code-figure] > pre {
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+ * Heading autolink anchor icon
+ *
+ * HTML structure produced by rehype-autolink-headings (behavior:'append'):
+ *   <h2 id="...">
+ *     Heading text
+ *     <a href="#..." class="heading-anchor" aria-label="...">
+ *       <span class="heading-anchor-icon"><!-- SVG or content --></span>
+ *     </a>
+ *   </h2>
+ * ========================================================================== */
+
+.custom-prose :is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+}
+
+.custom-prose :is(h1, h2, h3, h4, h5, h6) a.heading-anchor {
+  color: var(--color-muted-foreground);
+  text-decoration: none;
+  margin-inline-start: 0.35em;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+  vertical-align: middle;
+}
+
+.custom-prose :is(h1, h2, h3, h4, h5, h6):hover a.heading-anchor,
+.custom-prose :is(h1, h2, h3, h4, h5, h6) a.heading-anchor:focus-visible {
+  opacity: 1;
+}
+
+.custom-prose :is(h1, h2, h3, h4, h5, h6) a.heading-anchor:hover {
+  color: var(--sw-prose-link-hover-color);
+  opacity: 1;
+}
+
+.custom-prose .heading-anchor-icon {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+}
+
+.custom-prose .heading-anchor-icon svg {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}

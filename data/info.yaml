@@ -1,0 +1,118 @@
+name: Anshul Raj Verma
+avatar_url: https://github.com/arv-anshul.png
+resume_url: https://cdn.jsdelivr.net/gh/arv-anshul/resume@main/pdf/basic.pdf
+intro_text: |
+  Hello! I'm Anshul Raj Verma, a Data Scientist passionate about harnessing GenAI to solve real-world problems.
+  Since 2021, I've sharpened my skills through a six-month Data Science & AI internship and a series of self-driven
+  projects, becoming proficient in Python and Data Science concepts. I've also built end-to-end GenAI applications
+  using LangChain, LangGraph, LlamaIndex, and core MCP concepts—experience that's fueled my drive to design
+  intelligent, scalable solutions.
+
+socials:
+  - name: Website
+    icon: lucide:globe
+    url: https://arv-anshul.github.io
+  - name: GitHub
+    icon: lucide:github
+    url: https://github.com/arv-anshul
+  - name: LinkedIn
+    icon: lucide:linkedin
+    url: https://linkedin.com/in/arv-anshul
+  - name: E-Mail
+    icon: lucide:mail
+    url: mailto:arv.anshul.1864@gmail.com
+
+tech_stack:
+  Programming Languages:
+    - name: Python
+      icon: simple-icons:python
+    - name: HTML
+      icon: simple-icons:html5
+    - name: CSS
+      icon: simple-icons:css
+    - name: Bash
+      icon: simple-icons:gnubash
+    - name: Rust
+      icon: simple-icons:rust
+    - name: JavaScript
+      icon: simple-icons:javascript
+    - name: Go
+      icon: simple-icons:go
+    - name: TypeScript
+      icon: simple-icons:typescript
+  Backend Tools:
+    - name: FastAPI
+      icon: simple-icons:fastapi
+    - name: MongoDB
+      icon: simple-icons:mongodb
+    - name: MySQL
+      icon: simple-icons:mysql
+    - name: Redis
+      icon: simple-icons:redis
+  Development Tools:
+    - name: pre-commit
+      icon: simple-icons:precommit
+    - name: Starship
+      icon: simple-icons:starship
+    - name: Raycast
+      icon: simple-icons:raycast
+    - name: Zed Code Editor
+      icon: simple-icons:zedindustries
+    - name: Typst
+      icon: simple-icons:typst
+    - name: Google Gemini
+      icon: simple-icons:googlegemini
+  Dev Ops & ML Ops:
+    - name: Docker
+      icon: simple-icons:docker
+    - name: GitHub Actions
+      icon: simple-icons:githubactions
+    - name: MLFlow
+      icon: simple-icons:mlflow
+    - name: PyPI
+      icon: simple-icons:pypi
+  Data Science & GenAI:
+    - name: Scikit-Learn
+      icon: simple-icons:scikitlearn
+    - name: Polars
+      icon: simple-icons:polars
+    - name: Pandas
+      icon: simple-icons:pandas
+    - name: Numpy
+      icon: simple-icons:numpy
+    - name: Plotly
+      icon: simple-icons:plotly
+    - name: Hugging Face
+      icon: simple-icons:huggingface
+    - name: LangChain
+      icon: simple-icons:langchain
+    - name: Model Context Protocol
+      icon: simple-icons:modelcontextprotocol
+  Python Tools:
+    - name: Pytest
+      icon: simple-icons:pytest
+    - name: Pydantic
+      icon: simple-icons:pydantic
+    - name: Ruff
+      icon: simple-icons:ruff
+    - name: Material for Mkdocs
+      icon: simple-icons:materialformkdocs
+    - name: UV
+      icon: simple-icons:uv
+    - name: Scrapy
+      icon: simple-icons:scrapy
+  Web Development:
+    - name: ShadCN UI
+      icon: simple-icons:shadcnui
+    - name: Tailwind CSS
+      icon: simple-icons:tailwindcss
+    - name: Vite
+      icon: simple-icons:vite
+    - name: VueJs
+      icon: simple-icons:vuedotjs
+    - name: Astro
+      icon: simple-icons:astro
+    - name: React
+      icon: simple-icons:react
+    - name: Bun
+      icon: simple-icons:bun

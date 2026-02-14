@@ -1,0 +1,24 @@
+---
+import FriendCard from "@/components/friend-card.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { loadFriendsData } from "@/lib/data-loaders/friends";
+
+const { friends } = await loadFriendsData();
+---
+
+<BaseLayout
+  title="Friends - ARV"
+  description="Meet my awesome friends."
+  nav={{ sticky: true }}
+>
+  <header class="text-center">
+    <h1 class="font-bold text-3xl font-heading">Friends</h1>
+    <p class="text-xl text-muted-foreground">
+      Meet the awesome people and projects I follow.
+    </p>
+  </header>
+
+  <section class="mt-8 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {friends.map((friend) => <FriendCard friend={friend} />)}
+  </section>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import FrontmatterCard from "@/components/frontmatter-card.astro";
+import Prose from "@/components/starwind/prose/Prose.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { getBlogSlugs } from "@/lib/blog-utils";
+import "remark-github-alerts/styles/github-base.css";
+import "remark-github-alerts/styles/github-colors-light.css";
+import "remark-github-alerts/styles/github-colors-dark-class.css";
+import "@/styles/katex.min.css";
+import "@/styles/custom-prose.css";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("blog");
+  return posts.map((post) => {
+    const slugs = getBlogSlugs(post.id);
+    return {
+      params: { post: slugs.pop() },
+      props: { post },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} - ARV Blog`}
+  description={post.data.description}
+  class="md:max-w-3/5"
+  seo={{
+    basic: {
+      title: post.data.title,
+      type: "website",
+      image: new URL(`og.webp`, Astro.url).toString(),
+      url: Astro.url,
+    },
+    article: {
+      publishedTime: post.data.pubDate.toUTCString(),
+      authors: [post.data.author],
+    },
+  }}
+>
+  <FrontmatterCard data={post.data} backPageUrl="/blog" />
+  <article class="mt-10 w-full">
+    <Prose class="max-w-auto w-full custom-prose">
+      <Content />
+    </Prose>
+  </article>
+</BaseLayout>

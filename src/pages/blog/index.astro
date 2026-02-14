@@ -1,0 +1,262 @@
+---
+import { getCollection } from "astro:content";
+import FrontmatterCard from "@/components/frontmatter-card.astro";
+import { ItemGroup } from "@/components/starwind/item";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/starwind/pagination";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { getBlogSlugs } from "@/lib/blog-utils";
+
+const POSTS_PER_PAGE = 10;
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+const basePath = "/blog";
+---
+
+<BaseLayout
+  title="Blog - ARV"
+  description="Blogs written by ARV."
+  nav={{ sticky: true }}
+>
+  <div>
+    <h1 class="font-heading text-3xl font-bold mb-6 md:text-center">
+      Latest Blog Posts
+    </h1>
+    <ItemGroup class="grid gap-4 md:grid-cols-2" id="blog-grid">
+      {posts.map((post, i) => {
+          const page = Math.floor(i / POSTS_PER_PAGE) + 1;
+          return (
+            <div
+              data-page={page}
+              class="blog-post-item"
+              style={page !== 1 ? "display:none" : undefined}
+            >
+              <FrontmatterCard
+                variant="small"
+                href={`/blog/${getBlogSlugs(post.id).pop()}`}
+                data={post.data}
+              />
+            </div>
+          );
+        })}
+    </ItemGroup>
+
+    {totalPages > 1 && (
+        <div class="mt-8" id="pagination-container">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  size="sm"
+                  id="pagination-prev"
+                  href={`${basePath}?page=1`}
+                >
+                  Prev
+                </PaginationPrevious>
+              </PaginationItem>
+
+              {/* First page */}
+              <PaginationItem data-pagination-item={1}>
+                <PaginationLink
+                  size="icon-sm"
+                  href={`${basePath}?page=1`}
+                  data-pagination-link={1}
+                >
+                  1
+                </PaginationLink>
+              </PaginationItem>
+
+              {/* Start ellipsis (between first page and middle pages) */}
+              <PaginationItem
+                data-pagination-ellipsis="start"
+                style="display:none"
+              >
+                <PaginationEllipsis
+                  class="text-muted-foreground"
+                  size="icon-sm"
+                />
+              </PaginationItem>
+
+              {/* Middle pages (2 through totalPages - 1) */}
+              {Array.from(
+                { length: Math.max(0, totalPages - 2) },
+                (_, i) => i + 2,
+              ).map((page) => (
+                <PaginationItem
+                  data-pagination-item={page}
+                  style="display:none"
+                >
+                  <PaginationLink
+                    size="icon-sm"
+                    href={`${basePath}?page=${page}`}
+                    data-pagination-link={page}
+                  >
+                    {page}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+
+              {/* End ellipsis (between middle pages and last page) */}
+              <PaginationItem
+                data-pagination-ellipsis="end"
+                style="display:none"
+              >
+                <PaginationEllipsis
+                  class="text-muted-foreground"
+                  size="icon-sm"
+                />
+              </PaginationItem>
+
+              {/* Last page (only if more than 1 page) */}
+              {totalPages > 1 && (
+                <PaginationItem data-pagination-item={totalPages}>
+                  <PaginationLink
+                    size="icon-sm"
+                    href={`${basePath}?page=${totalPages}`}
+                    data-pagination-link={totalPages}
+                  >
+                    {totalPages}
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+
+              <PaginationItem>
+                <PaginationNext
+                  size="sm"
+                  id="pagination-next"
+                  href={`${basePath}?page=2`}
+                >
+                  Next
+                </PaginationNext>
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
+      )}
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ totalPages, basePath }}>
+  // Tailwind classes that differentiate outline (active) from ghost (inactive)
+  const OUTLINE_CLASSES = [
+    "border",
+    "bg-background",
+    "shadow-xs",
+    "dark:border-input",
+    "dark:bg-input/30",
+    "dark:hover:bg-input/50",
+  ];
+
+  function getCurrentPage() {
+    const pageParam = new URLSearchParams(window.location.search).get("page");
+    if (!pageParam) {
+      return { page: 1, hasParam: false };
+    }
+    const parsed = Number.parseInt(pageParam, 10) || 1;
+    return { page: Math.max(1, Math.min(parsed, totalPages)), hasParam: true };
+  }
+
+  function updateBlogPosts(currentPage) {
+    for (const el of document.querySelectorAll(".blog-post-item")) {
+      const itemPage = Number.parseInt(el.dataset.page, 10);
+      el.style.display = itemPage === currentPage ? "" : "none";
+    }
+  }
+
+  function computePageWindow(currentPage) {
+    const WINDOW = 2;
+    if (totalPages <= 5) {
+      return { start: 1, end: totalPages };
+    }
+    if (currentPage <= 3) {
+      return { start: 1, end: 5 };
+    }
+    if (currentPage >= totalPages - 2) {
+      return { start: totalPages - 4, end: totalPages };
+    }
+    return { start: currentPage - WINDOW, end: currentPage + WINDOW };
+  }
+
+  function updatePageLinks(currentPage) {
+    const { start, end } = computePageWindow(currentPage);
+
+    const visiblePages = new Set([1, totalPages]);
+    for (let i = start; i <= end; i++) {
+      visiblePages.add(i);
+    }
+
+    for (const item of document.querySelectorAll("[data-pagination-item]")) {
+      const page = Number.parseInt(item.dataset.paginationItem, 10);
+      item.style.display = visiblePages.has(page) ? "" : "none";
+
+      const link = item.querySelector("[data-pagination-link]");
+      if (!link) {
+        continue;
+      }
+      const isActive = page === currentPage;
+      link.toggleAttribute("aria-current", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      }
+      for (const cls of OUTLINE_CLASSES) {
+        link.classList.toggle(cls, isActive);
+      }
+    }
+
+    const startEllipsis = document.querySelector(
+      '[data-pagination-ellipsis="start"]'
+    );
+    const endEllipsis = document.querySelector(
+      '[data-pagination-ellipsis="end"]'
+    );
+    if (startEllipsis) {
+      startEllipsis.style.display = start > 2 ? "" : "none";
+    }
+    if (endEllipsis) {
+      endEllipsis.style.display = end < totalPages - 1 ? "" : "none";
+    }
+  }
+
+  function updatePrevNext(currentPage) {
+    const prevBtn = document.getElementById("pagination-prev");
+    const nextBtn = document.getElementById("pagination-next");
+
+    if (prevBtn) {
+      prevBtn.href = `${basePath}?page=${Math.max(1, currentPage - 1)}`;
+      prevBtn.classList.toggle("pointer-events-none", currentPage <= 1);
+      prevBtn.classList.toggle("opacity-50", currentPage <= 1);
+    }
+    if (nextBtn) {
+      nextBtn.href = `${basePath}?page=${Math.min(totalPages, currentPage + 1)}`;
+      nextBtn.classList.toggle(
+        "pointer-events-none",
+        currentPage >= totalPages
+      );
+      nextBtn.classList.toggle("opacity-50", currentPage >= totalPages);
+    }
+  }
+
+  function initPagination() {
+    const { page, hasParam } = getCurrentPage();
+    updateBlogPosts(page);
+    updatePageLinks(page);
+    updatePrevNext(page);
+    if (hasParam) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  initPagination();
+  window.addEventListener("popstate", initPagination);
+</script>

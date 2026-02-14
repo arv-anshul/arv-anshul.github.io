@@ -1,0 +1,24 @@
+---
+import ProjectCard from "@/components/project-card.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { loadProjectsData } from "@/lib/data-loaders/projects";
+
+const { projects } = await loadProjectsData();
+---
+
+<BaseLayout
+  title="Projects - ARV"
+  description="See all the project created by ARV."
+  nav={{ sticky: true }}
+>
+  <div>
+    <h1 class="font-heading text-3xl font-bold md:text-center mb-6">
+      Projects
+    </h1>
+    <section>
+      <div class="grid gap-4 md:grid-cols-2">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,25 @@
+[global]
+respect-gitignore = true
+flavor = "standard"
+line_length = 120
+include = [
+  "content/**/*.{md,mdx}",
+  "src/**/*.{md,mdx}",
+  "README.md",
+]
+disable = [
+  "MD036", # no-emphasis-as-heading
+  "MD026", # no-trailing-punctuation
+]
+
+[per-file-flavor]
+"**/*.md" = "gfm"
+"**/*.mdx" = "mdx"
+
+[MD033]
+allowed-elements = ["br", "details", "summary", "figure", "figcaption", "iframe", "kbd", "a", "img"]
+
+[MD013]
+reflow = true
+code-blocks = false
+headings = false
