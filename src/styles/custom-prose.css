@@ -5,7 +5,7 @@
 /*
  * Image within <figure> having <figcaption> tag
 */
-.custom-prose figure figcaption {
+.custom-prose figure img > figcaption {
   text-align: center;
 }
 
@@ -43,7 +43,7 @@
 
 /* Remove the individual border & radius from <pre> when inside a titled
    figure, since the figure wrapper already provides them. */
-.custom-prose figure[data-rehype-pretty-code-figure]>pre {
+.custom-prose figure[data-rehype-pretty-code-figure] > pre {
   border: none;
   border-radius: 0;
   margin-top: 0;
