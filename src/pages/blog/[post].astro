@@ -48,7 +48,7 @@ const { Content } = await render(post);
   }}
 >
   <FrontmatterCard data={post.data} backPageUrl="/blog" />
-  <article class="mt-10 w-full">
+  <article class="mt-10 w-full" data-pagefind-body>
     <Prose class="max-w-auto w-full custom-prose">
       <Content />
     </Prose>

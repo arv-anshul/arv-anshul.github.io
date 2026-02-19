@@ -7,6 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import mermaid from "astro-mermaid";
+import pagefind from "astro-pagefind";
 import { h, s } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeKatex from "rehype-katex";
@@ -32,6 +33,7 @@ export default defineConfig({
         layout: "elk",
       },
     }),
+    pagefind(),
   ],
   vite: {
     plugins: [tailwindcss(), yaml()],

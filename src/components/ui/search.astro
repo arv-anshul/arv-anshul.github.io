@@ -1,0 +1,394 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<!-- Search Trigger Button -->
+<button
+  id="search-trigger"
+  type="button"
+  aria-label="Open search"
+  title="Search (/ or Ctrl+K)"
+  class="inline-flex items-center gap-x-1.5 px-2 py-1 text-sm font-mono text-muted-foreground bg-accent hover:bg-muted border border-border rounded-md transition-colors cursor-pointer"
+>
+  <Icon name="lucide:search" class="size-4 shrink-0" />
+  <span class="hidden sm:inline text-xs">Search</span>
+  <kbd
+    class="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-mono text-muted-foreground border border-border rounded px-1 py-0.5 bg-background leading-none"
+  >
+    <span class="text-xs">⌘</span>K
+  </kbd>
+</button>
+
+<!-- Search Modal (Native Dialog) -->
+<dialog
+  id="search-modal"
+  class="fixed z-50 m-0 p-0 bg-transparent border-none outline-none w-full max-w-2xl top-[10vh] left-1/2 -translate-x-1/2 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+  aria-label="Site search"
+>
+  <div
+    class="flex flex-col bg-background border border-border rounded-xl shadow-2xl overflow-hidden max-h-[80vh] w-full"
+  >
+    <!-- Search Input Row -->
+    <div
+      class="flex items-center gap-x-2 px-4 py-3 border-b border-border shrink-0"
+    >
+      <Icon
+        name="lucide:search"
+        class="size-4 shrink-0 text-muted-foreground"
+      />
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search…"
+        autocomplete="off"
+        spellcheck="false"
+        class="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground text-sm outline-none border-none ring-0 font-mono"
+      >
+      <button
+        id="search-close"
+        type="button"
+        aria-label="Close search"
+        class="inline-flex items-center justify-center size-6 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors shrink-0 cursor-pointer"
+      >
+        <Icon name="lucide:x" class="size-4" />
+      </button>
+    </div>
+
+    <!-- Results Area -->
+    <div id="search-results-container" class="overflow-y-auto">
+      <!-- Empty state / hint -->
+      <div
+        id="search-empty"
+        class="flex flex-col items-center justify-center gap-2 py-10 text-muted-foreground text-sm font-mono"
+      >
+        <Icon name="lucide:search" class="size-8 opacity-30" />
+        <p>Type to search…</p>
+      </div>
+
+      <!-- No results state -->
+      <div
+        id="search-no-results"
+        class="hidden flex flex-col items-center justify-center gap-2 py-10 text-muted-foreground text-sm font-mono"
+      >
+        <Icon name="lucide:search-x" class="size-8 opacity-30" />
+        <p>No results found.</p>
+      </div>
+
+      <!-- Results list -->
+      <ul
+        id="search-results-list"
+        class="hidden divide-y divide-border py-1"
+        role="listbox"
+        aria-label="Search results"
+      ></ul>
+    </div>
+
+    <!-- Footer hint -->
+    <div
+      class="flex items-center gap-x-4 px-4 py-2 border-t border-border text-muted-foreground text-xs font-mono shrink-0"
+    >
+      <span class="flex items-center gap-1">
+        <kbd
+          class="border border-border rounded px-1 py-0.5 bg-muted text-[10px] leading-none"
+        >
+          ↑↓
+        </kbd>
+        navigate
+      </span>
+      <span class="flex items-center gap-1">
+        <kbd
+          class="border border-border rounded px-1 py-0.5 bg-muted text-[10px] leading-none"
+        >
+          ↵
+        </kbd>
+        open
+      </span>
+      <span class="flex items-center gap-1">
+        <kbd
+          class="border border-border rounded px-1 py-0.5 bg-muted text-[10px] leading-none"
+        >
+          Esc
+        </kbd>
+        close
+      </span>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  /* Native dialog backdrop styling */
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+  /* Prevent scrolling when dialog is open */
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  // ─── State ──────────────────────────────────────────────────────────────────
+  let pagefind: any = null;
+  let focusedIndex = -1;
+
+  // ─── DOM refs ────────────────────────────────────────────────────────────────
+  const trigger = document.getElementById("search-trigger")!;
+  const modal = document.getElementById("search-modal") as HTMLDialogElement;
+  const input = document.getElementById("search-input") as HTMLInputElement;
+  const closeBtn = document.getElementById("search-close")!;
+  const resultsList = document.getElementById("search-results-list")!;
+  const emptyState = document.getElementById("search-empty")!;
+  const noResults = document.getElementById("search-no-results")!;
+
+  // ─── Pagefind initialisation ─────────────────────────────────────────────────
+  async function ensurePagefind() {
+    if (pagefind) {
+      return;
+    }
+    try {
+      // Using a variable prevents Vite from trying to resolve this at build time
+      const PF_URL = "/pagefind/pagefind.js";
+      pagefind = await import(/* @vite-ignore */ PF_URL);
+      await pagefind.init();
+    } catch (e) {
+      console.warn("[search] Pagefind not available:", e);
+    }
+  }
+
+  // ─── Modal open/close ─────────────────────────────────────────────────────
+  function openModal() {
+    if (modal.open) {
+      return;
+    }
+    modal.showModal();
+    input.value = "";
+    resetResults();
+    input.focus();
+    // Start loading pagefind index in the background
+    ensurePagefind();
+  }
+
+  function closeModal() {
+    if (!modal.open) {
+      return;
+    }
+    modal.close();
+    focusedIndex = -1;
+  }
+
+  // ─── Results rendering ────────────────────────────────────────────────────
+  function resetResults() {
+    resultsList.innerHTML = "";
+    resultsList.classList.add("hidden");
+    emptyState.classList.remove("hidden");
+    noResults.classList.add("hidden");
+    focusedIndex = -1;
+  }
+
+  function showNoResults() {
+    resultsList.classList.add("hidden");
+    emptyState.classList.add("hidden");
+    noResults.classList.remove("hidden");
+    focusedIndex = -1;
+  }
+
+  function renderResults(
+    results: {
+      url: string;
+      meta: { title?: string; image?: string };
+      excerpt: string;
+    }[]
+  ) {
+    resultsList.innerHTML = "";
+
+    if (results.length === 0) {
+      showNoResults();
+      return;
+    }
+
+    emptyState.classList.add("hidden");
+    noResults.classList.add("hidden");
+    resultsList.classList.remove("hidden");
+
+    results.forEach((r, i) => {
+      const li = document.createElement("li");
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", "false");
+      li.setAttribute("data-index", String(i));
+      li.className =
+        "group flex flex-col gap-1 px-4 py-3 cursor-pointer hover:bg-muted transition-colors focus-within:bg-muted";
+
+      const title = r.meta?.title ?? "Untitled";
+      // URL relative display
+      const displayUrl =
+        r.url.replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "") || "/";
+
+      li.innerHTML = `
+        <a
+          href="${r.url}"
+          class="flex flex-col gap-0.5 outline-none"
+          tabindex="-1"
+          data-search-result
+        >
+          <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
+          <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
+          ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
+        </a>
+      `;
+
+      // Clicking a result closes the modal
+      li.addEventListener("click", () => closeModal());
+
+      resultsList.appendChild(li);
+    });
+
+    focusedIndex = -1;
+  }
+
+  function setFocus(index: number) {
+    let currentIndex = index;
+    const items = resultsList.querySelectorAll<HTMLLIElement>("li[data-index]");
+    if (items.length === 0) {
+      return;
+    }
+
+    // Clamp
+    if (currentIndex < 0) {
+      currentIndex = items.length - 1;
+    }
+    if (currentIndex >= items.length) {
+      currentIndex = 0;
+    }
+
+    focusedIndex = currentIndex;
+
+    items.forEach((item, i) => {
+      const isActive = i === focusedIndex;
+      item.setAttribute("aria-selected", String(isActive));
+      if (isActive) {
+        item.classList.add("bg-muted");
+        item.scrollIntoView({ block: "nearest" });
+      } else {
+        item.classList.remove("bg-muted");
+      }
+    });
+  }
+
+  function activateFocused() {
+    const items = resultsList.querySelectorAll<HTMLLIElement>("li[data-index]");
+    if (focusedIndex >= 0 && focusedIndex < items.length) {
+      const anchor = items[focusedIndex].querySelector<HTMLAnchorElement>(
+        "a[data-search-result]"
+      );
+      if (anchor) {
+        closeModal();
+        anchor.click();
+      }
+    }
+  }
+
+  // ─── Search handler ────────────────────────────────────────────────────────
+  async function handleSearch(query: string) {
+    const trimmed = query.trim();
+
+    if (!trimmed) {
+      resetResults();
+      return;
+    }
+
+    await ensurePagefind();
+    if (!pagefind) {
+      return;
+    }
+
+    // Preload as user types for faster search
+    pagefind.preload(trimmed);
+
+    const search = await pagefind.debouncedSearch(trimmed, {}, 200);
+    // Null means a newer search was started — skip
+    if (search === null) {
+      return;
+    }
+
+    // Load top 8 results eagerly
+    const data = await Promise.all(
+      search.results.slice(0, 8).map((r: any) => r.data())
+    );
+    renderResults(data);
+  }
+
+  // ─── Event listeners ──────────────────────────────────────────────────────
+  trigger.addEventListener("click", openModal);
+
+  // Close on backdrop click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  input.addEventListener("input", (e) => {
+    handleSearch((e.target as HTMLInputElement).value);
+  });
+
+  input.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setFocus(focusedIndex + 1);
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setFocus(focusedIndex - 1);
+        break;
+      case "Enter":
+        e.preventDefault();
+        activateFocused();
+        break;
+      // Escape is handled natively by <dialog>, but we can add redundant listener if needed
+      // Actually, the native Escape behavior closes the dialog but we might want to ensure cleanup
+    }
+  });
+
+  // Listen for native close event to clean up if closed via Escape or other means
+  modal.addEventListener("close", () => {
+    // cleanup if needed
+    focusedIndex = -1;
+  });
+
+  // ─── Global shortcut keys ─────────────────────────────────────────────────
+  document.addEventListener("keydown", (e) => {
+    // Ignore when typing in inputs/textareas
+    const tag = (e.target as HTMLElement).tagName.toLowerCase();
+    const isEditable =
+      tag === "input" ||
+      tag === "textarea" ||
+      (e.target as HTMLElement).isContentEditable;
+
+    // Ctrl/Cmd+K
+    if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+      e.preventDefault();
+      if (modal.open) {
+        closeModal();
+      } else {
+        openModal();
+      }
+      return;
+    }
+
+    // "/" key — only when not in an editable field and modal is closed
+    if (e.key === "/" && !isEditable && !modal.open) {
+      e.preventDefault();
+      openModal();
+    }
+  });
+
+  // ─── Astro View Transitions support ──────────────────────────────────────
+  document.addEventListener("astro:page-load", () => {
+    // Re-close modal on navigation
+    closeModal();
+  });
+</script>

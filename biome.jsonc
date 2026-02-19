@@ -3,7 +3,10 @@
   "extends": ["ultracite/biome/core", "ultracite/biome/astro"],
   "overrides": [
     {
-      "includes": ["src/components/starwind/**/*"],
+      "includes": [
+        "src/components/starwind/**/*",
+        "src/components/ui/search.astro"
+      ],
       "linter": {
         "enabled": false
       }

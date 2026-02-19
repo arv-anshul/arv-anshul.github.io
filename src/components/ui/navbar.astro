@@ -5,6 +5,7 @@ import OmSvg from "public/favicon.svg";
 import { ThemeToggle } from "@/components/starwind/theme-toggle";
 import { cn } from "@/lib/utils";
 import Button from "../starwind/button";
+import Search from "./search.astro";
 
 interface Props {
   sticky?: boolean;
@@ -72,7 +73,10 @@ const endLinks = [
     </nav>
 
     <!-- End Links (Desktop Icons) -->
-    <div class="flex items-center gap-x-10 justify-self-end">
+    <div class="flex items-center gap-x-2 justify-self-end">
+      <!-- Search trigger + dialog -->
+      <Search />
+
       <div class="flex items-center gap-x-1">
         {endLinks.map((link) => (
             <Button
