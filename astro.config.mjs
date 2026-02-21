@@ -40,6 +40,11 @@ export default defineConfig({
   },
   redirects: {
     "/about": "/",
+    "/notebooks": "https://github.com/arv-anshul/notebooks",
+    "/github": "https://github.com/arv-anshul",
+    "/linkedin": "https://linkedin.com/in/arv-anshul",
+    "/hf": "https://hf.co/arv-anshul",
+    "/kaggle": "https://kaggle.com/arvanshul",
   },
   markdown: {
     syntaxHighlight: false,
