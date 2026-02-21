@@ -3,8 +3,8 @@ import type { APIRoute, GetStaticPaths } from "astro";
 const DOWNLOAD_FILENAME = "Anshul Raj Verma - Resume.pdf";
 
 const resumeUrls: Record<string, string> = {
-  basic: "https://github.com/arv-anshul/resume/raw/main/pdf/basic.pdf",
-  vantage: "https://github.com/arv-anshul/resume/raw/main/pdf/vantage.pdf",
+  basic: "https://cdn.jsdelivr.net/gh/arv-anshul/resume@main/pdf/basic.pdf",
+  vantage: "https://cdn.jsdelivr.net/gh/arv-anshul/resume@main/pdf/vantage.pdf",
 };
 
 export const getStaticPaths: GetStaticPaths = () =>
