@@ -58,7 +58,10 @@ const {
     >
     <script is:inline set:html={themeInit} />
   </head>
-  <body class="relative w-full min-h-screen flex flex-col" {...props}>
+  <body
+    class="relative w-full min-h-screen flex flex-col selection:bg-muted-foreground selection:text-accent"
+    {...props}
+  >
     <Navbar sticky={nav.sticky} />
     <main
       class={cn(
