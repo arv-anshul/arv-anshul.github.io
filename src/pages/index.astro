@@ -73,11 +73,11 @@ const info = await loadInfoData();
 
       <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
-            <Item variant="outline" as="a" href={item.url}>
-              <ItemMedia variant="icon" class="border-none rounded">
+            <Item as="a" href={item.url} variant="outline">
+              <ItemMedia class="rounded border-none" variant="icon">
                 <Icon name={item.icon} />
               </ItemMedia>
-              <ItemContent class="text-start gap-0">
+              <ItemContent class="gap-0 text-start">
                 <ItemTitle class="line-clamp-1">{item.title}</ItemTitle>
                 <ItemDescription class="text-xs">
                   {item.description}
@@ -98,7 +98,7 @@ const info = await loadInfoData();
 
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
-            <Item variant="outline" class="flex flex-col gap-3">
+            <Item class="flex flex-col gap-3" variant="outline">
               <ItemTitle class="font-bold">{category}</ItemTitle>
               <ItemDescription class="flex flex-wrap justify-center gap-3">
                 {items
@@ -106,8 +106,8 @@ const info = await loadInfoData();
                   .map((tech) => (
                     <Icon
                       name={tech.icon}
-                      title={tech.icon.split(":")[1]}
                       size={22}
+                      title={tech.icon.split(":")[1]}
                     />
                   ))}
               </ItemDescription>

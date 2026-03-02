@@ -40,20 +40,22 @@ const {
   data-slot="theme-toggle"
   {...rest}
 >
-  <slot><span class="size-5" data-theme-icon-wrapper>
-    <slot name="light-icon">
-      <Sun
-        class="hidden size-5 group-data-[state=off]:data-ready:block"
-        data-theme-icon
-      />
-    </slot>
-    <slot name="dark-icon">
-      <Moon
-        class="hidden size-5 group-data-[state=on]:data-ready:block"
-        data-theme-icon
-      />
-    </slot>
-  </span></slot>
+  <slot
+    ><span class="size-5" data-theme-icon-wrapper>
+      <slot name="light-icon">
+        <Sun
+          class="hidden size-5 group-data-[state=off]:data-ready:block"
+          data-theme-icon
+        />
+      </slot>
+      <slot name="dark-icon">
+        <Moon
+          class="hidden size-5 group-data-[state=on]:data-ready:block"
+          data-theme-icon
+        />
+      </slot>
+    </span></slot
+  >
 </Toggle>
 
 <script>

@@ -222,41 +222,41 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose :is(h1, h2, h3, h4, h5, h6):not(:where(.not-sw-prose *)) {
-    color: var(--sw-prose-heading-color);
     font-family: var(--sw-prose-heading-font);
     font-weight: var(--sw-prose-heading-weight);
     line-height: var(--sw-prose-heading-line-height);
+    color: var(--sw-prose-heading-color);
   }
 
   .sw-prose h1:not(:where(.not-sw-prose *)) {
+    margin-bottom: 0.889em;
     font-size: var(--sw-prose-h1-size);
     font-weight: var(--sw-prose-h1-weight);
-    margin-bottom: 0.889em;
   }
 
   .sw-prose h2:not(:where(.not-sw-prose *)) {
+    margin-bottom: 0.667em;
     font-size: var(--sw-prose-h2-size);
     font-weight: var(--sw-prose-h2-weight);
-    margin-bottom: 0.667em;
   }
 
   .sw-prose h3:not(:where(.not-sw-prose *)) {
+    margin-bottom: 0.6em;
     font-size: var(--sw-prose-h3-size);
     font-weight: var(--sw-prose-h3-weight);
-    margin-bottom: 0.6em;
   }
 
   .sw-prose h4:not(:where(.not-sw-prose *)) {
+    margin-bottom: 0.5em;
     font-size: var(--sw-prose-h4-size);
     font-weight: var(--sw-prose-h4-weight);
-    margin-bottom: 0.5em;
   }
 
   .sw-prose h5:not(:where(.not-sw-prose *)),
   .sw-prose h6:not(:where(.not-sw-prose *)) {
+    margin-bottom: 0.5em;
     font-size: inherit;
     font-weight: var(--sw-prose-heading-weight);
-    margin-bottom: 0.5em;
   }
 
   /* Reset margin-top after headings */
@@ -278,17 +278,17 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose a:not(:where(.not-sw-prose *)) {
+    font-weight: 500;
     color: var(--sw-prose-link-color);
     text-decoration: underline;
     text-decoration-color: var(--sw-prose-link-decoration-color);
     text-underline-offset: 0.15em;
-    font-weight: 500;
-    transition-property: color;
     transition-timing-function: var(
       --tw-ease,
       var(--default-transition-timing-function)
     );
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+    transition-property: color;
   }
 
   .sw-prose a:hover:not(:where(.not-sw-prose *)) {
@@ -300,8 +300,8 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose strong:not(:where(.not-sw-prose *)) {
-    color: var(--sw-prose-strong-color);
     font-weight: var(--sw-prose-strong-weight);
+    color: var(--sw-prose-strong-color);
   }
 
   .sw-prose :is(a, blockquote, thead th) strong:not(:where(.not-sw-prose *)) {
@@ -327,9 +327,9 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .sw-prose li:not(:where(.not-sw-prose *)) {
+    padding-inline-start: 0.375em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    padding-inline-start: 0.375em;
     overflow-wrap: anywhere;
   }
 
@@ -358,15 +358,15 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .sw-prose dt:not(:where(.not-sw-prose *)) {
-    color: var(--color-foreground);
-    font-weight: 600;
     margin-top: var(--sw-prose-spacing);
+    font-weight: 600;
+    color: var(--color-foreground);
     opacity: 1;
   }
 
   .sw-prose dd:not(:where(.not-sw-prose *)) {
-    margin-top: 0.25rem;
     padding-inline-start: var(--sw-prose-list-indent);
+    margin-top: 0.25rem;
   }
 
   .sw-prose dt + dt:not(:where(.not-sw-prose *)),
@@ -380,13 +380,13 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose blockquote:not(:where(.not-sw-prose *)) {
+    padding-inline-start: 1rem;
+    margin-top: var(--sw-prose-spacing);
+    margin-bottom: var(--sw-prose-spacing);
     font-style: italic;
     color: var(--sw-prose-blockquote-color);
     border-inline-start: var(--sw-prose-blockquote-border-width) solid
       var(--sw-prose-blockquote-border-color);
-    padding-inline-start: 1rem;
-    margin-top: var(--sw-prose-spacing);
-    margin-bottom: var(--sw-prose-spacing);
   }
 
   .sw-prose blockquote p:first-of-type:not(:where(.not-sw-prose *))::before {
@@ -402,12 +402,11 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose code:not(:where(.not-sw-prose *)) {
-    background-color: var(--sw-prose-code-bg);
-    color: var(--sw-prose-code-color);
+    padding: calc(var(--spacing) / 2) calc(var(--spacing) * 1.25);
     font-size: var(--sw-prose-code-size);
     font-weight: var(--sw-prose-code-weight);
-    /* padding: 0.125rem 0.375rem; */
-    padding: calc(var(--spacing) / 2) calc(var(--spacing) * 1.25);
+    color: var(--sw-prose-code-color);
+    background-color: var(--sw-prose-code-bg);
     border-radius: var(--sw-prose-code-radius);
   }
 
@@ -424,15 +423,15 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose pre:not(:where(.not-sw-prose *)) {
-    border: 1px solid var(--sw-prose-pre-border-color);
-    border-radius: var(--sw-prose-pre-border-radius);
     padding: 0.75rem 1rem;
-    font-size: var(--sw-prose-code-size);
-    line-height: 1.714;
-    overflow-x: auto;
-    tab-size: 2;
     margin-top: var(--sw-prose-spacing);
     margin-bottom: var(--sw-prose-spacing);
+    overflow-x: auto;
+    font-size: var(--sw-prose-code-size);
+    line-height: 1.714;
+    tab-size: 2;
+    border: 1px solid var(--sw-prose-pre-border-color);
+    border-radius: var(--sw-prose-pre-border-radius);
   }
 
   .sw-prose pre code:not(:where(.not-sw-prose *)) {
@@ -445,10 +444,10 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose hr:not(:where(.not-sw-prose *)) {
-    border: 0;
-    border-top: 1px solid var(--color-border);
     margin-top: 3em;
     margin-bottom: 3em;
+    border: 0;
+    border-top: 1px solid var(--color-border);
   }
 
   .sw-prose hr + *:not(:where(.not-sw-prose *)) {
@@ -464,11 +463,11 @@ const { class: className, ...rest } = Astro.props;
     display: block;
     max-width: 100%;
     height: auto;
+    margin-top: var(--sw-prose-spacing);
+    margin-bottom: var(--sw-prose-spacing);
     border: var(--sw-prose-media-border-width) solid
       var(--sw-prose-media-border-color);
     border-radius: var(--sw-prose-media-border-radius);
-    margin-top: var(--sw-prose-spacing);
-    margin-bottom: var(--sw-prose-spacing);
   }
 
   .sw-prose picture > img:not(:where(.not-sw-prose *)) {
@@ -491,9 +490,9 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .sw-prose figcaption:not(:where(.not-sw-prose *)) {
-    color: var(--color-muted-foreground);
-    font-size: var(--sw-prose-code-size);
     margin-top: 0.857em;
+    font-size: var(--sw-prose-code-size);
+    color: var(--color-muted-foreground);
   }
 
   /* --------------------------------------------------------------------------
@@ -502,11 +501,11 @@ const { class: className, ...rest } = Astro.props;
 
   .sw-prose table:not(:where(.not-sw-prose *)) {
     width: 100%;
-    table-layout: auto;
     margin-top: var(--sw-prose-spacing);
     margin-bottom: var(--sw-prose-spacing);
     font-size: var(--sw-prose-code-size);
     line-height: 1.714;
+    table-layout: auto;
   }
 
   .sw-prose thead:not(:where(.not-sw-prose *)) {
@@ -514,12 +513,12 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .sw-prose thead th:not(:where(.not-sw-prose *)) {
-    color: var(--sw-prose-table-heading-color);
-    font-weight: 600;
-    vertical-align: bottom;
+    padding-inline-start: 0.571em;
     padding-inline-end: 0.571em;
     padding-bottom: 0.571em;
-    padding-inline-start: 0.571em;
+    font-weight: 600;
+    vertical-align: bottom;
+    color: var(--sw-prose-table-heading-color);
     text-align: start;
     opacity: 1;
   }
@@ -541,8 +540,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .sw-prose :is(td, th):not(:where(.not-sw-prose *)) {
-    vertical-align: baseline;
     padding: 0.571em;
+    vertical-align: baseline;
   }
 
   .sw-prose :is(td:first-child, th:first-child):not(:where(.not-sw-prose *)) {
@@ -566,18 +565,18 @@ const { class: className, ...rest } = Astro.props;
    * -------------------------------------------------------------------------- */
 
   .sw-prose kbd:not(:where(.not-sw-prose *)) {
-    font-weight: 500;
+    display: inline-flex;
+    gap: var(--spacing);
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: calc(var(--spacing) * 5);
+    padding: calc(var(--spacing) / 2) calc(var(--spacing) * 1.25);
     font-family: inherit;
     font-size: var(--sw-prose-code-size);
-    width: fit-content;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing);
-    min-width: calc(var(--spacing) * 5);
+    font-weight: 500;
     color: var(--color-muted-foreground);
     background-color: var(--color-muted);
-    padding: calc(var(--spacing) / 2) calc(var(--spacing) * 1.25);
     border-radius: var(--radius-sm);
     /* box-shadow:
       0 0 0 1px color-mix(in srgb, var(--color-foreground) 10%, transparent),
@@ -591,17 +590,17 @@ const { class: className, ...rest } = Astro.props;
   .sw-prose details:not(:where(.not-sw-prose *)) {
     --sw-details-border-color: var(--color-border);
     --sw-details-border-color-hover: var(--color-primary-accent);
-
-    border-inline-start: 2px solid var(--sw-details-border-color);
     padding-inline-start: 1rem;
     margin-top: var(--sw-prose-spacing);
     margin-bottom: var(--sw-prose-spacing);
-    transition-property: border-color;
+
+    border-inline-start: 2px solid var(--sw-details-border-color);
     transition-timing-function: var(
       --tw-ease,
       var(--default-transition-timing-function)
     );
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+    transition-property: border-color;
   }
 
   .sw-prose details:not([open]):hover:not(:where(.not-sw-prose *)),
@@ -610,12 +609,12 @@ const { class: className, ...rest } = Astro.props;
   }
 
   .sw-prose summary:not(:where(.not-sw-prose *)) {
+    display: block;
+    padding-inline-start: 0.5rem;
+    margin-inline-start: -0.5rem;
+    font-weight: 600;
     color: var(--color-foreground);
     cursor: pointer;
-    display: block;
-    font-weight: 600;
-    margin-inline-start: -0.5rem;
-    padding-inline-start: 0.5rem;
     opacity: 1;
   }
 
@@ -631,14 +630,14 @@ const { class: className, ...rest } = Astro.props;
 
   .sw-prose summary:not(:where(.not-sw-prose *))::before {
     --sw-details-marker-size: 1.25rem;
-
-    background-color: currentColor;
-    content: "";
     display: inline-block;
-    height: var(--sw-details-marker-size);
     width: var(--sw-details-marker-size);
+    height: var(--sw-details-marker-size);
     margin-inline: calc((var(--sw-details-marker-size) / 4) * -1) 0.25rem;
     vertical-align: middle;
+    content: "";
+
+    background-color: currentColor;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.8 11.3 10.6 7a1 1 0 1 0-1.4 1.5l3.5 3.5-3.5 3.5a1 1 0 0 0 0 1.4 1 1 0 0 0 .7.3 1 1 0 0 0 .7-.3l4.2-4.2a1 1 0 0 0 0-1.4Z'/%3E%3C/svg%3E%0A");
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.8 11.3 10.6 7a1 1 0 1 0-1.4 1.5l3.5 3.5-3.5 3.5a1 1 0 0 0 0 1.4 1 1 0 0 0 .7.3 1 1 0 0 0 .7-.3l4.2-4.2a1 1 0 0 0 0-1.4Z'/%3E%3C/svg%3E%0A");
     -webkit-mask-repeat: no-repeat;
@@ -677,9 +676,9 @@ const { class: className, ...rest } = Astro.props;
 
   /* Mark/Highlight */
   .sw-prose mark:not(:where(.not-sw-prose *)) {
-    background-color: var(--sw-prose-highlight-bg-color);
-    color: var(--sw-prose-highlight-color);
     padding: calc(var(--spacing) / 2) var(--spacing);
+    color: var(--sw-prose-highlight-color);
+    background-color: var(--sw-prose-highlight-bg-color);
     border-radius: calc(var(--radius) / 4);
   }
 

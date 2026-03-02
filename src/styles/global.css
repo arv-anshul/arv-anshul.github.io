@@ -170,8 +170,8 @@
   }
 
   body {
-    @apply bg-background text-foreground scheme-light dark:scheme-dark;
     font-family: "Inter Variable", var(--font-sans);
+    @apply bg-background text-foreground scheme-light dark:scheme-dark;
   }
 
   button {

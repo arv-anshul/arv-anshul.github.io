@@ -5,8 +5,8 @@ import type { HTMLAttributes } from "astro/types";
 import { Icon } from "astro-icon/components";
 
 interface Page {
-  id: string;
   data: InferEntrySchema<"projects">;
+  id: string;
 }
 
 interface Props extends HTMLAttributes<"nav"> {
@@ -58,6 +58,7 @@ const sortedPages = [...pages].sort((a, b) => {
           return (
             <li>
               <a
+                aria-current={isActive ? "page" : undefined}
                 href={`/projects/${page.id}`}
                 class:list={[
                   "group flex items-start gap-3 px-4 py-3 transition-colors duration-200",
@@ -65,21 +66,20 @@ const sortedPages = [...pages].sort((a, b) => {
                     ? "bg-muted text-foreground"
                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
                 ]}
-                aria-current={isActive ? "page" : undefined}
               >
                 {page.data.icon && (
                   <span
+                    aria-hidden="true"
                     class:list={[
                       "text-xl mt-0.5 shrink-0 transition-transform duration-200 group-hover:scale-110",
                       isActive ? "opacity-100" : "opacity-60",
                     ]}
-                    aria-hidden="true"
                   >
                     <Icon name={page.data.icon} />
                   </span>
                 )}
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2 flex-wrap">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-center gap-2">
                     <span
                       class:list={[
                         "text-sm font-medium",
@@ -89,12 +89,12 @@ const sortedPages = [...pages].sort((a, b) => {
                       {page.data.title}
                     </span>
                     {isIndex && (
-                      <span class="font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded-full font-mono text-xs text-primary bg-muted border border-primary leading-none">
+                      <span class="rounded-full·border·border-primary·bg-muted·px-1.5·py-0.5·font-mono·font-semibold·text-primary·text-xs·uppercase·leading-none·tracking-wide">
                         Index
                       </span>
                     )}
                   </div>
-                  <p class="text-xs text-muted-foreground line-clamp-1">
+                  <p class="line-clamp-1·text-muted-foreground·text-xs">
                     {page.data.description}
                   </p>
                 </div>

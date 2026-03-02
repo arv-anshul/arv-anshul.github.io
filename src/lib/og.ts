@@ -70,9 +70,9 @@ export async function getMarkupFromEntry(
 }
 
 export interface OgImageData {
-  title: string;
   description: string;
   icon?: string;
+  title: string;
 }
 
 export async function getMarkupFromOgData(url: string, data: OgImageData) {

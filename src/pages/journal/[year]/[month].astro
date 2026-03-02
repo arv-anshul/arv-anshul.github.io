@@ -48,8 +48,6 @@ const { Content } = await render(journal);
 >
   <FrontmatterCard data={journal.data} backPageUrl="/journal" />
   <article class="mt-10 w-full" data-pagefind-body>
-    <Prose class="max-w-auto w-full custom-prose">
-      <Content />
-    </Prose>
+    <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
   </article>
 </BaseLayout>

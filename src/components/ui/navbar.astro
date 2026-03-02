@@ -61,10 +61,13 @@ const endLinks = [
         {middleLinks.map((link) => (
             <li>
               <a
-                class="flex items-center gap-x-1 text-sm font-medium text-foreground hover:opacity-70 transition-opacity"
+                class="flex·items-center·gap-x-1·font-medium·text-foreground·text-sm·transition-opacity·hover:opacity-70"
                 href={link.href}
               >
-                <Icon name={link.icon} class="hidden md:inline" />
+                <Icon
+                class="hidden md:inline"
+                name={link.icon}
+                />
                 {link.title}
               </a>
             </li>
@@ -80,12 +83,12 @@ const endLinks = [
       <div class="flex items-center gap-x-1">
         {endLinks.map((link) => (
             <Button
+              class="transition-opacity·hover:opacity-70"
               href={link.href}
+              size="icon"
+              target="_blank"
               title={link.title}
               variant="ghost"
-              size="icon"
-              class="hover:opacity-70 transition-opacity"
-              target="_blank"
             >
               <Icon name={link.icon} />
             </Button>

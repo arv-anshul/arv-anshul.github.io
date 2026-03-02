@@ -38,14 +38,14 @@ const basePath = "/blog";
           const page = Math.floor(i / POSTS_PER_PAGE) + 1;
           return (
             <div
-              data-page={page}
               class="blog-post-item"
+              data-page={page}
               style={page !== 1 ? "display:none" : undefined}
             >
               <FrontmatterCard
-                variant="small"
-                href={`/blog/${getBlogSlugs(post.id).pop()}`}
                 data={post.data}
+                href={`/blog/${getBlogSlugs(post.id).pop()}`}
+                variant="small"
               />
             </div>
           );
@@ -58,9 +58,9 @@ const basePath = "/blog";
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious
-                  size="sm"
-                  id="pagination-prev"
                   href={`${basePath}?page=1`}
+                  id="pagination-prev"
+                  size="sm"
                 >
                   Prev
                 </PaginationPrevious>
@@ -69,9 +69,9 @@ const basePath = "/blog";
               {/* First page */}
               <PaginationItem data-pagination-item={1}>
                 <PaginationLink
-                  size="icon-sm"
-                  href={`${basePath}?page=1`}
                   data-pagination-link={1}
+                  href={`${basePath}?page=1`}
+                  size="icon-sm"
                 >
                   1
                 </PaginationLink>
@@ -98,9 +98,9 @@ const basePath = "/blog";
                   style="display:none"
                 >
                   <PaginationLink
-                    size="icon-sm"
-                    href={`${basePath}?page=${page}`}
                     data-pagination-link={page}
+                    href={`${basePath}?page=${page}`}
+                    size="icon-sm"
                   >
                     {page}
                   </PaginationLink>
@@ -122,9 +122,9 @@ const basePath = "/blog";
               {totalPages > 1 && (
                 <PaginationItem data-pagination-item={totalPages}>
                   <PaginationLink
-                    size="icon-sm"
-                    href={`${basePath}?page=${totalPages}`}
                     data-pagination-link={totalPages}
+                    href={`${basePath}?page=${totalPages}`}
+                    size="icon-sm"
                   >
                     {totalPages}
                   </PaginationLink>
@@ -133,9 +133,9 @@ const basePath = "/blog";
 
               <PaginationItem>
                 <PaginationNext
-                  size="sm"
-                  id="pagination-next"
                   href={`${basePath}?page=2`}
+                  id="pagination-next"
+                  size="sm"
                 >
                   Next
                 </PaginationNext>

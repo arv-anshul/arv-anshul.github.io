@@ -33,23 +33,23 @@
 
 /* Title bar */
 .custom-prose figcaption[data-rehype-pretty-code-title] {
+  padding: 0.5rem 1rem;
+  margin-top: 0;
   font-family: var(--font-mono);
   font-size: var(--sw-prose-code-size);
   font-weight: 500;
   color: var(--color-muted-foreground);
   background-color: color-mix(in srgb, var(--color-muted) 50%, transparent);
   border-bottom: 1px solid var(--sw-prose-pre-border-color);
-  padding: 0.5rem 1rem;
-  margin-top: 0;
 }
 
 /* Remove the individual border & radius from <pre> when inside a titled
    figure, since the figure wrapper already provides them. */
 .custom-prose figure[data-rehype-pretty-code-figure] > pre {
-  border: none;
-  border-radius: 0;
   margin-top: 0;
   margin-bottom: 0;
+  border: none;
+  border-radius: 0;
 }
 
 /* ==========================================================================
@@ -69,14 +69,14 @@
 }
 
 .custom-prose :is(h1, h2, h3, h4, h5, h6) a.heading-anchor {
+  margin-inline-start: 0.35em;
+  vertical-align: middle;
   color: var(--color-muted-foreground);
   text-decoration: none;
-  margin-inline-start: 0.35em;
   opacity: 0;
   transition:
     opacity 0.2s ease,
     color 0.2s ease;
-  vertical-align: middle;
 }
 
 .custom-prose :is(h1, h2, h3, h4, h5, h6):hover a.heading-anchor,

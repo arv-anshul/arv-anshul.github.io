@@ -94,13 +94,13 @@ const isSmall = variant === "small";
 
   {!isSmall && backPageUrl && (
       <a
+        class="group flex items-center gap-0.5 font-medium text-sm transition-colors hover:text-muted-foreground"
         href={backPageUrl}
-        class="group flex items-center gap-0.5 text-sm font-medium transition-colors hover:text-muted-foreground"
       >
         <Icon
+          class="transition-transform duration-300 group-hover:-translate-x-0.5"
           name="lucide:arrow-left"
           size={18}
-          class="transition-transform duration-300 group-hover:-translate-x-0.5"
         />
         <span>Back</span>
       </a>

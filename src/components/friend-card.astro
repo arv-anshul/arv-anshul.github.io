@@ -21,7 +21,13 @@ const { friend, class: className, ...props } = Astro.props as Props;
 ---
 
 <Card class={cn("items-center gap-3", className)} {...props} data-card>
-  <a href={friend.primary_url} target="_blank" class="h-30 w-30">
+  <a
+    href={friend.primary_url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Visit ${friend.name}'s website`}
+    class="h-30 w-30"
+  >
     <Image
       src={friend.avatar}
       alt={`${friend.name} avatar`}
@@ -46,10 +52,10 @@ const { friend, class: className, ...props } = Astro.props as Props;
     {friend.socials.map((social) => (
         <Button
           href={social.url}
-          title={social.name}
-          target="_blank"
-          variant="ghost"
           size="icon-sm"
+          target="_blank"
+          title={social.name}
+          variant="ghost"
         >
           <Icon name={social.icon} />
         </Button>

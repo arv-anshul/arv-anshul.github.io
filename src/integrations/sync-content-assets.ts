@@ -15,8 +15,8 @@ interface SyncMapping {
 }
 
 interface SyncContentAssetsOptions {
-  mappings?: SyncMapping[];
   extensions?: string[];
+  mappings?: SyncMapping[];
 }
 
 // ── Defaults ───────────────────────────────────────────

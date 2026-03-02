@@ -2,9 +2,9 @@ import type { IconifyJSON } from "@iconify/types";
 import { getIconData, iconToHTML, iconToSVG, replaceIDs } from "@iconify/utils";
 
 interface IconOptions {
+  height?: number | string;
   size?: number | string;
   width?: number | string;
-  height?: number | string;
 }
 
 /**

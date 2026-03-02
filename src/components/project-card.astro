@@ -28,8 +28,8 @@ const { project, class: className, ...props } = Astro.props as Props;
       <CardTitle class="flex items-center gap-1 font-bold">
         {project.relative_url ? (
             <a
+              class="flex·items-center·gap-1·transition-colors·hover:text-muted-foreground"
               href={project.relative_url}
-              class="flex items-center gap-1 hover:text-muted-foreground transition-colors"
             >
               {project.title}
               <Icon name="lucide:link" size={15} />
@@ -44,10 +44,10 @@ const { project, class: className, ...props } = Astro.props as Props;
     <div class="flex gap-1">
       {project.urls.map((item) => (
           <Button
-            size="icon-sm"
-            variant="outline"
             href={item.url}
+            size="icon-sm"
             title={item.name}
+            variant="outline"
           >
             <Icon name={item.icon} title={item.name} />
           </Button>

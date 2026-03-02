@@ -16,11 +16,11 @@ import "remark-github-alerts/styles/github-colors-dark-class.css";
 import "@/styles/custom-prose.css";
 
 interface Props {
-  project: CollectionEntry<"projects">;
   nestedPages?: {
     id: string;
     data: InferEntrySchema<"projects">;
   }[];
+  project: CollectionEntry<"projects">;
 }
 
 export const getStaticPaths = (async () => {
@@ -71,8 +71,6 @@ const { Content } = await render(project);
     )}
 
   <article class="mt-10 w-full" data-pagefind-body>
-    <Prose class="max-w-auto w-full custom-prose">
-      <Content />
-    </Prose>
+    <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
   </article>
 </BaseLayout>

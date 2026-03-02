@@ -53,12 +53,12 @@ const linkItems = [
     <div class="flex">
       {linkItems.map((item) => (
           <Button
+            class="transition-colors·hover:text-muted-foreground"
             href={item.url}
             size="icon"
-            variant="ghost"
-            title={item.title}
-            class="hover:text-muted-foreground transition-colors"
             target="_blank"
+            title={item.title}
+            variant="ghost"
           >
             <Icon name={item.icon} title={item.title} />
           </Button>
