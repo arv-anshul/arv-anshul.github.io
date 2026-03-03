@@ -1,6 +1,7 @@
 // @ts-check
 
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 import yaml from "@rollup/plugin-yaml";
 import tailwindcss from "@tailwindcss/vite";
@@ -34,6 +35,7 @@ export default defineConfig({
       },
     }),
     pagefind(),
+    sitemap(),
   ],
   vite: {
     plugins: [tailwindcss(), yaml()],
