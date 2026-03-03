@@ -15,10 +15,11 @@ export async function getImageBufferFromMarkup(
   markup: ReturnType<typeof html>,
   options?: Partial<RenderOptions>
 ) {
-  const node = await fromJsx(markup);
+  const { node, stylesheets } = await fromJsx(markup);
 
   const renderer = new Renderer();
   const png = await renderer.render(node, {
+    stylesheets,
     ...renderOptions,
     ...options,
   });
