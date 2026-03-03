@@ -1,3 +1,8 @@
+// FIXME:
+// This route doesn't serve the PDF with headers, its just run at build time and
+// gets converted into PDF file itself which gets served.
+// I want the route to serve the PDF file with headers.
+
 import type { APIRoute, GetStaticPaths } from "astro";
 
 const DOWNLOAD_FILENAME = "Anshul Raj Verma - Resume.pdf";
