@@ -21,6 +21,9 @@ socials:
   - name: E-Mail
     icon: lucide:mail
     url: mailto:arv.anshul.1864@gmail.com
+  - name: YouTube
+    icon: simple-icons:youtube
+    url: https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ
 
 tech_stack:
   Programming Languages:

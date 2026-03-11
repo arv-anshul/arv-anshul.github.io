@@ -47,6 +47,7 @@ export default defineConfig({
     "/linkedin": "https://linkedin.com/in/arv-anshul",
     "/hf": "https://hf.co/arv-anshul",
     "/kaggle": "https://kaggle.com/arvanshul",
+    "/youtube": "https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ",
   },
   markdown: {
     syntaxHighlight: false,

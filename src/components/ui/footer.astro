@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import Button from "@/components/starwind/button";
+import { loadInfoData } from "@/lib/data-loaders/info";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -9,28 +10,20 @@ interface Props {
 
 const { class: className } = Astro.props as Props;
 
+const infoData = await loadInfoData();
 const copyrightYear = new Date().getFullYear();
 const linkItems = [
   {
     url: "/resume",
-    title: "Resume",
+    name: "Resume",
     icon: "lucide:scroll-text",
   },
   {
     url: "/rss.xml",
-    title: "RSS Feed",
+    name: "RSS Feed",
     icon: "lucide:rss",
   },
-  {
-    url: "https://linkedin.com/in/arv-anshul",
-    title: "LinkedIn",
-    icon: "simple-icons:linkedin",
-  },
-  {
-    url: "https://github.com/arv-anshul",
-    title: "GitHub",
-    icon: "simple-icons:github",
-  },
+  ...infoData.socials.filter((item) => !["Website"].includes(item.name)),
 ];
 ---
 
@@ -53,14 +46,14 @@ const linkItems = [
     <div class="flex">
       {linkItems.map((item) => (
           <Button
-            class="transition-colors·hover:text-muted-foreground"
+            class="size-9 gap-0 transition-colors hover:text-muted-foreground"
             href={item.url}
             size="icon"
             target="_blank"
-            title={item.title}
+            title={item.name}
             variant="ghost"
           >
-            <Icon name={item.icon} title={item.title} />
+            <Icon name={item.icon} title={item.name} />
           </Button>
         ))}
     </div>
