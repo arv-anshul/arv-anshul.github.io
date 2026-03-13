@@ -24,6 +24,12 @@ socials:
   - name: YouTube
     icon: simple-icons:youtube
     url: https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ
+  - name: IMDb
+    icon: simple-icons:imdb
+    url: https://www.imdb.com/user/ur173640968
+  - name: Spotify
+    icon: simple-icons:spotify
+    url: https://open.spotify.com/user/wk6gxe954mv4qbttc4tnvyw8t
 
 tech_stack:
   Programming Languages:
