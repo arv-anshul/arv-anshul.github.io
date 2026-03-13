@@ -53,7 +53,6 @@ export default defineConfig({
   },
   markdown: {
     syntaxHighlight: false,
-    // TODO: Remove redundant remark and rehype plugins
     remarkPlugins: [
       [remarkGfm, { singleTilde: false }],
       remarkGithubAlerts,
