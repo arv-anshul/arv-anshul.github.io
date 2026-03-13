@@ -2,11 +2,9 @@
 pubDate: 2024-01-08T09:44
 description: Conventions to follow for Dev Journal entries.
 icon: mdi:notebook-multiple
-title: Journal
+title: Dev Journal
 categories: [thoughts, journal, diary]
 ---
-
-# Dev Journal
 
 I came to know about **Dev Journal** [from this YouTube video](https://youtu.be/hcQ7avj6Zrg).
 

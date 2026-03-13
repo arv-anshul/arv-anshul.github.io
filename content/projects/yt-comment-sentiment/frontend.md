@@ -1,12 +1,10 @@
 ---
 pubDate: 2024-12-27
 icon: simple-icons:vuedotjs
-title: Frontend Side
+title: YT Comment Sentiment - Frontend Side
 description: Built frontend of project using VueJs + Vite and hosted on GitHub Pages.
 categories: [project, frontend]
 ---
-
-# YT Comment Sentiment - Frontend Side
 
 |                                                                                                      Technology | Description                                                                                    |
 | --------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------- |

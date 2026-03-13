@@ -25,7 +25,8 @@ maintain the certainty.
 
 > [!question] Why render from `yaml` format?
 >
-> Because I am going to define a schema for that which follows a certain format and using that format the webpage is being rendered using [`mkdocs-markdownextradata-plugin`](https://pypi.org/project/mkdocs-markdownextradata-plugin/).
+> Because I am going to define a schema for that which follows a certain format and using that format the webpage is
+> being rendered using [`mkdocs-markdownextradata-plugin`](https://pypi.org/project/mkdocs-markdownextradata-plugin/).
 
 ### How to Add Friends?
 
