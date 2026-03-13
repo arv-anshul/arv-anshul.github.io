@@ -48,6 +48,8 @@ export default defineConfig({
     "/hf": "https://hf.co/arv-anshul",
     "/kaggle": "https://kaggle.com/arvanshul",
     "/youtube": "https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ",
+    "/imdb": "https://www.imdb.com/user/ur173640968",
+    "/spotify": "https://open.spotify.com/user/wk6gxe954mv4qbttc4tnvyw8t",
   },
   markdown: {
     syntaxHighlight: false,

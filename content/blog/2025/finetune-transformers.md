@@ -84,10 +84,8 @@ A pre-trained model which we are going to finetune using our custom dataset.
 
 - [Auto Classes](https://huggingface.co/docs/transformers/model_doc/auto)
 - [Model Configuration](https://huggingface.co/docs/transformers/main_classes/configuration)
-
 - [`transformers.AutoModel`](https://huggingface.co/docs/transformers/v4.47.1/en/autoclass_tutorial#automodel)
--
-  - [`transformers.BERTModel`](https://huggingface.co/docs/transformers/model_doc/bert)
+- [`transformers.BERTModel`](https://huggingface.co/docs/transformers/model_doc/bert)
 
 #### BERT Model
 

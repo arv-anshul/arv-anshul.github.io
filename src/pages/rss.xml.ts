@@ -18,9 +18,11 @@ export async function GET(context: RSSOptions) {
     })
   );
 
-  const blog = await getCollection("blog");
-  const projects = await getCollection("projects");
-  const journal = await getCollection("journal");
+  const [blog, projects, journal] = await Promise.all([
+    getCollection("blog"),
+    getCollection("projects"),
+    getCollection("journal"),
+  ]);
 
   const allContent = [
     ...blog.map((entry) => ({

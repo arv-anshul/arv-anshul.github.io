@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { socialProfileSchema } from "./common";
 
 const friendInfoSchema = z.object({

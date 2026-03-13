@@ -23,7 +23,9 @@ const linkItems = [
     name: "RSS Feed",
     icon: "lucide:rss",
   },
-  ...infoData.socials.filter((item) => !["Website"].includes(item.name)),
+  ...infoData.socials.filter(
+    (item) => !["Website", "IMDb", "Spotify"].includes(item.name)
+  ),
 ];
 ---
 

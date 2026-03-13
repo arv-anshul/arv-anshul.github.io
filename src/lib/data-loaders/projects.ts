@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { iconSchema, socialProfileSchema } from "./common";
 
 const projectSchema = z.object({

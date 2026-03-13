@@ -9,8 +9,6 @@ links:
   - "📝 GitHub Repo": https://github.com/arv-anshul/yt-watch-history/
 ---
 
-# ML Systems Doubts
-
 I've been working on a **project of Machine Learning** where I am using Docker to containerise my applications (frontend
 and backend). But I'm facing difficulties while using ML models in the containers.
 

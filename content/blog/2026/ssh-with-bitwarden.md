@@ -15,9 +15,11 @@ the data only the private key is able to decrypt the data.
 ## Manage SSH with Bitwarden
 
 1. Generate new SSH key:
+
    ```bash
    ssh-keygen -t ed25519 -C "email@example.com" -f "~/.ssh/new-ssh"
    ```
+
 2. The command generates two files
    - `~/.ssh/new-ssh`: Contains the PRIVATE KEY. _**DO NOT SHARE THIS.**_
    - `~/.ssh/new-ssh.pub`: Contains you public key.
@@ -25,16 +27,21 @@ the data only the private key is able to decrypt the data.
    field. The Public Key and Fingerprint field will gets update automatically.
 4. Again in Bitwarden, go to Settings > Check "Enable SSH agent".
 5. Add the Bitwarden socket file path in your config (`.bashrc` or `.zshrc`) file. Then, restart your terminal.
+
    ```bash
    # For Linux/MacOS
    export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
    ```
+
 6. Now, delete the `~/.ssh/new-ssh` file. After this you only have the `~/.ssh/new-ssh.pub` file.
+
    ```bash
    rm ~/.ssh/new-ssh
    ```
+
 7. Add the Public Key (content of `~/.ssh/new-ssh.pub`) in your GitHub account.
 8. Now create `~/.ssh/config` file to add the host configuration.
+
    ```bash title="~/.ssh/config"
    HostName github.com
     User git
@@ -42,11 +49,15 @@ the data only the private key is able to decrypt the data.
     IdentityFile ~/.ssh/new-ssh
     IdentitiesOnly yes
    ```
+
 9. Check where your config works?
+
    ```bash
    ssh -T git@github.com
    ```
+
 10. Clone GitHub repo like:
+
     ```bash
     git clone git@github.com:user/repo
     ```

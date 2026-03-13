@@ -64,7 +64,7 @@ like:
 
 ---
 
-# 🔎 Job Finder - Raycast Note
+> 🔎 Job Finder - Raycast Note
 
 ## Current Plan
 
