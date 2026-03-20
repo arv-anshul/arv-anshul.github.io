@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/starwind/item";
+import BaseLayout from "@/layouts/base-layout.astro";
+import { loadAllProjects } from "@/lib/data-loaders/all-projects";
+
+const { projects } = await loadAllProjects();
+---
+
+<BaseLayout
+  title="All Projects - ARV"
+  description="See all of my minor projects created by ARV."
+  nav={{ sticky: true }}
+>
+  <div>
+    <h1 class="font-heading text-3xl font-bold md:text-center mb-6">
+      All Projects Index
+    </h1>
+    <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
+      {projects.map((project) => (
+        <Item as="a" class="py-3" href={project.url} target="_blank" variant="outline">
+          <ItemMedia class="h-full">
+            <Icon name={project.icon} size={35} />
+          </ItemMedia>
+          <ItemContent class="gap-1">
+            <ItemTitle class="font-bold text-base">{project.title}</ItemTitle>
+            <ItemDescription class="line-clamp-2 text-wrap">{project.description}</ItemDescription>
+          </ItemContent>
+        </Item>
+      ))}
+    </ItemGroup>
+  </div>
+</BaseLayout>
