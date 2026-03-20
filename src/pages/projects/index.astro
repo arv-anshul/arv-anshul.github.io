@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "@/components/project-card.astro";
+import Button from "@/components/starwind/button";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadProjectsData } from "@/lib/data-loaders/projects";
 
@@ -20,5 +21,11 @@ const { projects } = await loadProjectsData();
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
     </section>
+  </div>
+
+  <div class="flex flex-1 justify-center mt-5">
+    <Button class="h-auto w-auto py-1.5 px-12" size="lg" href="/projects/all"
+      >See All Projects</Button
+    >
   </div>
 </BaseLayout>
