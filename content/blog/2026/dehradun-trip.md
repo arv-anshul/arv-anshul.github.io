@@ -184,6 +184,64 @@ window to see the bikes but couldn't. Although my pain was vanished by then beca
 lights came back, I quickly jump from the bed get near to the window to peek the bikes and they are there with no
 hindrance. We all got relief and slept.
 
-## Day 04
+## Day 04: Last Ride to Rishikesh
 
-coming soon...
+Before check out, we had decided to visit Landour and came till 10 o'clock and check out. The roads to Landour is too
+slant, it just there is almost no traffic that's why I am able to ride it easily, otherwise it would be harder. We
+returned before 10 and check out. But before riding to Rishikesh we ordered food at hotel because it was too good to be
+true. After having the breakfast we moved. It is even harder to go downhill than riding uphill because you have to
+constantly keep your fingers on clutch and break.
+
+After passing the Dehradun city you will get a very nice highway that's where I touched 113km. It was terrific and
+awesome. After this speed I got overconfident and started overtaking couple of cars and taxis. Once I increased to 50+
+and try to overtake and just then a curve came up where I flicker a bit and rubbed into the middle wall of the road but
+thankfully I didn't crash. No one's got hurt not even me. Just my shoes got damaged which belongs to Ankit. We stopped
+nearby and checked if there's any major damage in the bike but there wasn't.
+
+We reached Rishikesh and we need to find a hotel. There is too much traffic and heat. While searching for hotel I lost
+Ankit way and stopped and wait till they found a hotel. When got it at ₹2,000. I started moving with Map in my phone and
+phone in my shirt's upper pocket. It took me almost 30-40 minutes to reach hotel. There was too much heat that I have to
+take bath, can you believe it? We take rest of 1 hour before exploring Rishikesh.
+
+I have only one shirt left to wear which is only for warm climate and I got it in Rishikesh. We visited Triveni ghat by
+Auto because of the traffic and the decision was actually right. Attend the Ganga Aarti and sang Hanuman Chalisa there.
+Then moved towards Ram Jhula but we didn't walk on it because we are out of time and the bridge was shivering too much
+while walking. Then we walked to hotel and slept.
+
+## Day 05: Trip Hangover
+
+We packed and check out before 9 o'clock, we reached bike rental shop just before 11 and returned the bike. Bhaiya asked
+have you crashed anywhere but we rejected.
+
+Now we have 5 hours before our bus to ISBT Kashmere Gate, Delhi. We found a cafe where we ate Aaloo Pratha and sat till
+03 PM. Then we took our trolley from bike rental shop and moved to Bus Stand. Got into bus and slept. Then we dinner at
+the bus stoppage and reached Delhi on time. We took Cab and gone to NDLS railway station. We waited for 5 hours there in
+waiting room.
+
+Sat on train at 06 AM morning and reached Bhopal on time at 02:20 PM. We took Cab to Dosa shop because hostel has no
+food at that time. We ate Dosa and slept.
+
+---
+
+## Miscellaneous
+
+There are stuffs I wanted to share regarding this trip.
+
+### An Expense Tracker
+
+We are three but only one pays in whole trip and at the end every spends splits and the amount was returned. In Jaipur
+trip, I paid all the expense and in this Tanu Didi paid. At first I was not going that's I thought about creating an
+Excel sheet to track our expense. The next day of return I made an Excel sheet, and entered all the expense which was
+noted down in Notes app by Ankit.
+
+[Dehradun Trip Expenses - Excel Sheet](/blog/2026/assets/dehradun-trip-expenses.xlsx)
+
+### A Chatting Group
+
+It will be very helpful if you create a chatting group for the trip. You can share important common information there.
+We have created a group on WhatsApp.
+
+### Backpack
+
+In my opinion, you should only keep the essential things in your backpack also keep it manageable so that you can carry
+it easily for long time without fatigue.

@@ -26,7 +26,15 @@ const DEFAULT_MAPPINGS: SyncMapping[] = [
   { contentDir: "content/blog", outputDir: "blog" },
 ];
 
-const DEFAULT_EXTENSIONS = [".png", ".pdf", ".gif", ".svg", ".jpeg", ".jpg"];
+const DEFAULT_EXTENSIONS = [
+  ".png",
+  ".pdf",
+  ".gif",
+  ".svg",
+  ".jpeg",
+  ".jpg",
+  ".xlsx",
+];
 
 const MIME_TYPES: Record<string, string> = {
   ".png": "image/png",
