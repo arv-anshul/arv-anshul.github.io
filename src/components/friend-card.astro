@@ -8,6 +8,7 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
+  CardHeader,
   CardTitle,
 } from "@/components/starwind/card";
 import type { FriendsData } from "@/lib/data-loaders/friends";
@@ -20,34 +21,39 @@ interface Props extends HTMLAttributes<"div"> {
 const { friend, class: className, ...props } = Astro.props as Props;
 ---
 
-<Card class={cn("items-center gap-3", className)} {...props} data-card>
-  <a
-    href={friend.primary_url}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label={`Visit ${friend.name}'s website`}
-    class="h-30 w-30"
-  >
-    <Image
-      src={friend.avatar}
-      alt={`${friend.name} avatar`}
-      class="rounded-full object-cover"
-      height="300"
-      width="300"
-    />
-  </a>
-
-  <CardContent>
+<Card
+  class={cn("bg-transparent items-center gap-3", className)}
+  {...props}
+  data-card
+>
+  <CardHeader class="flex flex-col gap-0 items-center w-full">
+    <a
+      href={friend.primary_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Visit ${friend.name}'s website`}
+      class="h-30 w-30"
+    >
+      <Image
+        src={friend.avatar}
+        alt={`${friend.name} avatar`}
+        class="rounded-full object-cover"
+        height="300"
+        width="300"
+      />
+    </a>
     <CardTitle class="text-lg font-bold">{friend.name}</CardTitle>
     <CardDescription class="text-sm">{friend.profession}</CardDescription>
+  </CardHeader>
+
+  <CardContent
+    class="text-sm text-justify leading-relaxed text-foreground px-4 mb-auto"
+  >
+    {friend.description}
   </CardContent>
 
-  <CardDescription class="text-sm leading-relaxed text-foreground px-4 mb-auto">
-    {friend.description}
-  </CardDescription>
-
   <CardFooter
-    class="flex flex-wrap gap-2 justify-center w-full p-1 border-t border-muted"
+    class="bg-transparent flex flex-wrap gap-2 justify-center w-full p-2 border-t"
   >
     {friend.socials.map((social) => (
         <Button
@@ -55,9 +61,9 @@ const { friend, class: className, ...props } = Astro.props as Props;
           size="icon-sm"
           target="_blank"
           title={social.name}
-          variant="ghost"
+          variant="outline"
         >
-          <Icon name={social.icon} />
+          <Icon name={social.icon} size="20" />
         </Button>
       ))}
   </CardFooter>

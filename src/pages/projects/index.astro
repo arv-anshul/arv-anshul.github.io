@@ -12,20 +12,16 @@ const { projects } = await loadProjectsData();
   description="See all the project created by ARV."
   nav={{ sticky: true }}
 >
-  <div>
-    <h1 class="font-heading text-3xl font-bold md:text-center mb-6">
-      Projects
-    </h1>
-    <section>
-      <div class="grid gap-4 md:grid-cols-2">
-        {projects.map((project) => <ProjectCard project={project} />)}
-      </div>
-    </section>
+  <h1 class="font-heading text-3xl font-bold md:text-center mb-6">Projects</h1>
+  <div class="grid gap-4 md:grid-cols-2">
+    {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 
-  <div class="flex flex-1 justify-center mt-5">
-    <Button class="h-auto w-auto py-1.5 px-12" size="lg" href="/projects/all"
-      >See All Projects</Button
-    >
-  </div>
+  <Button
+    class="text-center mt-5 mx-auto w-fit block h-auto py-1.5 px-12"
+    size="lg"
+    href="/projects/all"
+  >
+    See All Projects
+  </Button>
 </BaseLayout>
