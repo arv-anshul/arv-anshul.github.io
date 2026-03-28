@@ -40,7 +40,7 @@ const basePath = "/blog";
             <div
               class="blog-post-item"
               data-page={page}
-              style={page !== 1 ? "display:none" : undefined}
+              style={page === 1 ? undefined: "display:none"}
             >
               <FrontmatterCard
                 data={post.data}

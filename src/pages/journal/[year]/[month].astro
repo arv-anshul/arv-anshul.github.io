@@ -36,7 +36,7 @@ const { Content } = await render(journal);
     basic: {
       title: journal.data.title,
       type: "website",
-      image: new URL(`og.webp`, Astro.url).toString(),
+      image: new URL("og.webp", Astro.url).toString(),
       url: Astro.url,
     },
     article: {

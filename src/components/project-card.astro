@@ -22,7 +22,7 @@ interface Props extends HTMLAttributes<"div"> {
 const { project, class: className, ...props } = Astro.props as Props;
 ---
 
-<Card class={cn("bg-transparent gap-4 pt-4", className)} {...props}>
+<Card class={cn("gap-4 bg-transparent pt-4", className)} {...props}>
   <CardHeader class="flex flex-wrap justify-between items-start px-4">
     <div>
       <CardTitle class="flex items-center gap-1 font-bold">

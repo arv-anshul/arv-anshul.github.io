@@ -11,7 +11,7 @@ repos:
           - --maxkb=5000 # 5MB
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.1.15
+    rev: v0.1.62
     hooks:
       - id: rumdl
       - id: rumdl-fmt

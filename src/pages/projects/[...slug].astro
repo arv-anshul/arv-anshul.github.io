@@ -53,7 +53,7 @@ const { Content } = await render(project);
     basic: {
       title: project.data.title,
       type: "website",
-      image: new URL(`og.webp`, Astro.url).toString(),
+      image: new URL("og.webp", Astro.url).toString(),
       url: Astro.url,
     },
     article: {

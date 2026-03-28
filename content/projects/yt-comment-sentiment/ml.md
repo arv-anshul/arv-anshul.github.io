@@ -27,8 +27,6 @@ that we have used
 - Performed intensive EDA by creating many additional features using comment's chars, words and sentences.
 - Generated wordcloud to see different sentiment's frequent words.
 
-[**EDA Notebook**](#)
-
 ## Model Building Steps
 
 - **Comment Vectorization**
