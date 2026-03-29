@@ -1,18 +1,30 @@
 ---
 import { joinPaths } from "@astrojs/internal-helpers/path";
+import Button from "@/components/starwind/button";
 import BaseLayout from "@/layouts/base-layout.astro";
 
-const redirectUrl = joinPaths(Astro.url.toString(), "basic.pdf");
+const resumeUrl = joinPaths(Astro.url.toString(), "basic.pdf");
+
+if (Astro.url.searchParams.get("download")) {
+  Astro.redirect(resumeUrl);
+}
 ---
 
 <BaseLayout
   title="Resume - ARV"
-  description="Resume of ARV in PDF format."
-  nav={{sticky: true}}
+  description="Resume of Anshul Raj Verma in PDF format."
 >
-  <p>Redirecting to <a href={redirectUrl}>resume</a>...</p>
+  <Button
+    href="/resume/download"
+    class="text-center mb-5 mx-auto w-fit block h-auto py-1.5 px-12 animate-pulse"
+  >
+    Download Resume
+  </Button>
+  <div class="p-3 border w-5/6 bg-muted/50 rounded-lg mx-auto">
+    <iframe
+      class="h-200 w-full rounded-lg"
+      src={`https://docs.google.com/viewerng/viewer?url=${resumeUrl}&embedded=true`}
+      title="Anshul Raj Verma - Resume"
+    ></iframe>
+  </div>
 </BaseLayout>
-
-<script is:inline define:vars={{ redirectUrl }}>
-  window.location.replace(redirectUrl);
-</script>

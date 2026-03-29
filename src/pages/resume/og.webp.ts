@@ -1,22 +1,9 @@
-import {
-  getImageBufferFromMarkup,
-  getMarkupFromOgData,
-  type OgImageData,
-} from "@/lib/og";
+// Fetch the OG Image of GitHub repository (https://github.com/arv-anshul/resume) and serve.
 
-const imageData: OgImageData = {
-  title: "Resume - ARV",
-  description: "Resume of ARV in PDF format.",
-  icon: "lucide:scroll-text",
-};
+const IMAGE_URL =
+  "https://repository-images.githubusercontent.com/922600035/72c58a40-21cd-455e-a322-2a76019a66ef";
 
-export const GET = async ({
-  request,
-}: {
-  props: OgImageData;
-  request: Request;
-}) => {
-  const markup = await getMarkupFromOgData(request.url, imageData);
-  const imageBuffer = await getImageBufferFromMarkup(markup);
-  return new Response(imageBuffer);
+export const GET = async () => {
+  const image = await fetch(IMAGE_URL);
+  return new Response(await image.arrayBuffer());
 };
