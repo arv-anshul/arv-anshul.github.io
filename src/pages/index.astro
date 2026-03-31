@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import ExperienceCard from "@/components/experience-card.astro";
+import Button from "@/components/starwind/button";
 import {
   Item,
   ItemContent,
@@ -11,6 +13,7 @@ import {
 } from "@/components/starwind/item";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadInfoData } from "@/lib/data-loaders/info";
+import { loadResumeData } from "@/lib/data-loaders/resume";
 
 const referLinks = [
   {
@@ -52,6 +55,7 @@ const referLinks = [
 ];
 
 const info = await loadInfoData();
+const resume = await loadResumeData();
 ---
 
 <BaseLayout nav={{ sticky: true }} title="Home - ARV">
@@ -115,5 +119,22 @@ const info = await loadInfoData();
           ))}
       </ItemGroup>
     </section>
+
+    <section class="w-full">
+      <h2 class="font-heading font-bold text-2xl" id="experiences">
+        Experiences
+      </h2>
+      <ItemGroup class="mt-4 flex flex-col gap-4">
+        {resume.work.map((item) => <ExperienceCard data={item} />)}
+      </ItemGroup>
+    </section>
+
+    <Button
+      class="text-center mx-auto w-fit block h-auto py-1.5 px-12"
+      size="lg"
+      href="/resume"
+    >
+      See My Resume
+    </Button>
   </div>
 </BaseLayout>

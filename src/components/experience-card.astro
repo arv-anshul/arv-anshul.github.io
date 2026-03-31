@@ -1,0 +1,83 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemHeader,
+  ItemSeparator,
+  ItemTitle,
+} from "@/components/starwind/item";
+import type { ResumeData } from "@/lib/data-loaders/resume";
+import { cn } from "@/lib/utils";
+
+interface Props extends HTMLAttributes<"div"> {
+  data: ResumeData["work"][number];
+}
+
+const { data, class: className, ...props } = Astro.props as Props;
+
+function formatDuration(startDate: string, endDate: string) {
+  const parseStr = (s: string) => {
+    if (!s || s.toLowerCase() === "present") {
+      return { label: "Present", date: new Date() };
+    }
+    const parts = s.split("-").map(Number);
+    const date = new Date(parts[0], parts[1] ? parts[1] - 1 : 0);
+    const label = date.toLocaleDateString("en-US", {
+      month: "short",
+      year: "numeric",
+    });
+    return { label, date };
+  };
+
+  const start = parseStr(startDate);
+  const end = parseStr(endDate);
+
+  const monthsDiff =
+    (end.date.getFullYear() - start.date.getFullYear()) * 12 +
+    (end.date.getMonth() - start.date.getMonth()) +
+    1;
+  const years = Math.floor(monthsDiff / 12);
+  const months = monthsDiff % 12;
+
+  const durationParts: string[] = [];
+  if (years > 0) {
+    durationParts.push(`${years} yr${years > 1 ? "s" : ""}`);
+  }
+  if (months > 0) {
+    durationParts.push(`${months} ${months > 1 ? "months" : "month"}`);
+  }
+
+  const durationStr =
+    durationParts.length > 0 ? ` (${durationParts.join(" ")})` : "";
+  return `${start.label} - ${end.label}${durationStr}`;
+}
+
+const dateString = formatDuration(data.startDate, data.endDate);
+---
+
+<Item
+  class={cn("flex flex-col items-start gap-4 text-start", className)}
+  variant="outline"
+  {...props}
+>
+  <ItemHeader class="flex flex-col items-start gap-1">
+    <ItemTitle class="text-lg font-bold">{data.position}</ItemTitle>
+    <ItemDescription class="text-sm">
+      @{data.name}
+      &bull; {data.summary}
+      &bull; {dateString}
+    </ItemDescription>
+  </ItemHeader>
+
+  {data.highlights.length > 0 && <ItemSeparator class="w-full" />}
+
+  <ItemContent class="w-full">
+    <ul
+      class="ml-3 flex flex-col gap-2 list-disc text-sm text-muted-foreground marker:text-muted-foreground/50"
+    >
+      {data.highlights.map((item) => <li>{item}</li>)}
+    </ul>
+  </ItemContent>
+</Item>
