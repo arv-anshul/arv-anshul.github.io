@@ -23,10 +23,10 @@ const middleLinks = [
   { href: "/projects", title: "Projects", icon: "lucide:rocket" },
   { href: "/blog", title: "Blog", icon: "lucide:newspaper" },
   { href: "/journal", title: "Journal", icon: "lucide:notebook-pen" },
+  { href: "/resume", title: "Resume", icon: "lucide:scroll-text" },
 ];
 
 const endLinks = [
-  { href: "/resume", title: "Resume", icon: "lucide:scroll-text" },
   {
     href: "/github",
     title: "GitHub",
@@ -42,7 +42,7 @@ const endLinks = [
   )}
 >
   <div
-    class="flex items-center justify-between md:w-2/3 xl:w-3/5 mx-auto px-4 md:px-0 gap-x-4 py-1"
+    class="flex items-center justify-between md:w-2/3 xl:w-3/5 mx-auto px-4 md:px-0 gap-x-2 py-1"
   >
     <!-- Home/Logo -->
     <div class="flex items-center">
@@ -57,19 +57,21 @@ const endLinks = [
 
     <!-- Desktop Navigation -->
     <nav class="ml-2 mr-auto">
-      <ul class="flex items-center gap-5">
+      <ul class="flex items-center">
         {middleLinks.map((link) => (
             <li>
-              <a
-                class="flex items-center gap-x-1 font-medium text-foreground text-sm transition-opacity hover:opacity-70"
+              <Button
+                class="flex items-center gap-x-1"
                 href={link.href}
+                size="sm"
+                variant="ghost"
               >
                 <Icon
                 class="hidden md:inline"
                 name={link.icon}
                 />
                 {link.title}
-              </a>
+              </Button>
             </li>
           ))}
       </ul>
