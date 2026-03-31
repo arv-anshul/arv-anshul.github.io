@@ -1,6 +1,3 @@
-@import "@fontsource-variable/inter";
-@import "@fontsource-variable/geist-mono";
-
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/forms";
@@ -110,8 +107,8 @@
   --input: var(--color-zinc-200);
   --outline: var(--color-zinc-400);
   --radius: 0.375rem;
-  --font-heading: "Inter Variable", var(--font-sans);
-  --font-mono: "Geist Mono Variable", monospace;
+  --font-heading: var(--font-inter), var(--font-sans);
+  --font-mono: var(--font-geist-mono), monospace;
 
   /* sidebar variables */
   --sidebar-background: var(--color-zinc-50);
@@ -170,7 +167,7 @@
   }
 
   body {
-    font-family: "Inter Variable", var(--font-sans);
+    font-family: var(--font-inter), var(--font-sans);
     @apply bg-background text-foreground scheme-light dark:scheme-dark;
   }
 

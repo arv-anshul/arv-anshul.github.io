@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 import yaml from "@rollup/plugin-yaml";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
 import mermaid from "astro-mermaid";
 import pagefind from "astro-pagefind";
@@ -25,6 +25,18 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  fonts: [
+    {
+      name: "Inter",
+      cssVariable: "--font-inter",
+      provider: fontProviders.fontsource(),
+    },
+    {
+      name: "Geist Mono",
+      cssVariable: "--font-geist-mono",
+      provider: fontProviders.fontsource(),
+    },
+  ],
   integrations: [
     icon(),
     mdx(),
