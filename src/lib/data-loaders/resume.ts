@@ -26,8 +26,8 @@ export const resumeSchema = z.object({
       institution: z.string(),
       area: z.string(),
       studyType: z.string(),
-      startDate: z.coerce.number().min(1900),
-      endDate: z.coerce.number().min(1900),
+      startDate: z.string(),
+      endDate: z.string(),
       score: z.string(),
     })
   ),
