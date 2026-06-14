@@ -1,5 +1,6 @@
 // @ts-check
 
+import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
@@ -65,56 +66,61 @@ export default defineConfig({
   },
   markdown: {
     syntaxHighlight: false,
-    remarkPlugins: [
-      [remarkGfm, { singleTilde: false }],
-      remarkGithubAlerts,
-      remarkMath,
-    ],
-    rehypePlugins: [
-      rehypeSlug,
-      rehypeKatex,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "append",
-          properties: { class: "heading-anchor", ariaLabel: "Link to section" },
-          content: h("span.heading-anchor-icon", [
-            s(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: 24,
-                height: 24,
-                viewBox: "0 0 24 24",
-                fill: "none",
-                stroke: "currentColor",
-                strokeWidth: 2,
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-              },
-              [
-                s("path", {
-                  d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71",
-                }),
-                s("path", {
-                  d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71",
-                }),
-              ]
-            ),
-          ]),
-        },
+    processor: unified({
+      remarkPlugins: [
+        [remarkGfm, { singleTilde: false }],
+        remarkGithubAlerts,
+        remarkMath,
       ],
-      [
-        rehypePrettyCode,
-        {
-          transformers: [
-            transformerCopyButton({
-              visibility: "hover",
-              feedbackDuration: 2500,
-            }),
-          ],
-        },
+      rehypePlugins: [
+        rehypeSlug,
+        rehypeKatex,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: "append",
+            properties: {
+              class: "heading-anchor",
+              ariaLabel: "Link to section",
+            },
+            content: h("span.heading-anchor-icon", [
+              s(
+                "svg",
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: 24,
+                  height: 24,
+                  viewBox: "0 0 24 24",
+                  fill: "none",
+                  stroke: "currentColor",
+                  strokeWidth: 2,
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                },
+                [
+                  s("path", {
+                    d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71",
+                  }),
+                  s("path", {
+                    d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71",
+                  }),
+                ]
+              ),
+            ]),
+          },
+        ],
+        [
+          rehypePrettyCode,
+          {
+            transformers: [
+              transformerCopyButton({
+                visibility: "hover",
+                feedbackDuration: 2500,
+              }),
+            ],
+          },
+        ],
       ],
-    ],
+    }),
   },
 });

@@ -9,10 +9,10 @@ friends:
     socials:
       - name: Github
         url: https://github.com/arv-anshul
-        icon: lucide:github
+        icon: simple-icons:github
       - name: LinkedIn
         url: https://linkedin.com/in/arv-anshul
-        icon: lucide:linkedin
+        icon: simple-icons:linkedin
       - name: Resume
         url: https://arv-anshul.github.io/resume
         icon: lucide:scroll-text
@@ -34,7 +34,7 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/Wcowin
-        icon: lucide:github
+        icon: simple-icons:github
       - name: Personal Website
         url: https://wcowin.work/
         icon: lucide:globe
@@ -54,10 +54,10 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/somtoval
-        icon: lucide:github
+        icon: simple-icons:github
       - name: LinkedIn profile
         url: https://linkedin.com/in/somto-ogbe
-        icon: lucide:linkedin
+        icon: simple-icons:linkedin
       - name: Email
         url: mailto:ogbesomto4@gmail.com
         icon: lucide:mail
@@ -74,10 +74,10 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/rahulkr30
-        icon: lucide:github
+        icon: simple-icons:github
       - name: LinkedIn profile
         url: https://linkedin.com/in/rahul-kumar30
-        icon: lucide:linkedin
+        icon: simple-icons:linkedin
       - name: Email
         url: mailto:rahulkr30101@gmail.com
         icon: lucide:mail
@@ -96,10 +96,10 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/dipanjanpathak
-        icon: lucide:github
+        icon: simple-icons:github
       - name: LinkedIn profile
         url: https://www.linkedin.com/in/dipanjanpathak/
-        icon: lucide:linkedin
+        icon: simple-icons:linkedin
       - name: Email
         url: mailto:dipanjanpathak@gmail.com
         icon: lucide:mail

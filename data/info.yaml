@@ -13,10 +13,10 @@ socials:
     icon: lucide:globe
     url: https://arv-anshul.github.io
   - name: GitHub
-    icon: lucide:github
+    icon: simple-icons:github
     url: https://github.com/arv-anshul
   - name: LinkedIn
-    icon: lucide:linkedin
+    icon: simple-icons:linkedin
     url: https://linkedin.com/in/arv-anshul
   - name: E-Mail
     icon: lucide:mail
@@ -59,8 +59,8 @@ tech_stack:
     - name: Redis
       icon: simple-icons:redis
   Development Tools:
-    - name: pre-commit
-      icon: simple-icons:precommit
+    - name: prek
+      icon: simple-icons:prek
     - name: Starship
       icon: simple-icons:starship
     - name: Raycast
@@ -69,11 +69,17 @@ tech_stack:
       icon: simple-icons:zedindustries
     - name: Typst
       icon: simple-icons:typst
-    - name: Google Gemini
-      icon: simple-icons:googlegemini
+    - name: Pi Coding Agent
+      icon: simple-icons:pi
+    - name: Helium Browser
+      icon: simple-icons:heliumbrowser
+    - name: Ghostty
+      icon: simple-icons:ghostty
   Dev Ops & ML Ops:
     - name: Docker
       icon: simple-icons:docker
+    - name: Podman
+      icon: simple-icons:podman
     - name: GitHub Actions
       icon: simple-icons:githubactions
     - name: MLFlow
