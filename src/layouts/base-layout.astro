@@ -32,13 +32,12 @@ const {
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="viewport" content="width=device-width">
-    <meta name="generator" content={Astro.generator}>
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml">
+    <meta content="width=device-width" name="viewport">
+    <meta content={Astro.generator} name="generator">
     <Font cssVariable="--font-inter" />
     <Font cssVariable="--font-geist-mono" />
     <SEO
-      title={title}
       description={description}
       openGraph={{
         basic: {
@@ -49,16 +48,21 @@ const {
         },
         optional: {
           description,
+          siteName: "Anshul Raj Verma",
         },
         ...seo,
       }}
+      title={title}
+      twitter={{
+        card: "summary_large_image",
+      }}
     />
-    <link rel="sitemap" href="/sitemap-index.xml">
+    <link href="/sitemap-index.xml" rel="sitemap">
     <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="ARV's Blog RSS"
       href={new URL("rss.xml", Astro.site)}
+      rel="alternate"
+      title="ARV's Blog RSS"
+      type="application/rss+xml"
     >
     <script is:inline set:html={themeInit} />
   </head>

@@ -1,23 +1,22 @@
-import Pagination, { pagination } from "./Pagination.astro";
-import PaginationContent, {
+import Pagination from "./Pagination.astro";
+import PaginationContent from "./PaginationContent.astro";
+import PaginationEllipsis from "./PaginationEllipsis.astro";
+import PaginationItem from "./PaginationItem.astro";
+import PaginationLink from "./PaginationLink.astro";
+import PaginationNext from "./PaginationNext.astro";
+import PaginationPrevious from "./PaginationPrevious.astro";
+import {
+  pagination,
   paginationContent,
-} from "./PaginationContent.astro";
-import PaginationEllipsis, {
   paginationEllipsis,
-} from "./PaginationEllipsis.astro";
-import PaginationItem, { paginationItem } from "./PaginationItem.astro";
-import PaginationLink, { paginationLink } from "./PaginationLink.astro";
-import PaginationNext, { paginationNext } from "./PaginationNext.astro";
-import PaginationPrevious, {
+  paginationNext,
   paginationPrevious,
-} from "./PaginationPrevious.astro";
+} from "./variants";
 
 const PaginationVariants = {
   pagination,
   paginationContent,
   paginationEllipsis,
-  paginationItem,
-  paginationLink,
   paginationNext,
   paginationPrevious,
 };

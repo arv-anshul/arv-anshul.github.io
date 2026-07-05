@@ -19,12 +19,12 @@ const BASE_COLLECTION_SCHEMA = z.object({
 });
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "content/blog" }),
+  loader: glob({ pattern: "**/*.md", base: "content/blog" }),
   schema: BASE_COLLECTION_SCHEMA,
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "content/projects" }),
+  loader: glob({ pattern: "**/*.md", base: "content/projects" }),
   schema: BASE_COLLECTION_SCHEMA,
 });
 

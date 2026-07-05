@@ -44,14 +44,14 @@ export async function getMarkupFromEntry(
     <!-- Outer Background to simulate depth -->
     <div tw="flex w-full h-full bg-zinc-950 p-3">
       <!-- Main Card -->
-      <div tw="flex flex-col justify-between w-full h-full rounded-3xl border-4 border-zinc-800 bg-zinc-900 p-12 shadow-2xl">
+      <div tw="flex flex-col justify-between w-full h-full rounded-2xl border-2 border-zinc-800 bg-zinc-900 p-12">
 
         <!-- Top Content Wrapper -->
         <div tw="flex flex-col w-full">
           <!-- Header row -->
           <div tw="flex items-center w-full mb-8">
             <!-- Icon -->
-            <div tw="flex items-center justify-center w-40 h-40 rounded-3xl bg-zinc-800 border-2 border-zinc-700 mr-10 shadow-lg shrink-0">
+            <div tw="flex items-center justify-center w-40 h-40 rounded-xl bg-zinc-800 border border-zinc-700 mr-10 shrink-0">
               <img src="${iconDataUri}" tw="h-25 w-25" />
             </div>
 
@@ -76,7 +76,7 @@ export async function getMarkupFromEntry(
           </div>
 
           <!-- Description -->
-          <p tw="text-3xl mt-0 text-zinc-400 leading-relaxed overflow-hidden max-h-32">
+          <p tw="text-3xl mt-0 text-zinc-400 leading-relaxed overflow-hidden max-h-44">
             ${data.description}
           </p>
         </div>
@@ -110,7 +110,7 @@ export async function getMarkupFromOgData(url: string, data: OgImageData) {
     <!-- Outer Background to simulate depth -->
     <div tw="flex w-full h-full bg-zinc-950 p-3">
       <!-- Main Card -->
-      <div tw="flex flex-col justify-between items-center w-full h-full rounded-3xl border-4 border-zinc-800 bg-zinc-900 p-12 shadow-2xl">
+      <div tw="flex flex-col justify-between items-center w-full h-full rounded-2xl border-2 border-zinc-800 bg-zinc-900 p-12">
 
         <!-- Empty spacer to balance the flex distribution -->
         <div tw="flex w-full h-8 shrink-0"></div>
@@ -118,13 +118,13 @@ export async function getMarkupFromOgData(url: string, data: OgImageData) {
         <!-- Center Content -->
         <div tw="flex flex-col items-center justify-center w-full max-w-4xl">
           <!-- Icon -->
-          <div tw="flex items-center justify-center w-40 h-40 rounded-3xl bg-zinc-800 border-2 border-zinc-700 mb-3 shadow-lg shrink-0">
+          <div tw="flex items-center justify-center w-40 h-40 rounded-xl bg-zinc-800 border border-zinc-700 mb-3 shrink-0">
             <img src="${iconDataUri}" tw="h-25 w-25" />
           </div>
           <!-- Title -->
           <h1 tw="text-7xl font-bold mt-0 mb-3 text-white leading-tight text-center tracking-tight">${data.title}</h1>
           <!-- Description -->
-          <p tw="text-3xl text-zinc-400 mt-0 mb-0 leading-relaxed text-center overflow-hidden max-h-32">${data.description}</p>
+          <p tw="text-2xl text-zinc-400 mt-0 mb-0 leading-relaxed text-center overflow-hidden max-h-48">${data.description}</p>
         </div>
 
         <!-- Footer perfectly locked to the bottom -->

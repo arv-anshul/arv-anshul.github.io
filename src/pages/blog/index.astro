@@ -25,9 +25,9 @@ const basePath = "/blog";
 ---
 
 <BaseLayout
-  title="Blog - ARV"
-  description="Blogs written by ARV."
+  description="Blogs by Anshul Raj Verma on data science, GenAI, LangChain, Python tooling and lessons from building real-world projects."
   nav={{ sticky: true }}
+  title="Blog — Data Science, GenAI & Dev Notes by ARV"
 >
   <div>
     <h1 class="font-heading text-3xl font-bold mb-6 md:text-center">
@@ -147,7 +147,7 @@ const basePath = "/blog";
   </div>
 </BaseLayout>
 
-<script is:inline define:vars={{ totalPages, basePath }}>
+<script define:vars={{ totalPages, basePath }} is:inline>
   // Tailwind classes that differentiate outline (active) from ghost (inactive)
   const OUTLINE_CLASSES = [
     "border",

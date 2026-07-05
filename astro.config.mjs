@@ -1,7 +1,6 @@
 // @ts-check
 
 import { unified } from "@astrojs/markdown-remark";
-import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 import yaml from "@rollup/plugin-yaml";
@@ -40,7 +39,6 @@ export default defineConfig({
   ],
   integrations: [
     icon(),
-    mdx(),
     syncContentAssets(),
     mermaid({
       mermaidConfig: {

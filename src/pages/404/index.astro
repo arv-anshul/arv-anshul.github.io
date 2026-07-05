@@ -3,16 +3,16 @@ import BaseLayout from "@/layouts/base-layout.astro";
 ---
 
 <BaseLayout
-  title="404: Not Found - ARV"
-  description="Oops! page might be missing."
+  description="The page you're looking for may have been moved, renamed or removed. Head back home to explore projects, blog and more."
   seo={{
     basic: {
-      title: "404: Not Found",
+      title: "404 — Page Not Found",
       type: "website",
       image: new URL("/404/og.webp", Astro.url).toString(),
       url: Astro.url,
     },
   }}
+  title="404 — Page Not Found"
 >
   <div
     class="flex flex-col h-[60vh] flex-1 items-center justify-center text-center"
@@ -25,8 +25,8 @@ import BaseLayout from "@/layouts/base-layout.astro";
         changed, or is temporarily unavailable.
       </p>
       <a
-        href="/"
         class="mt-4 px-4 py-2 rounded-md bg-accent font-medium text-sm hover:opacity-80 transition-opacity"
+        href="/"
       >
         Back to Home
       </a>

@@ -1,34 +1,8 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { tv, type VariantProps } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
 
-export const toggle = tv({
-  base: [
-    "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium",
-    "disabled:pointer-events-none disabled:opacity-50",
-    "data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
-    "[&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-    "focus-visible:border-outline focus-visible:ring-3 focus-visible:ring-outline/50",
-    "outline-none transition-colors",
-    "aria-invalid:border-error aria-invalid:ring-error/40",
-  ],
-  variants: {
-    variant: {
-      default: "bg-transparent hover:bg-muted hover:text-muted-foreground",
-      outline:
-        "border border-input bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground",
-    },
-    size: {
-      sm: "h-9 min-w-9 px-2 text-sm",
-      md: "h-11 min-w-11 px-2.5 text-base",
-      lg: "h-12 min-w-12 px-3 text-lg",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "md",
-  },
-});
+import { toggle } from "./variants";
 
 type Props = VariantProps<typeof toggle> &
   HTMLAttributes<"button"> & {
@@ -37,7 +11,7 @@ type Props = VariantProps<typeof toggle> &
      */
     defaultPressed?: boolean;
     /**
-     * Optional sync group name. When set, all toggles with the same sync group will mirror each others state
+     * Optional sync group name. When set, all toggles with the same sync group will mirror each other's state
      */
     syncGroup?: string;
   };
@@ -55,13 +29,13 @@ const dataState = defaultPressed ? "on" : "off";
 ---
 
 <button
-  type="button"
+  aria-pressed={defaultPressed}
   class={toggle({ variant, size, class: `starwind-toggle ${className || ""}` })}
-  data-slot="toggle"
   data-state={dataState}
   data-sync-group={syncGroup}
-  aria-pressed={defaultPressed}
+  type="button"
   {...rest}
+  data-slot="toggle"
 >
   <slot />
 </button>

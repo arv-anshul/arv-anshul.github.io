@@ -30,9 +30,8 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout
-  title={`${post.data.title} - ARV Blog`}
-  description={post.data.description}
   class="md:max-w-3/5"
+  description={post.data.description}
   seo={{
     basic: {
       title: post.data.title,
@@ -45,8 +44,9 @@ const { Content } = await render(post);
       authors: [post.data.author],
     },
   }}
+  title={`${post.data.title} - ARV Blog`}
 >
-  <FrontmatterCard data={post.data} backPageUrl="/blog" />
+  <FrontmatterCard backPageUrl="/blog" data={post.data} />
   <article class="mt-10 w-full" data-pagefind-body>
     <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
   </article>

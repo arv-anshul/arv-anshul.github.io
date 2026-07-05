@@ -5,8 +5,9 @@ import {
 } from "@/lib/og";
 
 const imageData: OgImageData = {
-  title: "Journal - ARV",
-  description: "Weekly Journals written by ARV.",
+  title: "Journal",
+  description:
+    "Weekly journal by Anshul Raj Verma — what I learned, built and shipped each week across data science, GenAI and dev work.",
   icon: "lucide:notebook-pen",
 };
 

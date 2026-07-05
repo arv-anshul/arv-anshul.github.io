@@ -1,43 +1,40 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { tv } from "tailwind-variants";
 
-export const prose = tv({
-  base: "sw-prose max-w-[65ch]",
-});
+import { prose } from "./variants";
 
 type Props = HTMLAttributes<"div">;
 
 const { class: className, ...rest } = Astro.props;
 ---
 
-<div class:list={[prose({ class: className })]} data-slot="prose" {...rest}>
+<div class:list={[prose({ class: className })]} {...rest} data-slot="prose">
   <slot />
 </div>
 
 <style is:global>
   /* ==========================================================================
-   * Starwind Prose - Typography styles for markdown content
-   * Inspired by Tailwind Typography and Astro Starlight
-   * ========================================================================== */
+                     * Starwind Prose - Typography styles for markdown content
+                     * Inspired by Tailwind Typography and Astro Starlight
+                     * ========================================================================== */
 
   /* --------------------------------------------------------------------------
-   * CSS Custom Properties
-   *
-   * Sizing is em-based, so it scales with the inherited font-size.
-   * Control overall size via Tailwind text utilities: text-sm md:text-base
-   *
-   * Override specific values using CSS variables (supports responsive):
-   *   class="[--prose-spacing:1.5em] md:[--prose-spacing:1.25em]"
-   *
-   * Or set on a parent element:
-   *   <div style="--prose-h1-size: 3em;"><Prose>...</Prose></div>
-   * -------------------------------------------------------------------------- */
+                     * CSS Custom Properties
+                     *
+                     * Sizing is em-based, so it scales with the inherited font-size.
+                     * Control overall size via Tailwind text utilities: text-sm md:text-base
+                     *
+                     * Override specific values using CSS variables (supports responsive):
+                     *   class="[--prose-spacing:1.5em] md:[--prose-spacing:1.25em]"
+                     *
+                     * Or set on a parent element:
+                     *   <div style="--prose-h1-size: 3em;"><Prose>...</Prose></div>
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose {
     /* ===================
-     * Typography & Spacing
-     * =================== */
+                       * Typography & Spacing
+                       * =================== */
     --sw-prose-line-height: var(--prose-line-height, 1.6);
     --sw-prose-spacing: var(--prose-spacing, 1.25em);
     --sw-prose-heading-spacing: var(--prose-heading-spacing, 1.5em);
@@ -45,8 +42,8 @@ const { class: className, ...rest } = Astro.props;
     --sw-prose-list-indent: var(--prose-list-indent, 1.625em);
 
     /* ===================
-     * Colors
-     * =================== */
+                       * Colors
+                       * =================== */
     --sw-prose-color: var(
       --prose-color,
       --alpha(var(--color-foreground) / 80%)
@@ -61,8 +58,8 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Headings
-     * =================== */
+                       * Headings
+                       * =================== */
     --sw-prose-heading-font: var(
       --prose-heading-font,
       var(--font-heading, inherit)
@@ -91,8 +88,8 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Links
-     * =================== */
+                       * Links
+                       * =================== */
     --sw-prose-link-color: var(--prose-link-color, var(--color-foreground));
     --sw-prose-link-decoration-color: var(
       --prose-link-decoration-color,
@@ -104,14 +101,14 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Strong/Bold
-     * =================== */
+                       * Strong/Bold
+                       * =================== */
     --sw-prose-strong-color: var(--prose-strong-color, var(--color-foreground));
     --sw-prose-strong-weight: var(--prose-strong-weight, 600);
 
     /* ===================
-     * Blockquote
-     * =================== */
+                       * Blockquote
+                       * =================== */
     --sw-prose-blockquote-color: var(
       --prose-blockquote-color,
       var(--color-foreground)
@@ -126,16 +123,16 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Inline Code
-     * =================== */
+                       * Inline Code
+                       * =================== */
     --sw-prose-code-bg: var(--prose-code-bg, var(--color-muted));
     --sw-prose-code-color: var(--prose-code-color, var(--color-foreground));
     --sw-prose-code-weight: var(--prose-code-weight, 500);
     --sw-prose-code-radius: var(--prose-code-radius, var(--radius-sm));
 
     /* ===================
-     * Pre / Code Blocks
-     * =================== */
+                       * Pre / Code Blocks
+                       * =================== */
     --sw-prose-pre-border-color: var(
       --prose-pre-border-color,
       var(--color-border)
@@ -146,8 +143,8 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Tables
-     * =================== */
+                       * Tables
+                       * =================== */
     --sw-prose-table-heading-color: var(
       --prose-table-heading-color,
       var(--color-foreground)
@@ -158,8 +155,8 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Media (images, video, etc.)
-     * =================== */
+                       * Media (images, video, etc.)
+                       * =================== */
     --sw-prose-media-border-width: var(--prose-media-border-width, 0px);
     --sw-prose-media-border-color: var(
       --prose-media-border-color,
@@ -168,8 +165,8 @@ const { class: className, ...rest } = Astro.props;
     --sw-prose-media-border-radius: var(--prose-media-border-radius, 0);
 
     /* ===================
-     * Mark/Highlight
-     * =================== */
+                       * Mark/Highlight
+                       * =================== */
     --sw-prose-highlight-color: var(
       --prose-highlight-color,
       var(--color-foreground)
@@ -180,8 +177,8 @@ const { class: className, ...rest } = Astro.props;
     );
 
     /* ===================
-     * Base styles
-     * =================== */
+                       * Base styles
+                       * =================== */
     line-height: var(--sw-prose-line-height);
     color: var(--sw-prose-color);
   }
@@ -218,8 +215,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Headings
-   * -------------------------------------------------------------------------- */
+                     * Headings
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose :is(h1, h2, h3, h4, h5, h6):not(:where(.not-sw-prose *)) {
     font-family: var(--sw-prose-heading-font);
@@ -265,8 +262,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Paragraphs
-   * -------------------------------------------------------------------------- */
+                     * Paragraphs
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose p:not(:where(.not-sw-prose *)) {
     margin-top: var(--sw-prose-spacing);
@@ -274,8 +271,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Links
-   * -------------------------------------------------------------------------- */
+                     * Links
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose a:not(:where(.not-sw-prose *)) {
     font-weight: 500;
@@ -296,8 +293,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Strong, Bold, Emphasis
-   * -------------------------------------------------------------------------- */
+                     * Strong, Bold, Emphasis
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose strong:not(:where(.not-sw-prose *)) {
     font-weight: var(--sw-prose-strong-weight);
@@ -309,8 +306,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Lists
-   * -------------------------------------------------------------------------- */
+                     * Lists
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose :is(ul, ol):not(:where(.not-sw-prose *)) {
     padding-inline-start: var(--sw-prose-list-indent);
@@ -376,8 +373,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Blockquotes
-   * -------------------------------------------------------------------------- */
+                     * Blockquotes
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose blockquote:not(:where(.not-sw-prose *)) {
     padding-inline-start: 1rem;
@@ -398,8 +395,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Code (inline)
-   * -------------------------------------------------------------------------- */
+                     * Code (inline)
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose code:not(:where(.not-sw-prose *)) {
     padding: calc(var(--spacing) / 2) calc(var(--spacing) * 1.25);
@@ -419,8 +416,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Pre / Code blocks
-   * -------------------------------------------------------------------------- */
+                     * Pre / Code blocks
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose pre:not(:where(.not-sw-prose *)) {
     padding: 0.75rem 1rem;
@@ -440,8 +437,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Horizontal Rules
-   * -------------------------------------------------------------------------- */
+                     * Horizontal Rules
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose hr:not(:where(.not-sw-prose *)) {
     margin-top: 3em;
@@ -455,8 +452,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Images and Media
-   * -------------------------------------------------------------------------- */
+                     * Images and Media
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose
   :is(img, picture, video, canvas, svg, iframe):not(:where(.not-sw-prose *)) {
@@ -476,8 +473,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Figures and Captions
-   * -------------------------------------------------------------------------- */
+                     * Figures and Captions
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose figure:not(:where(.not-sw-prose *)) {
     margin-top: var(--sw-prose-spacing);
@@ -496,8 +493,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Tables
-   * -------------------------------------------------------------------------- */
+                     * Tables
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose table:not(:where(.not-sw-prose *)) {
     width: 100%;
@@ -561,8 +558,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Keyboard Input
-   * -------------------------------------------------------------------------- */
+                     * Keyboard Input
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose kbd:not(:where(.not-sw-prose *)) {
     display: inline-flex;
@@ -579,13 +576,13 @@ const { class: className, ...rest } = Astro.props;
     background-color: var(--color-muted);
     border-radius: var(--radius-sm);
     /* box-shadow:
-      0 0 0 1px color-mix(in srgb, var(--color-foreground) 10%, transparent),
-      0 2px 0 color-mix(in srgb, var(--color-foreground) 10%, transparent); */
+                        0 0 0 1px color-mix(in srgb, var(--color-foreground) 10%, transparent),
+                        0 2px 0 color-mix(in srgb, var(--color-foreground) 10%, transparent); */
   }
 
   /* --------------------------------------------------------------------------
-   * Details / Summary (Starlight-inspired)
-   * -------------------------------------------------------------------------- */
+                     * Details / Summary (Starlight-inspired)
+                     * -------------------------------------------------------------------------- */
 
   .sw-prose details:not(:where(.not-sw-prose *)) {
     --sw-details-border-color: var(--color-border);
@@ -665,8 +662,8 @@ const { class: className, ...rest } = Astro.props;
   }
 
   /* --------------------------------------------------------------------------
-   * Miscellaneous
-   * -------------------------------------------------------------------------- */
+                     * Miscellaneous
+                     * -------------------------------------------------------------------------- */
 
   /* Abbreviations */
   .sw-prose abbr[title]:not(:where(.not-sw-prose *)) {

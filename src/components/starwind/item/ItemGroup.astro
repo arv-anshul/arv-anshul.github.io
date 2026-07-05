@@ -1,21 +1,18 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { tv } from "tailwind-variants";
+
+import { itemGroup } from "./variants";
 
 type Props = HTMLAttributes<"div">;
-
-export const itemGroup = tv({
-  base: "group/item-group flex flex-col",
-});
 
 const { class: className, ...rest } = Astro.props;
 ---
 
 <div
-  role="list"
   class={itemGroup({ class: className })}
-  data-slot="item-group"
+  role="list"
   {...rest}
+  data-slot="item-group"
 >
   <slot />
 </div>

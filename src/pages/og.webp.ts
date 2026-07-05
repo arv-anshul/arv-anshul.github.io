@@ -5,8 +5,9 @@ import {
 } from "@/lib/og";
 
 const imageData: OgImageData = {
-  title: "Home - ARV",
-  description: "Personal website of ARV built with Astro.",
+  title: "Anshul Raj Verma",
+  description:
+    "Data Scientist building end-to-end GenAI apps with LangChain, LangGraph and MCP. Explore my projects, blog, resume and journal.",
 };
 
 export const GET = async ({

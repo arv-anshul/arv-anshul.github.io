@@ -1,16 +1,11 @@
 ---
 import Moon from "@tabler/icons/outline/moon.svg";
 import Sun from "@tabler/icons/outline/sun.svg";
-import { tv, type VariantProps } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
 
 import { Toggle, ToggleVariants } from "@/components/starwind/toggle";
 
-export const themeToggle = tv({
-  base: [
-    "starwind-theme-toggle",
-    "group hover:border-muted-foreground hover:bg-transparent data-[state=on]:bg-transparent",
-  ],
-});
+import { themeToggle } from "./variants";
 
 type Props = VariantProps<typeof ToggleVariants.toggle> & {
   /**
@@ -33,15 +28,15 @@ const {
 ---
 
 <Toggle
-  class={themeToggle({ class: className })}
-  variant={variant}
-  size={size}
   aria-label={ariaLabel}
-  data-slot="theme-toggle"
+  class={themeToggle({ class: className })}
+  size={size}
+  variant={variant}
   {...rest}
+  data-slot="theme-toggle"
 >
-  <slot
-    ><span class="size-5" data-theme-icon-wrapper>
+  <slot>
+    <span class="size-5" data-theme-icon-wrapper>
       <slot name="light-icon">
         <Sun
           class="hidden size-5 group-data-[state=off]:data-ready:block"
@@ -54,8 +49,8 @@ const {
           data-theme-icon
         />
       </slot>
-    </span></slot
-  >
+    </span>
+  </slot>
 </Toggle>
 
 <script>
@@ -109,7 +104,6 @@ const {
       const newTheme = pressed ? "dark" : "light";
 
       document.documentElement.classList.toggle("dark", pressed);
-      document.documentElement.setAttribute("data-theme", newTheme);
       localStorage.setItem("colorTheme", newTheme);
 
       // Dispatch custom event to sync other theme toggles

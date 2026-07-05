@@ -28,17 +28,17 @@ const { friend, class: className, ...props } = Astro.props as Props;
 >
   <CardHeader class="flex flex-col gap-0 items-center w-full">
     <a
-      href={friend.primary_url}
-      target="_blank"
-      rel="noopener noreferrer"
       aria-label={`Visit ${friend.name}'s website`}
       class="h-30 w-30"
+      href={friend.primary_url}
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <Image
-        src={friend.avatar}
         alt={`${friend.name} avatar`}
         class="rounded-full object-cover"
         height="300"
+        src={friend.avatar}
         width="300"
       />
     </a>

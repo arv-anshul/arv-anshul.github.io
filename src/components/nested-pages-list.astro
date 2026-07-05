@@ -35,7 +35,7 @@ const sortedPages = [...pages].sort((a, b) => {
     <summary
       class="flex items-center gap-2 px-4 py-2.5 cursor-pointer select-none text-sm font-semibold text-foreground bg-muted hover:bg-accent transition-colors duration-200 list-none [&::-webkit-details-marker]:hidden"
     >
-      <Icon name="lucide:layers" class="size-4 opacity-70" />
+      <Icon class="size-4 opacity-70" name="lucide:layers" />
       <span>Related Pages</span>
       <span
         class="ml-auto font-bold text-lg text-muted-foreground leading-none"
@@ -43,12 +43,12 @@ const sortedPages = [...pages].sort((a, b) => {
         {sortedPages.length}
       </span>
       <Icon
-        name="lucide:chevron-down"
         class="size-3.5 shrink-0 transition-transform duration-200 [[open]>&]:rotate-180"
+        name="lucide:chevron-down"
       />
     </summary>
 
-    <ul class="divide-y divide-border" role="list">
+    <ul class="divide-y divide-border">
       {sortedPages.map((page) => {
           const isActive = removeTrailingForwardSlash(
             Astro.url.pathname,

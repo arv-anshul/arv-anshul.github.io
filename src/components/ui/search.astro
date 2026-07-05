@@ -4,13 +4,13 @@ import { Icon } from "astro-icon/components";
 
 <!-- Search Trigger Button -->
 <button
-  id="search-trigger"
-  type="button"
   aria-label="Open search"
-  title="Search (/ or Ctrl+K)"
   class="inline-flex items-center gap-x-1.5 px-2 py-1 text-sm font-mono text-muted-foreground bg-accent hover:bg-muted border border-border rounded-md transition-colors cursor-pointer"
+  id="search-trigger"
+  title="Search (/ or Ctrl+K)"
+  type="button"
 >
-  <Icon name="lucide:search" class="size-4 shrink-0" />
+  <Icon class="size-4 shrink-0" name="lucide:search" />
   <span class="hidden sm:inline text-xs">Search</span>
   <kbd
     class="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-mono text-muted-foreground border border-border rounded px-1 py-0.5 bg-background leading-none"
@@ -21,9 +21,9 @@ import { Icon } from "astro-icon/components";
 
 <!-- Search Modal (Native Dialog) -->
 <dialog
-  id="search-modal"
-  class="fixed z-50 m-0 p-0 bg-transparent border-none outline-none w-full max-w-2xl top-[10vh] left-1/2 -translate-x-1/2 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
   aria-label="Site search"
+  class="fixed z-50 m-0 p-0 bg-transparent border-none outline-none w-full max-w-2xl top-[10vh] left-1/2 -translate-x-1/2 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+  id="search-modal"
 >
   <div
     class="flex flex-col bg-background border border-border rounded-xl shadow-2xl overflow-hidden max-h-[80vh] w-full"
@@ -33,53 +33,53 @@ import { Icon } from "astro-icon/components";
       class="flex items-center gap-x-2 px-4 py-3 border-b border-border shrink-0"
     >
       <Icon
-        name="lucide:search"
         class="size-4 shrink-0 text-muted-foreground"
+        name="lucide:search"
       />
       <input
-        id="search-input"
-        type="text"
-        placeholder="Search…"
         autocomplete="off"
-        spellcheck="false"
         class="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground text-sm outline-none border-none ring-0 font-mono"
+        id="search-input"
+        placeholder="Search…"
+        spellcheck="false"
+        type="text"
       >
       <button
-        id="search-close"
-        type="button"
         aria-label="Close search"
         class="inline-flex items-center justify-center size-6 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors shrink-0 cursor-pointer"
+        id="search-close"
+        type="button"
       >
-        <Icon name="lucide:x" class="size-4" />
+        <Icon class="size-4" name="lucide:x" />
       </button>
     </div>
 
     <!-- Results Area -->
-    <div id="search-results-container" class="overflow-y-auto">
+    <div class="overflow-y-auto" id="search-results-container">
       <!-- Empty state / hint -->
       <div
-        id="search-empty"
         class="flex flex-col items-center justify-center gap-2 py-10 text-muted-foreground text-sm font-mono"
+        id="search-empty"
       >
-        <Icon name="lucide:search" class="size-8 opacity-30" />
+        <Icon class="size-8 opacity-30" name="lucide:search" />
         <p>Type to search…</p>
       </div>
 
       <!-- No results state -->
       <div
-        id="search-no-results"
         class="hidden flex flex-col items-center justify-center gap-2 py-10 text-muted-foreground text-sm font-mono"
+        id="search-no-results"
       >
-        <Icon name="lucide:search-x" class="size-8 opacity-30" />
+        <Icon class="size-8 opacity-30" name="lucide:search-x" />
         <p>No results found.</p>
       </div>
 
       <!-- Results list -->
       <ul
-        id="search-results-list"
-        class="hidden divide-y divide-border py-1"
-        role="listbox"
         aria-label="Search results"
+        class="hidden divide-y divide-border py-1"
+        id="search-results-list"
+        role="listbox"
       ></ul>
     </div>
 
@@ -225,17 +225,17 @@ import { Icon } from "astro-icon/components";
         r.url.replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "") || "/";
 
       li.innerHTML = `
-        <a
-          href="${r.url}"
-          class="flex flex-col gap-0.5 outline-none"
-          tabindex="-1"
-          data-search-result
-        >
-          <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
-          <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
-          ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
-        </a>
-      `;
+                          <a
+                            href="${r.url}"
+                            class="flex flex-col gap-0.5 outline-none"
+                            tabindex="-1"
+                            data-search-result
+                          >
+                            <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
+                            <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
+                            ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
+                          </a>
+                        `;
 
       // Clicking a result closes the modal
       li.addEventListener("click", () => closeModal());

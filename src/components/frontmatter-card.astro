@@ -42,13 +42,13 @@ const isSmall = variant === "small";
 
 <Item
   as={isSmall ? "a" : "section"}
-  variant={isSmall ? "outline" : "muted"}
   class={cn(
     "flex flex-col items-start gap-2",
     isSmall && "h-full",
     !isSmall && "w-full border-muted",
     className,
   )}
+  variant={isSmall ? "outline" : "muted"}
   {...props}
 >
   <div class:list={["flex justify-between w-full", !isSmall && "items-start"]}>

@@ -58,15 +58,19 @@ const info = await loadInfoData();
 const resume = await loadResumeData();
 ---
 
-<BaseLayout nav={{ sticky: true }} title="Home - ARV">
+<BaseLayout
+  description="Data Scientist building end-to-end GenAI apps with LangChain, LangGraph & MCP. Explore my projects, blog, resume and journal."
+  nav={{ sticky: true }}
+  title="Anshul Raj Verma — Data Scientist & GenAI Developer"
+>
   <div class="gap-10 flex flex-col items-center justify-center text-center">
     <header class="flex flex-col items-center gap-5">
       <Image
         alt="arv-anshul"
         class="w-60 rounded-full"
+        height="300"
         src={info.avatar_url}
         width="300"
-        height="300"
       />
       <h1 class="font-bold text-3xl">{info.name}</h1>
       <p class="text-justify">{info.intro_text}</p>
@@ -131,8 +135,8 @@ const resume = await loadResumeData();
 
     <Button
       class="text-center mx-auto w-fit block h-auto py-1.5 px-12"
-      size="lg"
       href="/resume"
+      size="lg"
     >
       See My Resume
     </Button>

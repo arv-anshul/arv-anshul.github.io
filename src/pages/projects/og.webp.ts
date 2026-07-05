@@ -5,8 +5,9 @@ import {
 } from "@/lib/og";
 
 const imageData: OgImageData = {
-  title: "Projects - ARV",
-  description: "See all the project created by ARV.",
+  title: "Projects",
+  description:
+    "Explore data science and GenAI projects by Anshul Raj Verma — end-to-end ML systems, LangChain apps and open-source tools.",
   icon: "lucide:rocket",
 };
 

@@ -6,38 +6,39 @@
     "cssVariables": true
   },
   "componentDir": "src/components",
+  "utilsDir": "src/lib/utils",
   "components": [
     {
       "name": "prose",
-      "version": "1.0.0"
+      "version": "1.0.2"
     },
     {
       "name": "item",
-      "version": "1.0.0"
+      "version": "1.0.3"
     },
     {
       "name": "separator",
-      "version": "1.0.0"
+      "version": "1.0.2"
     },
     {
       "name": "card",
-      "version": "2.0.0"
+      "version": "2.0.2"
     },
     {
       "name": "button",
-      "version": "2.3.0"
+      "version": "2.3.3"
     },
     {
       "name": "toggle",
-      "version": "1.0.1"
+      "version": "1.0.3"
     },
     {
       "name": "theme-toggle",
-      "version": "1.0.0"
+      "version": "1.0.2"
     },
     {
       "name": "pagination",
-      "version": "3.0.2"
+      "version": "3.0.4"
     }
   ]
 }

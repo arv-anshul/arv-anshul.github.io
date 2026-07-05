@@ -27,9 +27,9 @@ export const getStaticPaths = (async () => {
   const projects = await getCollection("projects");
 
   return projects.map((project) => {
-    const children = projects.filter((p) => {
-      return p.id.startsWith(project.id.split("/")[0]);
-    });
+    const children = projects.filter((p) =>
+      p.id.startsWith(project.id.split("/")[0])
+    );
 
     return {
       params: { slug: project.id },
@@ -46,9 +46,8 @@ const { Content } = await render(project);
 ---
 
 <BaseLayout
-  title={`${project.data.title} - ARV Project`}
-  description={project.data.description}
   class="md:max-w-3/5"
+  description={project.data.description}
   seo={{
     basic: {
       title: project.data.title,
@@ -62,8 +61,9 @@ const { Content } = await render(project);
       tags: project.data.categories,
     },
   }}
+  title={`${project.data.title} - ARV Project`}
 >
-  <FrontmatterCard data={project.data} backPageUrl="/projects" />
+  <FrontmatterCard backPageUrl="/projects" data={project.data} />
   {nestedPages && (
       <section class="my-6">
         <NestedPagesList pages={nestedPages} />

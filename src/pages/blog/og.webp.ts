@@ -5,8 +5,9 @@ import {
 } from "@/lib/og";
 
 const imageData: OgImageData = {
-  title: "Blog - ARV",
-  description: "Blogs written by ARV.",
+  title: "Blog",
+  description:
+    "Blogs by Anshul Raj Verma on data science, GenAI, LangChain, Python tooling and lessons from building real-world projects.",
   icon: "lucide:newspaper",
 };
 
