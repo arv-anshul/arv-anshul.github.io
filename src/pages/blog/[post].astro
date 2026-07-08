@@ -46,7 +46,11 @@ const { Content } = await render(post);
   }}
   title={`${post.data.title} - ARV Blog`}
 >
-  <FrontmatterCard backPageUrl="/blog" data={post.data} />
+  <FrontmatterCard
+    backPageUrl="/blog"
+    data={post.data}
+    transitionName={Astro.params.post}
+  />
   <article class="mt-10 w-full" data-pagefind-body>
     <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
   </article>

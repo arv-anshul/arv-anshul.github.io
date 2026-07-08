@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 import "@/styles/global.css";
 import type { HTMLAttributes } from "astro/types";
 import { SEO, type SEOProps } from "astro-seo";
@@ -34,6 +35,7 @@ const {
     <meta charset="utf-8">
     <link href="/favicon.svg" rel="icon" type="image/svg+xml">
     <meta content="width=device-width" name="viewport">
+    <ClientRouter />
     <meta content={Astro.generator} name="generator">
     <Font cssVariable="--font-inter" />
     <Font cssVariable="--font-geist-mono" />

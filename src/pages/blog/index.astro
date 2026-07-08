@@ -36,6 +36,7 @@ const basePath = "/blog";
     <ItemGroup class="grid gap-4 md:grid-cols-2" id="blog-grid">
       {posts.map((post, i) => {
           const page = Math.floor(i / POSTS_PER_PAGE) + 1;
+          const slug = getBlogSlugs(post.id).pop();
           return (
             <div
               class="blog-post-item"
@@ -44,7 +45,8 @@ const basePath = "/blog";
             >
               <FrontmatterCard
                 data={post.data}
-                href={`/blog/${getBlogSlugs(post.id).pop()}`}
+                href={`/blog/${slug}`}
+                transitionName={slug}
                 variant="small"
               />
             </div>
@@ -147,7 +149,7 @@ const basePath = "/blog";
   </div>
 </BaseLayout>
 
-<script define:vars={{ totalPages, basePath }} is:inline>
+<script data-astro-rerun define:vars={{ totalPages, basePath }} is:inline>
   // Tailwind classes that differentiate outline (active) from ghost (inactive)
   const OUTLINE_CLASSES = [
     "border",
@@ -257,6 +259,7 @@ const basePath = "/blog";
     }
   }
 
+  // data-astro-rerun re-runs this on every swap (incl. back/forward), so
+  // ClientRouter handles history — no popstate listener needed.
   initPagination();
-  window.addEventListener("popstate", initPagination);
 </script>

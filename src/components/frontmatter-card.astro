@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils";
 
 interface BaseProps {
   data: InferEntrySchema<"blog" | "projects">;
+  /** Unique key (e.g. slug) to morph the whole card across a view transition. */
+  transitionName?: string;
 }
 
 type SmallProps = BaseProps &
@@ -33,6 +35,7 @@ const {
   data,
   variant = "default",
   backPageUrl,
+  transitionName,
   class: className,
   ...props
 } = Astro.props as Props;
@@ -48,6 +51,7 @@ const isSmall = variant === "small";
     !isSmall && "w-full border-muted",
     className,
   )}
+  transition:name={transitionName ? `card-${transitionName}` : undefined}
   variant={isSmall ? "outline" : "muted"}
   {...props}
 >
