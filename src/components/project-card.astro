@@ -1,15 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import { Icon } from "astro-icon/components";
-import { Button } from "@/components/starwind/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/starwind/card";
 import type { ProjectsData } from "@/lib/data-loaders/projects";
 import { cn } from "@/lib/utils";
 
@@ -22,52 +13,55 @@ interface Props extends HTMLAttributes<"div"> {
 const { project, class: className, ...props } = Astro.props as Props;
 ---
 
-<Card class={cn("gap-4 bg-transparent pt-4", className)} {...props}>
-  <CardHeader class="flex flex-wrap justify-between items-start px-4">
-    <div>
-      <CardTitle class="flex items-center gap-1 font-bold">
-        {project.relative_url ? (
-            <a
-              class="flex items-center gap-1 transition-colors hover:text-muted-foreground"
-              href={project.relative_url}
-            >
-              {project.title}
-              <Icon name="lucide:link" size={15} />
-            </a>
-          ) : (
-            project.title
-          )}
-      </CardTitle>
-      <CardDescription class="text-xs">{project.completed_on}</CardDescription>
-    </div>
-
-    <div class="flex gap-1">
-      {project.urls.map((item) => (
-          <Button
-            href={item.url}
-            size="icon-sm"
-            title={item.name}
-            variant="outline"
+<div
+  class={cn(
+    "grid gap-x-6 gap-y-3 border border-border/50 bg-card/70 p-5 transition-colors duration-200 hover:border-foreground/15 md:grid-cols-[1fr_auto]",
+    className,
+  )}
+  {...props}
+>
+  <div class="min-w-0">
+    <h2
+      class="flex items-center gap-1 font-heading text-xl font-bold leading-tight"
+    >
+      {project.relative_url ? (
+          <a
+            class="flex items-center gap-1 transition-colors hover:text-muted-foreground"
+            href={project.relative_url}
           >
-            <Icon name={item.icon} title={item.name} />
-          </Button>
-        ))}
-    </div>
-  </CardHeader>
+            {project.title}
+            <Icon name="lucide:link" size={15} />
+          </a>
+        ) : (
+          project.title
+        )}
+    </h2>
+    <span class="block font-mono text-xs text-muted-foreground">
+      {project.completed_on}
+    </span>
+  </div>
 
-  <CardContent
-    class="text-justify text-sm mb-auto px-4 line-clamp-10 md:line-clamp-8"
-  >
+  <span class="flex gap-1.5 md:justify-end">
+    {project.urls.slice(0, 3).map((item) => (
+        <a
+          class="grid size-7 place-items-center text-muted-foreground transition-colors hover:text-foreground"
+          href={item.url}
+          title={item.name}
+        >
+          <Icon name={item.icon} size="14" title={item.name} />
+        </a>
+      ))}
+  </span>
+
+  <p class="text-sm text-muted-foreground line-clamp-3 md:col-span-2">
     {project.description}
-  </CardContent>
+  </p>
 
-  <CardFooter
-    class="bg-transparent flex-wrap justify-center gap-3 p-4 border-t"
+  <div
+    class="flex flex-wrap items-center gap-3 border-t border-border pt-5 md:col-span-2"
   >
     {project.tech_icons.map((name) => (
-        <span class="inline-flex items-center justify-center">
-          <Icon name={name} size="20" title={name.split(":")[1]} />
-        </span>
+        <Icon name={name} size="18" title={name.split(":")[1]} />
       ))}
-  </CardFooter>
-</Card>
+  </div>
+</div>

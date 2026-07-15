@@ -1,6 +1,5 @@
 ---
 import ProjectCard from "@/components/project-card.astro";
-import Button from "@/components/starwind/button";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadProjectsData } from "@/lib/data-loaders/projects";
 
@@ -10,18 +9,25 @@ const { projects } = await loadProjectsData();
 <BaseLayout
   description="Explore data science and GenAI projects by Anshul Raj Verma — end-to-end ML systems, LangChain apps and open-source tools."
   nav={{ sticky: true }}
-  title="Projects — Data Science & GenAI Builds by ARV"
+  title="Projects — Data Science and GenAI Builds by ARV"
 >
-  <h1 class="font-heading text-3xl font-bold md:text-center mb-6">Projects</h1>
-  <div class="grid gap-4 md:grid-cols-2">
+  <div class="mb-8">
+    <h1 class="font-heading text-4xl font-bold tracking-tight">Projects</h1>
+    <p class="mt-2 text-muted-foreground">
+      End-to-end ML systems, GenAI apps and open-source tools —
+      {projects.length}
+      builds, newest first.
+    </p>
+  </div>
+
+  <div class="flex flex-col gap-4">
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 
-  <Button
-    class="text-center mt-5 mx-auto w-fit block h-auto py-1.5 px-12"
+  <a
+    class="mx-auto mt-8 block w-fit bg-foreground px-8 py-2 text-sm font-semibold text-background transition-opacity hover:opacity-90"
     href="/projects/all"
-    size="lg"
   >
     See All Projects
-  </Button>
+  </a>
 </BaseLayout>
