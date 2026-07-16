@@ -81,12 +81,12 @@ const resume = await loadResumeData();
 
       <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
-            <Item as="a" href={item.url} variant="outline">
+            <Item as="a" class="bg-card/50" href={item.url} variant="outline">
               <ItemMedia class="rounded-lg border-none" variant="icon">
                 <Icon name={item.icon} />
               </ItemMedia>
               <ItemContent class="gap-0 text-start">
-                <ItemTitle class="line-clamp-1">{item.title}</ItemTitle>
+                <ItemTitle class="line-clamp-1 font-bold">{item.title}</ItemTitle>
                 <ItemDescription class="text-xs">
                   {item.description}
                 </ItemDescription>
@@ -106,7 +106,7 @@ const resume = await loadResumeData();
 
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
-            <Item class="flex flex-col gap-3" variant="outline">
+            <Item class="flex flex-col gap-3 bg-card/50 transition-colors duration-200 hover:border-foreground/15" variant="outline">
               <ItemTitle class="font-bold">{category}</ItemTitle>
               <ItemDescription class="flex flex-wrap justify-center gap-3">
                 {items
@@ -129,7 +129,7 @@ const resume = await loadResumeData();
         Experiences
       </h2>
       <ItemGroup class="mt-4 flex flex-col gap-4">
-        {resume.work.map((item) => <ExperienceCard data={item} />)}
+        {resume.work.map((item) => <ExperienceCard class="bg-card/50 transition-colors duration-200 hover:border-foreground/15" data={item} />)}
       </ItemGroup>
     </section>
 

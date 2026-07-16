@@ -85,9 +85,9 @@
   --card-foreground: var(--color-zinc-900);
   --popover: var(--color-zinc-50);
   --popover-foreground: var(--color-zinc-900);
-  --primary: var(--color-cyan-600);
+  --primary: var(--color-purple-600);
   --primary-foreground: var(--color-zinc-50);
-  --primary-accent: var(--color-cyan-500);
+  --primary-accent: var(--color-purple-500);
   --secondary: var(--color-violet-500);
   --secondary-foreground: var(--color-zinc-50);
   --secondary-accent: var(--color-violet-400);
@@ -113,7 +113,7 @@
   /* sidebar variables */
   --sidebar-background: var(--color-zinc-50);
   --sidebar-foreground: var(--color-zinc-900);
-  --sidebar-primary: var(--color-cyan-600);
+  --sidebar-primary: var(--color-purple-600);
   --sidebar-primary-foreground: var(--color-zinc-50);
   --sidebar-accent: var(--color-zinc-100);
   --sidebar-accent-foreground: var(--color-zinc-800);
@@ -128,9 +128,9 @@
   --card-foreground: var(--color-zinc-100);
   --popover: var(--color-zinc-800);
   --popover-foreground: var(--color-zinc-100);
-  --primary: var(--color-cyan-400);
+  --primary: var(--color-purple-400);
   --primary-foreground: var(--color-zinc-950);
-  --primary-accent: var(--color-cyan-300);
+  --primary-accent: var(--color-purple-300);
   --secondary: var(--color-violet-400);
   --secondary-foreground: var(--color-zinc-950);
   --secondary-accent: var(--color-violet-300);
@@ -153,7 +153,7 @@
   /* sidebar variables */
   --sidebar-background: var(--color-zinc-900);
   --sidebar-foreground: var(--color-zinc-100);
-  --sidebar-primary: var(--color-cyan-400);
+  --sidebar-primary: var(--color-purple-400);
   --sidebar-primary-foreground: var(--color-zinc-950);
   --sidebar-accent: var(--color-zinc-800);
   --sidebar-accent-foreground: var(--color-zinc-200);

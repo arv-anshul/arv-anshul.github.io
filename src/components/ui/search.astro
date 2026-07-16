@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components";
 <!-- Search Trigger Button -->
 <button
   aria-label="Open search"
-  class="inline-flex items-center gap-x-1.5 px-2 py-1 text-sm font-mono text-muted-foreground bg-accent/50 hover:bg-muted border border-border/50 rounded-lg transition-colors cursor-pointer"
+  class="inline-flex items-center gap-x-1.5 px-2 py-1 text-sm font-mono text-muted-foreground bg-accent/50 hover:bg-muted border rounded-full transition-colors cursor-pointer"
   id="search-trigger"
   title="Search (/ or Ctrl+K)"
   type="button"
@@ -226,17 +226,17 @@ import { Icon } from "astro-icon/components";
         r.url.replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "") || "/";
 
       li.innerHTML = `
-                                <a
-                                  href="${r.url}"
-                                  class="flex flex-col gap-0.5 outline-none"
-                                  tabindex="-1"
-                                  data-search-result
-                                >
-                                  <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
-                                  <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
-                                  ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
-                                </a>
-                              `;
+        <a
+          href="${r.url}"
+          class="flex flex-col gap-0.5 outline-none"
+          tabindex="-1"
+          data-search-result
+        >
+          <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
+          <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
+          ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary-accent [&_mark]:font-mono [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
+        </a>
+      `;
 
       // Clicking a result closes the modal
       li.addEventListener("click", () => closeModal());
