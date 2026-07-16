@@ -149,7 +149,7 @@ const basePath = "/blog";
   </div>
 </BaseLayout>
 
-<script data-astro-rerun define:vars={{ totalPages, basePath }} is:inline>
+<script define:vars={{ totalPages, basePath }} is:inline>
   // Tailwind classes that differentiate outline (active) from ghost (inactive)
   const OUTLINE_CLASSES = [
     "border",
@@ -259,7 +259,10 @@ const basePath = "/blog";
     }
   }
 
-  // data-astro-rerun re-runs this on every swap (incl. back/forward), so
-  // ClientRouter handles history — no popstate listener needed.
+  // astro:page-load fires on initial load and every ClientRouter navigation,
+  // including browser back/forward — data-astro-rerun does not. The listener is
+  // registered once (script isn't re-run without data-astro-rerun), so it never
+  // stacks. The immediate call covers the first time this page is parsed.
+  document.addEventListener("astro:page-load", initPagination);
   initPagination();
 </script>

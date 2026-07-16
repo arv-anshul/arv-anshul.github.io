@@ -106,7 +106,7 @@
   --border: var(--color-zinc-200);
   --input: var(--color-zinc-200);
   --outline: var(--color-zinc-400);
-  --radius: 0.375rem;
+  --radius: 0rem;
   --font-heading: var(--font-inter), var(--font-sans);
   --font-mono: var(--font-geist-mono), monospace;
 

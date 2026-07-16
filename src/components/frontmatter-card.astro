@@ -47,7 +47,8 @@ const isSmall = variant === "small";
   as={isSmall ? "a" : "section"}
   class={cn(
     "flex flex-col items-start gap-2",
-    isSmall && "h-full",
+    isSmall &&
+      "h-full border-border/50 bg-card/70 transition-colors hover:border-foreground/15 [a]:hover:bg-card/70",
     !isSmall && "w-full border-muted",
     className,
   )}
@@ -59,8 +60,10 @@ const isSmall = variant === "small";
     <ItemContent class="flex flex-col gap-1">
       <ItemTitle
         class:list={[
-          "font-heading font-bold",
-          isSmall ? "text-xl" : "text-4xl",
+          "font-heading font-bold transition-colors",
+          isSmall
+            ? "text-xl group-hover/item:text-muted-foreground"
+            : "text-4xl",
         ]}
       >
         {data.title}
@@ -85,7 +88,7 @@ const isSmall = variant === "small";
         name={data.icon}
         title={`Blog Icon: ${data.icon}`}
         class:list={[
-          "rounded-md p-2",
+          "rounded-lg p-2",
           isSmall ? "bg-muted size-15" : "size-18",
         ]}
       />

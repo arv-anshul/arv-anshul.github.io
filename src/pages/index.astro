@@ -82,7 +82,7 @@ const resume = await loadResumeData();
       <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
             <Item as="a" href={item.url} variant="outline">
-              <ItemMedia class="rounded border-none" variant="icon">
+              <ItemMedia class="rounded-lg border-none" variant="icon">
                 <Icon name={item.icon} />
               </ItemMedia>
               <ItemContent class="gap-0 text-start">
@@ -133,12 +133,11 @@ const resume = await loadResumeData();
       </ItemGroup>
     </section>
 
-    <Button
-      class="text-center mx-auto w-fit block h-auto py-1.5 px-12"
+    <a
+      class="text-center mx-auto w-fit block h-auto py-1.5 px-12 font-semibold text-background transition-opacity hover:opacity-90 bg-foreground"
       href="/resume"
-      size="lg"
     >
       See My Resume
-    </Button>
+    </a>
   </div>
 </BaseLayout>
