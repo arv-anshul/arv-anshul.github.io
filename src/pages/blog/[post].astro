@@ -5,6 +5,8 @@ import FrontmatterCard from "@/components/frontmatter-card.astro";
 import Prose from "@/components/starwind/prose/Prose.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { getBlogSlugs } from "@/lib/blog-utils";
+import { loadInfoData } from "@/lib/data-loaders/info";
+import { getArticleJsonLd } from "@/lib/seo";
 import "remark-github-alerts/styles/github-base.css";
 import "remark-github-alerts/styles/github-colors-light.css";
 import "remark-github-alerts/styles/github-colors-dark-class.css";
@@ -16,37 +18,59 @@ interface Props {
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection("blog");
-  return posts.map((post) => {
-    const slugs = getBlogSlugs(post.id);
+  return posts.map((p) => {
+    const slugs = getBlogSlugs(p.id);
     return {
       params: { post: slugs.pop() },
-      props: { post },
+      props: { post: p },
     };
   });
 }) satisfies GetStaticPaths;
 
 const { post } = Astro.props as Props;
 const { Content } = await render(post);
+
+const info = await loadInfoData();
+const ogImage = new URL("og.webp", Astro.url).toString();
 ---
 
 <BaseLayout
   class="md:max-w-3/5"
   description={post.data.description}
+  jsonLd={getArticleJsonLd({
+    author: post.data.author,
+    categories: post.data.categories,
+    description: post.data.description,
+    image: ogImage,
+    pubDate: post.data.pubDate,
+    siteUrl: info.site_url,
+    title: post.data.title,
+    updatedDate: post.data.updatedDate,
+    url: Astro.url.toString(),
+  })}
+  keywords={post.data.categories}
   seo={{
-    basic: {
-      title: post.data.title,
-      type: "website",
-      image: new URL("og.webp", Astro.url).toString(),
-      url: Astro.url,
-    },
     article: {
-      publishedTime: post.data.pubDate.toUTCString(),
       authors: [post.data.author],
+      modifiedTime: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+      publishedTime: post.data.pubDate.toISOString(),
+      section: post.data.categories[0],
+      tags: post.data.categories,
+    },
+    basic: {
+      image: ogImage,
+      title: post.data.title,
+      type: "article",
+      url: Astro.url,
     },
   }}
   title={`${post.data.title} - ARV Blog`}
 >
-  <FrontmatterCard backPageUrl="/blog" data={post.data} />
+  <FrontmatterCard
+    backPageUrl="/blog"
+    data={post.data}
+    transitionName={Astro.params.post}
+  />
   <article class="mt-10 w-full" data-pagefind-body>
     <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
   </article>

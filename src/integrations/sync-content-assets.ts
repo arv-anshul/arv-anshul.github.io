@@ -37,12 +37,12 @@ const DEFAULT_EXTENSIONS = [
 ];
 
 const MIME_TYPES: Record<string, string> = {
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".jpeg": "image/jpeg",
   ".gif": "image/gif",
-  ".svg": "image/svg+xml",
+  ".jpeg": "image/jpeg",
+  ".jpg": "image/jpeg",
   ".pdf": "application/pdf",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
 };
 
 // ── Helpers ────────────────────────────────────────────
@@ -58,19 +58,24 @@ async function walk(dir: string, exts: Set<string>): Promise<string[]> {
     return [];
   }
 
-  const results: string[] = [];
   const entries = await readdir(dir, { withFileTypes: true });
 
-  for (const entry of entries) {
+  const tasks = entries.map((entry) => {
     const full = join(dir, entry.name);
-    if (entry.isDirectory()) {
-      results.push(...(await walk(full, exts)));
-    } else if (isAsset(entry.name, exts)) {
-      results.push(full);
-    }
-  }
 
-  return results;
+    if (entry.isDirectory()) {
+      return walk(full, exts);
+    }
+
+    if (isAsset(entry.name, exts)) {
+      return [full];
+    }
+
+    return [];
+  });
+
+  const results = await Promise.all(tasks);
+  return results.flat();
 }
 
 // ── Vite plugin (dev server) ───────────────────────────
@@ -81,8 +86,6 @@ function createVitePlugin(
   exts: Set<string>
 ): Plugin {
   return {
-    name: "vite-plugin-sync-content-assets",
-
     configureServer(server: ViteDevServer) {
       // ── 1. Watch content dirs ────────────────────────
       for (const m of mappings) {
@@ -147,6 +150,7 @@ function createVitePlugin(
         next();
       });
     },
+    name: "vite-plugin-sync-content-assets",
   };
 }
 
@@ -160,9 +164,49 @@ export default function syncContentAssets(
   let rootDir: string;
 
   return {
-    name: "sync-content-assets",
-
     hooks: {
+      "astro:build:done": async ({ dir }) => {
+        const outDir = fileURLToPath(dir);
+        let count = 0;
+
+        console.log(`\n${TAG} 🔄 Syncing content assets to build output…`);
+
+        const dirsToCreate = new Set<string>();
+
+        // 1. Gather file metadata and deduplicate required directories
+        const tasks = mappings.map(async (m) => {
+          const absContent = join(rootDir, m.contentDir);
+          const files = await walk(absContent, exts);
+
+          return files.map((file) => {
+            const rel = relative(absContent, file);
+            const dest = join(outDir, m.outputDir, rel);
+
+            dirsToCreate.add(dirname(dest));
+
+            return { dest, file, outputDir: m.outputDir, rel };
+          });
+        });
+
+        const allFilesNested = await Promise.all(tasks);
+        const flattenedFiles = allFilesNested.flat();
+
+        // 2. Concurrently create unique directory paths safely
+        await Promise.all(
+          Array.from(dirsToCreate).map((d) => mkdir(d, { recursive: true }))
+        );
+
+        // 3. Concurrently execute file mutations
+        await Promise.all(
+          flattenedFiles.map(async ({ file, dest, rel, outputDir }) => {
+            console.log(`${TAG}   📄 Syncing ${outputDir}/${rel}`);
+            await copyFile(file, dest);
+            count += 1;
+          })
+        );
+
+        console.log(`${TAG} ✅ Synced ${count} asset(s)\n`);
+      },
       "astro:config:setup": ({ config, updateConfig }) => {
         rootDir = fileURLToPath(config.root);
 
@@ -172,30 +216,7 @@ export default function syncContentAssets(
           },
         });
       },
-
-      "astro:build:done": async ({ dir }) => {
-        const outDir = fileURLToPath(dir);
-        let count = 0;
-
-        console.log(`\n${TAG} 🔄 Syncing content assets to build output…`);
-
-        for (const m of mappings) {
-          const absContent = join(rootDir, m.contentDir);
-          const files = await walk(absContent, exts);
-
-          for (const file of files) {
-            const rel = relative(absContent, file);
-            const dest = join(outDir, m.outputDir, rel);
-
-            console.log(`${TAG}   📄 Syncing ${m.outputDir}/${rel}`);
-            await mkdir(dirname(dest), { recursive: true });
-            await copyFile(file, dest);
-            count++;
-          }
-        }
-
-        console.log(`${TAG} ✅ Synced ${count} asset(s)\n`);
-      },
     },
+    name: "sync-content-assets",
   };
 }

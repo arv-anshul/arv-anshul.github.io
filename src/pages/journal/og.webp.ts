@@ -5,10 +5,10 @@ import {
 } from "@/lib/og";
 
 const imageData: OgImageData = {
-  title: "Journal",
   description:
     "Weekly journal by Anshul Raj Verma — what I learned, built and shipped each week across data science, GenAI and dev work.",
   icon: "lucide:notebook-pen",
+  title: "Journal",
 };
 
 export const GET = async ({

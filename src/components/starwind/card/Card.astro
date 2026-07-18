@@ -10,7 +10,7 @@ const { class: className, size, ...rest } = Astro.props;
 ---
 
 <div
-  class={card({ size, class: className })}
+  class={card({ class: className, size })}
   data-size={size ?? "default"}
   {...rest}
   data-slot="card"

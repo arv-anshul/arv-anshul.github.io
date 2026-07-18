@@ -2,11 +2,11 @@ import { z } from "zod/v4";
 import { socialProfileSchema } from "./common";
 
 const friendInfoSchema = z.object({
+  avatar: z.httpUrl(),
+  description: z.string(),
   name: z.string(),
   primary_url: z.httpUrl(),
-  avatar: z.httpUrl(),
   profession: z.string(),
-  description: z.string(),
   socials: z.array(socialProfileSchema),
 });
 

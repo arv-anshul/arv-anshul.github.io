@@ -4,6 +4,8 @@ import type { GetStaticPaths } from "astro";
 import FrontmatterCard from "@/components/frontmatter-card.astro";
 import Prose from "@/components/starwind/prose/Prose.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
+import { loadInfoData } from "@/lib/data-loaders/info";
+import { getArticleJsonLd } from "@/lib/seo";
 import "remark-github-alerts/styles/github-base.css";
 import "remark-github-alerts/styles/github-colors-light.css";
 import "remark-github-alerts/styles/github-colors-dark-class.css";
@@ -15,33 +17,50 @@ interface Props {
 
 export const getStaticPaths = (async () => {
   const journals = await getCollection("journal");
-  return journals.map((journal) => {
-    const [year, month] = journal.id.split("/");
+  return journals.map((j) => {
+    const [year, month] = j.id.split("/");
     return {
-      params: { year, month },
-      props: { journal },
+      params: { month, year },
+      props: { journal: j },
     };
   });
 }) satisfies GetStaticPaths;
 
 const { journal } = Astro.props as Props;
 const { Content } = await render(journal);
+
+const info = await loadInfoData();
+const ogImage = new URL("og.webp", Astro.url).toString();
 ---
 
 <BaseLayout
   class="md:max-w-3/5"
   description={journal.data.description}
+  jsonLd={getArticleJsonLd({
+    author: journal.data.author,
+    categories: journal.data.categories,
+    description: journal.data.description,
+    image: ogImage,
+    pubDate: journal.data.pubDate,
+    siteUrl: info.site_url,
+    title: journal.data.title,
+    updatedDate: journal.data.updatedDate,
+    url: Astro.url.toString(),
+  })}
+  keywords={journal.data.categories}
   seo={{
-    basic: {
-      title: journal.data.title,
-      type: "website",
-      image: new URL("og.webp", Astro.url).toString(),
-      url: Astro.url,
-    },
     article: {
-      publishedTime: journal.data.pubDate.toUTCString(),
       authors: [journal.data.author],
+      modifiedTime: (journal.data.updatedDate ?? journal.data.pubDate).toISOString(),
+      publishedTime: journal.data.pubDate.toISOString(),
+      section: journal.data.categories[0],
       tags: journal.data.categories,
+    },
+    basic: {
+      image: ogImage,
+      title: journal.data.title,
+      type: "article",
+      url: Astro.url,
     },
   }}
   title={`${journal.data.title} - ARV Journal`}

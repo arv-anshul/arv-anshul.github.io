@@ -22,7 +22,7 @@ const { friend, class: className, ...props } = Astro.props as Props;
 ---
 
 <Card
-  class={cn("items-center gap-3 bg-transparent", className)}
+  class={cn("items-center gap-3 border border-border/50 bg-card/70 transition-colors duration-200 hover:border-foreground/15", className)}
   {...props}
   data-card
 >

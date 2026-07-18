@@ -5,10 +5,10 @@ import {
 } from "@/lib/og";
 
 const imageData: OgImageData = {
-  title: "Projects",
   description:
     "Explore data science and GenAI projects by Anshul Raj Verma — end-to-end ML systems, LangChain apps and open-source tools.",
   icon: "lucide:rocket",
+  title: "Projects",
 };
 
 export const GET = async ({

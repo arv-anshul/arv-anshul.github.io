@@ -30,10 +30,12 @@ const sortedPages = [...pages].sort((a, b) => {
 });
 ---
 
-<nav class:list={["rounded-md border border-muted overflow-hidden", className]}>
-  <details>
+<nav
+  class:list={["rounded-none border border-accent overflow-hidden", className]}
+>
+  <details open>
     <summary
-      class="flex items-center gap-2 px-4 py-2.5 cursor-pointer select-none text-sm font-semibold text-foreground bg-muted hover:bg-accent transition-colors duration-200 list-none [&::-webkit-details-marker]:hidden"
+      class="flex items-center gap-2 px-4 py-2.5 cursor-pointer select-none text-sm font-semibold text-foreground bg-accent/80 hover:bg-accent transition-colors duration-200 list-none [&::-webkit-details-marker]:hidden"
     >
       <Icon class="size-4 opacity-70" name="lucide:layers" />
       <span>Related Pages</span>
@@ -61,17 +63,17 @@ const sortedPages = [...pages].sort((a, b) => {
                 aria-current={isActive ? "page" : undefined}
                 href={`/projects/${page.id}`}
                 class:list={[
-                  "group flex items-start gap-3 px-4 py-3 transition-colors duration-200",
+                  "group flex items-center gap-3 px-4 py-3 transition-colors duration-200",
                   isActive
-                    ? "bg-muted text-foreground"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                    ? "bg-accent/50 text-foreground"
+                    : "text-muted-foreground hover:bg-accent/30 hover:text-accent-foreground focus-visible:bg-accent/30 focus-visible:text-accent-foreground",
                 ]}
               >
                 {page.data.icon && (
                   <span
                     aria-hidden="true"
                     class:list={[
-                      "text-xl mt-0.5 shrink-0 transition-transform duration-200 group-hover:scale-110",
+                      "text-xl shrink-0",
                       isActive ? "opacity-100" : "opacity-60",
                     ]}
                   >
@@ -79,25 +81,23 @@ const sortedPages = [...pages].sort((a, b) => {
                   </span>
                 )}
                 <div class="min-w-0 flex-1">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span
-                      class:list={[
-                        "text-sm font-medium",
-                        isActive && "text-foreground",
-                      ]}
-                    >
-                      {page.data.title}
-                    </span>
-                    {isIndex && (
-                      <span class="rounded-full border border-primary bg-muted px-1.5 py-0.5 font-mono font-semibold text-primary text-xs uppercase leading-none tracking-wide">
-                        Index
-                      </span>
-                    )}
-                  </div>
+                  <span
+                    class:list={[
+                      "text-sm font-medium",
+                      isActive && "text-foreground",
+                    ]}
+                  >
+                    {page.data.title}
+                  </span>
                   <p class="line-clamp-1 text-muted-foreground text-xs">
                     {page.data.description}
                   </p>
                 </div>
+                {isIndex && (
+                  <span class="shrink-0 rounded-full bg-primary-accent/20 px-1.5 py-1 font-mono font-semibold text-primary text-xs uppercase leading-none tracking-wide">
+                    Index
+                  </span>
+                )}
               </a>
             </li>
           );

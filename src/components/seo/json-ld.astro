@@ -1,0 +1,14 @@
+---
+type JsonLd = Record<string, unknown>;
+
+interface Props {
+  data: JsonLd | (JsonLd | null | undefined)[];
+}
+
+const { data } = Astro.props as Props;
+const items = (Array.isArray(data) ? data : [data]).filter(Boolean) as JsonLd[];
+---
+
+{items.map((item) => (
+    <script set:html={JSON.stringify(item)} is:inline type="application/ld+json" />
+  ))}

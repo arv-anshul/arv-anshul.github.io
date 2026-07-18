@@ -7,30 +7,35 @@ import { iconSchema } from "@/lib/data-loaders/common";
  * This is a subset of `@astrojs/rss`'s `rssSchema` schema.
  */
 const BASE_COLLECTION_SCHEMA = z.object({
-  title: z.string(),
+  author: z.enum(["Anshul Raj Verma"] as const).default("Anshul Raj Verma"),
+  categories: z.array(z.string()).min(1),
   description: z.string(),
   icon: iconSchema,
-  author: z.enum(["Anshul Raj Verma"] as const).default("Anshul Raj Verma"),
   pubDate: z
     .union([z.string(), z.number(), z.date()])
     .transform((value) => new Date(value))
     .refine((value) => !Number.isNaN(value.getTime())), // From @astro/rss package
-  categories: z.array(z.string()).min(1),
+  title: z.string(),
+  updatedDate: z
+    .union([z.string(), z.number(), z.date()])
+    .transform((value) => new Date(value))
+    .refine((value) => !Number.isNaN(value.getTime()))
+    .optional(),
 });
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "content/blog" }),
+  loader: glob({ base: "content/blog", pattern: "**/*.md" }),
   schema: BASE_COLLECTION_SCHEMA,
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "content/projects" }),
+  loader: glob({ base: "content/projects", pattern: "**/*.md" }),
   schema: BASE_COLLECTION_SCHEMA,
 });
 
 const journal = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "content/journal" }),
+  loader: glob({ base: "content/journal", pattern: "**/*.md" }),
   schema: BASE_COLLECTION_SCHEMA,
 });
 
-export const collections = { blog, projects, journal };
+export const collections = { blog, journal, projects };

@@ -6,9 +6,9 @@ import { html } from "satori-html";
 import getIconSVGString from "@/lib/icon-svg";
 
 export const renderOptions: RenderOptions = {
-  width: 1200,
-  height: 630,
   format: "webp",
+  height: 630,
+  width: 1200,
 };
 
 export async function getImageBufferFromMarkup(
@@ -63,7 +63,7 @@ export async function getMarkupFromEntry(
                 <div tw="flex items-center mr-8">
                   <img src="${calendarIconUri}" tw="h-6 w-6 mr-3" />
                   <span tw="text-2xl uppercase tracking-wide">
-                    ${data.pubDate.toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "2-digit" })}
+                    ${data.pubDate.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}
                   </span>
                 </div>
 

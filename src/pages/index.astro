@@ -14,43 +14,44 @@ import {
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadInfoData } from "@/lib/data-loaders/info";
 import { loadResumeData } from "@/lib/data-loaders/resume";
+import { getPersonJsonLd, getWebSiteJsonLd } from "@/lib/seo";
 
 const referLinks = [
   {
     description: "See my projects in detail.",
-    url: "/projects",
-    title: "Projects",
     icon: "lucide:rocket",
+    title: "Projects",
+    url: "/projects",
   },
   {
     description: "See my resume.",
-    url: "/resume",
-    title: "Resume",
     icon: "lucide:scroll-text",
+    title: "Resume",
+    url: "/resume",
   },
   {
     description: "Read my blogs.",
-    url: "/blog",
-    title: "Blog",
     icon: "lucide:newspaper",
+    title: "Blog",
+    url: "/blog",
   },
   {
     description: "See some of my friends.",
-    url: "/friends",
-    title: "Friends",
     icon: "lucide:users",
+    title: "Friends",
+    url: "/friends",
   },
   {
     description: "Visit my LinkedIn profile.",
-    url: "/linkedin",
-    title: "LinkedIn",
     icon: "simple-icons:linkedin",
+    title: "LinkedIn",
+    url: "/linkedin",
   },
   {
     description: "See my GitHub profile.",
-    url: "/github",
-    title: "GitHub",
     icon: "simple-icons:github",
+    title: "GitHub",
+    url: "/github",
   },
 ];
 
@@ -60,6 +61,7 @@ const resume = await loadResumeData();
 
 <BaseLayout
   description="Data Scientist building end-to-end GenAI apps with LangChain, LangGraph & MCP. Explore my projects, blog, resume and journal."
+  jsonLd={[getPersonJsonLd(info), getWebSiteJsonLd(info)]}
   nav={{ sticky: true }}
   title="Anshul Raj Verma — Data Scientist & GenAI Developer"
 >
@@ -81,12 +83,12 @@ const resume = await loadResumeData();
 
       <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
-            <Item as="a" href={item.url} variant="outline">
-              <ItemMedia class="rounded border-none" variant="icon">
+            <Item as="a" class="bg-card/50" href={item.url} variant="outline">
+              <ItemMedia class="rounded-lg border-none" variant="icon">
                 <Icon name={item.icon} />
               </ItemMedia>
               <ItemContent class="gap-0 text-start">
-                <ItemTitle class="line-clamp-1">{item.title}</ItemTitle>
+                <ItemTitle class="line-clamp-1 font-bold">{item.title}</ItemTitle>
                 <ItemDescription class="text-xs">
                   {item.description}
                 </ItemDescription>
@@ -106,7 +108,7 @@ const resume = await loadResumeData();
 
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
-            <Item class="flex flex-col gap-3" variant="outline">
+            <Item class="flex flex-col gap-3 bg-card/50 transition-colors duration-200 hover:border-foreground/15" variant="outline">
               <ItemTitle class="font-bold">{category}</ItemTitle>
               <ItemDescription class="flex flex-wrap justify-center gap-3">
                 {items
@@ -129,16 +131,15 @@ const resume = await loadResumeData();
         Experiences
       </h2>
       <ItemGroup class="mt-4 flex flex-col gap-4">
-        {resume.work.map((item) => <ExperienceCard data={item} />)}
+        {resume.work.map((item) => <ExperienceCard class="bg-card/50 transition-colors duration-200 hover:border-foreground/15" data={item} />)}
       </ItemGroup>
     </section>
 
-    <Button
-      class="text-center mx-auto w-fit block h-auto py-1.5 px-12"
+    <a
+      class="text-center mx-auto w-fit block h-auto py-1.5 px-12 font-semibold text-background transition-opacity hover:opacity-90 bg-foreground"
       href="/resume"
-      size="lg"
     >
       See My Resume
-    </Button>
+    </a>
   </div>
 </BaseLayout>

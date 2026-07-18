@@ -21,19 +21,15 @@ import syncContentAssets from "./src/integrations/sync-content-assets";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://arv-anshul.github.io",
-  server: {
-    port: 3000,
-  },
   fonts: [
     {
-      name: "Inter",
       cssVariable: "--font-inter",
+      name: "Inter",
       provider: fontProviders.fontsource(),
     },
     {
-      name: "Geist Mono",
       cssVariable: "--font-geist-mono",
+      name: "Geist Mono",
       provider: fontProviders.fontsource(),
     },
   ],
@@ -48,28 +44,8 @@ export default defineConfig({
     pagefind(),
     sitemap(),
   ],
-  vite: {
-    plugins: [tailwindcss(), yaml()],
-  },
-  redirects: {
-    "/about": "/",
-    "/notebooks": "https://github.com/arv-anshul/notebooks",
-    "/github": "https://github.com/arv-anshul",
-    "/linkedin": "https://linkedin.com/in/arv-anshul",
-    "/hf": "https://hf.co/arv-anshul",
-    "/kaggle": "https://kaggle.com/arvanshul",
-    "/youtube": "https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ",
-    "/imdb": "https://www.imdb.com/user/ur173640968",
-    "/spotify": "https://open.spotify.com/user/wk6gxe954mv4qbttc4tnvyw8t",
-  },
   markdown: {
-    syntaxHighlight: false,
     processor: unified({
-      remarkPlugins: [
-        [remarkGfm, { singleTilde: false }],
-        remarkGithubAlerts,
-        remarkMath,
-      ],
       rehypePlugins: [
         rehypeSlug,
         rehypeKatex,
@@ -77,23 +53,19 @@ export default defineConfig({
           rehypeAutolinkHeadings,
           {
             behavior: "append",
-            properties: {
-              class: "heading-anchor",
-              ariaLabel: "Link to section",
-            },
             content: h("span.heading-anchor-icon", [
               s(
                 "svg",
                 {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: 24,
-                  height: 24,
-                  viewBox: "0 0 24 24",
                   fill: "none",
+                  height: 24,
                   stroke: "currentColor",
-                  strokeWidth: 2,
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  viewBox: "0 0 24 24",
+                  width: 24,
+                  xmlns: "http://www.w3.org/2000/svg",
                 },
                 [
                   s("path", {
@@ -105,6 +77,10 @@ export default defineConfig({
                 ]
               ),
             ]),
+            properties: {
+              ariaLabel: "Link to section",
+              class: "heading-anchor",
+            },
           },
         ],
         [
@@ -112,13 +88,38 @@ export default defineConfig({
           {
             transformers: [
               transformerCopyButton({
-                visibility: "hover",
                 feedbackDuration: 2500,
+                visibility: "hover",
               }),
             ],
           },
         ],
       ],
+      remarkPlugins: [
+        [remarkGfm, { singleTilde: false }],
+        remarkGithubAlerts,
+        remarkMath,
+      ],
     }),
+    syntaxHighlight: false,
+  },
+  redirects: {
+    "/about": "/",
+    "/github": "https://github.com/arv-anshul",
+    "/hf": "https://hf.co/arv-anshul",
+    "/imdb": "https://www.imdb.com/user/ur173640968",
+    "/kaggle": "https://kaggle.com/arvanshul",
+    "/linkedin": "https://linkedin.com/in/arv-anshul",
+    "/notebooks": "https://github.com/arv-anshul/notebooks",
+    "/spotify": "https://open.spotify.com/user/wk6gxe954mv4qbttc4tnvyw8t",
+    "/twitter": "https://x.com/arvanshul",
+    "/youtube": "https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ",
+  },
+  server: {
+    port: 3000,
+  },
+  site: "https://arvanshul.com",
+  vite: {
+    plugins: [tailwindcss(), yaml()],
   },
 });

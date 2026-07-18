@@ -14,30 +14,30 @@ interface Props {
 const { sticky = false } = Astro.props;
 
 const homeLink = {
+  alt: "Om Logo",
   href: "/",
   title: "ARV",
-  alt: "Om Logo",
 };
 
 const middleLinks = [
-  { href: "/projects", title: "Projects", icon: "lucide:rocket" },
-  { href: "/blog", title: "Blog", icon: "lucide:newspaper" },
-  { href: "/journal", title: "Journal", icon: "lucide:notebook-pen" },
-  { href: "/resume", title: "Resume", icon: "lucide:scroll-text" },
+  { href: "/projects", icon: "lucide:rocket", title: "Projects" },
+  { href: "/blog", icon: "lucide:newspaper", title: "Blog" },
+  { href: "/journal", icon: "lucide:notebook-pen", title: "Journal" },
+  { href: "/resume", icon: "lucide:scroll-text", title: "Resume" },
 ];
 
 const endLinks = [
   {
     href: "/github",
-    title: "GitHub",
     icon: "simple-icons:github",
+    title: "GitHub",
   },
 ];
 ---
 
 <header
   class={cn(
-    "border-b backdrop-blur-sm",
+    "border-b border-b-muted/50 backdrop-blur-sm",
     sticky ? "sticky top-0 z-40" : "",
   )}
 >
@@ -61,7 +61,7 @@ const endLinks = [
         {middleLinks.map((link) => (
             <li>
               <Button
-                class="flex items-center gap-x-1"
+                class="flex items-center gap-x-1 rounded-xl"
                 href={link.href}
                 size="sm"
                 variant="ghost"
@@ -85,7 +85,7 @@ const endLinks = [
       <div class="flex items-center gap-x-1">
         {endLinks.map((link) => (
             <Button
-              class="transition-opacity hover:opacity-70"
+            class="hover:bg-transparent hover:opacity-70"
               href={link.href}
               size="icon"
               target="_blank"

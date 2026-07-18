@@ -14,14 +14,14 @@ const infoData = await loadInfoData();
 const copyrightYear = new Date().getFullYear();
 const linkItems = [
   {
-    url: "/resume",
-    name: "Resume",
     icon: "lucide:scroll-text",
+    name: "Resume",
+    url: "/resume",
   },
   {
-    url: "/rss.xml",
-    name: "RSS Feed",
     icon: "lucide:rss",
+    name: "RSS Feed",
+    url: "/rss.xml",
   },
   ...infoData.socials.filter(
     (item) => !["Website", "IMDb", "Spotify"].includes(item.name)
@@ -35,11 +35,11 @@ const linkItems = [
   >
     <div class="flex flex-col items-center md:items-start">
       <span>
-        Copyright &copy; {copyrightYear}
+        Copyright &copy; {copyrightYear} {" "}
         <span class="text-muted-foreground font-bold">Anshul Raj Verma</span>
       </span>
       <span>
-        Made with
+        Made with {" "}
         <span class="animate-pulse text-red-500 text-lg align-middle">
           &hearts;
         </span>
@@ -48,7 +48,7 @@ const linkItems = [
     <div class="flex">
       {linkItems.map((item) => (
           <Button
-            class="size-9 gap-0 transition-colors hover:text-muted-foreground"
+            class="size-9 gap-0 transition-colors hover:bg-transparent hover:opacity-70"
             href={item.url}
             size="icon"
             target="_blank"

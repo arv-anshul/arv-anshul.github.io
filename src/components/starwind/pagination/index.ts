@@ -33,11 +33,11 @@ export {
 };
 
 export default {
-  Root: Pagination,
   Content: PaginationContent,
   Ellipsis: PaginationEllipsis,
   Item: PaginationItem,
   Link: PaginationLink,
   Next: PaginationNext,
   Previous: PaginationPrevious,
+  Root: Pagination,
 };

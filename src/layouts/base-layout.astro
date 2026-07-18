@@ -1,15 +1,29 @@
 ---
 import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 import "@/styles/global.css";
 import type { HTMLAttributes } from "astro/types";
 import { SEO, type SEOProps } from "astro-seo";
+import JsonLd from "@/components/seo/json-ld.astro";
 import Footer from "@/components/ui/footer.astro";
 import Navbar from "@/components/ui/navbar.astro";
+import {
+  DEFAULT_DESCRIPTION,
+  LOCALE,
+  SITE_KEYWORDS,
+  THEME_COLOR_DARK,
+  THEME_COLOR_LIGHT,
+  TWITTER_HANDLE,
+} from "@/consts";
+import { getSocialUrl, loadInfoData } from "@/lib/data-loaders/info";
+import { getBreadcrumbJsonLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 import themeInit from "@/scripts/theme-init.js?raw";
 
 interface Props extends HTMLAttributes<"body"> {
   description?: string;
+  jsonLd?: Record<string, unknown> | (Record<string, unknown> | null)[];
+  keywords?: string[];
   nav?: {
     sticky?: boolean;
   };
@@ -19,7 +33,9 @@ interface Props extends HTMLAttributes<"body"> {
 
 const {
   title = "ARV - Website",
-  description = "Personal website of ARV built with Astro.",
+  description = DEFAULT_DESCRIPTION,
+  jsonLd,
+  keywords,
   nav = {
     sticky: false,
   },
@@ -27,6 +43,12 @@ const {
   seo,
   ...props
 } = Astro.props as Props;
+
+const info = await loadInfoData();
+const authorLinkedIn = getSocialUrl(info, "LinkedIn");
+const metaKeywords = (keywords ?? SITE_KEYWORDS).join(", ");
+const breadcrumb = getBreadcrumbJsonLd(Astro.url, info.site_url);
+const jsonLdItems = [breadcrumb, jsonLd].flat().filter(Boolean);
 ---
 
 <html lang="en">
@@ -34,29 +56,58 @@ const {
     <meta charset="utf-8">
     <link href="/favicon.svg" rel="icon" type="image/svg+xml">
     <meta content="width=device-width" name="viewport">
+    <ClientRouter />
     <meta content={Astro.generator} name="generator">
     <Font cssVariable="--font-inter" />
     <Font cssVariable="--font-geist-mono" />
     <SEO
       description={description}
+      extend={{
+        link: [
+          { href: authorLinkedIn, rel: "author" },
+          { href: "/favicon.ico", rel: "icon", sizes: "any" },
+          { href: "/apple-touch-icon.png", rel: "apple-touch-icon" },
+          { href: "/site.webmanifest", rel: "manifest" },
+        ],
+        meta: [
+          { content: info.name, name: "author" },
+          { content: metaKeywords, name: "keywords" },
+          {
+            content: THEME_COLOR_LIGHT,
+            media: "(prefers-color-scheme: light)",
+            name: "theme-color",
+          },
+          {
+            content: THEME_COLOR_DARK,
+            media: "(prefers-color-scheme: dark)",
+            name: "theme-color",
+          },
+        ],
+      }}
       openGraph={{
         basic: {
+          image: new URL("og.webp", Astro.url).toString(),
           title,
           type: "website",
-          image: new URL("og.webp", Astro.url).toString(),
           url: Astro.url,
         },
         optional: {
           description,
-          siteName: "Anshul Raj Verma",
+          locale: LOCALE,
+          siteName: info.name,
         },
         ...seo,
       }}
       title={title}
       twitter={{
         card: "summary_large_image",
+        creator: TWITTER_HANDLE,
+        description,
+        site: TWITTER_HANDLE,
+        title,
       }}
     />
+    <JsonLd data={jsonLdItems} />
     <link href="/sitemap-index.xml" rel="sitemap">
     <link
       href={new URL("rss.xml", Astro.site)}

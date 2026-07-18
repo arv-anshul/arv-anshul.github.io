@@ -14,15 +14,15 @@ if (Astro.url.searchParams.get("download")) {
   description="Resume of Anshul Raj Verma, Data Scientist specializing in GenAI, LangChain and Python. View online or download the PDF."
   title="Resume — Anshul Raj Verma, Data Scientist & GenAI Dev"
 >
-  <Button
-    class="text-center mb-5 mx-auto w-fit block h-auto py-1.5 px-12 animate-pulse"
+  <a
+    class="mx-auto mb-5 block w-fit bg-foreground px-8 py-2 text-sm font-semibold text-background transition-opacity hover:opacity-90"
     href="/resume/download"
   >
     Download Resume
-  </Button>
-  <div class="p-3 border w-5/6 bg-muted/50 rounded-lg mx-auto">
+  </a>
+  <div class="p-3 w-5/6 bg-muted/50 mx-auto">
     <iframe
-      class="h-200 w-full rounded-lg"
+      class="h-200 w-full"
       src={`https://docs.google.com/viewerng/viewer?url=${resumeUrl}&embedded=true`}
       title="Anshul Raj Verma - Resume"
     ></iframe>

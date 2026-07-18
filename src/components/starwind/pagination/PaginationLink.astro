@@ -16,7 +16,7 @@ const { class: className, isActive, size = "icon", ...rest } = Astro.props;
 
 <a
   aria-current={isActive ? "page" : undefined}
-  class={ButtonVariants.button({ variant: isActive ? "outline" : "ghost", size, class: className })}
+  class={ButtonVariants.button({ class: className, size, variant: isActive ? "outline" : "ghost" })}
   {...rest}
   data-slot="pagination-link"
 >

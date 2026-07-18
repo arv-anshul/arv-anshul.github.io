@@ -15,7 +15,7 @@ const Tag = Astro.props.href ? "a" : "button";
 ---
 
 <Tag
-  class={button({ variant, size, class: className })}
+  class={button({ class: className, size, variant })}
   data-slot="button"
   {...rest}
 >

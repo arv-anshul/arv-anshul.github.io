@@ -49,7 +49,6 @@ export {
 };
 
 export default {
-  Root: Item,
   Actions: ItemActions,
   Content: ItemContent,
   Description: ItemDescription,
@@ -57,6 +56,7 @@ export default {
   Group: ItemGroup,
   Header: ItemHeader,
   Media: ItemMedia,
+  Root: Item,
   Separator: ItemSeparator,
   Title: ItemTitle,
 };

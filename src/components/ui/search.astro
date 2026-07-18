@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components";
 <!-- Search Trigger Button -->
 <button
   aria-label="Open search"
-  class="inline-flex items-center gap-x-1.5 px-2 py-1 text-sm font-mono text-muted-foreground bg-accent hover:bg-muted border border-border rounded-md transition-colors cursor-pointer"
+  class="inline-flex items-center gap-x-1.5 px-2 py-1 text-sm font-mono text-muted-foreground bg-accent/50 hover:bg-muted border rounded-full transition-colors cursor-pointer"
   id="search-trigger"
   title="Search (/ or Ctrl+K)"
   type="button"
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon/components";
   <Icon class="size-4 shrink-0" name="lucide:search" />
   <span class="hidden sm:inline text-xs">Search</span>
   <kbd
-    class="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-mono text-muted-foreground border border-border rounded px-1 py-0.5 bg-background leading-none"
+    class="hidden sm:inline-flex items-center gap-0.5 text-[10px] font-mono text-muted-foreground rounded-lg px-1 py-0.5 bg-background leading-none"
   >
     <span class="text-xs">⌘</span>K
   </kbd>
@@ -133,13 +133,14 @@ import { Icon } from "astro-icon/components";
   let focusedIndex = -1;
 
   // ─── DOM refs ────────────────────────────────────────────────────────────────
-  const trigger = document.getElementById("search-trigger")!;
-  const modal = document.getElementById("search-modal") as HTMLDialogElement;
-  const input = document.getElementById("search-input") as HTMLInputElement;
-  const closeBtn = document.getElementById("search-close")!;
-  const resultsList = document.getElementById("search-results-list")!;
-  const emptyState = document.getElementById("search-empty")!;
-  const noResults = document.getElementById("search-no-results")!;
+  // Re-queried on every astro:page-load — the DOM swaps but this module runs once.
+  let trigger: HTMLElement;
+  let modal: HTMLDialogElement;
+  let input: HTMLInputElement;
+  let closeBtn: HTMLElement;
+  let resultsList: HTMLElement;
+  let emptyState: HTMLElement;
+  let noResults: HTMLElement;
 
   // ─── Pagefind initialisation ─────────────────────────────────────────────────
   async function ensurePagefind() {
@@ -225,17 +226,17 @@ import { Icon } from "astro-icon/components";
         r.url.replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "") || "/";
 
       li.innerHTML = `
-                          <a
-                            href="${r.url}"
-                            class="flex flex-col gap-0.5 outline-none"
-                            tabindex="-1"
-                            data-search-result
-                          >
-                            <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
-                            <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
-                            ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
-                          </a>
-                        `;
+        <a
+          href="${r.url}"
+          class="flex flex-col gap-0.5 outline-none"
+          tabindex="-1"
+          data-search-result
+        >
+          <span class="text-sm font-semibold text-foreground leading-snug font-mono truncate">${title}</span>
+          <span class="text-xs text-muted-foreground truncate font-mono">${displayUrl}</span>
+          ${r.excerpt ? `<span class="text-xs text-muted-foreground line-clamp-2 mt-0.5 leading-relaxed [&_mark]:text-primary-accent [&_mark]:font-mono [&_mark]:bg-transparent [&_mark]:font-semibold">${r.excerpt}</span>` : ""}
+        </a>
+      `;
 
       // Clicking a result closes the modal
       li.addEventListener("click", () => closeModal());
@@ -318,46 +319,53 @@ import { Icon } from "astro-icon/components";
     renderResults(data);
   }
 
-  // ─── Event listeners ──────────────────────────────────────────────────────
-  trigger.addEventListener("click", openModal);
+  // ─── Element listeners (re-bound each page load on fresh nodes) ─────────────
+  function bindElements() {
+    trigger = document.getElementById("search-trigger")!;
+    modal = document.getElementById("search-modal") as HTMLDialogElement;
+    input = document.getElementById("search-input") as HTMLInputElement;
+    closeBtn = document.getElementById("search-close")!;
+    resultsList = document.getElementById("search-results-list")!;
+    emptyState = document.getElementById("search-empty")!;
+    noResults = document.getElementById("search-no-results")!;
 
-  // Close on backdrop click
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
+    trigger.addEventListener("click", openModal);
 
-  closeBtn.addEventListener("click", closeModal);
+    // Close on backdrop click
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
 
-  input.addEventListener("input", (e) => {
-    handleSearch((e.target as HTMLInputElement).value);
-  });
+    closeBtn.addEventListener("click", closeModal);
 
-  input.addEventListener("keydown", (e) => {
-    switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setFocus(focusedIndex + 1);
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        setFocus(focusedIndex - 1);
-        break;
-      case "Enter":
-        e.preventDefault();
-        activateFocused();
-        break;
-      // Escape is handled natively by <dialog>, but we can add redundant listener if needed
-      // Actually, the native Escape behavior closes the dialog but we might want to ensure cleanup
-    }
-  });
+    input.addEventListener("input", (e) => {
+      handleSearch((e.target as HTMLInputElement).value);
+    });
 
-  // Listen for native close event to clean up if closed via Escape or other means
-  modal.addEventListener("close", () => {
-    // cleanup if needed
-    focusedIndex = -1;
-  });
+    input.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowDown":
+          e.preventDefault();
+          setFocus(focusedIndex + 1);
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          setFocus(focusedIndex - 1);
+          break;
+        case "Enter":
+          e.preventDefault();
+          activateFocused();
+          break;
+      }
+    });
+
+    // Native close event (Escape or otherwise) — reset focus state
+    modal.addEventListener("close", () => {
+      focusedIndex = -1;
+    });
+  }
 
   // ─── Global shortcut keys ─────────────────────────────────────────────────
   document.addEventListener("keydown", (e) => {
@@ -387,8 +395,6 @@ import { Icon } from "astro-icon/components";
   });
 
   // ─── Astro View Transitions support ──────────────────────────────────────
-  document.addEventListener("astro:page-load", () => {
-    // Re-close modal on navigation
-    closeModal();
-  });
+  // Fires on initial load and after every swap — re-bind to the fresh DOM nodes.
+  document.addEventListener("astro:page-load", bindElements);
 </script>
