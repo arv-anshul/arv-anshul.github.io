@@ -14,6 +14,7 @@ import {
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadInfoData } from "@/lib/data-loaders/info";
 import { loadResumeData } from "@/lib/data-loaders/resume";
+import { getPersonJsonLd, getWebSiteJsonLd } from "@/lib/seo";
 
 const referLinks = [
   {
@@ -60,6 +61,7 @@ const resume = await loadResumeData();
 
 <BaseLayout
   description="Data Scientist building end-to-end GenAI apps with LangChain, LangGraph & MCP. Explore my projects, blog, resume and journal."
+  jsonLd={[getPersonJsonLd(info), getWebSiteJsonLd(info)]}
   nav={{ sticky: true }}
   title="Anshul Raj Verma — Data Scientist & GenAI Developer"
 >

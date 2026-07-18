@@ -15,6 +15,11 @@ const BASE_COLLECTION_SCHEMA = z.object({
     .union([z.string(), z.number(), z.date()])
     .transform((value) => new Date(value))
     .refine((value) => !Number.isNaN(value.getTime())), // From @astro/rss package
+  updatedDate: z
+    .union([z.string(), z.number(), z.date()])
+    .transform((value) => new Date(value))
+    .refine((value) => !Number.isNaN(value.getTime()))
+    .optional(),
   categories: z.array(z.string()).min(1),
 });
 

@@ -5,6 +5,8 @@ import FrontmatterCard from "@/components/frontmatter-card.astro";
 import Prose from "@/components/starwind/prose/Prose.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { getBlogSlugs } from "@/lib/blog-utils";
+import { loadInfoData } from "@/lib/data-loaders/info";
+import { getArticleJsonLd } from "@/lib/seo";
 import "remark-github-alerts/styles/github-base.css";
 import "remark-github-alerts/styles/github-colors-light.css";
 import "remark-github-alerts/styles/github-colors-dark-class.css";
@@ -27,21 +29,39 @@ export const getStaticPaths = (async () => {
 
 const { post } = Astro.props as Props;
 const { Content } = await render(post);
+
+const info = await loadInfoData();
+const ogImage = new URL("og.webp", Astro.url).toString();
 ---
 
 <BaseLayout
   class="md:max-w-3/5"
   description={post.data.description}
+  jsonLd={getArticleJsonLd({
+    title: post.data.title,
+    description: post.data.description,
+    url: Astro.url.toString(),
+    image: ogImage,
+    pubDate: post.data.pubDate,
+    updatedDate: post.data.updatedDate,
+    author: post.data.author,
+    categories: post.data.categories,
+    siteUrl: info.site_url,
+  })}
+  keywords={post.data.categories}
   seo={{
     basic: {
       title: post.data.title,
-      type: "website",
-      image: new URL("og.webp", Astro.url).toString(),
+      type: "article",
+      image: ogImage,
       url: Astro.url,
     },
     article: {
-      publishedTime: post.data.pubDate.toUTCString(),
+      publishedTime: post.data.pubDate.toISOString(),
+      modifiedTime: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
       authors: [post.data.author],
+      section: post.data.categories[0],
+      tags: post.data.categories,
     },
   }}
   title={`${post.data.title} - ARV Blog`}

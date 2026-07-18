@@ -1,0 +1,5 @@
+# All crawlers, including AI/LLM agents, may read the whole site.
+User-agent: *
+Allow: /
+
+Sitemap: https://arvanshul.com/sitemap-index.xml

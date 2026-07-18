@@ -10,6 +10,8 @@ import FrontmatterCard from "@/components/frontmatter-card.astro";
 import NestedPagesList from "@/components/nested-pages-list.astro";
 import Prose from "@/components/starwind/prose";
 import BaseLayout from "@/layouts/base-layout.astro";
+import { loadInfoData } from "@/lib/data-loaders/info";
+import { getArticleJsonLd } from "@/lib/seo";
 import "remark-github-alerts/styles/github-base.css";
 import "remark-github-alerts/styles/github-colors-light.css";
 import "remark-github-alerts/styles/github-colors-dark-class.css";
@@ -43,21 +45,38 @@ export const getStaticPaths = (async () => {
 
 const { project, nestedPages } = Astro.props as Props;
 const { Content } = await render(project);
+
+const info = await loadInfoData();
+const ogImage = new URL("og.webp", Astro.url).toString();
 ---
 
 <BaseLayout
   class="md:max-w-3/5"
   description={project.data.description}
+  jsonLd={getArticleJsonLd({
+    title: project.data.title,
+    description: project.data.description,
+    url: Astro.url.toString(),
+    image: ogImage,
+    pubDate: project.data.pubDate,
+    updatedDate: project.data.updatedDate,
+    author: project.data.author,
+    categories: project.data.categories,
+    siteUrl: info.site_url,
+  })}
+  keywords={project.data.categories}
   seo={{
     basic: {
       title: project.data.title,
-      type: "website",
-      image: new URL("og.webp", Astro.url).toString(),
+      type: "article",
+      image: ogImage,
       url: Astro.url,
     },
     article: {
-      publishedTime: project.data.pubDate.toUTCString(),
+      publishedTime: project.data.pubDate.toISOString(),
+      modifiedTime: (project.data.updatedDate ?? project.data.pubDate).toISOString(),
       authors: [project.data.author],
+      section: project.data.categories[0],
       tags: project.data.categories,
     },
   }}

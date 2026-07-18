@@ -3,6 +3,7 @@ import { iconSchema, socialProfileSchema } from "./common";
 
 const infoDataSchema = z.object({
   name: z.string(),
+  site_url: z.httpUrl(),
   avatar_url: z.httpUrl(),
   resume_url: z.httpUrl(),
   intro_text: z.string(),
@@ -23,4 +24,9 @@ export type InfoData = z.infer<typeof infoDataSchema>;
 export async function loadInfoData(): Promise<InfoData> {
   const rawInfoData = await import("data/info.yaml");
   return infoDataSchema.parse(rawInfoData);
+}
+
+/** Look up a social profile URL by its `name` (e.g. "LinkedIn", "GitHub"). */
+export function getSocialUrl(info: InfoData, name: string): string | undefined {
+  return info.socials.find((s) => s.name === name)?.url;
 }

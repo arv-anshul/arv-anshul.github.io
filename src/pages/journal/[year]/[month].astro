@@ -4,6 +4,8 @@ import type { GetStaticPaths } from "astro";
 import FrontmatterCard from "@/components/frontmatter-card.astro";
 import Prose from "@/components/starwind/prose/Prose.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
+import { loadInfoData } from "@/lib/data-loaders/info";
+import { getArticleJsonLd } from "@/lib/seo";
 import "remark-github-alerts/styles/github-base.css";
 import "remark-github-alerts/styles/github-colors-light.css";
 import "remark-github-alerts/styles/github-colors-dark-class.css";
@@ -26,21 +28,38 @@ export const getStaticPaths = (async () => {
 
 const { journal } = Astro.props as Props;
 const { Content } = await render(journal);
+
+const info = await loadInfoData();
+const ogImage = new URL("og.webp", Astro.url).toString();
 ---
 
 <BaseLayout
   class="md:max-w-3/5"
   description={journal.data.description}
+  jsonLd={getArticleJsonLd({
+    title: journal.data.title,
+    description: journal.data.description,
+    url: Astro.url.toString(),
+    image: ogImage,
+    pubDate: journal.data.pubDate,
+    updatedDate: journal.data.updatedDate,
+    author: journal.data.author,
+    categories: journal.data.categories,
+    siteUrl: info.site_url,
+  })}
+  keywords={journal.data.categories}
   seo={{
     basic: {
       title: journal.data.title,
-      type: "website",
-      image: new URL("og.webp", Astro.url).toString(),
+      type: "article",
+      image: ogImage,
       url: Astro.url,
     },
     article: {
-      publishedTime: journal.data.pubDate.toUTCString(),
+      publishedTime: journal.data.pubDate.toISOString(),
+      modifiedTime: (journal.data.updatedDate ?? journal.data.pubDate).toISOString(),
       authors: [journal.data.author],
+      section: journal.data.categories[0],
       tags: journal.data.categories,
     },
   }}

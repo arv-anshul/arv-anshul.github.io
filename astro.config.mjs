@@ -21,7 +21,7 @@ import syncContentAssets from "./src/integrations/sync-content-assets";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://arv-anshul.github.io",
+  site: "https://arvanshul.com",
   server: {
     port: 3000,
   },
@@ -61,6 +61,7 @@ export default defineConfig({
     "/youtube": "https://youtube.com/channel/UC90WdLQimUEbL4ZIiSj68mQ",
     "/imdb": "https://www.imdb.com/user/ur173640968",
     "/spotify": "https://open.spotify.com/user/wk6gxe954mv4qbttc4tnvyw8t",
+    "/twitter": "https://x.com/arvanshul",
   },
   markdown: {
     syntaxHighlight: false,
