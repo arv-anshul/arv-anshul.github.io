@@ -20,7 +20,7 @@ const { data, class: className, ...props } = Astro.props as Props;
 function formatDuration(startDate: string, endDate: string) {
   const parseStr = (s: string) => {
     if (!s || s.toLowerCase() === "present") {
-      return { label: "Present", date: new Date() };
+      return { date: new Date(), label: "Present" };
     }
     const parts = s.split("-").map(Number);
     const date = new Date(parts[0], parts[1] ? parts[1] - 1 : 0);
@@ -28,7 +28,7 @@ function formatDuration(startDate: string, endDate: string) {
       month: "short",
       year: "numeric",
     });
-    return { label, date };
+    return { date, label };
   };
 
   const start = parseStr(startDate);

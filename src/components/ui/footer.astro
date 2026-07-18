@@ -14,14 +14,14 @@ const infoData = await loadInfoData();
 const copyrightYear = new Date().getFullYear();
 const linkItems = [
   {
-    url: "/resume",
-    name: "Resume",
     icon: "lucide:scroll-text",
+    name: "Resume",
+    url: "/resume",
   },
   {
-    url: "/rss.xml",
-    name: "RSS Feed",
     icon: "lucide:rss",
+    name: "RSS Feed",
+    url: "/rss.xml",
   },
   ...infoData.socials.filter(
     (item) => !["Website", "IMDb", "Spotify"].includes(item.name)

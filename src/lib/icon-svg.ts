@@ -28,8 +28,8 @@ export default async function getIconSVGString(
     iconSet = await import(
       `../../node_modules/@iconify-json/${setName}/icons.json`
     );
-  } catch {
-    throw new Error(`Icon set "${setName}" not found.`);
+  } catch (error) {
+    throw new Error(`Icon set "${setName}" not found.`, { cause: error });
   }
 
   const iconData = getIconData(iconSet, iconName);
@@ -38,8 +38,8 @@ export default async function getIconSVGString(
   }
 
   const renderData = iconToSVG(iconData, {
-    width: options.size ?? options.width ?? "1em",
     height: options.size ?? options.height ?? "1em",
+    width: options.size ?? options.width ?? "1em",
   });
 
   return iconToHTML(replaceIDs(renderData.body), renderData.attributes);

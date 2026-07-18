@@ -2,18 +2,18 @@ import { z } from "zod/v4";
 import { iconSchema, socialProfileSchema } from "./common";
 
 const infoDataSchema = z.object({
-  name: z.string(),
-  site_url: z.httpUrl(),
   avatar_url: z.httpUrl(),
-  resume_url: z.httpUrl(),
   intro_text: z.string(),
+  name: z.string(),
+  resume_url: z.httpUrl(),
+  site_url: z.httpUrl(),
   socials: z.array(socialProfileSchema),
   tech_stack: z.record(
     z.string(),
     z.array(
       z.object({
-        name: z.string(),
         icon: iconSchema,
+        name: z.string(),
       })
     )
   ),

@@ -37,11 +37,11 @@ export {
 };
 
 export default {
-  Root: Card,
-  Header: CardHeader,
-  Footer: CardFooter,
-  Title: CardTitle,
-  Description: CardDescription,
-  Content: CardContent,
   Action: CardAction,
+  Content: CardContent,
+  Description: CardDescription,
+  Footer: CardFooter,
+  Header: CardHeader,
+  Root: Card,
+  Title: CardTitle,
 };

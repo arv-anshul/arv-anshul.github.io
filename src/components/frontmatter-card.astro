@@ -72,9 +72,9 @@ const isSmall = variant === "small";
         <span class="flex gap-0.5" title="Published Date">
           <Icon name="lucide:calendar" size={15} />
           {data.pubDate.toLocaleDateString("en-IN", {
-              year: "numeric",
-              month: "short",
               day: "2-digit",
+              month: "short",
+              year: "numeric",
             })}
         </span>
         <span class="flex gap-0.5" title="Author">

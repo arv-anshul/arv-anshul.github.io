@@ -8,13 +8,13 @@ export function getPersonJsonLd(info: InfoData): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: info.name,
-    url: info.site_url,
     image: info.avatar_url,
     jobTitle: AUTHOR_JOB_TITLE,
+    name: info.name,
     sameAs: info.socials
       .filter((s) => !s.url.startsWith("mailto:") && s.url !== info.site_url)
       .map((s) => s.url),
+    url: info.site_url,
   };
 }
 
@@ -23,9 +23,9 @@ export function getWebSiteJsonLd(info: InfoData): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    author: { "@type": "Person", name: info.name, url: info.site_url },
     name: info.name,
     url: info.site_url,
-    author: { "@type": "Person", name: info.name, url: info.site_url },
   };
 }
 
@@ -40,13 +40,13 @@ export function getBreadcrumbJsonLd(url: URL, siteUrl: string): JsonLd | null {
   }
 
   const crumbs = [
-    { name: "Home", item: siteUrl },
+    { item: siteUrl, name: "Home" },
     ...segments.map((seg, i) => ({
-      name: decodeURIComponent(seg).replace(/-/g, " "),
       item: new URL(
         `/${segments.slice(0, i + 1).join("/")}`,
         siteUrl
       ).toString(),
+      name: decodeURIComponent(seg).replace(/-/g, " "),
     })),
   ];
 
@@ -55,9 +55,9 @@ export function getBreadcrumbJsonLd(url: URL, siteUrl: string): JsonLd | null {
     "@type": "BreadcrumbList",
     itemListElement: crumbs.map((c, i) => ({
       "@type": "ListItem",
-      position: i + 1,
-      name: c.name,
       item: c.item,
+      name: c.name,
+      position: i + 1,
     })),
   };
 }
@@ -77,13 +77,13 @@ export function getArticleJsonLd(opts: {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: opts.title,
-    description: opts.description,
-    image: opts.image,
-    datePublished: opts.pubDate.toISOString(),
-    dateModified: (opts.updatedDate ?? opts.pubDate).toISOString(),
     author: { "@type": "Person", name: opts.author, url: opts.siteUrl },
-    mainEntityOfPage: { "@type": "WebPage", "@id": opts.url },
+    dateModified: (opts.updatedDate ?? opts.pubDate).toISOString(),
+    datePublished: opts.pubDate.toISOString(),
+    description: opts.description,
+    headline: opts.title,
+    image: opts.image,
     keywords: opts.categories.join(", "),
+    mainEntityOfPage: { "@id": opts.url, "@type": "WebPage" },
   };
 }

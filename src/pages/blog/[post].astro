@@ -18,11 +18,11 @@ interface Props {
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection("blog");
-  return posts.map((post) => {
-    const slugs = getBlogSlugs(post.id);
+  return posts.map((p) => {
+    const slugs = getBlogSlugs(p.id);
     return {
       params: { post: slugs.pop() },
-      props: { post },
+      props: { post: p },
     };
   });
 }) satisfies GetStaticPaths;
@@ -38,30 +38,30 @@ const ogImage = new URL("og.webp", Astro.url).toString();
   class="md:max-w-3/5"
   description={post.data.description}
   jsonLd={getArticleJsonLd({
-    title: post.data.title,
-    description: post.data.description,
-    url: Astro.url.toString(),
-    image: ogImage,
-    pubDate: post.data.pubDate,
-    updatedDate: post.data.updatedDate,
     author: post.data.author,
     categories: post.data.categories,
+    description: post.data.description,
+    image: ogImage,
+    pubDate: post.data.pubDate,
     siteUrl: info.site_url,
+    title: post.data.title,
+    updatedDate: post.data.updatedDate,
+    url: Astro.url.toString(),
   })}
   keywords={post.data.categories}
   seo={{
-    basic: {
-      title: post.data.title,
-      type: "article",
-      image: ogImage,
-      url: Astro.url,
-    },
     article: {
-      publishedTime: post.data.pubDate.toISOString(),
-      modifiedTime: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
       authors: [post.data.author],
+      modifiedTime: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+      publishedTime: post.data.pubDate.toISOString(),
       section: post.data.categories[0],
       tags: post.data.categories,
+    },
+    basic: {
+      image: ogImage,
+      title: post.data.title,
+      type: "article",
+      url: Astro.url,
     },
   }}
   title={`${post.data.title} - ARV Blog`}

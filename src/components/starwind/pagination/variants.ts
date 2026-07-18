@@ -8,14 +8,14 @@ export const paginationContent = tv({
 
 export const paginationEllipsis = tv({
   base: "flex items-center justify-center",
+  defaultVariants: { size: "icon" },
   variants: {
     size: {
-      "icon-sm": "size-9",
       icon: "size-11",
       "icon-lg": "size-12",
+      "icon-sm": "size-9",
     },
   },
-  defaultVariants: { size: "icon" },
 });
 
 export const paginationNext = tv({ base: "group gap-1" });

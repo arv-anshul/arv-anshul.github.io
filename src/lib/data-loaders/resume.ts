@@ -2,55 +2,55 @@ import { z } from "zod";
 
 export const resumeSchema = z.object({
   basics: z.object({
-    name: z.string(),
-    label: z.string(),
     email: z.email(),
-    url: z.httpUrl(),
+    label: z.string(),
     location: z.object({ address: z.string() }),
+    name: z.string(),
     profiles: z.array(
-      z.object({ network: z.string(), username: z.string(), url: z.httpUrl() })
+      z.object({ network: z.string(), url: z.httpUrl(), username: z.string() })
     ),
+    url: z.httpUrl(),
   }),
-  work: z.array(
+  certificates: z.array(
     z.object({
+      date: z.string(),
+      issuer: z.string(),
       name: z.string(),
-      position: z.string(),
-      startDate: z.string(),
-      endDate: z.string(),
       summary: z.string(),
-      highlights: z.array(z.string()),
     })
   ),
   education: z.array(
     z.object({
-      institution: z.string(),
       area: z.string(),
-      studyType: z.string(),
-      startDate: z.string(),
       endDate: z.string(),
+      institution: z.string(),
       score: z.string(),
+      startDate: z.string(),
+      studyType: z.string(),
     })
   ),
-  certificates: z.array(
+  languages: z.array(z.object({ fluency: z.string(), language: z.string() })),
+  projects: z.array(
     z.object({
+      description: z.string(),
+      highlights: z.array(z.string()),
       name: z.string(),
-      date: z.string(),
-      issuer: z.string(),
-      summary: z.string(),
+      url: z.httpUrl(),
     })
   ),
   skills: z.array(
-    z.object({ name: z.string(), keywords: z.array(z.string()) })
+    z.object({ keywords: z.array(z.string()), name: z.string() })
   ),
-  projects: z.array(
+  work: z.array(
     z.object({
-      name: z.string(),
-      url: z.httpUrl(),
-      description: z.string(),
+      endDate: z.string(),
       highlights: z.array(z.string()),
+      name: z.string(),
+      position: z.string(),
+      startDate: z.string(),
+      summary: z.string(),
     })
   ),
-  languages: z.array(z.object({ language: z.string(), fluency: z.string() })),
 });
 
 export type ResumeData = z.infer<typeof resumeSchema>;

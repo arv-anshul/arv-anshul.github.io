@@ -18,9 +18,9 @@ export const GET: APIRoute = async () => {
 
   return new Response(pdfBuffer, {
     headers: {
-      "Content-Type": "application/pdf",
-      "Content-Disposition": `filename="${DOWNLOAD_FILENAME}"`,
       "Cache-Control": "public, max-age=3600",
+      "Content-Disposition": `filename="${DOWNLOAD_FILENAME}"`,
+      "Content-Type": "application/pdf",
     },
   });
 };

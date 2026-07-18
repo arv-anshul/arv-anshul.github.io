@@ -15,7 +15,7 @@ const { variant = "default", class: className, ...rest } = Astro.props;
 ---
 
 <div
-  class={itemMedia({ variant, class: className })}
+  class={itemMedia({ class: className, variant })}
   data-variant={variant}
   {...rest}
   data-slot="item-media"

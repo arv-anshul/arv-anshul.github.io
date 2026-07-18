@@ -28,16 +28,16 @@ interface Props {
 export const getStaticPaths = (async () => {
   const projects = await getCollection("projects");
 
-  return projects.map((project) => {
-    const children = projects.filter((p) =>
-      p.id.startsWith(project.id.split("/")[0])
+  return projects.map((p) => {
+    const children = projects.filter((i) =>
+      i.id.startsWith(i.id.split("/")[0])
     );
 
     return {
-      params: { slug: project.id },
+      params: { slug: p.id },
       props: {
-        project,
         nestedPages: children.length > 1 ? children : undefined, // Only contains the sub-pages for a specific project
+        project: p,
       },
     };
   });
@@ -54,30 +54,30 @@ const ogImage = new URL("og.webp", Astro.url).toString();
   class="md:max-w-3/5"
   description={project.data.description}
   jsonLd={getArticleJsonLd({
-    title: project.data.title,
-    description: project.data.description,
-    url: Astro.url.toString(),
-    image: ogImage,
-    pubDate: project.data.pubDate,
-    updatedDate: project.data.updatedDate,
     author: project.data.author,
     categories: project.data.categories,
+    description: project.data.description,
+    image: ogImage,
+    pubDate: project.data.pubDate,
     siteUrl: info.site_url,
+    title: project.data.title,
+    updatedDate: project.data.updatedDate,
+    url: Astro.url.toString(),
   })}
   keywords={project.data.categories}
   seo={{
-    basic: {
-      title: project.data.title,
-      type: "article",
-      image: ogImage,
-      url: Astro.url,
-    },
     article: {
-      publishedTime: project.data.pubDate.toISOString(),
-      modifiedTime: (project.data.updatedDate ?? project.data.pubDate).toISOString(),
       authors: [project.data.author],
+      modifiedTime: (project.data.updatedDate ?? project.data.pubDate).toISOString(),
+      publishedTime: project.data.pubDate.toISOString(),
       section: project.data.categories[0],
       tags: project.data.categories,
+    },
+    basic: {
+      image: ogImage,
+      title: project.data.title,
+      type: "article",
+      url: Astro.url,
     },
   }}
   title={`${project.data.title} - ARV Project`}

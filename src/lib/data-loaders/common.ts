@@ -6,7 +6,7 @@ export const iconSchema = z
   .lowercase();
 
 export const socialProfileSchema = z.object({
-  name: z.string(),
   icon: iconSchema,
+  name: z.string(),
   url: z.url(), // Not z.httpUrl() because it can be mailto:email@email.com type url too.
 });

@@ -6,14 +6,14 @@ export const card = tv({
     "has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0",
     "*:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
   ],
+  defaultVariants: {
+    size: "default",
+  },
   variants: {
     size: {
       default: "gap-6 py-6",
       sm: "gap-4 py-4 text-sm",
     },
-  },
-  defaultVariants: {
-    size: "default",
   },
 });
 

@@ -12,8 +12,8 @@ export async function GET(context: RSSOptions) {
         math: "latex",
       },
       themes: {
-        light: "light-plus",
         dark: "dark-plus",
+        light: "light-plus",
       },
     })
   );
@@ -28,26 +28,26 @@ export async function GET(context: RSSOptions) {
     ...blog.map((entry) => ({
       ...entry.data,
       categories: ["blog", ...entry.data.categories],
-      link: `/blog/${entry.id}`,
       content: sanitizeHtml(parser.render(entry.body || ""), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
       }),
+      link: `/blog/${entry.id}`,
     })),
     ...journal.map((entry) => ({
       ...entry.data,
       categories: ["journal", ...entry.data.categories],
-      link: `/journal/${entry.id}`,
       content: sanitizeHtml(parser.render(entry.body || ""), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
       }),
+      link: `/journal/${entry.id}`,
     })),
     ...projects.map((entry) => ({
       ...entry.data,
       categories: ["project", ...entry.data.categories],
-      link: `/projects/${entry.id}`,
       content: sanitizeHtml(parser.render(entry.body || ""), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
       }),
+      link: `/projects/${entry.id}`,
     })),
   ];
 
@@ -55,12 +55,12 @@ export async function GET(context: RSSOptions) {
   allContent.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
   return rss({
-    title: "ARV's Blog",
+    customData: "<language>en-us</language>",
     description:
       "A Data Scientist passionate about harnessing GenAI to solve real-world problems.",
-    site: context.site,
     items: allContent,
-    customData: "<language>en-us</language>",
+    site: context.site,
+    title: "ARV's Blog",
     trailingSlash: false,
   });
 }

@@ -10,20 +10,20 @@ export const toggle = tv({
     "transition-colors outline-none",
     "aria-invalid:ring-error/40 aria-invalid:border-error",
   ],
+  defaultVariants: {
+    size: "md",
+    variant: "default",
+  },
   variants: {
+    size: {
+      lg: "h-12 min-w-12 px-3 text-lg",
+      md: "h-11 min-w-11 px-2.5 text-base",
+      sm: "h-9 min-w-9 px-2 text-sm",
+    },
     variant: {
       default: "hover:bg-muted hover:text-muted-foreground bg-transparent",
       outline:
         "border-input hover:bg-accent hover:text-accent-foreground border bg-transparent shadow-xs",
     },
-    size: {
-      sm: "h-9 min-w-9 px-2 text-sm",
-      md: "h-11 min-w-11 px-2.5 text-base",
-      lg: "h-12 min-w-12 px-3 text-lg",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "md",
   },
 });

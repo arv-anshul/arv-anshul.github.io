@@ -64,47 +64,47 @@ const jsonLdItems = [breadcrumb, jsonLd].flat().filter(Boolean);
       description={description}
       extend={{
         link: [
-          { rel: "author", href: authorLinkedIn },
-          { rel: "icon", href: "/favicon.ico", sizes: "any" },
-          { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-          { rel: "manifest", href: "/site.webmanifest" },
+          { href: authorLinkedIn, rel: "author" },
+          { href: "/favicon.ico", rel: "icon", sizes: "any" },
+          { href: "/apple-touch-icon.png", rel: "apple-touch-icon" },
+          { href: "/site.webmanifest", rel: "manifest" },
         ],
         meta: [
-          { name: "author", content: info.name },
-          { name: "keywords", content: metaKeywords },
+          { content: info.name, name: "author" },
+          { content: metaKeywords, name: "keywords" },
           {
-            name: "theme-color",
-            media: "(prefers-color-scheme: light)",
             content: THEME_COLOR_LIGHT,
+            media: "(prefers-color-scheme: light)",
+            name: "theme-color",
           },
           {
-            name: "theme-color",
-            media: "(prefers-color-scheme: dark)",
             content: THEME_COLOR_DARK,
+            media: "(prefers-color-scheme: dark)",
+            name: "theme-color",
           },
         ],
       }}
       openGraph={{
         basic: {
+          image: new URL("og.webp", Astro.url).toString(),
           title,
           type: "website",
-          image: new URL("og.webp", Astro.url).toString(),
           url: Astro.url,
         },
         optional: {
           description,
-          siteName: info.name,
           locale: LOCALE,
+          siteName: info.name,
         },
         ...seo,
       }}
       title={title}
       twitter={{
         card: "summary_large_image",
-        site: TWITTER_HANDLE,
         creator: TWITTER_HANDLE,
-        title,
         description,
+        site: TWITTER_HANDLE,
+        title,
       }}
     />
     <JsonLd data={jsonLdItems} />

@@ -6,20 +6,20 @@ export const item = tv({
     "[a]:hover:bg-accent/50 [a]:transition-colors",
     "focus-visible:border-ring focus-visible:ring-outline/50 outline-none focus-visible:ring-[3px]",
   ],
+  defaultVariants: {
+    size: "default",
+    variant: "default",
+  },
   variants: {
-    variant: {
-      default: "bg-transparent",
-      outline: "border-border",
-      muted: "bg-muted/50",
-    },
     size: {
       default: "gap-4 p-4",
       sm: "gap-2.5 px-4 py-3",
     },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "default",
+    variant: {
+      default: "bg-transparent",
+      muted: "bg-muted/50",
+      outline: "border-border",
+    },
   },
 });
 
@@ -55,6 +55,9 @@ export const itemMedia = tv({
     "flex shrink-0 items-center justify-center gap-2 [&_svg]:pointer-events-none",
     "group-has-[[data-slot=item-description]]/item:translate-y-0.5 group-has-[[data-slot=item-description]]/item:self-start",
   ],
+  defaultVariants: {
+    variant: "default",
+  },
   variants: {
     variant: {
       default: "bg-transparent",
@@ -62,9 +65,6 @@ export const itemMedia = tv({
       image:
         "size-10 overflow-hidden rounded-sm [&_img]:size-full [&_img]:object-cover",
     },
-  },
-  defaultVariants: {
-    variant: "default",
   },
 });
 

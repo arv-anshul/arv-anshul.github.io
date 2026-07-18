@@ -149,7 +149,7 @@ const basePath = "/blog";
   </div>
 </BaseLayout>
 
-<script define:vars={{ totalPages, basePath }} is:inline>
+<script define:vars={{ basePath, totalPages }} is:inline>
   // Tailwind classes that differentiate outline (active) from ghost (inactive)
   const OUTLINE_CLASSES = [
     "border",
@@ -163,10 +163,10 @@ const basePath = "/blog";
   function getCurrentPage() {
     const pageParam = new URLSearchParams(window.location.search).get("page");
     if (!pageParam) {
-      return { page: 1, hasParam: false };
+      return { hasParam: false, page: 1 };
     }
     const parsed = Number.parseInt(pageParam, 10) || 1;
-    return { page: Math.max(1, Math.min(parsed, totalPages)), hasParam: true };
+    return { hasParam: true, page: Math.max(1, Math.min(parsed, totalPages)) };
   }
 
   function updateBlogPosts(currentPage) {
@@ -179,23 +179,24 @@ const basePath = "/blog";
   function computePageWindow(currentPage) {
     const WINDOW = 2;
     if (totalPages <= 5) {
-      return { start: 1, end: totalPages };
+      return { end: totalPages, start: 1 };
     }
     if (currentPage <= 3) {
-      return { start: 1, end: 5 };
+      return { end: 5, start: 1 };
     }
     if (currentPage >= totalPages - 2) {
-      return { start: totalPages - 4, end: totalPages };
+      return { end: totalPages, start: totalPages - 4 };
     }
-    return { start: currentPage - WINDOW, end: currentPage + WINDOW };
+    return { end: currentPage + WINDOW, start: currentPage - WINDOW };
   }
 
   function updatePageLinks(currentPage) {
     const { start, end } = computePageWindow(currentPage);
 
     const visiblePages = new Set([1, totalPages]);
-    for (let i = start; i <= end; i++) {
+    for (let i = start; i <= end; ) {
       visiblePages.add(i);
+      i += 1;
     }
 
     for (const item of document.querySelectorAll("[data-pagination-item]")) {
@@ -255,7 +256,7 @@ const basePath = "/blog";
     updatePageLinks(page);
     updatePrevNext(page);
     if (hasParam) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ behavior: "smooth", top: 0 });
     }
   }
 

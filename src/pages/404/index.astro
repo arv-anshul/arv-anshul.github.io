@@ -6,9 +6,9 @@ import BaseLayout from "@/layouts/base-layout.astro";
   description="The page you're looking for may have been moved, renamed or removed. Head back home to explore projects, blog and more."
   seo={{
     basic: {
+      image: new URL("/404/og.webp", Astro.url).toString(),
       title: "404 — Page Not Found",
       type: "website",
-      image: new URL("/404/og.webp", Astro.url).toString(),
       url: Astro.url,
     },
   }}

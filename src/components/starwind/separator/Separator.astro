@@ -16,7 +16,7 @@ const { class: className, orientation = "horizontal", ...rest } = Astro.props;
 
 <div
   aria-orientation={orientation}
-  class={separator({ orientation, class: className })}
+  class={separator({ class: className, orientation })}
   role="separator"
   {...rest}
   data-slot="separator"

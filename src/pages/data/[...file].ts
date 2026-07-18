@@ -20,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = () =>
 export const GET: APIRoute = ({ props }) =>
   new Response(props.body as string, {
     headers: {
-      "Content-Type": "text/yaml; charset=utf-8",
       "Cache-Control": "public, max-age=3600",
+      "Content-Type": "text/yaml; charset=utf-8",
     },
   });

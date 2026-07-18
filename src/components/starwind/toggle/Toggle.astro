@@ -30,7 +30,7 @@ const dataState = defaultPressed ? "on" : "off";
 
 <button
   aria-pressed={defaultPressed}
-  class={toggle({ variant, size, class: `starwind-toggle ${className || ""}` })}
+  class={toggle({ class: `starwind-toggle ${className || ""}`, size, variant })}
   data-state={dataState}
   data-sync-group={syncGroup}
   type="button"
@@ -115,13 +115,13 @@ const dataState = defaultPressed ? "on" : "off";
       const changeEvent = new CustomEvent<ToggleChangeEvent["detail"]>(
         "starwind-toggle:change",
         {
-          detail: {
-            pressed,
-            toggleId: this.toggle.id,
-            syncGroup: this.syncGroup,
-          },
           bubbles: true,
           cancelable: true,
+          detail: {
+            pressed,
+            syncGroup: this.syncGroup,
+            toggleId: this.toggle.id,
+          },
         }
       );
 

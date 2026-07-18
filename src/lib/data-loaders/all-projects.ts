@@ -4,9 +4,9 @@ import { iconSchema } from "./common";
 const allProjectsSchema = z.object({
   projects: z.array(
     z.object({
-      title: z.string(),
       description: z.string(),
       icon: iconSchema,
+      title: z.string(),
       url: z.string(),
     })
   ),
