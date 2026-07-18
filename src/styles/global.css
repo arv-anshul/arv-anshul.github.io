@@ -79,7 +79,7 @@
 }
 
 :root {
-  --background: var(--color-zinc-50);
+  --background: var(--color-neutral-200);
   --foreground: var(--color-zinc-900);
   --card: var(--color-zinc-50);
   --card-foreground: var(--color-zinc-900);
@@ -111,7 +111,7 @@
   --font-mono: var(--font-geist-mono), monospace;
 
   /* sidebar variables */
-  --sidebar-background: var(--color-zinc-50);
+  --sidebar-background: var(--color-neutral-200);
   --sidebar-foreground: var(--color-zinc-900);
   --sidebar-primary: var(--color-purple-600);
   --sidebar-primary-foreground: var(--color-zinc-50);
@@ -151,7 +151,7 @@
   --outline: var(--color-zinc-500);
 
   /* sidebar variables */
-  --sidebar-background: var(--color-zinc-900);
+  --sidebar-background: var(--color-zinc-950);
   --sidebar-foreground: var(--color-zinc-100);
   --sidebar-primary: var(--color-purple-400);
   --sidebar-primary-foreground: var(--color-zinc-950);
