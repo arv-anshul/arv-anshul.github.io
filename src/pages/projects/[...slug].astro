@@ -30,7 +30,7 @@ export const getStaticPaths = (async () => {
 
   return projects.map((p) => {
     const children = projects.filter((i) =>
-      i.id.startsWith(i.id.split("/")[0])
+      i.id.startsWith(p.id.split("/")[0])
     );
 
     return {
