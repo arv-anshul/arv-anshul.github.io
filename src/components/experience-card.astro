@@ -65,9 +65,8 @@ const dateString = formatDuration(data.startDate, data.endDate);
   <ItemHeader class="flex flex-col items-start gap-1">
     <ItemTitle class="text-lg font-bold">{data.position}</ItemTitle>
     <ItemDescription class="text-sm">
-      @{data.name}
-      &bull; {data.summary}
-      &bull; {dateString}
+      @{data.name} {" "}
+      &bull; {data.summary} &bull; {dateString}
     </ItemDescription>
   </ItemHeader>
 
