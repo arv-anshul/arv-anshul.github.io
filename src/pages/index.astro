@@ -70,7 +70,9 @@ const resume = await loadResumeData();
       <Image
         alt="arv-anshul"
         class="w-60 rounded-full"
+        fetchpriority="high"
         height="300"
+        loading="eager"
         src={info.avatar_url}
         width="300"
       />
