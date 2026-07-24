@@ -33,6 +33,9 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
     },
   ],
+  image: {
+    domains: ["gravatar.com"],
+  },
   integrations: [
     icon(),
     syncContentAssets(),
