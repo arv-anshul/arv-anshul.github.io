@@ -1,7 +1,96 @@
-@import url("https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css");
-
 .custom-prose {
   --prose-media-border-radius: var(--radius);
+}
+
+/* ==========================================================================
+ * GitHub alerts
+ *
+ * Markup comes from the `githubAlerts` plugin in src/lib/markdown-plugins.ts:
+ *   <div class="markdown-alert markdown-alert-note">
+ *     <p class="markdown-alert-title"><svg class="octicon">…</svg>Note</p>
+ *     …body…
+ *   </div>
+ * Colours are GitHub's, light and dark.
+ * ========================================================================== */
+
+.custom-prose .markdown-alert {
+  --alert-color: var(--color-muted-foreground);
+
+  padding: 0.5rem 1rem;
+  margin-block: var(--sw-prose-spacing);
+  border-left: 0.25em solid var(--alert-color);
+}
+
+.custom-prose .markdown-alert > :first-child {
+  margin-top: 0;
+}
+
+.custom-prose .markdown-alert > :last-child {
+  margin-bottom: 0;
+}
+
+.custom-prose .markdown-alert-title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--alert-color);
+}
+
+.custom-prose .markdown-alert-title .octicon {
+  flex: none;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+}
+
+.custom-prose .markdown-alert-note {
+  --alert-color: #0969da;
+}
+.custom-prose .markdown-alert-tip {
+  --alert-color: #1a7f37;
+}
+.custom-prose .markdown-alert-important {
+  --alert-color: #8250df;
+}
+.custom-prose .markdown-alert-warning {
+  --alert-color: #9a6700;
+}
+.custom-prose .markdown-alert-caution {
+  --alert-color: #d1242f;
+}
+
+.dark .custom-prose .markdown-alert-note {
+  --alert-color: #2f81f7;
+}
+.dark .custom-prose .markdown-alert-tip {
+  --alert-color: #3fb950;
+}
+.dark .custom-prose .markdown-alert-important {
+  --alert-color: #a371f7;
+}
+.dark .custom-prose .markdown-alert-warning {
+  --alert-color: #d29922;
+}
+.dark .custom-prose .markdown-alert-caution {
+  --alert-color: #f85149;
+}
+
+/* ==========================================================================
+ * Shiki dual themes
+ *
+ * Dark mode here is class-based (`@custom-variant dark` in global.css), so
+ * Shiki's default prefers-color-scheme output would not follow the toggle.
+ * ========================================================================== */
+
+.dark .astro-code,
+.dark .astro-code span {
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  color: var(--shiki-dark) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+  background-color: var(--shiki-dark-bg) !important;
 }
 
 /*
@@ -9,47 +98,6 @@
 */
 .custom-prose figure img > figcaption {
   text-align: center;
-}
-
-/* ==========================================================================
- * rehype-pretty-code: Figure + Title (figcaption) styling
- *
- * HTML structure produced by rehype-pretty-code with title="...":
- *   <figure data-rehype-pretty-code-figure>
- *     <figcaption data-rehype-pretty-code-title ...>Title</figcaption>
- *     <pre ...><code>...</code></pre>
- *   </figure>
- * ========================================================================== */
-
-/* Figure wrapper — reset prose defaults so the title and code block are
-   visually joined as a single unit. */
-.custom-prose figure[data-rehype-pretty-code-figure] {
-  margin-top: var(--sw-prose-spacing);
-  margin-bottom: var(--sw-prose-spacing);
-  overflow: hidden;
-  border: 1px solid var(--sw-prose-pre-border-color);
-  border-radius: var(--sw-prose-pre-border-radius);
-}
-
-/* Title bar */
-.custom-prose figcaption[data-rehype-pretty-code-title] {
-  padding: 0.5rem 1rem;
-  margin-top: 0;
-  font-family: var(--font-mono);
-  font-size: var(--sw-prose-code-size);
-  font-weight: 500;
-  color: var(--color-muted-foreground);
-  background-color: color-mix(in srgb, var(--color-muted) 50%, transparent);
-  border-bottom: 1px solid var(--sw-prose-pre-border-color);
-}
-
-/* Remove the individual border & radius from <pre> when inside a titled
-   figure, since the figure wrapper already provides them. */
-.custom-prose figure[data-rehype-pretty-code-figure] > pre {
-  margin-top: 0;
-  margin-bottom: 0;
-  border: none;
-  border-radius: 0;
 }
 
 /* ==========================================================================
