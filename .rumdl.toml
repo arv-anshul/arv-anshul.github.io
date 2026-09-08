@@ -1,7 +1,7 @@
 [global]
 respect-gitignore = true
 flavor = "standard"
-line_length = 120
+line-length = 120
 include = [
   "content/**/*.{md,mdx}",
   "src/**/*.{md,mdx}",
