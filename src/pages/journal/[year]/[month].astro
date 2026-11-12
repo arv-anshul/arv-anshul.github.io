@@ -48,7 +48,9 @@ const ogImage = new URL("og.webp", Astro.url).toString();
   seo={{
     article: {
       authors: [journal.data.author],
-      modifiedTime: (journal.data.updatedDate ?? journal.data.pubDate).toISOString(),
+      modifiedTime: (
+        journal.data.updatedDate ?? journal.data.pubDate
+      ).toISOString(),
       publishedTime: journal.data.pubDate.toISOString(),
       section: journal.data.categories[0],
       tags: journal.data.categories,
@@ -64,6 +66,6 @@ const ogImage = new URL("og.webp", Astro.url).toString();
 >
   <FrontmatterCard backPageUrl="/journal" data={journal.data} />
   <article class="mt-10 w-full" data-pagefind-body>
-    <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
+    <Prose class="max-w-auto custom-prose w-full"> <Content /> </Prose>
   </article>
 </BaseLayout>

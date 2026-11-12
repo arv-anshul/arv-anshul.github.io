@@ -1,10 +1,9 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/base-layout.astro";
 
 const journals = await getCollection("journal");
-
-import type { CollectionEntry } from "astro:content";
 
 // Assuming your journal collection type (adjust as needed)
 type Journal = CollectionEntry<"journal">;
@@ -15,17 +14,16 @@ const sortedJournals: Journal[] = journals.sort(
 );
 
 // 2. Group journals by Year
-const groupedJournals: Record<number, Journal[]> = sortedJournals.reduce(
-  (acc, journal) => {
-    const year = journal.data.pubDate.getFullYear();
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(journal);
-    return acc;
-  },
-  {} as Record<number, Journal[]>
-);
+const groupedJournals: Record<number, Journal[]> = sortedJournals.reduce<
+  Record<number, Journal[]>
+>((acc, journal) => {
+  const year = journal.data.pubDate.getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(journal);
+  return acc;
+}, {});
 
 // 3. Get the years as an array and sort them descending
 const years: number[] = Object.keys(groupedJournals)
@@ -39,23 +37,23 @@ const years: number[] = Object.keys(groupedJournals)
   title="Journal — Weekly Notes on Learning & Building"
 >
   <div class="text-center">
-    <h1 class="font-heading text-3xl font-bold mb-6">Weekly Journals</h1>
+    <h1 class="font-heading mb-6 text-3xl font-bold">Weekly Journals</h1>
     <div>
       {years.map((year) => (
-          <section class="mt-6">
-            <h2 class="mb-4 font-bold font-heading text-2xl">{year}</h2>
-            <div class="flex flex-col items-center">
-              {groupedJournals[year].map((journal) => (
-                <a
-                  class="w-fit text-lg hover:text-muted-foreground"
-                  href={`/journal/${journal.id}`}
-                >
-                  {journal.data.title}
-                </a>
-              ))}
-            </div>
-          </section>
-        ))}
+        <section class="mt-6">
+          <h2 class="font-heading mb-4 text-2xl font-bold">{year}</h2>
+          <div class="flex flex-col items-center">
+            {groupedJournals[year].map((journal) => (
+              <a
+                class="hover:text-muted-foreground w-fit text-lg"
+                href={`/journal/${journal.id}`}
+              >
+                {journal.data.title}
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
   </div>
 </BaseLayout>

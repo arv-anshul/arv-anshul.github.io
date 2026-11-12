@@ -46,7 +46,7 @@ export function getBreadcrumbJsonLd(url: URL, siteUrl: string): JsonLd | null {
         `/${segments.slice(0, i + 1).join("/")}`,
         siteUrl
       ).toString(),
-      name: decodeURIComponent(seg).replace(/-/g, " "),
+      name: decodeURIComponent(seg).replace(/-/gu, " "),
     })),
   ];
 

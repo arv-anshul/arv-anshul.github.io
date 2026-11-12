@@ -31,7 +31,7 @@ const linkItems = [
 
 <footer class={cn("border-t px-4 py-3 text-sm md:px-0", className)}>
   <div
-    class="flex flex-col-reverse gap-2 md:flex-row md:justify-between justify-center items-center w-full md:w-2/3 xl:w-3/5 mx-auto"
+    class="mx-auto flex w-full flex-col-reverse items-center justify-center gap-2 md:w-2/3 md:flex-row md:justify-between xl:w-3/5"
   >
     <div class="flex flex-col items-center md:items-start">
       <span>
@@ -41,17 +41,17 @@ const linkItems = [
     </div>
     <div class="flex">
       {linkItems.map((item) => (
-          <Button
-            class="size-9 gap-0 transition-colors hover:bg-transparent hover:opacity-70"
-            href={item.url}
-            size="icon"
-            target="_blank"
-            title={item.name}
-            variant="ghost"
-          >
-            <Icon name={item.icon} title={item.name} />
-          </Button>
-        ))}
+        <Button
+          class="size-9 gap-0 transition-colors hover:bg-transparent hover:opacity-70"
+          href={item.url}
+          size="icon"
+          target="_blank"
+          title={item.name}
+          variant="ghost"
+        >
+          <Icon name={item.icon} title={item.name} />
+        </Button>
+      ))}
     </div>
   </div>
 </footer>

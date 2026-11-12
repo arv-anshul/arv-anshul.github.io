@@ -22,11 +22,14 @@ const { friend, class: className, ...props } = Astro.props as Props;
 ---
 
 <Card
-  class={cn("items-center gap-3 border border-border/50 bg-card/70 transition-colors duration-200 hover:border-foreground/15", className)}
+  class={cn(
+    "border-border/50 bg-card/70 hover:border-foreground/15 items-center gap-3 border transition-colors duration-200",
+    className
+  )}
   {...props}
   data-card
 >
-  <CardHeader class="flex flex-col gap-0 items-center w-full">
+  <CardHeader class="flex w-full flex-col items-center gap-0">
     <a
       aria-label={`Visit ${friend.name}'s website`}
       class="h-30 w-30"
@@ -47,24 +50,24 @@ const { friend, class: className, ...props } = Astro.props as Props;
   </CardHeader>
 
   <CardContent
-    class="text-sm text-justify leading-relaxed text-foreground px-4 mb-auto"
+    class="text-foreground mb-auto px-4 text-justify text-sm leading-relaxed"
   >
     {friend.description}
   </CardContent>
 
   <CardFooter
-    class="bg-transparent flex flex-wrap gap-2 justify-center w-full p-2 border-t"
+    class="flex w-full flex-wrap justify-center gap-2 border-t bg-transparent p-2"
   >
     {friend.socials.map((social) => (
-        <Button
-          href={social.url}
-          size="icon-sm"
-          target="_blank"
-          title={social.name}
-          variant="outline"
-        >
-          <Icon name={social.icon} size="20" />
-        </Button>
-      ))}
+      <Button
+        href={social.url}
+        size="icon-sm"
+        target="_blank"
+        title={social.name}
+        variant="outline"
+      >
+        <Icon name={social.icon} size="20" />
+      </Button>
+    ))}
   </CardFooter>
 </Card>

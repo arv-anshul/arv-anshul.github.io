@@ -31,16 +31,16 @@ const sortedPages = [...pages].sort((a, b) => {
 ---
 
 <nav
-  class:list={["rounded-none border border-accent overflow-hidden", className]}
+  class:list={["border-accent overflow-hidden rounded-none border", className]}
 >
   <details open>
     <summary
-      class="flex items-center gap-2 px-4 py-2.5 cursor-pointer select-none text-sm font-semibold text-foreground bg-accent/80 hover:bg-accent transition-colors duration-200 list-none [&::-webkit-details-marker]:hidden"
+      class="text-foreground bg-accent/80 hover:bg-accent flex cursor-pointer list-none items-center gap-2 px-4 py-2.5 text-sm font-semibold transition-colors duration-200 select-none [&::-webkit-details-marker]:hidden"
     >
       <Icon class="size-4 opacity-70" name="lucide:layers" />
       <span>Related Pages</span>
       <span
-        class="ml-auto font-bold text-lg text-muted-foreground leading-none"
+        class="text-muted-foreground ml-auto text-lg leading-none font-bold"
       >
         {sortedPages.length}
       </span>
@@ -50,58 +50,58 @@ const sortedPages = [...pages].sort((a, b) => {
       />
     </summary>
 
-    <ul class="divide-y divide-border">
+    <ul class="divide-border divide-y">
       {sortedPages.map((page) => {
-          const isActive = removeTrailingForwardSlash(
-            Astro.url.pathname,
-          ).endsWith(page.id);
-          const isIndex = !removeTrailingForwardSlash(page.id).includes("/");
+        const isActive = removeTrailingForwardSlash(
+          Astro.url.pathname
+        ).endsWith(page.id);
+        const isIndex = !removeTrailingForwardSlash(page.id).includes("/");
 
-          return (
-            <li>
-              <a
-                aria-current={isActive ? "page" : undefined}
-                href={`/projects/${page.id}`}
-                class:list={[
-                  "group flex items-center gap-3 px-4 py-3 transition-colors duration-200",
-                  isActive
-                    ? "bg-accent/50 text-foreground"
-                    : "text-muted-foreground hover:bg-accent/30 hover:text-accent-foreground focus-visible:bg-accent/30 focus-visible:text-accent-foreground",
-                ]}
-              >
-                {page.data.icon && (
-                  <span
-                    aria-hidden="true"
-                    class:list={[
-                      "text-xl shrink-0",
-                      isActive ? "opacity-100" : "opacity-60",
-                    ]}
-                  >
-                    <Icon name={page.data.icon} />
-                  </span>
-                )}
-                <div class="min-w-0 flex-1">
-                  <span
-                    class:list={[
-                      "text-sm font-medium",
-                      isActive && "text-foreground",
-                    ]}
-                  >
-                    {page.data.title}
-                  </span>
-                  <p class="line-clamp-1 text-muted-foreground text-xs">
-                    {page.data.description}
-                  </p>
-                </div>
-                {isIndex && (
-                  <span class="shrink-0 rounded-full bg-primary-accent/20 px-1.5 py-1 font-mono font-semibold text-primary text-xs uppercase leading-none tracking-wide">
-                    Index
-                  </span>
-                )}
-              </a>
-            </li>
-          );
-        })}
+        return (
+          <li>
+            <a
+              aria-current={isActive ? "page" : undefined}
+              class:list={[
+                "group flex items-center gap-3 px-4 py-3 transition-colors duration-200",
+                isActive
+                  ? "bg-accent/50 text-foreground"
+                  : "text-muted-foreground hover:bg-accent/30 hover:text-accent-foreground focus-visible:bg-accent/30 focus-visible:text-accent-foreground",
+              ]}
+              href={`/projects/${page.id}`}
+            >
+              {page.data.icon && (
+                <span
+                  aria-hidden="true"
+                  class:list={[
+                    "text-xl shrink-0",
+                    isActive ? "opacity-100" : "opacity-60",
+                  ]}
+                >
+                  <Icon name={page.data.icon} />
+                </span>
+              )}
+              <div class="min-w-0 flex-1">
+                <span
+                  class:list={[
+                    "text-sm font-medium",
+                    isActive && "text-foreground",
+                  ]}
+                >
+                  {page.data.title}
+                </span>
+                <p class="text-muted-foreground line-clamp-1 text-xs">
+                  {page.data.description}
+                </p>
+              </div>
+              {isIndex && (
+                <span class="bg-primary-accent/20 text-primary shrink-0 rounded-full px-1.5 py-1 font-mono text-xs leading-none font-semibold tracking-wide uppercase">
+                  Index
+                </span>
+              )}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   </details>
 </nav>

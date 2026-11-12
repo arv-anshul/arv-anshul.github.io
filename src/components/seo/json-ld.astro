@@ -10,5 +10,9 @@ const items = (Array.isArray(data) ? data : [data]).filter(Boolean) as JsonLd[];
 ---
 
 {items.map((item) => (
-    <script set:html={JSON.stringify(item)} is:inline type="application/ld+json" />
-  ))}
+  <script
+    is:inline
+    set:html={JSON.stringify(item)}
+    type="application/ld+json"
+  />
+))}

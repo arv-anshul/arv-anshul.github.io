@@ -48,34 +48,32 @@ const isSmall = variant === "small";
   class={cn(
     "flex flex-col items-start gap-2",
     isSmall &&
-      "h-full border-border/50 bg-card/70 transition-colors hover:border-foreground/15 [a]:hover:bg-card/70",
-    !isSmall && "w-full border-muted",
-    className,
+      "border-border/50 bg-card/70 hover:border-foreground/15 [a]:hover:bg-card/70 h-full transition-colors",
+    !isSmall && "border-muted w-full",
+    className
   )}
   transition:name={transitionName ? `card-${transitionName}` : undefined}
   variant={isSmall ? "outline" : "muted"}
   {...props}
 >
-  <div class:list={["flex justify-between w-full", !isSmall && "items-start"]}>
+  <div class:list={["flex w-full justify-between", !isSmall && "items-start"]}>
     <ItemContent class="flex flex-col gap-1">
       <ItemTitle
         class:list={[
           "font-heading font-bold transition-colors",
-          isSmall
-            ? "text-xl"
-            : "text-4xl",
+          isSmall ? "text-xl" : "text-4xl",
         ]}
       >
         {data.title}
       </ItemTitle>
-      <p class="flex gap-3 text-xs text-muted-foreground">
+      <p class="text-muted-foreground flex gap-3 text-xs">
         <span class="flex gap-0.5" title="Published Date">
           <Icon name="lucide:calendar" size={15} />
           {data.pubDate.toLocaleDateString("en-IN", {
-              day: "2-digit",
-              month: "short",
-              year: "numeric",
-            })}
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          })}
         </span>
         <span class="flex gap-0.5" title="Author">
           <Icon name="lucide:user-pen" size={15} />
@@ -95,21 +93,21 @@ const isSmall = variant === "small";
     </ItemMedia>
   </div>
 
-  <ItemDescription class="text-wrap mb-auto">
+  <ItemDescription class="mb-auto text-wrap">
     {data.description}
   </ItemDescription>
 
   {!isSmall && backPageUrl && (
-      <a
-        class="group flex items-center gap-0.5 font-medium text-sm transition-colors hover:text-muted-foreground"
-        href={backPageUrl}
-      >
-        <Icon
-          class="transition-transform duration-300 group-hover:-translate-x-0.5"
-          name="lucide:arrow-left"
-          size={18}
-        />
-        <span>Back</span>
-      </a>
-    )}
+    <a
+      class="group hover:text-muted-foreground flex items-center gap-0.5 text-sm font-medium transition-colors"
+      href={backPageUrl}
+    >
+      <Icon
+        class="transition-transform duration-300 group-hover:-translate-x-0.5"
+        name="lucide:arrow-left"
+        size={18}
+      />
+      <span>Back</span>
+    </a>
+  )}
 </Item>

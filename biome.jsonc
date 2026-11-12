@@ -3,6 +3,13 @@
   "extends": ["ultracite/biome/core", "ultracite/biome/astro"],
   "overrides": [
     {
+      // YAML is formatted by dprint (see .pre-commit-config.yaml).
+      "includes": ["**/*.yaml", "**/*.yml"],
+      "formatter": {
+        "enabled": false
+      }
+    },
+    {
       "includes": [
         "src/components/starwind/**/*",
         "src/components/ui/search.astro"

@@ -32,13 +32,13 @@ export async function getMarkupFromEntry(
 ) {
   // Convert <svg> component into data URI to render it via <img> tag
   const calendarIcon = await getIconSVGString("lucide:calendar");
-  const calendarIconUri = `data:image/svg+xml,${encodeURIComponent(calendarIcon.replace(/currentColor/g, "#a1a1aa"))}`;
+  const calendarIconUri = `data:image/svg+xml,${encodeURIComponent(calendarIcon.replace(/currentColor/gu, "#a1a1aa"))}`;
 
   const userIcon = await getIconSVGString("lucide:user-pen");
-  const userIconUri = `data:image/svg+xml,${encodeURIComponent(userIcon.replace(/currentColor/g, "#a1a1aa"))}`;
+  const userIconUri = `data:image/svg+xml,${encodeURIComponent(userIcon.replace(/currentColor/gu, "#a1a1aa"))}`;
 
   const mainIcon = await getIconSVGString(data.icon);
-  const iconDataUri = `data:image/svg+xml,${encodeURIComponent(mainIcon.replace(/currentColor/g, "#ffffff"))}`;
+  const iconDataUri = `data:image/svg+xml,${encodeURIComponent(mainIcon.replace(/currentColor/gu, "#ffffff"))}`;
 
   const markup = html`
     <!-- Outer Background to simulate depth -->
@@ -104,7 +104,7 @@ export async function getMarkupFromOgData(url: string, data: OgImageData) {
   const mainIcon = data.icon
     ? await getIconSVGString(data.icon)
     : OmSvg.toString();
-  const iconDataUri = `data:image/svg+xml,${encodeURIComponent(mainIcon.replace(/currentColor/g, "#ffffff").replace("favicon", "no-favicon"))}`;
+  const iconDataUri = `data:image/svg+xml,${encodeURIComponent(mainIcon.replace(/currentColor/gu, "#ffffff").replace("favicon", "no-favicon"))}`;
 
   const markup = html`
     <!-- Outer Background to simulate depth -->

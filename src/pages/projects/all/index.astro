@@ -20,18 +20,26 @@ const { projects } = await loadAllProjects();
   title="All Projects — Minor Builds & Experiments by ARV"
 >
   <div>
-    <h1 class="font-heading text-3xl font-bold md:text-center mb-6">
+    <h1 class="font-heading mb-6 text-3xl font-bold md:text-center">
       All Projects Index
     </h1>
-    <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
+    <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
       {projects.map((project) => (
-        <Item as="a" class="py-3" href={project.url} target="_blank" variant="outline">
+        <Item
+          as="a"
+          class="py-3"
+          href={project.url}
+          target="_blank"
+          variant="outline"
+        >
           <ItemMedia class="h-full">
             <Icon name={project.icon} size={35} />
           </ItemMedia>
           <ItemContent class="gap-1">
-            <ItemTitle class="font-bold text-base">{project.title}</ItemTitle>
-            <ItemDescription class="line-clamp-2 text-wrap">{project.description}</ItemDescription>
+            <ItemTitle class="text-base font-bold">{project.title}</ItemTitle>
+            <ItemDescription class="line-clamp-2 text-wrap">
+              {project.description}
+            </ItemDescription>
           </ItemContent>
         </Item>
       ))}

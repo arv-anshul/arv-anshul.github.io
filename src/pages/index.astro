@@ -64,7 +64,7 @@ const resume = await loadResumeData();
   nav={{ sticky: true }}
   title="Anshul Raj Verma — Data Scientist & GenAI Developer"
 >
-  <div class="gap-10 flex flex-col items-center justify-center text-center">
+  <div class="flex flex-col items-center justify-center gap-10 text-center">
     <header class="flex flex-col items-center gap-5">
       <Image
         alt="arv-anshul"
@@ -75,69 +75,77 @@ const resume = await loadResumeData();
         src={info.avatar_url}
         width="300"
       />
-      <h1 class="font-bold text-3xl">{info.name}</h1>
+      <h1 class="text-3xl font-bold">{info.name}</h1>
       <p class="text-justify">{info.intro_text}</p>
     </header>
 
     <section class="w-full">
-      <h2 class="font-heading font-bold text-2xl" id="refer-to">Refer To</h2>
+      <h2 class="font-heading text-2xl font-bold" id="refer-to">Refer To</h2>
 
-      <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
+      <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
-            <Item as="a" class="bg-card/50" href={item.url} variant="outline">
-              <ItemMedia class="rounded-lg border-none" variant="icon">
-                <Icon name={item.icon} />
-              </ItemMedia>
-              <ItemContent class="gap-0 text-start">
-                <ItemTitle class="line-clamp-1 font-bold">{item.title}</ItemTitle>
-                <ItemDescription class="text-xs">
-                  {item.description}
-                </ItemDescription>
-              </ItemContent>
-              <ItemContent>
-                <Icon name="lucide:arrow-right" size={18} />
-              </ItemContent>
-            </Item>
-          ))}
+          <Item as="a" class="bg-card/50" href={item.url} variant="outline">
+            <ItemMedia class="rounded-lg border-none" variant="icon">
+              <Icon name={item.icon} />
+            </ItemMedia>
+            <ItemContent class="gap-0 text-start">
+              <ItemTitle class="line-clamp-1 font-bold">{item.title}</ItemTitle>
+              <ItemDescription class="text-xs">
+                {item.description}
+              </ItemDescription>
+            </ItemContent>
+            <ItemContent>
+              <Icon name="lucide:arrow-right" size={18} />
+            </ItemContent>
+          </Item>
+        ))}
       </ItemGroup>
     </section>
 
     <section class="w-full">
-      <h2 class="font-heading font-bold text-2xl" id="tech-stack">
+      <h2 class="font-heading text-2xl font-bold" id="tech-stack">
         Tech Stack
       </h2>
 
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
-            <Item class="flex flex-col gap-3 bg-card/50 transition-colors duration-200 hover:border-foreground/15" variant="outline">
-              <ItemTitle class="font-bold">{category}</ItemTitle>
-              <ItemDescription class="flex flex-wrap justify-center gap-3">
-                {items
-                  .sort((a, b) => a.name.localeCompare(b.name))
-                  .map((tech) => (
-                    <Icon
-                      name={tech.icon}
-                      size={22}
-                      title={tech.icon.split(":")[1]}
-                    />
-                  ))}
-              </ItemDescription>
-            </Item>
-          ))}
+          <Item
+            class="bg-card/50 hover:border-foreground/15 flex flex-col gap-3 transition-colors duration-200"
+            variant="outline"
+          >
+            <ItemTitle class="font-bold">{category}</ItemTitle>
+            <ItemDescription class="flex flex-wrap justify-center gap-3">
+              {items
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((tech) => (
+                  <Icon
+                    name={tech.icon}
+                    size={22}
+                    title={tech.icon.split(":")[1]}
+                  />
+                ))}
+            </ItemDescription>
+          </Item>
+        ))}
       </ItemGroup>
     </section>
 
     <section class="w-full">
-      <h2 class="font-heading font-bold text-2xl" id="experiences">
+      <h2 class="font-heading text-2xl font-bold" id="experiences">
         Experiences
       </h2>
       <ItemGroup class="mt-4 flex flex-col gap-4">
-        {resume.work.map((item) => <ExperienceCard class="bg-card/50 transition-colors duration-200 hover:border-foreground/15" data={item} />)}
+        {resume.work.map((item) => (
+          <ExperienceCard
+            class="bg-card/50 hover:border-foreground/15 transition-colors duration-200"
+            data={item}
+          />
+        ))}
       </ItemGroup>
     </section>
 
     <a
-      class="text-center mx-auto w-fit block h-auto py-1.5 px-12 font-semibold text-background transition-opacity hover:opacity-90 bg-foreground"
+      class="text-background bg-foreground mx-auto block h-auto w-fit px-12 py-1.5 text-center font-semibold transition-opacity hover:opacity-90"
       href="/resume"
     >
       See My Resume

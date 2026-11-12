@@ -5,7 +5,7 @@ const projectSchema = z.object({
   completed_on: z
     .string()
     .regex(
-      /(January|February|March|April|May|June|July|August|September|October|November|December),\s20\d{2}$/
+      /(?:January|February|March|April|May|June|July|August|September|October|November|December),\s20\d{2}$/u
     ),
   description: z.string(),
   highlights: z.array(z.string()).min(3).optional(),

@@ -15,53 +15,53 @@ const { project, class: className, ...props } = Astro.props as Props;
 
 <div
   class={cn(
-    "grid gap-x-6 gap-y-3 border border-border/50 bg-card/70 p-5 transition-colors duration-200 hover:border-foreground/15 md:grid-cols-[1fr_auto]",
-    className,
+    "border-border/50 bg-card/70 hover:border-foreground/15 grid gap-x-6 gap-y-3 border p-5 transition-colors duration-200 md:grid-cols-[1fr_auto]",
+    className
   )}
   {...props}
 >
   <div class="min-w-0">
     <h2
-      class="flex items-center gap-1 font-heading text-xl font-bold leading-tight"
+      class="font-heading flex items-center gap-1 text-xl leading-tight font-bold"
     >
       {project.relative_url ? (
-          <a
-            class="flex items-center gap-1 transition-colors hover:text-muted-foreground"
-            href={project.relative_url}
-          >
-            {project.title}
-            <Icon name="lucide:link" size={15} />
-          </a>
-        ) : (
-          project.title
-        )}
+        <a
+          class="hover:text-muted-foreground flex items-center gap-1 transition-colors"
+          href={project.relative_url}
+        >
+          {project.title}
+          <Icon name="lucide:link" size={15} />
+        </a>
+      ) : (
+        project.title
+      )}
     </h2>
-    <span class="block font-mono text-xs text-muted-foreground">
+    <span class="text-muted-foreground block font-mono text-xs">
       {project.completed_on}
     </span>
   </div>
 
   <span class="flex gap-1.5 md:justify-end">
     {project.urls.slice(0, 3).map((item) => (
-        <a
-          class="grid size-7 place-items-center text-muted-foreground transition-colors hover:text-foreground"
-          href={item.url}
-          title={item.name}
-        >
-          <Icon name={item.icon} size="14" title={item.name} />
-        </a>
-      ))}
+      <a
+        class="text-muted-foreground hover:text-foreground grid size-7 place-items-center transition-colors"
+        href={item.url}
+        title={item.name}
+      >
+        <Icon name={item.icon} size="14" title={item.name} />
+      </a>
+    ))}
   </span>
 
-  <p class="text-sm text-muted-foreground line-clamp-3 md:col-span-2">
+  <p class="text-muted-foreground line-clamp-3 text-sm md:col-span-2">
     {project.description}
   </p>
 
   <div
-    class="flex flex-wrap items-center gap-3 border-t border-border pt-5 md:col-span-2"
+    class="border-border flex flex-wrap items-center gap-3 border-t pt-5 md:col-span-2"
   >
     {project.tech_icons.map((name) => (
-        <Icon name={name} size="18" title={name.split(":")[1]} />
-      ))}
+      <Icon name={name} size="18" title={name.split(":")[1]} />
+    ))}
   </div>
 </div>

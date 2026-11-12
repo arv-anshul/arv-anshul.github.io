@@ -30,122 +30,116 @@ const basePath = "/blog";
   title="Blog — Data Science, GenAI & Dev Notes by ARV"
 >
   <div>
-    <h1 class="font-heading text-3xl font-bold mb-6 md:text-center">
+    <h1 class="font-heading mb-6 text-3xl font-bold md:text-center">
       Latest Blog Posts
     </h1>
     <ItemGroup class="grid gap-4 md:grid-cols-2" id="blog-grid">
       {posts.map((post, i) => {
-          const page = Math.floor(i / POSTS_PER_PAGE) + 1;
-          const slug = getBlogSlugs(post.id).pop();
-          return (
-            <div
-              class="blog-post-item"
-              data-page={page}
-              style={page === 1 ? undefined: "display:none"}
-            >
-              <FrontmatterCard
-                data={post.data}
-                href={`/blog/${slug}`}
-                transitionName={slug}
-                variant="small"
-              />
-            </div>
-          );
-        })}
+        const page = Math.floor(i / POSTS_PER_PAGE) + 1;
+        const slug = getBlogSlugs(post.id).pop();
+        return (
+          <div
+            class="blog-post-item"
+            data-page={page}
+            style={page === 1 ? undefined : "display:none"}
+          >
+            <FrontmatterCard
+              data={post.data}
+              href={`/blog/${slug}`}
+              transitionName={slug}
+              variant="small"
+            />
+          </div>
+        );
+      })}
     </ItemGroup>
 
     {totalPages > 1 && (
-        <div class="mt-8" id="pagination-container">
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious
-                  href={`${basePath}?page=1`}
-                  id="pagination-prev"
-                  size="sm"
-                >
-                  Prev
-                </PaginationPrevious>
-              </PaginationItem>
+      <div class="mt-8" id="pagination-container">
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                href={`${basePath}?page=1`}
+                id="pagination-prev"
+                size="sm"
+              >
+                Prev
+              </PaginationPrevious>
+            </PaginationItem>
 
-              {/* First page */}
-              <PaginationItem data-pagination-item={1}>
+            {/* First page */}
+            <PaginationItem data-pagination-item={1}>
+              <PaginationLink
+                data-pagination-link={1}
+                href={`${basePath}?page=1`}
+                size="icon-sm"
+              >
+                1
+              </PaginationLink>
+            </PaginationItem>
+
+            {/* Start ellipsis (between first page and middle pages) */}
+            <PaginationItem
+              data-pagination-ellipsis="start"
+              style="display:none"
+            >
+              <PaginationEllipsis
+                class="text-muted-foreground"
+                size="icon-sm"
+              />
+            </PaginationItem>
+
+            {/* Middle pages (2 through totalPages - 1) */}
+            {Array.from(
+              { length: Math.max(0, totalPages - 2) },
+              (_, i) => i + 2
+            ).map((page) => (
+              <PaginationItem data-pagination-item={page} style="display:none">
                 <PaginationLink
-                  data-pagination-link={1}
-                  href={`${basePath}?page=1`}
+                  data-pagination-link={page}
+                  href={`${basePath}?page=${page}`}
                   size="icon-sm"
                 >
-                  1
+                  {page}
                 </PaginationLink>
               </PaginationItem>
+            ))}
 
-              {/* Start ellipsis (between first page and middle pages) */}
-              <PaginationItem
-                data-pagination-ellipsis="start"
-                style="display:none"
-              >
-                <PaginationEllipsis
-                  class="text-muted-foreground"
+            {/* End ellipsis (between middle pages and last page) */}
+            <PaginationItem data-pagination-ellipsis="end" style="display:none">
+              <PaginationEllipsis
+                class="text-muted-foreground"
+                size="icon-sm"
+              />
+            </PaginationItem>
+
+            {/* Last page (only if more than 1 page) */}
+            {totalPages > 1 && (
+              <PaginationItem data-pagination-item={totalPages}>
+                <PaginationLink
+                  data-pagination-link={totalPages}
+                  href={`${basePath}?page=${totalPages}`}
                   size="icon-sm"
-                />
-              </PaginationItem>
-
-              {/* Middle pages (2 through totalPages - 1) */}
-              {Array.from(
-                { length: Math.max(0, totalPages - 2) },
-                (_, i) => i + 2,
-              ).map((page) => (
-                <PaginationItem
-                  data-pagination-item={page}
-                  style="display:none"
                 >
-                  <PaginationLink
-                    data-pagination-link={page}
-                    href={`${basePath}?page=${page}`}
-                    size="icon-sm"
-                  >
-                    {page}
-                  </PaginationLink>
-                </PaginationItem>
-              ))}
+                  {totalPages}
+                </PaginationLink>
+              </PaginationItem>
+            )}
 
-              {/* End ellipsis (between middle pages and last page) */}
-              <PaginationItem
-                data-pagination-ellipsis="end"
-                style="display:none"
+            <PaginationItem>
+              <PaginationNext
+                href={`${basePath}?page=2`}
+                id="pagination-next"
+                size="sm"
               >
-                <PaginationEllipsis
-                  class="text-muted-foreground"
-                  size="icon-sm"
-                />
-              </PaginationItem>
-
-              {/* Last page (only if more than 1 page) */}
-              {totalPages > 1 && (
-                <PaginationItem data-pagination-item={totalPages}>
-                  <PaginationLink
-                    data-pagination-link={totalPages}
-                    href={`${basePath}?page=${totalPages}`}
-                    size="icon-sm"
-                  >
-                    {totalPages}
-                  </PaginationLink>
-                </PaginationItem>
-              )}
-
-              <PaginationItem>
-                <PaginationNext
-                  href={`${basePath}?page=2`}
-                  id="pagination-next"
-                  size="sm"
-                >
-                  Next
-                </PaginationNext>
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
-        </div>
-      )}
+                Next
+              </PaginationNext>
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      </div>
+    )}
   </div>
 </BaseLayout>
 
@@ -232,8 +226,8 @@ const basePath = "/blog";
   }
 
   function updatePrevNext(currentPage) {
-    const prevBtn = document.getElementById("pagination-prev");
-    const nextBtn = document.getElementById("pagination-next");
+    const prevBtn = document.querySelector("#pagination-prev");
+    const nextBtn = document.querySelector("#pagination-next");
 
     if (prevBtn) {
       prevBtn.href = `${basePath}?page=${Math.max(1, currentPage - 1)}`;

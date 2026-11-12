@@ -25,7 +25,8 @@ projects:
     url: https://github.com/arv-anshul/arv-anshul.github.io/tree/backup/v1
 
   - title: Election 2024 Dashboard
-    description: A live Streamlit dashboard to track the seats share of political partries. Data is being fetched from
+    description:
+      A live Streamlit dashboard to track the seats share of political parties. Data is being fetched from
       ECI website.
     icon: simple-icons:streamlit
     url: https://github.com/arv-anshul/notebooks/tree/main/election-2024

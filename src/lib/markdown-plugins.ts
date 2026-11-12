@@ -68,7 +68,7 @@ const ALERT_ICONS = Object.fromEntries(
  * `remark-github-alerts` gave us.
  */
 const ALERT_MARKER =
-  /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*([^\n]*)(?:\n|$)/;
+  /^\[!(?<kind>NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*(?<title>[^\n]*)(?:\n|$)/u;
 
 export const githubAlerts = defineMdastPlugin({
   blockquote(node) {
@@ -83,12 +83,12 @@ export const githubAlerts = defineMdastPlugin({
     }
 
     const match = ALERT_MARKER.exec(marker.value);
-    if (!match) {
+    if (!match?.groups) {
       return;
     }
 
-    const kind = match[1].toLowerCase() as AlertKind;
-    const title = match[2].trim() || ALERTS[kind].label;
+    const kind = match.groups.kind.toLowerCase() as AlertKind;
+    const title = match.groups.title.trim() || ALERTS[kind].label;
 
     // Whatever followed the marker inside that first paragraph stays as body.
     const leftover = marker.value.slice(match[0].length);

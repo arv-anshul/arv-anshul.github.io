@@ -37,12 +37,12 @@ const endLinks = [
 
 <header
   class={cn(
-    "border-b border-b-muted/50 backdrop-blur-sm",
-    sticky ? "sticky top-0 z-40" : "",
+    "border-b-muted/50 border-b backdrop-blur-sm",
+    sticky ? "sticky top-0 z-40" : ""
   )}
 >
   <div
-    class="flex items-center justify-between md:w-2/3 xl:w-3/5 mx-auto px-4 md:px-0 gap-x-2 py-1"
+    class="mx-auto flex items-center justify-between gap-x-2 px-4 py-1 md:w-2/3 md:px-0 xl:w-3/5"
   >
     <!-- Home/Logo -->
     <div class="flex items-center">
@@ -56,24 +56,21 @@ const endLinks = [
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="ml-2 mr-auto">
+    <nav class="mr-auto ml-2">
       <ul class="flex items-center">
         {middleLinks.map((link) => (
-            <li>
-              <Button
-                class="flex items-center gap-x-1 rounded-xl"
-                href={link.href}
-                size="sm"
-                variant="ghost"
-              >
-                <Icon
-                class="hidden md:inline"
-                name={link.icon}
-                />
-                {link.title}
-              </Button>
-            </li>
-          ))}
+          <li>
+            <Button
+              class="flex items-center gap-x-1 rounded-xl"
+              href={link.href}
+              size="sm"
+              variant="ghost"
+            >
+              <Icon class="hidden md:inline" name={link.icon} />
+              {link.title}
+            </Button>
+          </li>
+        ))}
       </ul>
     </nav>
 
@@ -84,17 +81,17 @@ const endLinks = [
 
       <div class="flex items-center gap-x-1">
         {endLinks.map((link) => (
-            <Button
+          <Button
             class="hover:bg-transparent hover:opacity-70"
-              href={link.href}
-              size="icon"
-              target="_blank"
-              title={link.title}
-              variant="ghost"
-            >
-              <Icon name={link.icon} />
-            </Button>
-          ))}
+            href={link.href}
+            size="icon"
+            target="_blank"
+            title={link.title}
+            variant="ghost"
+          >
+            <Icon name={link.icon} />
+          </Button>
+        ))}
 
         <ThemeToggle size="sm" />
       </div>

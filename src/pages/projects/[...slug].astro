@@ -65,7 +65,9 @@ const ogImage = new URL("og.webp", Astro.url).toString();
   seo={{
     article: {
       authors: [project.data.author],
-      modifiedTime: (project.data.updatedDate ?? project.data.pubDate).toISOString(),
+      modifiedTime: (
+        project.data.updatedDate ?? project.data.pubDate
+      ).toISOString(),
       publishedTime: project.data.pubDate.toISOString(),
       section: project.data.categories[0],
       tags: project.data.categories,
@@ -81,12 +83,12 @@ const ogImage = new URL("og.webp", Astro.url).toString();
 >
   <FrontmatterCard backPageUrl="/projects" data={project.data} />
   {nestedPages && (
-      <section class="my-6">
-        <NestedPagesList pages={nestedPages} />
-      </section>
-    )}
+    <section class="my-6">
+      <NestedPagesList pages={nestedPages} />
+    </section>
+  )}
 
   <article class="mt-10 w-full" data-pagefind-body>
-    <Prose class="max-w-auto w-full custom-prose"> <Content /> </Prose>
+    <Prose class="max-w-auto custom-prose w-full"> <Content /> </Prose>
   </article>
 </BaseLayout>
